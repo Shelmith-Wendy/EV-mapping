@@ -1,0 +1,14 @@
+[project]
+name = "kenya-ev-map"
+version = "0.1.0"
+description = "Maps Zeno Moto EV charging stations across Kenya"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "geopy>=2.5.0",
+    "openlocationcode>=1.0.1",
+    "pandas>=3.0.5",
+    "requests>=2.34.2",
+    "shapely>=2.1.2",
+    "streamlit>=1.63.0",
+]

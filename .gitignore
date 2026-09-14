@@ -1,0 +1,29 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Pipeline staging (never published)
+data/staging/
+
+# Local tunnel binary
+.bin/
+
+# Streamlit copies dashboard + public data here at runtime
+app/static/dashboard/
+app/static/data/
+
+# Phase 1 bake from scripts/prepare_databricks_app.sh (do not commit)
+app/dashboard/
+app/data/
+
+# Databricks CLI / bundle local state
+.databricks/
+
+

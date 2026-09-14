@@ -1,0 +1,416 @@
+[
+  {
+    "locality": "Athi River",
+    "landmark": null,
+    "query_used": "Athi River, Kenya",
+    "latitude": -1.4481149,
+    "longitude": 36.971587,
+    "display_name": "Athi River, Mavoko, Machakos, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Awasi",
+    "landmark": null,
+    "query_used": "Awasi, Kenya",
+    "latitude": -0.160583,
+    "longitude": 35.073504,
+    "display_name": "Awasi, Awasi/Onjiko ward, Nyando, Kisumu, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Baba Dogo",
+    "landmark": null,
+    "query_used": "Baba Dogo, Kenya",
+    "latitude": -1.2448837,
+    "longitude": 36.8715391,
+    "display_name": "Henkel Kenya, Baba Dogo Road, Ruaraka, Babadogo ward, Kasarani, Nairobi, 00623, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Belle Vue",
+    "landmark": "Kiawara",
+    "query_used": "Kiawara, Kenya",
+    "latitude": -0.2003983,
+    "longitude": 36.8204864,
+    "display_name": "Kiawara, Mugunda ward, Kieni West, Nyeri, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Burnt Forest",
+    "landmark": null,
+    "query_used": "Burnt Forest, Kenya",
+    "latitude": 0.2132383,
+    "longitude": 35.43437,
+    "display_name": null,
+    "source": "geocoded"
+  },
+  {
+    "locality": "Chavakali",
+    "landmark": null,
+    "query_used": "Chavakali, Kenya",
+    "latitude": 0.1182133,
+    "longitude": 34.7338222,
+    "display_name": "Chavakali, Chavakali ward, Sabatia, Vihiga, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Chuka",
+    "landmark": null,
+    "query_used": "Chuka, Kenya",
+    "latitude": -0.2252218,
+    "longitude": 37.4232635,
+    "display_name": "Chuka, Tharaka-Nithi, 60100, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Eldoret",
+    "landmark": null,
+    "query_used": "Eldoret, Kenya",
+    "latitude": 0.5198329,
+    "longitude": 35.2715481,
+    "display_name": "Eldoret, Kimumu ward, Moiben, Uasin Gishu, 30100, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Embu",
+    "landmark": null,
+    "query_used": "Embu, Kenya",
+    "latitude": -0.5359479,
+    "longitude": 37.6652884,
+    "display_name": "Embu, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Equator",
+    "landmark": "Boito",
+    "query_used": "Boito, Kenya",
+    "latitude": -0.164821,
+    "longitude": 35.9022748,
+    "display_name": "Boito, Visoi ward, Rongai, Nakuru, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Giachuma",
+    "landmark": "Mureru Farm",
+    "query_used": "Mureru Farm, Kenya",
+    "latitude": -0.1365122,
+    "longitude": 37.032309,
+    "display_name": null,
+    "source": "geocoded"
+  },
+  {
+    "locality": "Gigil",
+    "landmark": "Gilgil",
+    "query_used": "Gilgil, Kenya",
+    "latitude": -0.5414303,
+    "longitude": 36.2361646,
+    "display_name": "Gilgil, Nakuru, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Igoji",
+    "landmark": null,
+    "query_used": "Igoji, Kenya",
+    "latitude": -0.1879993,
+    "longitude": 37.6808458,
+    "display_name": "Igoji, Igoji East ward, Imenti South, Meru, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Kapsabet",
+    "landmark": null,
+    "query_used": "Kapsabet, Kenya",
+    "latitude": 0.2004978,
+    "longitude": 35.1011501,
+    "display_name": "Kapsabet, Emgwen, Nandi, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Karatina",
+    "landmark": null,
+    "query_used": "Karatina, Kenya",
+    "latitude": -0.482246,
+    "longitude": 37.125224,
+    "display_name": "Karatina, Karatina town ward, Mathira West, Nyeri, 10101, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Kenol",
+    "landmark": "Kabati",
+    "query_used": "Kabati, Kenya",
+    "latitude": -0.9441667,
+    "longitude": 37.1216667,
+    "display_name": null,
+    "source": "geocoded"
+  },
+  {
+    "locality": "Kiambu",
+    "landmark": "Juja",
+    "query_used": "Juja, Kenya",
+    "latitude": -1.1054509,
+    "longitude": 37.0126648,
+    "display_name": "Juja, Kiambu, 01001, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Kiganjo",
+    "landmark": "Chaka",
+    "query_used": "Chaka, Kenya",
+    "latitude": -0.3593615,
+    "longitude": 36.9999599,
+    "display_name": "Chaka, Thegu River ward, Kieni East, Nyeri, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Kimende",
+    "landmark": null,
+    "query_used": "Kimende, Kenya",
+    "latitude": -0.9843308,
+    "longitude": 36.6287973,
+    "display_name": "Kimende, Kijabe ward, Lari, Kiambu, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "King'ong'o",
+    "landmark": null,
+    "query_used": "King'ong'o, Kenya",
+    "latitude": -0.4155517,
+    "longitude": 36.9546803,
+    "display_name": "King'ong'o Primary School, residential, Rware Ward, Nyeri, Nyeri Central, Nyeri, 10100, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Kisumu",
+    "landmark": null,
+    "query_used": "Kisumu, Kenya",
+    "latitude": -0.1029109,
+    "longitude": 34.7541761,
+    "display_name": "Kisumu, City of Kisumu, Kisumu, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Kitengela",
+    "landmark": null,
+    "query_used": "Kitengela, Kenya",
+    "latitude": -1.4745409,
+    "longitude": 36.9589935,
+    "display_name": "Kitengela, Oloosirkon/Sholinke ward, Kajiado East, Kajiado, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Lamuria",
+    "landmark": null,
+    "query_used": "Lamuria, Kenya",
+    "latitude": -0.1833,
+    "longitude": 36.8666,
+    "display_name": "Lamuria Farm, Laikipia East, Laikipia, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Limuru",
+    "landmark": null,
+    "query_used": "Limuru, Kenya",
+    "latitude": -1.1458738,
+    "longitude": 36.6375998,
+    "display_name": "Limuru, Kiambu, 00217, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Machakos",
+    "landmark": "Mlolongo",
+    "query_used": "Mlolongo, Kenya",
+    "latitude": -1.3935069,
+    "longitude": 36.9430384,
+    "display_name": "Mlolongo, Syokimau-Mulolongo ward, Mavoko, Machakos, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Makutano",
+    "landmark": null,
+    "query_used": "Makutano, Kenya",
+    "latitude": -0.7575,
+    "longitude": 37.2786111,
+    "display_name": null,
+    "source": "geocoded"
+  },
+  {
+    "locality": "Meru",
+    "landmark": null,
+    "query_used": "Meru, Kenya",
+    "latitude": 0.2254509,
+    "longitude": 37.7772624,
+    "display_name": "Meru, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Molo",
+    "landmark": null,
+    "query_used": "Molo, Kenya",
+    "latitude": -0.3547198,
+    "longitude": 35.7916393,
+    "display_name": "Molo, Nakuru, 20102, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Muchiene",
+    "landmark": "Subuiga",
+    "query_used": "Subuiga, Kenya",
+    "latitude": 0.1402468,
+    "longitude": 37.4725213,
+    "display_name": "Subuiga, A2, Kisima ward, Buuri, Meru, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Nairobi",
+    "landmark": "Kilimani",
+    "query_used": "Kilimani, Kenya",
+    "latitude": -1.2960146,
+    "longitude": 36.7817791,
+    "display_name": "Kilimani, Kilimani division, Westlands, Nairobi, 44847, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Naivasha",
+    "landmark": null,
+    "query_used": "Naivasha, Kenya",
+    "latitude": -0.7224425,
+    "longitude": 36.4387834,
+    "display_name": "Naivasha, Nakuru, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Nakuru",
+    "landmark": null,
+    "query_used": "Nakuru, Kenya",
+    "latitude": -0.2802724,
+    "longitude": 36.0712048,
+    "display_name": "Nakuru, Nakuru West, Nakuru, 20100, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Nanyuki",
+    "landmark": null,
+    "query_used": "Nanyuki, Kenya",
+    "latitude": 0.01403,
+    "longitude": 37.074632,
+    "display_name": "Nanyuki, Laikipia East, Laikipia, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Naro Moru",
+    "landmark": null,
+    "query_used": "Naro Moru, Kenya",
+    "latitude": -0.1172589,
+    "longitude": 36.9766576,
+    "display_name": "Naro Moru, Laikipia East, Laikipia, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Ngong",
+    "landmark": null,
+    "query_used": "Ngong, Kenya",
+    "latitude": -1.3666,
+    "longitude": 36.65,
+    "display_name": "Ngong, Ngong ward, Kajiado North, Kajiado, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Nyahururu",
+    "landmark": null,
+    "query_used": "Nyahururu, Kenya",
+    "latitude": 0.0333,
+    "longitude": 36.3666,
+    "display_name": "Nyahururu, Laikipia West, Laikipia, 20300, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Nyathuna",
+    "landmark": "Kikuyu",
+    "query_used": "Kikuyu, Kenya",
+    "latitude": -1.2362919,
+    "longitude": 36.590477,
+    "display_name": "Kikuyu, Kiambu, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Nyeri",
+    "landmark": "Jikaze",
+    "query_used": "Jikaze, Kenya",
+    "latitude": -0.4227048,
+    "longitude": 36.9506983,
+    "display_name": null,
+    "source": "geocoded"
+  },
+  {
+    "locality": "Ol Kalou",
+    "landmark": null,
+    "query_used": "Ol Kalou, Kenya",
+    "latitude": -0.2891727,
+    "longitude": 36.3147874,
+    "display_name": "Ol Kalou, Nyandarua, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Rongai",
+    "landmark": "Salgaa",
+    "query_used": "Salgaa, Kenya",
+    "latitude": -0.2060724,
+    "longitude": 35.8493085,
+    "display_name": "Salgaa, Mosop ward, Rongai, Nakuru, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Ruaka",
+    "landmark": null,
+    "query_used": "Ruaka, Kenya",
+    "latitude": -1.205646,
+    "longitude": 36.7844571,
+    "display_name": "Ruaka, Kiambaa, Kiambu, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Ruiru",
+    "landmark": "Eastern Bypass",
+    "query_used": "Eastern Bypass, Kenya",
+    "latitude": -1.2632091,
+    "longitude": 36.9832761,
+    "display_name": "Eastern Bypass, Ruai, Ruai ward, Njiru, Nairobi, 00520, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Rungiri",
+    "landmark": null,
+    "query_used": "Rungiri, Kenya",
+    "latitude": -1.242847,
+    "longitude": 36.6772357,
+    "display_name": "Rungiri, Gitaru, Gitaru ward, Kabete, Kiambu, 12345, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Sagana",
+    "landmark": null,
+    "query_used": "Sagana, Kenya",
+    "latitude": -0.666531,
+    "longitude": 37.208151,
+    "display_name": "Sagana, Kirinyaga West, Kirinyaga, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Thika",
+    "landmark": null,
+    "query_used": "Thika, Kenya",
+    "latitude": -1.036648,
+    "longitude": 37.077523,
+    "display_name": "Thika, Thika Township ward, Thika Town, Kiambu, Kenya",
+    "source": "geocoded"
+  },
+  {
+    "locality": "Timau",
+    "landmark": null,
+    "query_used": "Timau, Kenya",
+    "latitude": 0.0859445,
+    "longitude": 37.2389064,
+    "display_name": "Timau, Timau ward, Buuri, Meru, Kenya",
+    "source": "geocoded"
+  }
+]

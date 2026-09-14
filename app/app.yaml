@@ -1,0 +1,10 @@
+command:
+  [
+    "streamlit",
+    "run",
+    "app.py",
+    "--server.enableStaticServing=true",
+    "--server.headless=true",
+    "--browser.gatherUsageStats=false",
+  ]
+

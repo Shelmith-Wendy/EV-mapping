@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeno Moto Locations</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, sans-serif;
+    background: #f5f7fa;
+    color: #1a1a2e;
+    line-height: 1.5;
+  }
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px 16px; }
+
+  .header {
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+    color: #fff;
+    padding: 40px 24px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  .header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+  .header p { font-size: 1.05rem; opacity: 0.9; }
+  .header .count { display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 16px; border-radius: 20px; font-size: 0.9rem; margin-top: 8px; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; align-items: center; }
+  .search-wrap { flex: 1; min-width: 220px; position: relative; }
+  .search-wrap input {
+    width: 100%; padding: 12px 16px 12px 40px; border: 2px solid #e2e8f0;
+    border-radius: 10px; font-size: 0.95rem; background: #fff;
+    transition: border-color 0.2s;
+  }
+  .search-wrap input:focus { outline: none; border-color: #0d9488; }
+  .search-wrap .icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 1.1rem; }
+
+  .filters { margin-bottom: 24px; }
+  .pills {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    max-height: 56px; overflow-y: auto; padding: 4px 0;
+  }
+  .pills + .pills { margin-top: 8px; }
+  .pill {
+    padding: 6px 16px; border: 2px solid #e2e8f0; border-radius: 20px;
+    background: #fff; color: #475569; font-size: 0.85rem; cursor: pointer;
+    transition: all 0.2s; white-space: nowrap; font-weight: 500;
+  }
+  .pill:hover { border-color: #0d9488; color: #0d9488; }
+  .pill.active { background: #0d9488; color: #fff; border-color: #0d9488; }
+
+  .table-wrap { max-height: 70vh; overflow-x: auto; overflow-y: auto; background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); scrollbar-width: thin; scrollbar-color: #cbd5e1 transparent; }
+  .table-wrap::-webkit-scrollbar { height: 8px; }
+  .table-wrap::-webkit-scrollbar-track { background: transparent; }
+  .table-wrap::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+  table { width: 100%; border-collapse: collapse; min-width: 1050px; }
+  th {
+    background: #f8fafc; padding: 14px 12px; text-align: left;
+    font-size: 0.8rem; font-weight: 600; color: #64748b;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0; position: sticky; top: 0; z-index: 1;
+  }
+  td { padding: 14px 12px; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; vertical-align: middle; }
+  tr:hover td { background: #f8fafc; }
+  tr.hidden { display: none; }
+
+  .badge {
+    display: inline-block; background: #ecfdf5; color: #0f766e;
+    padding: 2px 10px; border-radius: 6px; font-size: 0.8rem;
+    font-weight: 600; font-family: monospace;
+  }
+  .loc { color: #94a3b8; font-size: 0.8rem; }
+  .na { color: #94a3b8; font-style: italic; font-size: 0.85rem; }
+  a { color: #0d9488; text-decoration: none; font-weight: 500; }
+  a:hover { text-decoration: underline; }
+  td.hours { font-size: 0.75rem; color: #64748b; word-wrap: break-word; }
+
+  .type-badge {
+    display: inline-block; padding: 2px 10px; border-radius: 6px;
+    font-size: 0.75rem; font-weight: 600; white-space: nowrap;
+  }
+  .badge-fc { background: #ecfdf5; color: #0f766e; }
+  .badge-ss { background: #fff7ed; color: #c2410c; }
+
+  .footer {
+    text-align: center; padding: 32px 0 16px; color: #94a3b8; font-size: 0.85rem;
+  }
+
+  th:nth-child(1), td:nth-child(1) { width: 36px; text-align: center; color: #94a3b8; font-size: 0.8rem; }
+  th:nth-child(2), td:nth-child(2) { width: 90px; }
+  th:nth-child(3), td:nth-child(3) { min-width: 180px; }
+  th:nth-child(4), td:nth-child(4) { min-width: 150px; }
+  th:nth-child(5), td:nth-child(5) { width: 110px; }
+  th:nth-child(6), td:nth-child(6) { width: 100px; }
+  th:nth-child(7), td:nth-child(7) { width: 120px; }
+  th:nth-child(8), td:nth-child(8) { width: 100px; }
+  th:nth-child(9), td:nth-child(9) { width: 150px; }
+  th:nth-child(10), td:nth-child(10) { min-width: 120px; }
+
+  @media (max-width: 768px) {
+    .header h1 { font-size: 1.5rem; }
+    .header { padding: 24px 16px; }
+    .pills { max-height: 44px; }
+    td, th { padding: 10px 8px; font-size: 0.8rem; }
+    th:nth-child(1), td:nth-child(1),
+    th:nth-child(7), td:nth-child(7) { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Zeno Moto Locations</h1>
+    <p>Find a Fast Charger or Swap Station near you</p>
+    <div class="count">114 stations &middot; 46 locations</div>
+  </div>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <span class="icon">&#x1F50D;</span>
+      <input type="text" id="search" placeholder="Search by name, code, or location..." oninput="filterTable()">
+    </div>
+  </div>
+
+  <div class="filters">
+    <div class="pills" id="typePills">
+      <button class="pill active" data-type="" onclick="filterType(this)">All (114)</button>
+      <button class="pill active" data-type="Swap Station" onclick="filterType(this)">Swap Station (48)</button>
+      <button class="pill " data-type="Fast Charger" onclick="filterType(this)">Fast Charger (66)</button>
+    </div>
+    <div class="pills" id="locPills">
+      <button class="pill pill-loc" data-locality="" onclick="filterLocality(this)">All (114)</button>
+      <button class="pill pill-loc" data-locality="Athi River" onclick="filterLocality(this)">Athi River (1)</button>
+      <button class="pill pill-loc" data-locality="Awasi" onclick="filterLocality(this)">Awasi (1)</button>
+      <button class="pill pill-loc" data-locality="Baba Dogo" onclick="filterLocality(this)">Baba Dogo (1)</button>
+      <button class="pill pill-loc" data-locality="Belle Vue" onclick="filterLocality(this)">Belle Vue (1)</button>
+      <button class="pill pill-loc" data-locality="Burnt Forest" onclick="filterLocality(this)">Burnt Forest (1)</button>
+      <button class="pill pill-loc" data-locality="Chavakali" onclick="filterLocality(this)">Chavakali (1)</button>
+      <button class="pill pill-loc" data-locality="Chuka" onclick="filterLocality(this)">Chuka (1)</button>
+      <button class="pill pill-loc" data-locality="Eldoret" onclick="filterLocality(this)">Eldoret (2)</button>
+      <button class="pill pill-loc" data-locality="Embu" onclick="filterLocality(this)">Embu (1)</button>
+      <button class="pill pill-loc" data-locality="Equator" onclick="filterLocality(this)">Equator (1)</button>
+      <button class="pill pill-loc" data-locality="Giachuma" onclick="filterLocality(this)">Giachuma (1)</button>
+      <button class="pill pill-loc" data-locality="Gigil" onclick="filterLocality(this)">Gigil (1)</button>
+      <button class="pill pill-loc" data-locality="Igoji" onclick="filterLocality(this)">Igoji (1)</button>
+      <button class="pill pill-loc" data-locality="Kapsabet" onclick="filterLocality(this)">Kapsabet (1)</button>
+      <button class="pill pill-loc" data-locality="Karatina" onclick="filterLocality(this)">Karatina (1)</button>
+      <button class="pill pill-loc" data-locality="Kenol" onclick="filterLocality(this)">Kenol (1)</button>
+      <button class="pill pill-loc" data-locality="Kiambu" onclick="filterLocality(this)">Kiambu (2)</button>
+      <button class="pill pill-loc" data-locality="Kiganjo" onclick="filterLocality(this)">Kiganjo (1)</button>
+      <button class="pill pill-loc" data-locality="Kimende" onclick="filterLocality(this)">Kimende (1)</button>
+      <button class="pill pill-loc" data-locality="King&#x27;ong&#x27;o" onclick="filterLocality(this)">King&#x27;ong&#x27;o (1)</button>
+      <button class="pill pill-loc" data-locality="Kisumu" onclick="filterLocality(this)">Kisumu (1)</button>
+      <button class="pill pill-loc" data-locality="Kitengela" onclick="filterLocality(this)">Kitengela (1)</button>
+      <button class="pill pill-loc" data-locality="Lamuria" onclick="filterLocality(this)">Lamuria (1)</button>
+      <button class="pill pill-loc" data-locality="Limuru" onclick="filterLocality(this)">Limuru (1)</button>
+      <button class="pill pill-loc" data-locality="Machakos" onclick="filterLocality(this)">Machakos (1)</button>
+      <button class="pill pill-loc" data-locality="Makutano" onclick="filterLocality(this)">Makutano (1)</button>
+      <button class="pill pill-loc" data-locality="Meru" onclick="filterLocality(this)">Meru (1)</button>
+      <button class="pill pill-loc" data-locality="Molo" onclick="filterLocality(this)">Molo (1)</button>
+      <button class="pill pill-loc" data-locality="Muchiene" onclick="filterLocality(this)">Muchiene (1)</button>
+      <button class="pill pill-loc" data-locality="Nairobi" onclick="filterLocality(this)">Nairobi (51)</button>
+      <button class="pill pill-loc" data-locality="Naivasha" onclick="filterLocality(this)">Naivasha (1)</button>
+      <button class="pill pill-loc" data-locality="Nakuru" onclick="filterLocality(this)">Nakuru (1)</button>
+      <button class="pill pill-loc" data-locality="Nanyuki" onclick="filterLocality(this)">Nanyuki (8)</button>
+      <button class="pill pill-loc" data-locality="Naro Moru" onclick="filterLocality(this)">Naro Moru (1)</button>
+      <button class="pill pill-loc" data-locality="Ngong" onclick="filterLocality(this)">Ngong (1)</button>
+      <button class="pill pill-loc" data-locality="Nyahururu" onclick="filterLocality(this)">Nyahururu (1)</button>
+      <button class="pill pill-loc" data-locality="Nyathuna" onclick="filterLocality(this)">Nyathuna (1)</button>
+      <button class="pill pill-loc" data-locality="Nyeri" onclick="filterLocality(this)">Nyeri (7)</button>
+      <button class="pill pill-loc" data-locality="Ol Kalou" onclick="filterLocality(this)">Ol Kalou (1)</button>
+      <button class="pill pill-loc" data-locality="Rongai" onclick="filterLocality(this)">Rongai (1)</button>
+      <button class="pill pill-loc" data-locality="Ruaka" onclick="filterLocality(this)">Ruaka (1)</button>
+      <button class="pill pill-loc" data-locality="Ruiru" onclick="filterLocality(this)">Ruiru (2)</button>
+      <button class="pill pill-loc" data-locality="Rungiri" onclick="filterLocality(this)">Rungiri (1)</button>
+      <button class="pill pill-loc" data-locality="Sagana" onclick="filterLocality(this)">Sagana (1)</button>
+      <button class="pill pill-loc" data-locality="Thika" onclick="filterLocality(this)">Thika (2)</button>
+      <button class="pill pill-loc" data-locality="Timau" onclick="filterLocality(this)">Timau (2)</button>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Code</th>
+          <th>Business Name</th>
+          <th>Address</th>
+          <th>Locality</th>
+          <th>Type</th>
+          <th>Phone</th>
+          <th>Website</th>
+          <th>Hours</th>
+          <th>Google Maps</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">1</td>
+          <td class="code"><span class="badge">ZFC013</span></td>
+          <td class="name">Zeno Fast Charger — Alpha auto parts</td>
+          <td class="addr">PQG5+7VP Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/7SgQ3HyEHcFusgpu7" target="_blank" rel="noopener">https://maps.app.goo.gl/7SgQ3HyEHcFusgpu7</a></td>
+        </tr>
+        <tr data-locality="Ruaka" data-type="Fast Charger">
+          <td class="idx">2</td>
+          <td class="code"><span class="badge">ZFC062</span></td>
+          <td class="name">Zeno Fast Charger — Apex Autospares</td>
+          <td class="addr">QQXM+HXF Ruaka</td>
+          <td class="locality">Ruaka</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/S7qtwGwxV2GLkRJGA" target="_blank" rel="noopener">https://maps.app.goo.gl/S7qtwGwxV2GLkRJGA</a></td>
+        </tr>
+        <tr data-locality="Athi River" data-type="Fast Charger">
+          <td class="idx">3</td>
+          <td class="code"><span class="badge">ZFC008</span></td>
+          <td class="name">Zeno Fast Charger — Athi Autospares</td>
+          <td class="addr">HX2H+M2H Athi River</td>
+          <td class="locality">Athi River</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/2EPCvZru7E9TKazE9?g_st=ac" target="_blank" rel="noopener">https://maps.app.goo.gl/2EPCvZru7E9TKazE9?g_st=ac</a></td>
+        </tr>
+        <tr data-locality="Nyahururu" data-type="Fast Charger">
+          <td class="idx">4</td>
+          <td class="code"><span class="badge">ZFC024</span></td>
+          <td class="name">Zeno Fast Charger — Attra Motorcycle, Nyahururu</td>
+          <td class="addr">29M5+6WF Nyahururu</td>
+          <td class="locality">Nyahururu</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/ZeD7G3WeHE1kZ4u8A" target="_blank" rel="noopener">https://maps.app.goo.gl/ZeD7G3WeHE1kZ4u8A</a></td>
+        </tr>
+        <tr data-locality="Chuka" data-type="Fast Charger">
+          <td class="idx">5</td>
+          <td class="code"><span class="badge">ZFC027</span></td>
+          <td class="name">Zeno Fast Charger — Automark Spares, Chuka</td>
+          <td class="addr">MMH6+32W Chuka</td>
+          <td class="locality">Chuka</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/W7bvhFVYePnpgDG58" target="_blank" rel="noopener">https://maps.app.goo.gl/W7bvhFVYePnpgDG58</a></td>
+        </tr>
+        <tr data-locality="Baba Dogo" data-type="Fast Charger">
+          <td class="idx">6</td>
+          <td class="code"><span class="badge">ZFC002</span></td>
+          <td class="name">Zeno Fast Charger — Baba Dogo HQ</td>
+          <td class="addr">QV4J+P5F Nairobi</td>
+          <td class="locality">Baba Dogo</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/dUb3FKGHQp4232G8A" target="_blank" rel="noopener">https://maps.app.goo.gl/dUb3FKGHQp4232G8A</a></td>
+        </tr>
+        <tr data-locality="Ngong" data-type="Fast Charger">
+          <td class="idx">7</td>
+          <td class="code"><span class="badge">ZFC041</span></td>
+          <td class="name">Zeno Fast Charger — Be Energy Ngong Town</td>
+          <td class="addr">JMW5+822 Ngong</td>
+          <td class="locality">Ngong</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/Su9JNV6ah3ixCLbr7" target="_blank" rel="noopener">https://maps.app.goo.gl/Su9JNV6ah3ixCLbr7</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">8</td>
+          <td class="code"><span class="badge">ZFC047</span></td>
+          <td class="name">Zeno Fast Charger — BE Energy Petrol Station Njiru</td>
+          <td class="addr">PWWM+JQM Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://share.google/OzE2DG2x1kgmJT8fJ" target="_blank" rel="noopener">https://share.google/OzE2DG2x1kgmJT8fJ</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">9</td>
+          <td class="code"><span class="badge">ZFC015</span></td>
+          <td class="name">Zeno Fast Charger — BE Energy Ruai</td>
+          <td class="addr">PXPM+56G Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://share.google/azbbzIj1gP2Gqv7IT" target="_blank" rel="noopener">https://share.google/azbbzIj1gP2Gqv7IT</a></td>
+        </tr>
+        <tr data-locality="Limuru" data-type="Fast Charger">
+          <td class="idx">10</td>
+          <td class="code"><span class="badge">ZFC004</span></td>
+          <td class="name">Zeno Fast Charger — Be Energy, Limuru Town</td>
+          <td class="addr">VJQJ+595 Limuru Town.</td>
+          <td class="locality">Limuru</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/XV2eEBHU9DFRxmGp7" target="_blank" rel="noopener">https://maps.app.goo.gl/XV2eEBHU9DFRxmGp7</a></td>
+        </tr>
+        <tr data-locality="Equator" data-type="Fast Charger">
+          <td class="idx">11</td>
+          <td class="code"><span class="badge">ZFC039</span></td>
+          <td class="name">Zeno Fast Charger — Boito</td>
+          <td class="addr">2GJJ+HCF Equator</td>
+          <td class="locality">Equator</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/NveBZA8wSmvNHtjj8" target="_blank" rel="noopener">https://maps.app.goo.gl/NveBZA8wSmvNHtjj8</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">12</td>
+          <td class="code"><span class="badge">ZFC029</span></td>
+          <td class="name">Zeno Fast Charger — Bunyala Rd</td>
+          <td class="addr">MRXG+Q22 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/bpX6PaVihAZrDoGs9" target="_blank" rel="noopener">https://maps.app.goo.gl/bpX6PaVihAZrDoGs9</a></td>
+        </tr>
+        <tr data-locality="Burnt Forest" data-type="Fast Charger">
+          <td class="idx">13</td>
+          <td class="code"><span class="badge">ZFC053</span></td>
+          <td class="name">Zeno Fast Charger — Burnt Forest</td>
+          <td class="addr">6C7M+8P5 Burnt Forest</td>
+          <td class="locality">Burnt Forest</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/McwaUAoAWB1AXQ2d9" target="_blank" rel="noopener">https://maps.app.goo.gl/McwaUAoAWB1AXQ2d9</a></td>
+        </tr>
+        <tr data-locality="Kiganjo" data-type="Fast Charger">
+          <td class="idx">14</td>
+          <td class="code"><span class="badge">ZFC032</span></td>
+          <td class="name">Zeno Fast Charger — Chaka</td>
+          <td class="addr">J2R2+98Q Kiganjo</td>
+          <td class="locality">Kiganjo</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/5nzDs1dsDrRNWWJx9" target="_blank" rel="noopener">https://maps.app.goo.gl/5nzDs1dsDrRNWWJx9</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">15</td>
+          <td class="code"><span class="badge">ZFC064</span></td>
+          <td class="name">Zeno Fast Charger — Commercial Centre, Opposite  Sarit</td>
+          <td class="addr">PRQ3+W8V Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/FW9F7nEXKgLnvbWw9" target="_blank" rel="noopener">https://maps.app.goo.gl/FW9F7nEXKgLnvbWw9</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">16</td>
+          <td class="code"><span class="badge">ZFC030</span></td>
+          <td class="name">Zeno Fast Charger — Dagoretti Corner Zeno Hub</td>
+          <td class="addr">PQ46+HJX Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/gZ9s3ZFu4bdvix35A" target="_blank" rel="noopener">https://maps.app.goo.gl/gZ9s3ZFu4bdvix35A</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">17</td>
+          <td class="code"><span class="badge">ZFC007</span></td>
+          <td class="name">Zeno Fast Charger — Deeval Auto Spares, Kasarani</td>
+          <td class="addr">QW7P+C88 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/Py1jEdSoWvKfrjQS8" target="_blank" rel="noopener">https://maps.app.goo.gl/Py1jEdSoWvKfrjQS8</a></td>
+        </tr>
+        <tr data-locality="Makutano" data-type="Fast Charger">
+          <td class="idx">18</td>
+          <td class="code"><span class="badge">ZFC006</span></td>
+          <td class="name">Zeno Fast Charger — Den C Dolla Point, Makutano</td>
+          <td class="addr">67RH+WFF Makutano</td>
+          <td class="locality">Makutano</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/wtLiQoida8HXBf2X8" target="_blank" rel="noopener">https://maps.app.goo.gl/wtLiQoida8HXBf2X8</a></td>
+        </tr>
+        <tr data-locality="Kimende" data-type="Fast Charger">
+          <td class="idx">19</td>
+          <td class="code"><span class="badge">ZFC035</span></td>
+          <td class="name">Zeno Fast Charger — Destiny Motorcycles</td>
+          <td class="addr">2J7J+V7H Kimende Township</td>
+          <td class="locality">Kimende</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/Bpssy8d3Y2arrgbx9" target="_blank" rel="noopener">https://maps.app.goo.gl/Bpssy8d3Y2arrgbx9</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">20</td>
+          <td class="code"><span class="badge">ZFC065</span></td>
+          <td class="name">Zeno Fast Charger — Donholm Roundabout</td>
+          <td class="addr">PV3P+J9M Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/oWu8cVRAmLKHqXhE9?g_st=aw" target="_blank" rel="noopener">https://maps.app.goo.gl/oWu8cVRAmLKHqXhE9?g_st=aw</a></td>
+        </tr>
+        <tr data-locality="Embu" data-type="Fast Charger">
+          <td class="idx">21</td>
+          <td class="code"><span class="badge">ZFC034</span></td>
+          <td class="name">Zeno Fast Charger — Donstar the Motor Master, Embu</td>
+          <td class="addr">FF44+P63 Embu</td>
+          <td class="locality">Embu</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/Q63s58gGxzeUzkg77" target="_blank" rel="noopener">https://maps.app.goo.gl/Q63s58gGxzeUzkg77</a></td>
+        </tr>
+        <tr data-locality="Belle Vue" data-type="Fast Charger">
+          <td class="idx">22</td>
+          <td class="code"><span class="badge">ZFC017</span></td>
+          <td class="name">Zeno Fast Charger — Ebenezer Hardware, Kiawara</td>
+          <td class="addr">RR2C+3G3 Belle Vue</td>
+          <td class="locality">Belle Vue</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/eipMuziFjqt8PZ947" target="_blank" rel="noopener">https://maps.app.goo.gl/eipMuziFjqt8PZ947</a></td>
+        </tr>
+        <tr data-locality="Lamuria" data-type="Fast Charger">
+          <td class="idx">23</td>
+          <td class="code"><span class="badge">ZFC021</span></td>
+          <td class="name">Zeno Fast Charger — Ebenezer Hardware, Lamuria</td>
+          <td class="addr">VV87+GMG Lamuria</td>
+          <td class="locality">Lamuria</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/jFWuhNi5asuBsC4y5" target="_blank" rel="noopener">https://maps.app.goo.gl/jFWuhNi5asuBsC4y5</a></td>
+        </tr>
+        <tr data-locality="Nanyuki" data-type="Fast Charger">
+          <td class="idx">24</td>
+          <td class="code"><span class="badge">ZFC028</span></td>
+          <td class="name">Zeno Fast Charger — Elonino Matanya Center</td>
+          <td class="addr">WXP5+54F Nanyuki</td>
+          <td class="locality">Nanyuki</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/axHsUMRERYazJcG69?g_st=aw" target="_blank" rel="noopener">https://maps.app.goo.gl/axHsUMRERYazJcG69?g_st=aw</a></td>
+        </tr>
+        <tr data-locality="Nyeri" data-type="Fast Charger">
+          <td class="idx">25</td>
+          <td class="code"><span class="badge">ZFC005</span></td>
+          <td class="name">Zeno Fast Charger — Express Automart</td>
+          <td class="addr">HXG2+W7F Nyeri</td>
+          <td class="locality">Nyeri</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/aE8ni6cwPuYSFAAm6" target="_blank" rel="noopener">https://maps.app.goo.gl/aE8ni6cwPuYSFAAm6</a></td>
+        </tr>
+        <tr data-locality="Eldoret" data-type="Fast Charger">
+          <td class="idx">26</td>
+          <td class="code"><span class="badge">ZFC054</span></td>
+          <td class="name">Zeno Fast Charger — Good New Missions</td>
+          <td class="addr">F7J7+MJ2 Eldoret</td>
+          <td class="locality">Eldoret</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/C7nzoEfU83dMpa5N6" target="_blank" rel="noopener">https://maps.app.goo.gl/C7nzoEfU83dMpa5N6</a></td>
+        </tr>
+        <tr data-locality="Nyeri" data-type="Fast Charger">
+          <td class="idx">27</td>
+          <td class="code"><span class="badge">ZFC010</span></td>
+          <td class="name">Zeno Fast Charger — Highway Building Jikaze</td>
+          <td class="addr">6GFRWHFJ+7X</td>
+          <td class="locality">Nyeri</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/zLV4aLJmuJhu8pS39" target="_blank" rel="noopener">https://maps.app.goo.gl/zLV4aLJmuJhu8pS39</a></td>
+        </tr>
+        <tr data-locality="Nanyuki" data-type="Fast Charger">
+          <td class="idx">28</td>
+          <td class="code"><span class="badge">ZFC018</span></td>
+          <td class="name">Zeno Fast Charger — Irura Building</td>
+          <td class="addr">236F+8VW Nanyuki</td>
+          <td class="locality">Nanyuki</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/VWzVvHdTrX2YdpuLA" target="_blank" rel="noopener">https://maps.app.goo.gl/VWzVvHdTrX2YdpuLA</a></td>
+        </tr>
+        <tr data-locality="Sagana" data-type="Fast Charger">
+          <td class="idx">29</td>
+          <td class="code"><span class="badge">ZFC022</span></td>
+          <td class="name">Zeno Fast Charger — Jackline Shop</td>
+          <td class="addr">86M6+W3M Sagana</td>
+          <td class="locality">Sagana</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/ZBE7DSREAitUsxd26" target="_blank" rel="noopener">https://maps.app.goo.gl/ZBE7DSREAitUsxd26</a></td>
+        </tr>
+        <tr data-locality="Kapsabet" data-type="Fast Charger">
+          <td class="idx">30</td>
+          <td class="code"><span class="badge">ZFC056</span></td>
+          <td class="name">Zeno Fast Charger — Kamurdin Kapsabet</td>
+          <td class="addr">632Q+R6V Kapsabet</td>
+          <td class="locality">Kapsabet</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/v3weHTfNB7svarSM7" target="_blank" rel="noopener">https://maps.app.goo.gl/v3weHTfNB7svarSM7</a></td>
+        </tr>
+        <tr data-locality="Naro Moru" data-type="Fast Charger">
+          <td class="idx">31</td>
+          <td class="code"><span class="badge">ZFC016</span></td>
+          <td class="name">Zeno Fast Charger — Kennt Technologies</td>
+          <td class="addr">R2HC+7J9 Naro Moru</td>
+          <td class="locality">Naro Moru</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/PJeJe96EvgdqwXTU7" target="_blank" rel="noopener">https://maps.app.goo.gl/PJeJe96EvgdqwXTU7</a></td>
+        </tr>
+        <tr data-locality="Igoji" data-type="Fast Charger">
+          <td class="idx">32</td>
+          <td class="code"><span class="badge">ZFC045</span></td>
+          <td class="name">Zeno Fast Charger — Lion Autospares</td>
+          <td class="addr">RM8G+FQF Igoji</td>
+          <td class="locality">Igoji</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/CRFuNK1G58LbaJ119" target="_blank" rel="noopener">https://maps.app.goo.gl/CRFuNK1G58LbaJ119</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">33</td>
+          <td class="code"><span class="badge">ZFC051</span></td>
+          <td class="name">Zeno Fast Charger — Mantex Supermarket Umoja</td>
+          <td class="addr">PV8V+GPF Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://goo.gl/maps/ZQZJrbnQgW4UHdop7" target="_blank" rel="noopener">https://goo.gl/maps/ZQZJrbnQgW4UHdop7</a></td>
+        </tr>
+        <tr data-locality="Molo" data-type="Fast Charger">
+          <td class="idx">34</td>
+          <td class="code"><span class="badge">ZFC038</span></td>
+          <td class="name">Zeno Fast Charger — Mau Sumit Park View Hotel</td>
+          <td class="addr">RMRV+CP6 Molo</td>
+          <td class="locality">Molo</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://goo.gl/maps/uogYzXe971qywinw5" target="_blank" rel="noopener">https://goo.gl/maps/uogYzXe971qywinw5</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">35</td>
+          <td class="code"><span class="badge">ZFC012</span></td>
+          <td class="name">Zeno Fast Charger — Medipost Pharmacy</td>
+          <td class="addr">PVW8+JR3 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/eFXfn9VS31rPfzxG6" target="_blank" rel="noopener">https://maps.app.goo.gl/eFXfn9VS31rPfzxG6</a></td>
+        </tr>
+        <tr data-locality="Giachuma" data-type="Fast Charger">
+          <td class="idx">36</td>
+          <td class="code"><span class="badge">ZFC042</span></td>
+          <td class="name">Zeno Fast Charger — Metal Gate Cyber</td>
+          <td class="addr">V27J+CWJ Mureru Farm</td>
+          <td class="locality">Giachuma</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/7EMxEy1vX4QGwqJZ7" target="_blank" rel="noopener">https://maps.app.goo.gl/7EMxEy1vX4QGwqJZ7</a></td>
+        </tr>
+        <tr data-locality="Gigil" data-type="Fast Charger">
+          <td class="idx">37</td>
+          <td class="code"><span class="badge">ZFC043</span></td>
+          <td class="name">Zeno Fast Charger — Miharati Bookshop</td>
+          <td class="addr">F8XG+GFH Gilgil</td>
+          <td class="locality">Gigil</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/fsEQrWWioTTxZwwAA" target="_blank" rel="noopener">https://maps.app.goo.gl/fsEQrWWioTTxZwwAA</a></td>
+        </tr>
+        <tr data-locality="Ruiru" data-type="Fast Charger">
+          <td class="idx">38</td>
+          <td class="code"><span class="badge">ZFC003</span></td>
+          <td class="name">Zeno Fast Charger — MonsehPharm Pharmacy</td>
+          <td class="addr">RW2H+P8F Ruiru</td>
+          <td class="locality">Ruiru</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/SxKRAwPo7anBep9f9" target="_blank" rel="noopener">https://maps.app.goo.gl/SxKRAwPo7anBep9f9</a></td>
+        </tr>
+        <tr data-locality="Awasi" data-type="Fast Charger">
+          <td class="idx">39</td>
+          <td class="code"><span class="badge">ZFC059</span></td>
+          <td class="name">Zeno Fast Charger — New Life Vision Cyber Awasi</td>
+          <td class="addr">R3PG+QM8 Awasi</td>
+          <td class="locality">Awasi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/sKaFvek8QkSxhNYGA" target="_blank" rel="noopener">https://maps.app.goo.gl/sKaFvek8QkSxhNYGA</a></td>
+        </tr>
+        <tr data-locality="King&#x27;ong&#x27;o" data-type="Fast Charger">
+          <td class="idx">40</td>
+          <td class="code"><span class="badge">ZFC031</span></td>
+          <td class="name">Zeno Fast Charger — Nyeri Service Centre</td>
+          <td class="addr">HXP2+JPC King&#x27;ong&#x27;o</td>
+          <td class="locality">King&#x27;ong&#x27;o</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/7qCnc4f1mAnZxzyT9?g_st=ipc" target="_blank" rel="noopener">https://maps.app.goo.gl/7qCnc4f1mAnZxzyT9?g_st=ipc</a></td>
+        </tr>
+        <tr data-locality="Nanyuki" data-type="Fast Charger">
+          <td class="idx">41</td>
+          <td class="code"><span class="badge">ZFC023</span></td>
+          <td class="name">Zeno Fast Charger — Odyssey Safari</td>
+          <td class="addr">239F+MJ9 Nanyuki</td>
+          <td class="locality">Nanyuki</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/fBgzpwPKBEkyscwWA" target="_blank" rel="noopener">https://maps.app.goo.gl/fBgzpwPKBEkyscwWA</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">42</td>
+          <td class="code"><span class="badge">ZFC049</span></td>
+          <td class="name">Zeno Fast Charger — Ola Station M-Kopa Phone Shop</td>
+          <td class="addr">PVM2+HP6 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/RRZwwKBxL5Q2GQdM9" target="_blank" rel="noopener">https://maps.app.goo.gl/RRZwwKBxL5Q2GQdM9</a></td>
+        </tr>
+        <tr data-locality="Nakuru" data-type="Fast Charger">
+          <td class="idx">43</td>
+          <td class="code"><span class="badge">ZFC037</span></td>
+          <td class="name">Zeno Fast Charger — Olive Cleaning Services</td>
+          <td class="addr">P4H3+737 Nakuru</td>
+          <td class="locality">Nakuru</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/8YR6PLX8fD83gv6F9" target="_blank" rel="noopener">https://maps.app.goo.gl/8YR6PLX8fD83gv6F9</a></td>
+        </tr>
+        <tr data-locality="Naivasha" data-type="Fast Charger">
+          <td class="idx">44</td>
+          <td class="code"><span class="badge">ZFC036</span></td>
+          <td class="name">Zeno Fast Charger — One Touch Photo Studio, Naivasha</td>
+          <td class="addr">7CMM+7VH Naivasha</td>
+          <td class="locality">Naivasha</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/kCYvYd3GNmWjbVKQ9" target="_blank" rel="noopener">https://maps.app.goo.gl/kCYvYd3GNmWjbVKQ9</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">45</td>
+          <td class="code"><span class="badge">ZFC048</span></td>
+          <td class="name">Zeno Fast Charger — PEFA Church Githurai</td>
+          <td class="addr">QWX6+CMV Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/cwfMg4ARSKvW6HFk6" target="_blank" rel="noopener">https://maps.app.goo.gl/cwfMg4ARSKvW6HFk6</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">46</td>
+          <td class="code"><span class="badge">ZFC011</span></td>
+          <td class="name">Zeno Fast Charger — Piki Pata Enterprise</td>
+          <td class="addr">PRFF+PPP Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/mijpJErCHPAk5WRK6" target="_blank" rel="noopener">https://maps.app.goo.gl/mijpJErCHPAk5WRK6</a></td>
+        </tr>
+        <tr data-locality="Ol Kalou" data-type="Fast Charger">
+          <td class="idx">47</td>
+          <td class="code"><span class="badge">ZFC052</span></td>
+          <td class="name">Zeno Fast Charger — Pioneer Motorbike Spares, Ol Kalou</td>
+          <td class="addr">P9MH+54F Ol Kalou</td>
+          <td class="locality">Ol Kalou</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/nLrqR46AdJiwZeHL9" target="_blank" rel="noopener">https://maps.app.goo.gl/nLrqR46AdJiwZeHL9</a></td>
+        </tr>
+        <tr data-locality="Chavakali" data-type="Fast Charger">
+          <td class="idx">48</td>
+          <td class="code"><span class="badge">ZFC057</span></td>
+          <td class="name">Zeno Fast Charger — Queens Salon Chavakali</td>
+          <td class="addr">4P7H+MP4 Chavakali</td>
+          <td class="locality">Chavakali</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/hhG1WPMAM5rHDyxY9" target="_blank" rel="noopener">https://maps.app.goo.gl/hhG1WPMAM5rHDyxY9</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">49</td>
+          <td class="code"><span class="badge">ZFC061</span></td>
+          <td class="name">Zeno Fast Charger — Quickmark,Waiyaki Way</td>
+          <td class="addr">PQP7+GGV Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/iXLw4MtSfCVAKEVP7" target="_blank" rel="noopener">https://maps.app.goo.gl/iXLw4MtSfCVAKEVP7</a></td>
+        </tr>
+        <tr data-locality="Rongai" data-type="Fast Charger">
+          <td class="idx">50</td>
+          <td class="code"><span class="badge">ZFC040</span></td>
+          <td class="name">Zeno Fast Charger — Salgaa Tumaini Church</td>
+          <td class="addr">QVQ6+5W7 Rongai</td>
+          <td class="locality">Rongai</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/TW3p3Ls4MQhurMYr5" target="_blank" rel="noopener">https://maps.app.goo.gl/TW3p3Ls4MQhurMYr5</a></td>
+        </tr>
+        <tr data-locality="Kitengela" data-type="Fast Charger">
+          <td class="idx">51</td>
+          <td class="code"><span class="badge">ZFC063</span></td>
+          <td class="name">Zeno Fast Charger — Sandalwood Hotel Kitengela</td>
+          <td class="addr">GXG5+FRV Kitengela</td>
+          <td class="locality">Kitengela</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/8XyqYbb8CpD7rs5P7" target="_blank" rel="noopener">https://maps.app.goo.gl/8XyqYbb8CpD7rs5P7</a></td>
+        </tr>
+        <tr data-locality="Nyathuna" data-type="Fast Charger">
+          <td class="idx">52</td>
+          <td class="code"><span class="badge">ZFC066</span></td>
+          <td class="name">Zeno Fast Charger — Sigon Mitumba Kikuyu</td>
+          <td class="addr">QMX3+7V9 Nyathuna</td>
+          <td class="locality">Nyathuna</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/rS4xrVMkKXWvPtAK6" target="_blank" rel="noopener">https://maps.app.goo.gl/rS4xrVMkKXWvPtAK6</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">53</td>
+          <td class="code"><span class="badge">ZFC060</span></td>
+          <td class="name">Zeno Fast Charger — Smart Joint Centre</td>
+          <td class="addr">PRM6+9M7 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/hmhHYEQjyBzr2UoeA?g_st=aw" target="_blank" rel="noopener">https://maps.app.goo.gl/hmhHYEQjyBzr2UoeA?g_st=aw</a></td>
+        </tr>
+        <tr data-locality="Kisumu" data-type="Fast Charger">
+          <td class="idx">54</td>
+          <td class="code"><span class="badge">ZFC058</span></td>
+          <td class="name">Zeno Fast Charger — Solar Power Solution Kisumu</td>
+          <td class="addr">VQX2+C6C Kisumu</td>
+          <td class="locality">Kisumu</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/sk8pYXR4rcMuUzVc9" target="_blank" rel="noopener">https://maps.app.goo.gl/sk8pYXR4rcMuUzVc9</a></td>
+        </tr>
+        <tr data-locality="Kenol" data-type="Fast Charger">
+          <td class="idx">55</td>
+          <td class="code"><span class="badge">ZFC050</span></td>
+          <td class="name">Zeno Fast Charger — Sons Kimandi House</td>
+          <td class="addr">344C+6QV Kabati</td>
+          <td class="locality">Kenol</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/seCPWwLG2qhznuxB7" target="_blank" rel="noopener">https://maps.app.goo.gl/seCPWwLG2qhznuxB7</a></td>
+        </tr>
+        <tr data-locality="Muchiene" data-type="Fast Charger">
+          <td class="idx">56</td>
+          <td class="code"><span class="badge">ZFC033</span></td>
+          <td class="name">Zeno Fast Charger — Subuiga</td>
+          <td class="addr">4FQC+XVF Muchiene</td>
+          <td class="locality">Muchiene</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/hjyJFSWfdWTu2P9s5" target="_blank" rel="noopener">https://maps.app.goo.gl/hjyJFSWfdWTu2P9s5</a></td>
+        </tr>
+        <tr data-locality="Rungiri" data-type="Fast Charger">
+          <td class="idx">57</td>
+          <td class="code"><span class="badge">ZFC026</span></td>
+          <td class="name">Zeno Fast Charger — Superwash Laundry Shop</td>
+          <td class="addr">PPR3+9WW Rungiri</td>
+          <td class="locality">Rungiri</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/6bsgNWJWRx27xQcn7" target="_blank" rel="noopener">https://maps.app.goo.gl/6bsgNWJWRx27xQcn7</a></td>
+        </tr>
+        <tr data-locality="Thika" data-type="Fast Charger">
+          <td class="idx">58</td>
+          <td class="code"><span class="badge">ZFC025</span></td>
+          <td class="name">Zeno Fast Charger — Thika</td>
+          <td class="addr">X35C+JRQ Thika</td>
+          <td class="locality">Thika</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/AYoq2J1T9VK9DUZr8" target="_blank" rel="noopener">https://maps.app.goo.gl/AYoq2J1T9VK9DUZr8</a></td>
+        </tr>
+        <tr data-locality="Timau" data-type="Fast Charger">
+          <td class="idx">59</td>
+          <td class="code"><span class="badge">ZFC044</span></td>
+          <td class="name">Zeno Fast Charger — Upendo, Timau</td>
+          <td class="addr">36PR+QCM Timau</td>
+          <td class="locality">Timau</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/envi3z4FRXnqynV6A" target="_blank" rel="noopener">https://maps.app.goo.gl/envi3z4FRXnqynV6A</a></td>
+        </tr>
+        <tr data-locality="Karatina" data-type="Fast Charger">
+          <td class="idx">60</td>
+          <td class="code"><span class="badge">ZFC001</span></td>
+          <td class="name">Zeno Fast Charger — Victoria Wholesales</td>
+          <td class="addr">G48G+VJP Karatina</td>
+          <td class="locality">Karatina</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/f2FzFymvYdjN9zSC8" target="_blank" rel="noopener">https://maps.app.goo.gl/f2FzFymvYdjN9zSC8</a></td>
+        </tr>
+        <tr data-locality="Eldoret" data-type="Fast Charger">
+          <td class="idx">61</td>
+          <td class="code"><span class="badge">ZFC055</span></td>
+          <td class="name">Zeno Fast Charger — VNY Motor Parts Eldoret</td>
+          <td class="addr">G73C+XVW Eldoret</td>
+          <td class="locality">Eldoret</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/yJeNXzgUcoU9rx1R9" target="_blank" rel="noopener">https://maps.app.goo.gl/yJeNXzgUcoU9rx1R9</a></td>
+        </tr>
+        <tr data-locality="Meru" data-type="Fast Charger">
+          <td class="idx">62</td>
+          <td class="code"><span class="badge">ZFC046</span></td>
+          <td class="name">Zeno Fast Charger — Webros Autospares</td>
+          <td class="addr">2MW5+34C Meru</td>
+          <td class="locality">Meru</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/ACc6bJFUxLvL2WYv6" target="_blank" rel="noopener">https://maps.app.goo.gl/ACc6bJFUxLvL2WYv6</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Fast Charger">
+          <td class="idx">63</td>
+          <td class="code"><span class="badge">ZFC009</span></td>
+          <td class="name">Zeno Fast Charger — Westlands Hub</td>
+          <td class="addr">PRP4+85C Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/6bAE43VoCyznCjgr5" target="_blank" rel="noopener">https://maps.app.goo.gl/6bAE43VoCyznCjgr5</a></td>
+        </tr>
+        <tr data-locality="Timau" data-type="Fast Charger">
+          <td class="idx">64</td>
+          <td class="code"><span class="badge">ZFC019</span></td>
+          <td class="name">Zeno Fast Charger — Wines &amp; Spirits, Timau</td>
+          <td class="addr">36PR+7VQ Timau</td>
+          <td class="locality">Timau</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/tvwak62wktLquhsL9" target="_blank" rel="noopener">https://maps.app.goo.gl/tvwak62wktLquhsL9</a></td>
+        </tr>
+        <tr data-locality="Nanyuki" data-type="Fast Charger">
+          <td class="idx">65</td>
+          <td class="code"><span class="badge">ZFC014</span></td>
+          <td class="name">Zeno Fast Charger — Zeno Hub Nanyuki</td>
+          <td class="addr">237H+97H Nanyuki</td>
+          <td class="locality">Nanyuki</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/8qhRZChNDtkV1hws5" target="_blank" rel="noopener">https://maps.app.goo.gl/8qhRZChNDtkV1hws5</a></td>
+        </tr>
+        <tr data-locality="Nyeri" data-type="Fast Charger">
+          <td class="idx">66</td>
+          <td class="code"><span class="badge">ZFC020</span></td>
+          <td class="name">Zeno Fast Charger — Zeno Hub Nyeri</td>
+          <td class="addr">HXH2+V7J Nyeri</td>
+          <td class="locality">Nyeri</td>
+          <td class="type-col"><span class="type-badge badge-fc">Fast Charger</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/5WYbcXmwMRDhxtsn8" target="_blank" rel="noopener">https://maps.app.goo.gl/5WYbcXmwMRDhxtsn8</a></td>
+        </tr>
+        <tr data-locality="Machakos" data-type="Swap Station">
+          <td class="idx">67</td>
+          <td class="code"><span class="badge">11998324387878300000</span></td>
+          <td class="name">Zeno Swap Station — Anthena Hotel, Mlolongo</td>
+          <td class="addr">HWXV+VHV Mlolongo</td>
+          <td class="locality">Machakos</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="Mon  | Tue  | Wed  | Thu  | Fri  | Sat  | Sun">Mon  | Tue  | Wed  | Thu  | Fri  | Sat  | Sun</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/yFJqFhVeTBb9y8dM9" target="_blank" rel="noopener">https://maps.app.goo.gl/yFJqFhVeTBb9y8dM9</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">68</td>
+          <td class="code"><span class="badge">ZENO-NBI-BENG-010</span></td>
+          <td class="name">Zeno Swap Station — Be Energy Racecourse, Ngong</td>
+          <td class="addr">MPVP+7FV Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/wQatAh7oVKmGU4xn9" target="_blank" rel="noopener">https://maps.app.goo.gl/wQatAh7oVKmGU4xn9</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">69</td>
+          <td class="code"><span class="badge">ZENO-NBI-GITA-020</span></td>
+          <td class="name">Zeno Swap Station — Be Energy, Gitaru</td>
+          <td class="addr">QM9J+VVQ Gitaru</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/Eue7253fVVwMVnhP9" target="_blank" rel="noopener">https://maps.app.goo.gl/Eue7253fVVwMVnhP9</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">70</td>
+          <td class="code"><span class="badge">ZENO-NBI-KAYO-011</span></td>
+          <td class="name">Zeno Swap Station — Be Energy, Kayole</td>
+          <td class="addr">PWM8+M88 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/71N2eKHJ2WtuboSH8" target="_blank" rel="noopener">https://maps.app.goo.gl/71N2eKHJ2WtuboSH8</a></td>
+        </tr>
+        <tr data-locality="Kiambu" data-type="Swap Station">
+          <td class="idx">71</td>
+          <td class="code"><span class="badge">ZENO-KBU-BEKI-022</span></td>
+          <td class="name">Zeno Swap Station — BE Energy, Kiambu</td>
+          <td class="addr">RRHG+WWW Kiambu</td>
+          <td class="locality">Kiambu</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://share.google/6JIfzGTrxGeDLkfAP" target="_blank" rel="noopener">https://share.google/6JIfzGTrxGeDLkfAP</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">72</td>
+          <td class="code"><span class="badge">ZENO-NBI-KISE-017</span></td>
+          <td class="name">Zeno Swap Station — Be Energy, Kiserian</td>
+          <td class="addr">HM9P+CCX Kiserian</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/eaRZDMBJTpTfKRvd6" target="_blank" rel="noopener">https://maps.app.goo.gl/eaRZDMBJTpTfKRvd6</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">73</td>
+          <td class="code"><span class="badge">ZENO-NBI-BEOU-009</span></td>
+          <td class="name">Zeno Swap Station — Be Energy, Outering</td>
+          <td class="addr">MVVQ+C8 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/XYXWZEZGUQz7R6gEA" target="_blank" rel="noopener">https://maps.app.goo.gl/XYXWZEZGUQz7R6gEA</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">74</td>
+          <td class="code"><span class="badge">ZENO-NBI-RONG-021</span></td>
+          <td class="name">Zeno Swap Station — Be Energy, Rongai</td>
+          <td class="addr">JP3V+C8W Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/St3v1fP1P6YsLACJ7" target="_blank" rel="noopener">https://maps.app.goo.gl/St3v1fP1P6YsLACJ7</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">75</td>
+          <td class="code"><span class="badge">ZENO-NBI-UTAW-019</span></td>
+          <td class="name">Zeno Swap Station — Be Energy, Utawala</td>
+          <td class="addr">PXFC+XQW Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/CYFy2DsW5AMKwq2GA" target="_blank" rel="noopener">https://maps.app.goo.gl/CYFy2DsW5AMKwq2GA</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">76</td>
+          <td class="code"><span class="badge">ZENO-NBI-SVCB-013</span></td>
+          <td class="name">Zeno Swap Station — Bunyala Road</td>
+          <td class="addr">MRXG+Q22 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/yR7WNhKE6n9xVpFW6" target="_blank" rel="noopener">https://maps.app.goo.gl/yR7WNhKE6n9xVpFW6</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">77</td>
+          <td class="code"><span class="badge">ZENO-NBI-MOMB-010</span></td>
+          <td class="name">Zeno Swap Station — District Mall, Mombasa Road</td>
+          <td class="addr">MRHV+2Q Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/humSuaUrymRhmDfe7" target="_blank" rel="noopener">https://maps.app.goo.gl/humSuaUrymRhmDfe7</a></td>
+        </tr>
+        <tr data-locality="Nanyuki" data-type="Swap Station">
+          <td class="idx">78</td>
+          <td class="code"><span class="badge">ZENO-NAN-DORM-003</span></td>
+          <td class="name">Zeno Swap Station — Dormans, Nanyuki</td>
+          <td class="addr">237H+84H Nanyuki</td>
+          <td class="locality">Nanyuki</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/ZXrcDtg6VQvf9p2b9" target="_blank" rel="noopener">https://maps.app.goo.gl/ZXrcDtg6VQvf9p2b9</a></td>
+        </tr>
+        <tr data-locality="Ruiru" data-type="Swap Station">
+          <td class="idx">79</td>
+          <td class="code"><span class="badge">ZENO-RUI-EAST-004</span></td>
+          <td class="name">Zeno Swap Station — Eastern Bypass, Ruiru</td>
+          <td class="addr">RXP3+WP Ruiru</td>
+          <td class="locality">Ruiru</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/C515sq5qqTM359AF6" target="_blank" rel="noopener">https://maps.app.goo.gl/C515sq5qqTM359AF6</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">80</td>
+          <td class="code"><span class="badge">ZENO-NBI-EAST-008</span></td>
+          <td class="name">Zeno Swap Station — Extra Miles Auto Spares, Eastleigh</td>
+          <td class="addr">PRMW+86M Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/ySKQxDzc5Xtcy1pV8" target="_blank" rel="noopener">https://maps.app.goo.gl/ySKQxDzc5Xtcy1pV8</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">81</td>
+          <td class="code"><span class="badge">ZENO-NBI-GIGI-018</span></td>
+          <td class="name">Zeno Swap Station — Gigiri Courtyard, Gigiri</td>
+          <td class="addr">QR84+VXJ Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/J7xrRhRrEomFXYH76" target="_blank" rel="noopener">https://maps.app.goo.gl/J7xrRhRrEomFXYH76</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">82</td>
+          <td class="code"><span class="badge">ZENO-NBI-JOGO-009</span></td>
+          <td class="name">Zeno Swap Station — Jam Rescue, Jogoo Road</td>
+          <td class="addr">PV3G+99 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/ratG6XgLdkPqrbs5A" target="_blank" rel="noopener">https://maps.app.goo.gl/ratG6XgLdkPqrbs5A</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">83</td>
+          <td class="code"><span class="badge">ZENO-NBI-JUBI-007</span></td>
+          <td class="name">Zeno Swap Station — Jubilee House, Nairobi</td>
+          <td class="addr">MVFV+8QP Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/devGPi66g1JzTmHP9" target="_blank" rel="noopener">https://maps.app.goo.gl/devGPi66g1JzTmHP9</a></td>
+        </tr>
+        <tr data-locality="Kiambu" data-type="Swap Station">
+          <td class="idx">84</td>
+          <td class="code"><span class="badge">ZENO-NBI-KALJ-021</span></td>
+          <td class="name">Zeno Swap Station — Kalimoni, Juja</td>
+          <td class="addr">V2R7+VH7 Juja</td>
+          <td class="locality">Kiambu</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/BbhYgF1f1LzNR3um9" target="_blank" rel="noopener">https://maps.app.goo.gl/BbhYgF1f1LzNR3um9</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">85</td>
+          <td class="code"><span class="badge">ZENO-NBI-KASA-006</span></td>
+          <td class="name">Zeno Swap Station — Kasarani, Nairobi</td>
+          <td class="addr">QVJX+V4J Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/imd3HKbdCQr9kuDF7" target="_blank" rel="noopener">https://maps.app.goo.gl/imd3HKbdCQr9kuDF7</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">86</td>
+          <td class="code"><span class="badge">ZENO-NBI-KCHA-002</span></td>
+          <td class="name">Zeno Swap Station — Kenya Continental Hotel, Rhapta</td>
+          <td class="addr">PQMX+J6G Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://share.google/QUGiJTiXhPV4jIEKw" target="_blank" rel="noopener">https://share.google/QUGiJTiXhPV4jIEKw</a></td>
+        </tr>
+        <tr data-locality="Nyeri" data-type="Swap Station">
+          <td class="idx">87</td>
+          <td class="code"><span class="badge">ZENO-NAN-KFAN-005</span></td>
+          <td class="name">Zeno Swap Station — KFA, Naro Moru</td>
+          <td class="addr">R2HC+6JW Naro Moru</td>
+          <td class="locality">Nyeri</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/eBrSts2eSJimS3nBA" target="_blank" rel="noopener">https://maps.app.goo.gl/eBrSts2eSJimS3nBA</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">88</td>
+          <td class="code"><span class="badge">ZENO-NBI-KANG-019</span></td>
+          <td class="name">Zeno Swap Station — Kwa Ndwaru, Kangemi</td>
+          <td class="addr">PPCP+5FW Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/w4QLWgmJHyepJvxU7" target="_blank" rel="noopener">https://maps.app.goo.gl/w4QLWgmJHyepJvxU7</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">89</td>
+          <td class="code"><span class="badge">ZENO-NBI-LACA-012</span></td>
+          <td class="name">Zeno Swap Station — La Casa Bendicta, Ngara</td>
+          <td class="addr">PRGG+JF5 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/uZ3y3XYoLmFCRfTGA" target="_blank" rel="noopener">https://maps.app.goo.gl/uZ3y3XYoLmFCRfTGA</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">90</td>
+          <td class="code"><span class="badge">ZENO-NBI-LUNG-020</span></td>
+          <td class="name">Zeno Swap Station — Lunga Lunga Square, Industrial Area</td>
+          <td class="addr">MVR6+F6V Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/V7dCMcVbxaQWqFN26" target="_blank" rel="noopener">https://maps.app.goo.gl/V7dCMcVbxaQWqFN26</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">91</td>
+          <td class="code"><span class="badge">ZENO-NBI-MSQK-001</span></td>
+          <td class="name">Zeno Swap Station — M Square, Kilimani</td>
+          <td class="addr">PQ69+5PJ, 103554 Gitanga Rd</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/3A1Adg5fmmFQiQxTA?g_st=ic" target="_blank" rel="noopener">https://maps.app.goo.gl/3A1Adg5fmmFQiQxTA?g_st=ic</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">92</td>
+          <td class="code"><span class="badge">ZENO-NBI-MAVU-015</span></td>
+          <td class="name">Zeno Swap Station — Mavuno Garage, Upperhill</td>
+          <td class="addr">PR29+Q6F Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/Cojty4eaT6vg4PQt5" target="_blank" rel="noopener">https://maps.app.goo.gl/Cojty4eaT6vg4PQt5</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">93</td>
+          <td class="code"><span class="badge">ZENO-NBI-MILB-017</span></td>
+          <td class="name">Zeno Swap Station — Milimani Business Park, Kilimani</td>
+          <td class="addr">PR62+GXR Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/TUhKC6RnwR2MutEo9" target="_blank" rel="noopener">https://maps.app.goo.gl/TUhKC6RnwR2MutEo9</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">94</td>
+          <td class="code"><span class="badge">ZENO-NBI-WEST-013</span></td>
+          <td class="name">Zeno Swap Station — Mpaka Road, Westlands</td>
+          <td class="addr">PQC9+7F7 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/PeegwbCSvaGDrSnh6" target="_blank" rel="noopener">https://maps.app.goo.gl/PeegwbCSvaGDrSnh6</a></td>
+        </tr>
+        <tr data-locality="Nanyuki" data-type="Swap Station">
+          <td class="idx">95</td>
+          <td class="code"><span class="badge">ZENO-NAN-MATT-001</span></td>
+          <td class="name">Zeno Swap Station — Nan Matt, Nanyuki</td>
+          <td class="addr">237G+XC4 Nanyuki</td>
+          <td class="locality">Nanyuki</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/Nqto5RZKYnk4WprK7" target="_blank" rel="noopener">https://maps.app.goo.gl/Nqto5RZKYnk4WprK7</a></td>
+        </tr>
+        <tr data-locality="Nyeri" data-type="Swap Station">
+          <td class="idx">96</td>
+          <td class="code"><span class="badge">ZENO-NYR-NGAN-011</span></td>
+          <td class="name">Zeno Swap Station — Ngangarithi, Nyeri</td>
+          <td class="addr">HX92+PHW Nyeri</td>
+          <td class="locality">Nyeri</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/QEkSwE9YkYny75ou7" target="_blank" rel="noopener">https://maps.app.goo.gl/QEkSwE9YkYny75ou7</a></td>
+        </tr>
+        <tr data-locality="Nanyuki" data-type="Swap Station">
+          <td class="idx">97</td>
+          <td class="code"><span class="badge">ZENO-NAN-PEAK-002</span></td>
+          <td class="name">Zeno Swap Station — Peak Place, Nanyuki</td>
+          <td class="addr">234F+72J Nanyuki</td>
+          <td class="locality">Nanyuki</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/UdTHQpuAScbZPmXv8" target="_blank" rel="noopener">https://maps.app.goo.gl/UdTHQpuAScbZPmXv8</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">98</td>
+          <td class="code"><span class="badge">ZENO-NBI-PITS-015</span></td>
+          <td class="name">Zeno Swap Station — Pitstop, NBO West</td>
+          <td class="addr">MRR9+QHX Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/X9T3Ps4rRQugNTzr5" target="_blank" rel="noopener">https://maps.app.goo.gl/X9T3Ps4rRQugNTzr5</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">99</td>
+          <td class="code"><span class="badge">ZENO-NBI-PARK-012</span></td>
+          <td class="name">Zeno Swap Station — Pop Up Mall, Parklands</td>
+          <td class="addr">PRR8+6QX Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/Hfcej8dpWo9dZUNH8" target="_blank" rel="noopener">https://maps.app.goo.gl/Hfcej8dpWo9dZUNH8</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">100</td>
+          <td class="code"><span class="badge">ZENO-NBI-QEMB-008</span></td>
+          <td class="name">Zeno Swap Station — Quickmart, Embakasi</td>
+          <td class="addr">MWP8+F42 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/vxSHWg799u8kJrj39" target="_blank" rel="noopener">https://maps.app.goo.gl/vxSHWg799u8kJrj39</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">101</td>
+          <td class="code"><span class="badge">ZENO-NBI-QKIL-006</span></td>
+          <td class="name">Zeno Swap Station — Quickmart, Kileleshwa</td>
+          <td class="addr">PQGQ+8FV Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/5pn4Nzshit9ojQv89" target="_blank" rel="noopener">https://maps.app.goo.gl/5pn4Nzshit9ojQv89</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">102</td>
+          <td class="code"><span class="badge">ZENO-NBI-ROYS-018</span></td>
+          <td class="name">Zeno Swap Station — Quickmart, Roysambu</td>
+          <td class="addr">QVMR+VP Ruiru</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/5HXLchc5cX2vHiWu6" target="_blank" rel="noopener">https://maps.app.goo.gl/5HXLchc5cX2vHiWu6</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">103</td>
+          <td class="code"><span class="badge">ZENO-NBI-RUAK-004</span></td>
+          <td class="name">Zeno Swap Station — Quickmart, Ruaka</td>
+          <td class="addr">QQVM+687 Ruaka</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/YEVu7ez6oSaHWzkk7" target="_blank" rel="noopener">https://maps.app.goo.gl/YEVu7ez6oSaHWzkk7</a></td>
+        </tr>
+        <tr data-locality="Nanyuki" data-type="Swap Station">
+          <td class="idx">104</td>
+          <td class="code"><span class="badge">ZENO-NAN-ROYA-003</span></td>
+          <td class="name">Zeno Swap Station — Royal Apartments, Nanyuki</td>
+          <td class="addr">23G9+23J Nanyuki</td>
+          <td class="locality">Nanyuki</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/fgapUAru6ch6E5scA" target="_blank" rel="noopener">https://maps.app.goo.gl/fgapUAru6ch6E5scA</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">105</td>
+          <td class="code"><span class="badge">ZENO-NBI-TABE-022</span></td>
+          <td class="name">Zeno Swap Station — Tabere Crescent, Kilimani</td>
+          <td class="addr">PQCV+XGG, Tabere Cres, Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/YrzsGcBwC4DRzxuQA" target="_blank" rel="noopener">https://maps.app.goo.gl/YrzsGcBwC4DRzxuQA</a></td>
+        </tr>
+        <tr data-locality="Thika" data-type="Swap Station">
+          <td class="idx">106</td>
+          <td class="code"><span class="badge">ZENO-THK-TOWN-005</span></td>
+          <td class="name">Zeno Swap Station — Thika Town, Thika</td>
+          <td class="addr">X35C+HRG Thika</td>
+          <td class="locality">Thika</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://www.google.com/maps/place/-1.041057,37.072077/data=!4m6!3m5!1s0!7e2!8m2!3d-1.0410572!4d37.0720775?utm_source=mstt_1&amp;entry=gps&amp;coh=192189&amp;g_ep=CAESBzI1LjE0LjAYACD67A0qYyw5NDIyMzI5OSw5NDIxNjQxMyw5NDIxMjQ5Niw5NDIwNzM5NCw5NDIwNzUwNiw5NDIwODUwNiw5NDIxNzUyMyw5NDIxODY1Myw5NDIyOTgzOSw0NzA4NDM5Myw5NDIxMzIwMEICS0U%3D&amp;skid=ceb202e2-c059-49ab-9328-49593eb1a22b" target="_blank" rel="noopener">https://www.google.com/maps/place/-1.041057,37.072077/data=!4m6!3m5!1s0!7e2!8m2!3d-1.0410572!4d37.0720775?utm_source=mstt_1&amp;entry=gps&amp;coh=192189&amp;g_ep=CAESBzI1LjE0LjAYACD67A0qYyw5NDIyMzI5OSw5NDIxNjQxMyw5NDIxMjQ5Niw5NDIwNzM5NCw5NDIwNzUwNiw5NDIwODUwNiw5NDIxNzUyMyw5NDIxODY1Myw5NDIyOTgzOSw0NzA4NDM5Myw5NDIxMzIwMEICS0U%3D&amp;skid=ceb202e2-c059-49ab-9328-49593eb1a22b</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">107</td>
+          <td class="code"><span class="badge">ZENO-NBI-UPKK-007</span></td>
+          <td class="name">Zeno Swap Station — Universal Plaza, Kikuyu</td>
+          <td class="addr">PMX8+279 Rungiri</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/gWv3iHAiDUH9T8nR7" target="_blank" rel="noopener">https://maps.app.goo.gl/gWv3iHAiDUH9T8nR7</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">108</td>
+          <td class="code"><span class="badge">ZENO-NBI-WABI-014</span></td>
+          <td class="name">Zeno Swap Station — Wabi Energy, Jogoo Road</td>
+          <td class="addr">PV42+H63 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/NBFc1qyphc5YakjU7" target="_blank" rel="noopener">https://maps.app.goo.gl/NBFc1qyphc5YakjU7</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">109</td>
+          <td class="code"><span class="badge">ZENO-NBI-WHUB-016</span></td>
+          <td class="name">Zeno Swap Station — Westlands</td>
+          <td class="addr">PQC9+7F7 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/PeegwbCSvaGDrSnh6" target="_blank" rel="noopener">https://maps.app.goo.gl/PeegwbCSvaGDrSnh6</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">110</td>
+          <td class="code"><span class="badge">ZENO-NBI-YAKA-014</span></td>
+          <td class="name">Zeno Swap Station — Yakama Motors, Upperhill</td>
+          <td class="addr">PR44+848 Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/DLcMW16RMSnEFYD46" target="_blank" rel="noopener">https://maps.app.goo.gl/DLcMW16RMSnEFYD46</a></td>
+        </tr>
+        <tr data-locality="Nyeri" data-type="Swap Station">
+          <td class="idx">111</td>
+          <td class="code"><span class="badge">02323361420626602073</span></td>
+          <td class="name">Zeno Swap Station — Cumulus, Nyeri</td>
+          <td class="addr">HXH2+8XJ, Nyeri</td>
+          <td class="locality">Nyeri</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="24/7">24/7</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/eT1HWiNL8UR3d2q16" target="_blank" rel="noopener">https://maps.app.goo.gl/eT1HWiNL8UR3d2q16</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">112</td>
+          <td class="code"><span class="badge">15713206280719200000</span></td>
+          <td class="name">Zeno Swap Station — Langata Mall</td>
+          <td class="addr">MQGM+84J, Langata Mall</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="Mon  | Tue  | Wed  | Thu  | Fri  | Sat  | Sun">Mon  | Tue  | Wed  | Thu  | Fri  | Sat  | Sun</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/DYrQ36fAL7neMxx47?g_st=aw" target="_blank" rel="noopener">https://maps.app.goo.gl/DYrQ36fAL7neMxx47?g_st=aw</a></td>
+        </tr>
+        <tr data-locality="Nairobi" data-type="Swap Station">
+          <td class="idx">113</td>
+          <td class="code"><span class="badge">17216446635448300000</span></td>
+          <td class="name">Zeno Swap Station — Zeno HQ, Baba Dogo</td>
+          <td class="addr">QV4J+Q4C Nairobi</td>
+          <td class="locality">Nairobi</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="Mon  | Tue  | Wed  | Thu  | Fri  | Sat  | Sun">Mon  | Tue  | Wed  | Thu  | Fri  | Sat  | Sun</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/gXTpAQEVqDtm3UAe9" target="_blank" rel="noopener">https://maps.app.goo.gl/gXTpAQEVqDtm3UAe9</a></td>
+        </tr>
+        <tr data-locality="Nyeri" data-type="Swap Station">
+          <td class="idx">114</td>
+          <td class="code"><span class="badge">813113595740238000</span></td>
+          <td class="name">Zeno Swap Station — Zeno Hub, Nyeri</td>
+          <td class="addr">HXH2+X6V Nyeri</td>
+          <td class="locality">Nyeri</td>
+          <td class="type-col"><span class="type-badge badge-ss">Swap Station</span></td>
+          <td class="phone"><a href="tel:+254796463822">+254796463822</a></td>
+          <td class="web"><a href="https://zeno.earth" target="_blank" rel="noopener">Visit Website</a></td>
+          <td class="hours" title="Mon  | Tue  | Wed  | Thu  | Fri  | Sat  | Sun">Mon  | Tue  | Wed  | Thu  | Fri  | Sat  | Sun</td>
+          <td class="gmap"><a href="https://maps.app.goo.gl/zXFUEK1wD9yrPr1x8" target="_blank" rel="noopener">https://maps.app.goo.gl/zXFUEK1wD9yrPr1x8</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    &copy; Zeno Moto &mdash; Generated from data on file
+  </div>
+</div>
+
+<script>
+  function setActive(group, btn) {
+    btn.parentElement.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  function filterType(btn) {
+    setActive(document.getElementById('typePills'), btn);
+    filterTable();
+  }
+
+  function filterLocality(btn) {
+    setActive(document.getElementById('locPills'), btn);
+    filterTable();
+  }
+
+  function filterTable() {
+    const selType = document.querySelector('#typePills .pill.active')?.dataset.type || '';
+    const selLoc = document.querySelector('#locPills .pill.active')?.dataset.locality || '';
+    const query = document.getElementById('search').value.toLowerCase();
+    const rows = document.querySelectorAll('tbody tr');
+    let visible = 0;
+    rows.forEach(row => {
+      const matchType = !selType || row.dataset.type === selType;
+      const matchLoc = !selLoc || row.dataset.locality === selLoc;
+      const matchSearch = !query || row.textContent.toLowerCase().includes(query);
+      if (matchType && matchLoc && matchSearch) {
+        row.classList.remove('hidden');
+        visible++;
+      } else {
+        row.classList.add('hidden');
+      }
+    });
+  }
+</script>
+</body>
+</html>

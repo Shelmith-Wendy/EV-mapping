@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T09:42:57+00:00",
+  "pipeline_run_id": "a9786c21152642adb31326e8cd4e8864",
+  "source_name": "zeno_earth",
+  "station_count": 114,
+  "retrieved_at": "2026-09-01T13:02:29+00:00",
+  "files": {
+    "county_summary.json": {
+      "bytes": 5138,
+      "sha256": "95b71ddea58a340e5b6f1e99ef1ca2fae7f1704cabab646eccbf08550911ca65"
+    },
+    "town_summary.json": {
+      "bytes": 14301,
+      "sha256": "1473c5a1cd0fb8e164b76af6d0bac42b25e6521cf70ca18fe752ae0492ae9c57"
+    },
+    "stations_with_county.json": {
+      "bytes": 135919,
+      "sha256": "05428e5bf105c3d9c583b058292ec8855164f2759b8ac524282723651e775847"
+    },
+    "kenya_counties_display.geojson": {
+      "bytes": 116772,
+      "sha256": "3d55b628fa26f3bdf2054e416995d2b14c851d740bc3719447613852db83e14b"
+    }
+  }
+}

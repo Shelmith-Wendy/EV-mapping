@@ -1,0 +1,1010 @@
+[
+  {
+    "coord_key": "-0.06456,36.9578",
+    "latitude": -0.0645625,
+    "longitude": 36.957796875,
+    "county": "Laikipia",
+    "town": "Nanyuki",
+    "town_source": "zeno_fallback",
+    "display_name": "Laikipia East, Laikipia County, Kenya"
+  },
+  {
+    "coord_key": "-0.07681,36.58244",
+    "latitude": -0.0768125,
+    "longitude": 36.5824375,
+    "county": "Laikipia",
+    "town": "Nyeri",
+    "town_source": "zeno_fallback",
+    "display_name": "Laikipia East, Laikipia County, Kenya"
+  },
+  {
+    "coord_key": "-0.10145,34.75052",
+    "latitude": -0.10145,
+    "longitude": 34.750517,
+    "county": "Kisumu",
+    "town": "Kisumu",
+    "town_source": "reverse_geocode",
+    "display_name": "Kampala Street, Kamas, Jua Kali, Southern sublocation, Market Milimani ward, Kisumu, City of Kisumu, Kisumu County, 40141, Kenya"
+  },
+  {
+    "coord_key": "-0.13369,36.8642",
+    "latitude": -0.1336875,
+    "longitude": 36.8642031,
+    "county": "Laikipia",
+    "town": "Mugunda",
+    "town_source": "reverse_geocode",
+    "display_name": "Mugunda ward, Laikipia East, Laikipia County, Kenya"
+  },
+  {
+    "coord_key": "-0.13651,37.03231",
+    "latitude": -0.1365122,
+    "longitude": 37.032309,
+    "county": "Nyeri",
+    "town": "Naromoru",
+    "town_source": "reverse_geocode",
+    "display_name": "Naromoru/kiamathaga ward, Kieni East, Nyeri, Kenya"
+  },
+  {
+    "coord_key": "-0.15898,35.69428",
+    "latitude": -0.158975,
+    "longitude": 35.694278,
+    "county": "Nakuru",
+    "town": "Mau Summit",
+    "town_source": "reverse_geocode",
+    "display_name": "Total Centre, Mau Summit, Kamara ward, Kuresoi North, Nakuru, Kenya"
+  },
+  {
+    "coord_key": "-0.16308,35.0767",
+    "latitude": -0.163084,
+    "longitude": 35.076699,
+    "county": "Kisumu",
+    "town": "Awasi",
+    "town_source": "reverse_geocode",
+    "display_name": "Administration, Awasi/Onjiko ward, Nyando, Kisumu County, Kenya"
+  },
+  {
+    "coord_key": "-0.17184,37.02161",
+    "latitude": -0.171838,
+    "longitude": 37.021609,
+    "county": "Nyeri",
+    "town": "Naromoru",
+    "town_source": "reverse_geocode",
+    "display_name": "Naromoru/kiamathaga ward, Kieni East, Nyeri, Kenya"
+  },
+  {
+    "coord_key": "-0.17189,37.02158",
+    "latitude": -0.1718861,
+    "longitude": 37.0215778,
+    "county": "Nyeri",
+    "town": "Naromoru",
+    "town_source": "reverse_geocode",
+    "display_name": "Naromoru/kiamathaga ward, Kieni East, Nyeri, Kenya"
+  },
+  {
+    "coord_key": "-0.18382,37.67691",
+    "latitude": -0.1838207,
+    "longitude": 37.6769067,
+    "county": "Meru",
+    "town": "Igoji East",
+    "town_source": "reverse_geocode",
+    "display_name": "Embu-Meru Highway, Igoji, Igoji East ward, Imenti South, Meru County, Kenya"
+  },
+  {
+    "coord_key": "-0.19986,36.82131",
+    "latitude": -0.1998611,
+    "longitude": 36.8213056,
+    "county": "Nyeri",
+    "town": "Mugunda",
+    "town_source": "reverse_geocode",
+    "display_name": "Kiawara, Mugunda ward, Kieni West, Nyeri, Kenya"
+  },
+  {
+    "coord_key": "-0.21207,35.8623",
+    "latitude": -0.2120733,
+    "longitude": 35.8623033,
+    "county": "Nakuru",
+    "town": "Mosop",
+    "town_source": "reverse_geocode",
+    "display_name": "Nairobi Road, Tegat, Sumeek sublocation, Sobea Highway, Mosop ward, Rongai, Nakuru, Kenya"
+  },
+  {
+    "coord_key": "-0.26694,36.37778",
+    "latitude": -0.2669444,
+    "longitude": 36.3777778,
+    "county": "Nyandarua",
+    "town": "Ol Kalou",
+    "town_source": "reverse_geocode",
+    "display_name": "Gilgil-Nyahururu Road, Ol Kalou, Nyandarua, Kenya"
+  },
+  {
+    "coord_key": "-0.27167,36.1025",
+    "latitude": -0.2716667,
+    "longitude": 36.1025,
+    "county": "Nakuru",
+    "town": "Nakuru",
+    "town_source": "reverse_geocode",
+    "display_name": "Mawanga, Ranges View, Nakuru, Nakuru East, Nakuru, 20100, Kenya"
+  },
+  {
+    "coord_key": "-0.32222,37.66",
+    "latitude": -0.3222222,
+    "longitude": 37.66,
+    "county": "Tharaka-Nithi",
+    "town": "Chuka",
+    "town_source": "reverse_geocode",
+    "display_name": "Meru-Nairobi Highway, Chuka, Karingani ward, Chuka, Tharaka-Nithi, Kenya"
+  },
+  {
+    "coord_key": "-0.35897,37.00082",
+    "latitude": -0.358972,
+    "longitude": 37.000823,
+    "county": "Nyeri",
+    "town": "Chaka",
+    "town_source": "reverse_geocode",
+    "display_name": "Chaka, Thegu River ward, Kieni East, Nyeri, Kenya"
+  },
+  {
+    "coord_key": "-0.41343,36.95178",
+    "latitude": -0.4134301,
+    "longitude": 36.9517834,
+    "county": "Nyeri",
+    "town": "Nyeri",
+    "town_source": "reverse_geocode",
+    "display_name": "Rware Ward, Nyeri, Nyeri Central, Nyeri, 10100, Kenya"
+  },
+  {
+    "coord_key": "-0.42,36.95056",
+    "latitude": -0.42,
+    "longitude": 36.9505556,
+    "county": "Nyeri",
+    "town": "Rware",
+    "town_source": "reverse_geocode",
+    "display_name": "Chania Bridge, Rware Ward, Rware ward, Nyeri Central, Nyeri, 10100, Kenya"
+  },
+  {
+    "coord_key": "-0.42028,36.95064",
+    "latitude": -0.4202778,
+    "longitude": 36.9506444,
+    "county": "Nyeri",
+    "town": "Rware",
+    "town_source": "reverse_geocode",
+    "display_name": "Chania Bridge, Rware Ward, Rware ward, Nyeri Central, Nyeri, 10100, Kenya"
+  },
+  {
+    "coord_key": "-0.42177,36.95233",
+    "latitude": -0.421768,
+    "longitude": 36.952326,
+    "county": "Nyeri",
+    "town": "Nyeri",
+    "town_source": "reverse_geocode",
+    "display_name": "Rware Ward, Nyeri, Nyeri Central, Nyeri, 10100, Kenya"
+  },
+  {
+    "coord_key": "-0.4227,36.9507",
+    "latitude": -0.4227048,
+    "longitude": 36.9506983,
+    "county": "Nyeri",
+    "town": "Nyeri",
+    "town_source": "reverse_geocode",
+    "display_name": "Nyeri Karatina Road, Rware Ward, Nyeri, Nyeri Central, Nyeri, 10100, Kenya"
+  },
+  {
+    "coord_key": "-0.43056,36.95139",
+    "latitude": -0.4305556,
+    "longitude": 36.9513889,
+    "county": "Nyeri",
+    "town": "Rware",
+    "town_source": "reverse_geocode",
+    "display_name": "Rware Ward, Rware ward, Nyeri Central, Nyeri, 10100, Kenya"
+  },
+  {
+    "coord_key": "-0.48277,37.12657",
+    "latitude": -0.482773,
+    "longitude": 37.126571,
+    "county": "Nyeri",
+    "town": "Karatina",
+    "town_source": "reverse_geocode",
+    "display_name": "Karatina, Karatina town ward, Mathira West, Nyeri, Kenya"
+  },
+  {
+    "coord_key": "-0.50111,36.32611",
+    "latitude": -0.5011111,
+    "longitude": 36.3261111,
+    "county": "Nakuru",
+    "town": "Gilgil",
+    "town_source": "reverse_geocode",
+    "display_name": "Gilgil, Gilgil ward, Gilgil, Nakuru, 20116, Kenya"
+  },
+  {
+    "coord_key": "-0.54306,37.45528",
+    "latitude": -0.5430556,
+    "longitude": 37.4552778,
+    "county": "Embu",
+    "town": "Embu",
+    "town_source": "reverse_geocode",
+    "display_name": "Embu-Nairobi Highway, Embu, Manyatta, Embu, Kenya"
+  },
+  {
+    "coord_key": "-0.665,37.21",
+    "latitude": -0.665,
+    "longitude": 37.21,
+    "county": "Kirinyaga",
+    "town": "Sagana",
+    "town_source": "reverse_geocode",
+    "display_name": "Sagana Shopping Mall, A2, Gacharu, Sagana, Kirinyaga West, Kirinyaga County, Kenya"
+  },
+  {
+    "coord_key": "-0.71667,36.43472",
+    "latitude": -0.7166667,
+    "longitude": 36.4347222,
+    "county": "Nakuru",
+    "town": "Viwandani",
+    "town_source": "reverse_geocode",
+    "display_name": "Biashara Road, Town, Viwandani ward, Naivasha, Nakuru, Kenya"
+  },
+  {
+    "coord_key": "-0.7575,37.27861",
+    "latitude": -0.7575,
+    "longitude": 37.2786111,
+    "county": "Embu",
+    "town": "Mutithi",
+    "town_source": "reverse_geocode",
+    "display_name": "Mutithi ward, Mbeere South, Embu, Kenya"
+  },
+  {
+    "coord_key": "-0.94417,37.12167",
+    "latitude": -0.9441667,
+    "longitude": 37.1216667,
+    "county": "Murang'a",
+    "town": "Kimorori",
+    "town_source": "reverse_geocode",
+    "display_name": "Meru-Nairobi Highway, Kimorori/Wempa ward, Murang`a South, Murang'a County, Kenya"
+  },
+  {
+    "coord_key": "-0.98528,36.63056",
+    "latitude": -0.9852778,
+    "longitude": 36.6305556,
+    "county": "Kiambu",
+    "town": "Kimende",
+    "town_source": "reverse_geocode",
+    "display_name": "Nairobi Road, Kimende, Kijabe ward, Lari, Kiambu, 00221, Kenya"
+  },
+  {
+    "coord_key": "-1.04083,37.07194",
+    "latitude": -1.0408333,
+    "longitude": 37.0719444,
+    "county": "Kiambu",
+    "town": "Thika",
+    "town_source": "reverse_geocode",
+    "display_name": "KCB ATM - Thika, Kenyatta Highway, Thika, Thika Township ward, Thika Town, Kiambu, Kenya"
+  },
+  {
+    "coord_key": "-1.04106,37.07208",
+    "latitude": -1.0410572,
+    "longitude": 37.0720775,
+    "county": "Kiambu",
+    "town": "Thika",
+    "town_source": "reverse_geocode",
+    "display_name": "Tuskys Supermarket (Chania), Kenyatta Highway, Thika, Thika Township ward, Thika Town, Kiambu, Kenya"
+  },
+  {
+    "coord_key": "-1.10784,37.01392",
+    "latitude": -1.1078361,
+    "longitude": 37.0139194,
+    "county": "Kiambu",
+    "town": "Juja",
+    "town_source": "reverse_geocode",
+    "display_name": "Juja Square Street, Juja ward, Juja, Kiambu, 01001, Kenya"
+  },
+  {
+    "coord_key": "-1.11194,36.63083",
+    "latitude": -1.1119444,
+    "longitude": 36.6308333,
+    "county": "Kiambu",
+    "town": "Limuru",
+    "town_source": "reverse_geocode",
+    "display_name": "Kamirithu sublocation, Limuru, Kiambu, 00217, Kenya"
+  },
+  {
+    "coord_key": "-1.16349,36.9543",
+    "latitude": -1.163485,
+    "longitude": 36.9543,
+    "county": "Kiambu",
+    "town": "Ruiru",
+    "town_source": "reverse_geocode",
+    "display_name": "Plateau Breeze Club, Eastern Bypass, Ruiru, Biashara ward, Ruiru, Kiambu, 00609, Kenya"
+  },
+  {
+    "coord_key": "-1.17014,36.82733",
+    "latitude": -1.1701375,
+    "longitude": 36.827328124999994,
+    "county": "Kiambu",
+    "town": "Kiambu",
+    "town_source": "reverse_geocode",
+    "display_name": "Cleanshelf Supermarkets, Kiambu-Limuru Road, Edenville, Indian Bazaar, Kiambu Township ward, Kiambu Town, Kiambu, 00900, Kenya"
+  },
+  {
+    "coord_key": "-1.1982,36.92833",
+    "latitude": -1.1982008,
+    "longitude": 36.9283253,
+    "county": "Kiambu",
+    "town": "Kahawa Wendani",
+    "town_source": "reverse_geocode",
+    "display_name": "Kahawa Wendani, Kahawa Wendani ward, Ruiru, Kiambu, 00609, Kenya"
+  },
+  {
+    "coord_key": "-1.20103,36.78499",
+    "latitude": -1.2010299,
+    "longitude": 36.784991,
+    "county": "Nairobi",
+    "town": "Muchatha",
+    "town_source": "reverse_geocode",
+    "display_name": "Banana-Raini Road, Karura sublocation, Yamogo, Muchatha, Westlands, Muchatha ward, Kiambaa, Kiambu, 43563, Kenya"
+  },
+  {
+    "coord_key": "-1.20139,36.91167",
+    "latitude": -1.2013875,
+    "longitude": 36.9116719,
+    "county": "Nairobi",
+    "town": "Githurai",
+    "town_source": "reverse_geocode",
+    "display_name": "Ngumba Road, Githurai sublocation, Githurai location, Githurai division, Kasarani, Nairobi, Nairobi County, 00608, Kenya"
+  },
+  {
+    "coord_key": "-1.20172,36.65486",
+    "latitude": -1.2017222,
+    "longitude": 36.6548611,
+    "county": "Kiambu",
+    "town": "Muguga",
+    "town_source": "reverse_geocode",
+    "display_name": "A104, Kiambaa, Muguga ward, Kabete, Kiambu, Kenya"
+  },
+  {
+    "coord_key": "-1.20677,36.78335",
+    "latitude": -1.206765,
+    "longitude": 36.783353,
+    "county": "Nairobi",
+    "town": "Ruaka",
+    "town_source": "reverse_geocode",
+    "display_name": "Quickmart Parking, Limuru Road, Ruaka, Kiambaa, Kiambu, 43563, Kenya"
+  },
+  {
+    "coord_key": "-1.21511,36.8919",
+    "latitude": -1.2151111,
+    "longitude": 36.8919,
+    "county": "Nairobi",
+    "town": "Roysambu",
+    "town_source": "reverse_geocode",
+    "display_name": "QuickMart, Kamiti Road, Roysambu sublocation, Roysambu location, Roysambu division, Kasarani, Nairobi, Nairobi County, 00608, Kenya"
+  },
+  {
+    "coord_key": "-1.21778,36.89778",
+    "latitude": -1.2177778,
+    "longitude": 36.8977778,
+    "county": "Nairobi",
+    "town": "Kasarani",
+    "town_source": "reverse_geocode",
+    "display_name": "KWFT, Kasarani Mwiki Road, Kasarani sublocation, Kasarani location, Kasarani, Nairobi, Nairobi County, 00608, Kenya"
+  },
+  {
+    "coord_key": "-1.23028,36.68222",
+    "latitude": -1.2302778,
+    "longitude": 36.6822222,
+    "county": "Kiambu",
+    "town": "Gitaru",
+    "town_source": "reverse_geocode",
+    "display_name": "Gitaru, Gitaru ward, Kabete, Kiambu, 12345, Kenya"
+  },
+  {
+    "coord_key": "-1.2328,36.8074",
+    "latitude": -1.2328,
+    "longitude": 36.8074,
+    "county": "Nairobi",
+    "town": "Highridge",
+    "town_source": "reverse_geocode",
+    "display_name": "Gigiri Lane, Karura sublocation, Highridge location, Highridge division, Westlands, Nairobi, Nairobi County, 00601, Kenya"
+  },
+  {
+    "coord_key": "-1.23632,36.93537",
+    "latitude": -1.2363202,
+    "longitude": 36.9353651,
+    "county": "Nairobi",
+    "town": "Kasarani",
+    "town_source": "reverse_geocode",
+    "display_name": "Mwiki location, Mwiki ward, Kasarani division, Kasarani, Nairobi, Nairobi County, 00608, Kenya"
+  },
+  {
+    "coord_key": "-1.24306,36.88028",
+    "latitude": -1.2430556,
+    "longitude": 36.8802778,
+    "county": "Nairobi",
+    "town": "Ruaraka",
+    "town_source": "reverse_geocode",
+    "display_name": "Sai pharmaceutical ltd, Baba Dogo Road, Ruaraka, Babadogo ward, Kasarani, Nairobi, Nairobi County, 00623, Kenya"
+  },
+  {
+    "coord_key": "-1.24312,36.88041",
+    "latitude": -1.2431167,
+    "longitude": 36.8804111,
+    "county": "Nairobi",
+    "town": "Ruaraka",
+    "town_source": "reverse_geocode",
+    "display_name": "Baba Dogo Road, Ruaraka, Babadogo ward, Kasarani, Nairobi, Nairobi County, 00623, Kenya"
+  },
+  {
+    "coord_key": "-1.25233,36.6657",
+    "latitude": -1.2523285,
+    "longitude": 36.6657041,
+    "county": "Kiambu",
+    "town": "Kikuyu",
+    "town_source": "reverse_geocode",
+    "display_name": "Kidfarmaco, Thogoto, Kikuyu, Kikuyu Township ward, Kikuyu, Kiambu, 00109, Kenya"
+  },
+  {
+    "coord_key": "-1.25333,36.86694",
+    "latitude": -1.2533333,
+    "longitude": 36.8669444,
+    "county": "Nairobi",
+    "town": "Roysambu",
+    "town_source": "reverse_geocode",
+    "display_name": "Mathare N Road, Mathare North Area4, Utalii ward, Roysambu division, Kasarani, Nairobi, Nairobi County, 57935, Kenya"
+  },
+  {
+    "coord_key": "-1.25341,36.93442",
+    "latitude": -1.2534125,
+    "longitude": 36.934421875,
+    "county": "Nairobi",
+    "town": "Njiru",
+    "town_source": "reverse_geocode",
+    "display_name": "Be, Kangundo Road, Kamatuto Kayole, New Njiru Town, Njiru ward, Njiru, Nairobi, Nairobi County, 55145, Kenya"
+  },
+  {
+    "coord_key": "-1.25889,36.70472",
+    "latitude": -1.2588889,
+    "longitude": 36.7047222,
+    "county": "Kiambu",
+    "town": "Uthiru",
+    "town_source": "reverse_geocode",
+    "display_name": "Uthiru ward, Kabete, Kiambu, 29039, Kenya"
+  },
+  {
+    "coord_key": "-1.25939,36.81698",
+    "latitude": -1.2593875,
+    "longitude": 36.8169844,
+    "county": "Nairobi",
+    "town": "Highridge",
+    "town_source": "reverse_geocode",
+    "display_name": "3rd Parklands Avenue, Highridge sublocation, Highridge location, Highridge division, Westlands, Nairobi, Nairobi County, 00606, Kenya"
+  },
+  {
+    "coord_key": "-1.26011,36.80336",
+    "latitude": -1.26011,
+    "longitude": 36.8033583,
+    "county": "Nairobi",
+    "town": "Highridge",
+    "town_source": "reverse_geocode",
+    "display_name": "Dostum Solutions Limited, Block B, 2nd Flr,, Ring Road Parklands, Parklands location, Parklands/Highridge ward, Highridge division, Westlands, Nairobi, Nairobi County, 97104, Kenya"
+  },
+  {
+    "coord_key": "-1.26367,36.76335",
+    "latitude": -1.2636733,
+    "longitude": 36.7633495,
+    "county": "Nairobi",
+    "town": "Kilimani",
+    "town_source": "reverse_geocode",
+    "display_name": "QuickMart, Waiyaki Way, Muthangari sublocation, Kileleshwa location, Kilimani division, Westlands, Nairobi, Nairobi County, 23546, Kenya"
+  },
+  {
+    "coord_key": "-1.26414,36.8054",
+    "latitude": -1.2641416,
+    "longitude": 36.8053978,
+    "county": "Nairobi",
+    "town": "Highridge",
+    "town_source": "reverse_geocode",
+    "display_name": "TNS Rms East Africa, 07, Mpaka Road, Parklands location, Parklands/Highridge ward, Highridge division, Westlands, Nairobi, Nairobi County, 97104, Kenya"
+  },
+  {
+    "coord_key": "-1.26456,36.98308",
+    "latitude": -1.2645625,
+    "longitude": 36.98307812499999,
+    "county": "Nairobi",
+    "town": "Ruai",
+    "town_source": "reverse_geocode",
+    "display_name": "Be Energy, Kangundo Road, Ruai, Ruai ward, Njiru, Nairobi, Nairobi County, 00520, Kenya"
+  },
+  {
+    "coord_key": "-1.26583,36.91583",
+    "latitude": -1.2658333,
+    "longitude": 36.9158333,
+    "county": "Nairobi",
+    "town": "Komarock",
+    "town_source": "reverse_geocode",
+    "display_name": "Greenie - Dr. Mwenje Sport Centre, Komarock Sector One Road, Tawanga, Komarock, Komarock ward, Embakasi, Nairobi, Nairobi County, 55145, Kenya"
+  },
+  {
+    "coord_key": "-1.26594,36.79808",
+    "latitude": -1.2659375,
+    "longitude": 36.798078125,
+    "county": "Nairobi",
+    "town": "Kilimani",
+    "town_source": "reverse_geocode",
+    "display_name": "Kenya Continetal Hotel, Rhapta Road, Muthangari sublocation, Kileleshwa location, Kilimani division, Westlands, Nairobi, Nairobi County, 97104, Kenya"
+  },
+  {
+    "coord_key": "-1.26609,36.85178",
+    "latitude": -1.2660892,
+    "longitude": 36.8517848,
+    "county": "Nairobi",
+    "town": "Airbase",
+    "town_source": "reverse_geocode",
+    "display_name": "Juja Road, Nigeria hotspot zone, Airbase ward, Kamukunji, Nairobi, Nairobi County, 00611, Kenya"
+  },
+  {
+    "coord_key": "-1.26645,36.81178",
+    "latitude": -1.2664480999999999,
+    "longitude": 36.8117762,
+    "county": "Nairobi",
+    "town": "Highridge",
+    "town_source": "reverse_geocode",
+    "display_name": "West Park Suites, 04, Ojijo Road, Highridge sublocation, Highridge location, Highridge division, Westlands, Nairobi, Nairobi County, 00606, Kenya"
+  },
+  {
+    "coord_key": "-1.26667,36.84556",
+    "latitude": -1.2666667,
+    "longitude": 36.8455556,
+    "county": "Nairobi",
+    "town": "Eastleigh North",
+    "town_source": "reverse_geocode",
+    "display_name": "Juja Road, Eastleigh Section 1, Eastleigh North ward, Kamukunji, Nairobi, Nairobi County, 69149, Kenya"
+  },
+  {
+    "coord_key": "-1.2735,36.82625",
+    "latitude": -1.2735,
+    "longitude": 36.8262472,
+    "county": "Nairobi",
+    "town": "CBD",
+    "town_source": "reverse_geocode",
+    "display_name": "Murang'a Road, Ngara East sublocation, Ngara location, CBD division, Starehe, Nairobi, Nairobi County, 30108, Kenya"
+  },
+  {
+    "coord_key": "-1.27417,36.75944",
+    "latitude": -1.2741667,
+    "longitude": 36.7594444,
+    "county": "Nairobi",
+    "town": "Kawangware",
+    "town_source": "reverse_geocode",
+    "display_name": "Muthiora Road, Gatina location, Gatina ward, Kawangware division, Dagoretti, Nairobi, Nairobi County, 23546, Kenya"
+  },
+  {
+    "coord_key": "-1.27419,36.78885",
+    "latitude": -1.2741853,
+    "longitude": 36.7888466,
+    "county": "Nairobi",
+    "town": "Kilimani",
+    "town_source": "reverse_geocode",
+    "display_name": "Tulip's, Mandera Road, Kileleshwa sublocation, Kileleshwa location, Kilimani division, Westlands, Nairobi, Nairobi County, 97104, Kenya"
+  },
+  {
+    "coord_key": "-1.275,36.97194",
+    "latitude": -1.275,
+    "longitude": 36.9719444,
+    "county": "Nairobi",
+    "town": "Ruai",
+    "town_source": "reverse_geocode",
+    "display_name": "Eastern Bypass, Ruai, Ruai ward, Njiru, Nairobi, Nairobi County, 00520, Kenya"
+  },
+  {
+    "coord_key": "-1.27556,36.82417",
+    "latitude": -1.2755556,
+    "longitude": 36.8241667,
+    "county": "Nairobi",
+    "town": "CBD",
+    "town_source": "reverse_geocode",
+    "display_name": "Ngara Road, Ngara East sublocation, Ngara location, CBD division, Starehe, Nairobi, Nairobi County, 00600, Kenya"
+  },
+  {
+    "coord_key": "-1.27756,36.79382",
+    "latitude": -1.2775586,
+    "longitude": 36.7938213,
+    "county": "Nairobi",
+    "town": "Kilimani",
+    "town_source": "reverse_geocode",
+    "display_name": "Tabere Crescent, Kileleshwa sublocation, Kileleshwa location, Kilimani division, Westlands, Nairobi, Nairobi County, 29526, Kenya"
+  },
+  {
+    "coord_key": "-1.28055,36.73635",
+    "latitude": -1.2805486,
+    "longitude": 36.7363548,
+    "county": "Nairobi",
+    "town": "Kawangware",
+    "town_source": "reverse_geocode",
+    "display_name": "Naivasha Road, Mountain View sublocation, Kawangware ward, Kawangware division, Dagoretti, Nairobi, Nairobi County, 29326, Kenya"
+  },
+  {
+    "coord_key": "-1.28355,36.89414",
+    "latitude": -1.28355,
+    "longitude": 36.894144,
+    "county": "Nairobi",
+    "town": "Umoja",
+    "town_source": "reverse_geocode",
+    "display_name": "Moi Drive, Umoja, Umoja II ward, Embakasi, Nairobi, Nairobi County, 56744, Kenya"
+  },
+  {
+    "coord_key": "-1.28864,36.80239",
+    "latitude": -1.2886389,
+    "longitude": 36.8023861,
+    "county": "Nairobi",
+    "town": "Kilimani",
+    "town_source": "reverse_geocode",
+    "display_name": "Kilimani location, Kilimani ward, Kilimani division, Westlands, Nairobi, Nairobi County, 00400, Kenya"
+  },
+  {
+    "coord_key": "-1.28954,36.76927",
+    "latitude": -1.2895375,
+    "longitude": 36.769265625,
+    "county": "Nairobi",
+    "town": "Kilimani",
+    "town_source": "reverse_geocode",
+    "display_name": "Kenya Human Rights Commision, Gitanga Road, Kilimani location, Kilimani ward, Kilimani division, Westlands, Nairobi, Nairobi County, 54102, Kenya"
+  },
+  {
+    "coord_key": "-1.29344,36.76169",
+    "latitude": -1.2934423,
+    "longitude": 36.7616858,
+    "county": "Nairobi",
+    "town": "Kilimani",
+    "town_source": "reverse_geocode",
+    "display_name": "Autofocus Investments Ltd, Kingara Road, Kilimani location, Kilimani ward, Kilimani division, Westlands, Nairobi, Nairobi County, 54102, Kenya"
+  },
+  {
+    "coord_key": "-1.29361,36.85056",
+    "latitude": -1.2936111,
+    "longitude": 36.8505556,
+    "county": "Nairobi",
+    "town": "Pumwani",
+    "town_source": "reverse_geocode",
+    "display_name": "Galaxy Express Jogco Road, Nolfok, Shauri Moyo sublocation, Pumwani ward, Kamukunji, Nairobi, Nairobi County, 00101, Kenya"
+  },
+  {
+    "coord_key": "-1.29422,36.80532",
+    "latitude": -1.2942222,
+    "longitude": 36.8053222,
+    "county": "Nairobi",
+    "town": "Kilimani",
+    "town_source": "reverse_geocode",
+    "display_name": "University of Nairobi School of Dental Sciences, Ralph Bunche Road, Kilimani location, Kilimani ward, Kilimani division, Westlands, Nairobi, Nairobi County, 00202, Kenya"
+  },
+  {
+    "coord_key": "-1.29604,36.88578",
+    "latitude": -1.2960351,
+    "longitude": 36.885785,
+    "county": "Nairobi",
+    "town": "Harambee",
+    "town_source": "reverse_geocode",
+    "display_name": "Outer Ring Road, Harambee sublocation, Harambee ward, Makadara subcounty, Nairobi, Nairobi County, 00515, Kenya"
+  },
+  {
+    "coord_key": "-1.29656,36.87594",
+    "latitude": -1.2965624999999998,
+    "longitude": 36.8759375,
+    "county": "Nairobi",
+    "town": "Maringo",
+    "town_source": "reverse_geocode",
+    "display_name": "Debonairs, Jogoo Road, Hamza, Hamza sublocation, Maringo/Hamza ward, Makadara subcounty, Nairobi, Nairobi County, 00515, Kenya"
+  },
+  {
+    "coord_key": "-1.29806,36.81806",
+    "latitude": -1.2980556,
+    "longitude": 36.8180556,
+    "county": "Nairobi",
+    "town": "Woodley",
+    "town_source": "reverse_geocode",
+    "display_name": "Upper Hill Road, Woodley/Kenyatta/Golf Course ward, Kibra, Nairobi, Nairobi County, 40476, Kenya"
+  },
+  {
+    "coord_key": "-1.30056,36.825",
+    "latitude": -1.3005556,
+    "longitude": 36.825,
+    "county": "Nairobi",
+    "town": "Landimawe",
+    "town_source": "reverse_geocode",
+    "display_name": "Agri-Quest Limited, Uhuru Highway, Landimawe, Landimawe ward, Starehe, Nairobi, Nairobi County, 30326, Kenya"
+  },
+  {
+    "coord_key": "-1.3006,36.82487",
+    "latitude": -1.3006007,
+    "longitude": 36.8248743,
+    "county": "Nairobi",
+    "town": "Landimawe",
+    "town_source": "reverse_geocode",
+    "display_name": "Nissan, Uhuru Highway, Landimawe, Landimawe ward, Starehe, Nairobi, Nairobi County, 30326, Kenya"
+  },
+  {
+    "coord_key": "-1.30644,36.88831",
+    "latitude": -1.3064375,
+    "longitude": 36.8883125,
+    "county": "Nairobi",
+    "town": "Viwandani",
+    "town_source": "reverse_geocode",
+    "display_name": "Viwandani ward, Makadara subcounty, Nairobi, Nairobi County, 00501, Kenya"
+  },
+  {
+    "coord_key": "-1.30677,36.73617",
+    "latitude": -1.3067683,
+    "longitude": 36.7361657,
+    "county": "Nairobi",
+    "town": "Kawangware",
+    "town_source": "reverse_geocode",
+    "display_name": "Ngando ward, Kawangware division, Dagoretti, Nairobi, Nairobi County, 00505, Kenya"
+  },
+  {
+    "coord_key": "-1.30802,36.81898",
+    "latitude": -1.3080222,
+    "longitude": 36.8189778,
+    "county": "Nairobi",
+    "town": "Nairobi West",
+    "town_source": "reverse_geocode",
+    "display_name": "Thorntree Bar & Restaurant, Langata Rd, Nairobi, Langata Road, Nairobi West, Nairobi West ward, Langata, Nairobi, Nairobi County, 30326, Kenya"
+  },
+  {
+    "coord_key": "-1.30877,36.86055",
+    "latitude": -1.3087667,
+    "longitude": 36.86055,
+    "county": "Nairobi",
+    "town": "Viwandani",
+    "town_source": "reverse_geocode",
+    "display_name": "Java House - Lunga Lunga, Lunga Lunga Road, Viwandani, Viwandani ward, Makadara subcounty, Nairobi, Nairobi County, 50504, Kenya"
+  },
+  {
+    "coord_key": "-1.31385,36.91529",
+    "latitude": -1.313847,
+    "longitude": 36.9152902,
+    "county": "Nairobi",
+    "town": "Jua Kali",
+    "town_source": "reverse_geocode",
+    "display_name": "QuickMart Embakasi, Rd to Utawala Academy, Mradi, Embakasi village, Jua Kali, Embakasi, Nairobi, Nairobi County, 00501, Kenya"
+  },
+  {
+    "coord_key": "-1.32244,36.84444",
+    "latitude": -1.3224375,
+    "longitude": 36.8444375,
+    "county": "Nairobi",
+    "town": "South B",
+    "town_source": "reverse_geocode",
+    "display_name": "Mombasa Road, South B, Nairobi South ward, Starehe, Nairobi, Nairobi County, 00603, Kenya"
+  },
+  {
+    "coord_key": "-1.32416,36.78277",
+    "latitude": -1.3241625,
+    "longitude": 36.782765624999996,
+    "county": "Nairobi",
+    "town": "Mugumo-ini",
+    "town_source": "reverse_geocode",
+    "display_name": "Langata Shopping Mall, Lang'ata Link Road, Mugumoine, Southlands, Mugumo-ini ward, Langata, Nairobi, Nairobi County, 21104, Kenya"
+  },
+  {
+    "coord_key": "-1.32666,36.89445",
+    "latitude": -1.3266625,
+    "longitude": 36.8944531,
+    "county": "Nairobi",
+    "town": "Pipeline",
+    "town_source": "reverse_geocode",
+    "display_name": "Pipeline, Pipeline ward, Embakasi, Nairobi, Nairobi County, 00501, Kenya"
+  },
+  {
+    "coord_key": "-1.35422,36.65752",
+    "latitude": -1.3542217,
+    "longitude": 36.657525,
+    "county": "Kajiado",
+    "town": "Ngong",
+    "town_source": "reverse_geocode",
+    "display_name": "Be Energy Petrol Station Ngong Town, Ngong Road, Umoja, Karen ward, Embulbul, Ngong ward, Kajiado North, Kajiado County, Kenya"
+  },
+  {
+    "coord_key": "-1.39639,36.74333",
+    "latitude": -1.3963889,
+    "longitude": 36.7433333,
+    "county": "Kajiado",
+    "town": "Nkaimurunya",
+    "town_source": "reverse_geocode",
+    "display_name": "Magadi Road, Nkaimurunya ward, Kajiado North, Kajiado County, 00511, Kenya"
+  },
+  {
+    "coord_key": "-1.40026,36.94392",
+    "latitude": -1.4002625,
+    "longitude": 36.943921875,
+    "county": "Machakos",
+    "town": "Mlolongo",
+    "town_source": "reverse_geocode",
+    "display_name": "Mlolongo, Syokimau-Mulolongo ward, Mavoko, Machakos County, 00519, Kenya"
+  },
+  {
+    "coord_key": "-1.43139,36.68611",
+    "latitude": -1.4313889,
+    "longitude": 36.6861111,
+    "county": "Kajiado",
+    "town": "Olkeri",
+    "town_source": "reverse_geocode",
+    "display_name": "B19, Upper Matasia sublocation, Olkeri ward, Kajiado North, Kajiado County, Kenya"
+  },
+  {
+    "coord_key": "-1.44849,36.97758",
+    "latitude": -1.4484941,
+    "longitude": 36.9775848,
+    "county": "Machakos",
+    "town": "Embakasi",
+    "town_source": "reverse_geocode",
+    "display_name": "Embakasi, Athi River ward, Mavoko, Machakos County, Kenya"
+  },
+  {
+    "coord_key": "-1.47372,36.95949",
+    "latitude": -1.4737161,
+    "longitude": 36.9594863,
+    "county": "Kajiado",
+    "town": "Kitengela",
+    "town_source": "reverse_geocode",
+    "display_name": "Sandalwood and Pampa at Savannah, Namanga Road, Kitengela, Athi River, Kajiado East, Kajiado County, 00204, Kenya"
+  },
+  {
+    "coord_key": "0.0057,37.0725",
+    "latitude": 0.0057,
+    "longitude": 37.0724972,
+    "county": "Laikipia",
+    "town": "Nanyuki",
+    "town_source": "reverse_geocode",
+    "display_name": "Nanyuki, Laikipia East, Laikipia County, 10400, Kenya"
+  },
+  {
+    "coord_key": "0.01072,37.0748",
+    "latitude": 0.010721,
+    "longitude": 37.0748,
+    "county": "Laikipia",
+    "town": "Nanyuki",
+    "town_source": "reverse_geocode",
+    "display_name": "Nanyuki, Laikipia East, Laikipia County, 10400, Kenya"
+  },
+  {
+    "coord_key": "0.01332,37.07787",
+    "latitude": 0.013323,
+    "longitude": 37.077867,
+    "county": "Laikipia",
+    "town": "Nanyuki",
+    "town_source": "reverse_geocode",
+    "display_name": "Nanyuki, Laikipia East, Laikipia County, 10400, Kenya"
+  },
+  {
+    "coord_key": "0.01343,37.07822",
+    "latitude": 0.013426,
+    "longitude": 37.078222,
+    "county": "Laikipia",
+    "town": "Nanyuki",
+    "town_source": "reverse_geocode",
+    "display_name": "Dormans Coffee Shop, Nyeri-Nanyuki Road, Nanyuki, Laikipia East, Laikipia County, 10400, Kenya"
+  },
+  {
+    "coord_key": "0.01486,37.07601",
+    "latitude": 0.0148556,
+    "longitude": 37.0760139,
+    "county": "Laikipia",
+    "town": "Nanyuki",
+    "town_source": "reverse_geocode",
+    "display_name": "Market Road, Nanyuki, Laikipia East, Laikipia County, 10400, Kenya"
+  },
+  {
+    "coord_key": "0.01916,37.07409",
+    "latitude": 0.019159,
+    "longitude": 37.074089,
+    "county": "Laikipia",
+    "town": "Nanyuki",
+    "town_source": "reverse_geocode",
+    "display_name": "Nanyuki-Rumuruti Road, Nanyuki, Laikipia East, Laikipia County, 10400, Kenya"
+  },
+  {
+    "coord_key": "0.02509,37.06764",
+    "latitude": 0.02509,
+    "longitude": 37.0676423,
+    "county": "Laikipia",
+    "town": "Nanyuki",
+    "town_source": "reverse_geocode",
+    "display_name": "Nanyuki, Laikipia East, Laikipia County, 10400, Kenya"
+  },
+  {
+    "coord_key": "0.03145,35.53106",
+    "latitude": 0.031445,
+    "longitude": 35.53106,
+    "county": "Baringo",
+    "town": "Timboroa",
+    "town_source": "reverse_geocode",
+    "display_name": "Timboroa, Eldama Ravine, Baringo, Kenya"
+  },
+  {
+    "coord_key": "0.03315,36.35979",
+    "latitude": 0.0331501,
+    "longitude": 36.3597857,
+    "county": "Laikipia",
+    "town": "Nyahururu",
+    "town_source": "reverse_geocode",
+    "display_name": "Nyahururu, Laikipia West, Laikipia County, 20300, Kenya"
+  },
+  {
+    "coord_key": "0.04519,37.65777",
+    "latitude": 0.0451875,
+    "longitude": 37.6577656,
+    "county": "Meru",
+    "town": "Meru",
+    "town_source": "reverse_geocode",
+    "display_name": "Njuri Ncheke Street, Kaongo, Meru, Imenti North, Meru County, Kenya"
+  },
+  {
+    "coord_key": "0.08572,37.24226",
+    "latitude": 0.08571999999999999,
+    "longitude": 37.2422623,
+    "county": "Meru",
+    "town": "Timau",
+    "town_source": "reverse_geocode",
+    "display_name": "Rubis, A2, Timau ward, Buuri, Meru County, Kenya"
+  },
+  {
+    "coord_key": "0.08696,37.24105",
+    "latitude": 0.0869625,
+    "longitude": 37.2410469,
+    "county": "Meru",
+    "town": "Timau",
+    "town_source": "reverse_geocode",
+    "display_name": "Timau, Timau ward, Buuri, Meru County, Kenya"
+  },
+  {
+    "coord_key": "0.11413,34.72933",
+    "latitude": 0.1141333,
+    "longitude": 34.72933,
+    "county": "Vihiga",
+    "town": "Chavakali",
+    "town_source": "reverse_geocode",
+    "display_name": "Kisumu Road, Chavakali ward, Sabatia, Vihiga County, Kenya"
+  },
+  {
+    "coord_key": "0.14136,37.47234",
+    "latitude": 0.1413574,
+    "longitude": 37.472336,
+    "county": "Meru",
+    "town": "Kisima",
+    "town_source": "reverse_geocode",
+    "display_name": "Kisima ward, Buuri, Meru County, Kenya"
+  },
+  {
+    "coord_key": "0.2021,35.08805",
+    "latitude": 0.20210499999999998,
+    "longitude": 35.0880467,
+    "county": "Nandi",
+    "town": "Kapsabet",
+    "town_source": "reverse_geocode",
+    "display_name": "Township sublocation, Nandi, Kapsabet ward, Emgwen, Nandi County, Kenya"
+  },
+  {
+    "coord_key": "0.21324,35.43437",
+    "latitude": 0.2132383,
+    "longitude": 35.43437,
+    "county": "Uasin Gishu",
+    "town": "Ainabkoi",
+    "town_source": "reverse_geocode",
+    "display_name": "Ainabkoi/Olare ward, Ainabkoi, Uasin Gishu County, Kenya"
+  },
+  {
+    "coord_key": "0.48164,35.26402",
+    "latitude": 0.4816417,
+    "longitude": 35.264025,
+    "county": "Uasin Gishu",
+    "town": "Langas",
+    "town_source": "reverse_geocode",
+    "display_name": "Langas ward, Kapseret, Uasin Gishu County, 30100, Kenya"
+  },
+  {
+    "coord_key": "0.50499,35.2722",
+    "latitude": 0.5049883,
+    "longitude": 35.2722032,
+    "county": "Uasin Gishu",
+    "town": "Kipkenyo",
+    "town_source": "reverse_geocode",
+    "display_name": "Pioneer Estate, Kipkenyo ward, Kapseret, Uasin Gishu County, 30100, Kenya"
+  }
+]

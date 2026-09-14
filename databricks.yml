@@ -1,0 +1,78 @@
+# Phase 1–2: Databricks Asset Bundle — App + UC Volume contract.
+# Before App deploy: ./scripts/prepare_databricks_app.sh
+#
+# Set workspace_host / catalog below (or pass --var=...).
+#
+#   databricks bundle validate -t dev
+#   databricks bundle deploy -t dev
+#   ./scripts/upload_public_to_volume.sh   # manual seed of Volume (Phase 2 exit)
+#   databricks bundle run kenya_ev_map -t dev
+
+bundle:
+  name: kenya-ev-map
+
+variables:
+  workspace_host:
+    description: Databricks workspace URL
+    default: https://YOUR-WORKSPACE.cloud.databricks.com
+  catalog:
+    description: Unity Catalog name that already exists in the workspace
+    default: main
+  schema_name:
+    description: Schema that owns the zeno_ev_map Volume
+    default: zeno_ev_map
+  volume_name:
+    description: Managed Volume name for published dashboard files
+    default: public
+
+sync:
+  paths:
+    - app
+
+resources:
+  schemas:
+    kenya_ev_schema:
+      name: ${var.schema_name}
+      catalog_name: ${var.catalog}
+      comment: Kenya EV map published dashboard artifacts
+
+  volumes:
+    kenya_ev_public:
+      name: ${var.volume_name}
+      catalog_name: ${var.catalog}
+      schema_name: ${resources.schemas.kenya_ev_schema.name}
+      volume_type: MANAGED
+      comment: >
+        Phase 2 contract root. Files live at
+        /Volumes/${var.catalog}/${var.schema_name}/${var.volume_name}/
+        (stations_with_county.json, county_summary.json, town_summary.json,
+        kenya_counties_display.geojson, manifest.json).
+
+  apps:
+    kenya_ev_map:
+      name: kenya-ev-map
+      description: Zeno Moto EV charging coverage map for Kenya (Streamlit + Leaflet)
+      source_code_path: ./app
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: ${var.workspace_host}
+
+  prod:
+    mode: production
+    workspace:
+      host: ${var.workspace_host}
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    permissions:
+      - user_name: ${workspace.current_user.userName}
+        level: CAN_MANAGE
+    resources:
+      apps:
+        kenya_ev_map:
+          name: kenya-ev-map
+          permissions:
+            - level: CAN_USE
+              group_name: users
