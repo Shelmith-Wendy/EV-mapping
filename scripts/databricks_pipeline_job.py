@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Databricks Job entry: run the Kenya EV pipeline and publish to a UC Volume.
+"""Databricks Job entry: refresh every REGIONS pipeline and publish to a UC Volume.
 
-Expected environment: serverless (or classic) Job task with outbound HTTPS for
-Zeno + Nominatim, WRITE on the target Volume, and bundle sync of scripts/ + data/raw/.
+Expected environment: serverless Job task with outbound HTTPS (Zeno, Taipei CSVs,
+Nominatim), WRITE on the target Volume, and bundle sync of scripts/ + regions/ +
+data/raw/. Exits non-zero if any region fails so Job email_notifications fire;
+successful regions still promote independently.
 """
 
 from __future__ import annotations
@@ -28,7 +30,7 @@ def main() -> int:
         "--force-fetch",
         action=argparse.BooleanOptionalAction,
         default=True,
-        help="Re-download Zeno HTML instead of using synced data/raw cache (default: true)",
+        help="Re-download source data instead of using synced data/raw cache (default: true)",
     )
     args = parser.parse_args()
 
@@ -37,7 +39,7 @@ def main() -> int:
     if args.force_fetch:
         os.environ["KENYA_EV_FORCE_FETCH"] = "1"
 
-    print(f"Publishing contract to {dest}/")
+    print(f"Publishing contract to {dest}/<region_id>/")
     print(f"KENYA_EV_FORCE_FETCH={os.environ.get('KENYA_EV_FORCE_FETCH', '')}")
 
     from run_pipeline import main as pipeline_main

@@ -1,0 +1,110 @@
+[
+  {
+    "locality": "中山區",
+    "landmark": null,
+    "query_used": "中山區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  },
+  {
+    "locality": "中正區",
+    "landmark": null,
+    "query_used": "中正區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  },
+  {
+    "locality": "信義區",
+    "landmark": null,
+    "query_used": "信義區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  },
+  {
+    "locality": "內湖區",
+    "landmark": null,
+    "query_used": "內湖區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  },
+  {
+    "locality": "北投區",
+    "landmark": null,
+    "query_used": "北投區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  },
+  {
+    "locality": "南港區",
+    "landmark": null,
+    "query_used": "南港區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  },
+  {
+    "locality": "士林區",
+    "landmark": null,
+    "query_used": "士林區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  },
+  {
+    "locality": "大同區",
+    "landmark": null,
+    "query_used": "大同區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  },
+  {
+    "locality": "大安區",
+    "landmark": null,
+    "query_used": "大安區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  },
+  {
+    "locality": "文山區",
+    "landmark": null,
+    "query_used": "文山區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  },
+  {
+    "locality": "松山區",
+    "landmark": null,
+    "query_used": "松山區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  },
+  {
+    "locality": "萬華區",
+    "landmark": null,
+    "query_used": "萬華區, Taiwan",
+    "latitude": null,
+    "longitude": null,
+    "display_name": null,
+    "source": "skipped_source_coords"
+  }
+]

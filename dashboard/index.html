@@ -3,88 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kenya EV Map</title>
+  <title>EV charging coverage</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="vendor/leaflet.css" />
   <link rel="stylesheet" href="vendor/maplibre-gl.css" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <div class="frame">
     <header class="toolbar">
       <div class="brand">
-        <p class="eyebrow">Zeno Moto · Kenya</p>
+        <p class="eyebrow" id="brand-eyebrow">Zeno Moto · Kenya</p>
         <h1>EV charging coverage</h1>
       </div>
-      <section class="stats" aria-label="Totals">
-        <article class="stat">
-          <p class="stat-label">Stations</p>
-          <p class="stat-value" id="stat-total">—</p>
-        </article>
-        <article class="stat stat-fast">
-          <p class="stat-label">Fast</p>
-          <p class="stat-value" id="stat-fast">—</p>
-        </article>
-        <article class="stat stat-swap">
-          <p class="stat-label">Swap</p>
-          <p class="stat-value" id="stat-swap">—</p>
-        </article>
-        <article class="stat">
-          <p class="stat-label">Counties</p>
-          <p class="stat-value" id="stat-counties">—</p>
-        </article>
-      </section>
-      <div class="toggles" role="group" aria-label="Station type">
-        <button class="toggle is-on" data-type="all">All</button>
-        <button class="toggle" data-type="fast_charger">Fast charger</button>
-        <button class="toggle" data-type="swap_station">Swap station</button>
-      </div>
+      <section class="stats" id="global-stats" aria-label="Totals"></section>
+      <div class="region-picker" id="region-picker" role="group" aria-label="Regions"></div>
+      <div class="toggles" id="type-toggles" role="group" aria-label="Station type"></div>
     </header>
 
-    <main class="stage">
-      <div id="map" aria-label="Kenya station map"></div>
-      <aside class="panel">
-        <div class="charts-stack">
-          <section class="chart-block" aria-label="Stations by county">
-            <div class="chart-block-head">
-              <h2>Counties</h2>
-              <p class="chart-hint" id="county-chart-hint">Click a county to drill down</p>
-              <button type="button" class="chart-clear" id="clear-county" hidden>Clear</button>
-            </div>
-            <div class="chart-scroll">
-              <div id="county-chart-box">
-                <canvas id="county-bars"></canvas>
-              </div>
-            </div>
-          </section>
-          <section class="chart-block" id="town-chart-block" aria-label="Stations by town" hidden>
-            <div class="chart-block-head">
-              <h2 id="town-chart-title">Towns</h2>
-              <p class="chart-hint" id="town-chart-hint">Click a town to see its stations</p>
-              <button type="button" class="chart-clear" id="clear-town" hidden>Clear</button>
-            </div>
-            <div class="chart-scroll">
-              <div id="town-chart-box">
-                <canvas id="town-bars"></canvas>
-              </div>
-            </div>
-          </section>
-        </div>
-        <ul class="legend">
-          <li><span class="swatch swatch-zero"></span> No stations</li>
-          <li><span class="swatch swatch-fast"></span> Fast charger</li>
-          <li><span class="swatch swatch-swap"></span> Swap station</li>
-        </ul>
-      </aside>
-    </main>
+    <div id="workspace" class="workspace is-merge" aria-live="polite"></div>
   </div>
 
   <script src="vendor/leaflet.js"></script>
   <script src="vendor/maplibre-gl.js"></script>
   <script src="vendor/leaflet-maplibre-gl.js"></script>
   <script src="vendor/chart.umd.min.js"></script>
-  <script src="app.js?v=3"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>

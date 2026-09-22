@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-14T12:39:08+00:00",
+  "pipeline_run_id": "466f895e51b64250b186160a4eb8a769",
+  "source_name": "Gogoro Network",
+  "station_count": 367,
+  "retrieved_at": "2026-09-14T12:39:05+00:00",
+  "files": {
+    "district_summary.json": {
+      "bytes": 1430,
+      "sha256": "b2076281d58d37128551f09fc945bff1e6d73431f3ac0a809b86dc6ee3e6f141"
+    },
+    "stations_with_county.json": {
+      "bytes": 390868,
+      "sha256": "c5c7926bf6d973c986a94729560a1c0a65b3fd4322ec4dcdd29b05ec5b3a0054"
+    },
+    "kenya_counties_display.geojson": {
+      "bytes": 6289,
+      "sha256": "799786fb63e6cf4b3cc66d88ab5ddf79b4c3c374dd0f83c62a056d7504c957b1"
+    }
+  }
+}

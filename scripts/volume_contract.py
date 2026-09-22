@@ -13,7 +13,8 @@ from common import (
     DASHBOARD_FILES,
     MANIFEST_FILE,
     STATIONS_WITH_COUNTY,
-    VOLUME_PUBLIC_FILES,
+    current_region,
+    dashboard_files_for,
     read_json,
     write_json,
 )
@@ -24,10 +25,6 @@ MANIFEST_SCHEMA_VERSION = 1
 def volume_root(catalog: str, schema: str, volume: str = "public") -> str:
     """Logical Volume path used by Jobs (write) and the App (read)."""
     return f"/Volumes/{catalog}/{schema}/{volume}"
-
-
-def volume_file_path(catalog: str, schema: str, name: str, volume: str = "public") -> str:
-    return f"{volume_root(catalog, schema, volume).rstrip('/')}/{name}"
 
 
 def file_sha256(path: Path) -> str:
@@ -43,14 +40,38 @@ def latest_retrieved_at(stations: list[dict]) -> str | None:
     return max(values) if values else None
 
 
+def _dashboard_files(region_id: str | None = None) -> tuple[str, ...]:
+    if region_id is None:
+        try:
+            return dashboard_files_for(current_region())
+        except KeyError:
+            return DASHBOARD_FILES
+    from regions import REGIONS
+
+    return dashboard_files_for(REGIONS[region_id])
+
+
+def contract_files(region_id: str | None = None) -> tuple[str, ...]:
+    """Dashboard artifacts + manifest for a region (Kenya-shaped default)."""
+    return _dashboard_files(region_id) + (MANIFEST_FILE,)
+
+
+def region_id_from_public_dir(public_dir: Path) -> str | None:
+    from regions import REGIONS
+
+    name = Path(public_dir).name
+    return name if name in REGIONS else None
+
+
 def build_manifest(
     public_dir: Path,
     *,
     pipeline_run_id: str | None = None,
     source_name: str = "zeno_earth",
+    region_id: str | None = None,
 ) -> dict:
     files = {}
-    for name in DASHBOARD_FILES:
+    for name in _dashboard_files(region_id):
         path = public_dir / name
         files[name] = {
             "bytes": path.stat().st_size,
@@ -69,22 +90,45 @@ def build_manifest(
     }
 
 
-def write_manifest(public_dir: Path, *, pipeline_run_id: str | None = None) -> Path:
+def write_manifest(
+    public_dir: Path,
+    *,
+    pipeline_run_id: str | None = None,
+    region_id: str | None = None,
+    source_name: str | None = None,
+) -> Path:
     public_dir = Path(public_dir)
-    missing = [name for name in DASHBOARD_FILES if not (public_dir / name).exists()]
+    dash_files = _dashboard_files(region_id)
+    missing = [name for name in dash_files if not (public_dir / name).exists()]
     if missing:
         raise FileNotFoundError(f"Missing dashboard files in {public_dir}: {missing}")
+
+    stations = read_json(public_dir / STATIONS_WITH_COUNTY)
+    if source_name is None:
+        names = [row.get("source_name") for row in stations if row.get("source_name")]
+        source_name = max(set(names), key=names.count) if names else "unknown"
+
     path = public_dir / MANIFEST_FILE
-    write_json(path, build_manifest(public_dir, pipeline_run_id=pipeline_run_id))
+    write_json(
+        path,
+        build_manifest(
+            public_dir,
+            pipeline_run_id=pipeline_run_id,
+            source_name=source_name,
+            region_id=region_id,
+        ),
+    )
     return path
 
 
-def validate_public_dir(public_dir: Path) -> list[str]:
+def validate_public_dir(public_dir: Path, *, region_id: str | None = None) -> list[str]:
     """Return human-readable problems; empty list means the contract is satisfied."""
     public_dir = Path(public_dir)
     problems: list[str] = []
+    dash_files = _dashboard_files(region_id)
+    volume_files = contract_files(region_id)
 
-    for name in VOLUME_PUBLIC_FILES:
+    for name in volume_files:
         path = public_dir / name
         if not path.is_file():
             problems.append(f"missing required file: {name}")
@@ -105,7 +149,7 @@ def validate_public_dir(public_dir: Path) -> list[str]:
             f"{manifest.get('schema_version')!r} != {MANIFEST_SCHEMA_VERSION}"
         )
 
-    for name in DASHBOARD_FILES:
+    for name in dash_files:
         path = public_dir / name
         if not path.is_file():
             continue
@@ -130,15 +174,25 @@ def validate_public_dir(public_dir: Path) -> list[str]:
     return problems
 
 
-def publish_public_dir(public_dir: Path, volume_root_path: str | Path) -> Path:
+def publish_public_dir(
+    public_dir: Path,
+    volume_root_path: str | Path,
+    *,
+    region_id: str | None = None,
+) -> Path:
     """Copy validated contract files from public_dir into a UC Volume directory.
 
-    On Databricks the Volume is FUSE-mounted under /Volumes/... so normal
-    filesystem copies work. Callers should validate the contract first.
+    When region_id is set, files land under {volume_root}/{region_id}/ so regions
+    do not overwrite each other. On Databricks the Volume is FUSE-mounted under
+    /Volumes/... so normal filesystem copies work. Callers should validate first.
     """
     public_dir = Path(public_dir)
+    rid = region_id or region_id_from_public_dir(public_dir)
     dest_root = Path(volume_root_path)
-    problems = validate_public_dir(public_dir)
+    if rid:
+        dest_root = dest_root / rid
+    volume_files = contract_files(rid)
+    problems = validate_public_dir(public_dir, region_id=rid)
     if problems:
         raise ValueError("Refusing to publish; contract problems: " + "; ".join(problems))
 
@@ -146,9 +200,9 @@ def publish_public_dir(public_dir: Path, volume_root_path: str | Path) -> Path:
     staging = dest_root / f".staging.{uuid.uuid4().hex}"
     staging.mkdir(parents=True, exist_ok=False)
     try:
-        for name in VOLUME_PUBLIC_FILES:
+        for name in volume_files:
             shutil.copy2(public_dir / name, staging / name)
-        for name in VOLUME_PUBLIC_FILES:
+        for name in volume_files:
             src = staging / name
             final = dest_root / name
             tmp = dest_root / f".{name}.{uuid.uuid4().hex}.tmp"

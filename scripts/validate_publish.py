@@ -8,22 +8,19 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from common import (
-    COUNT_COLS,
     COUNTIES_DISPLAY_GEOJSON,
     COUNTIES_GEOJSON,
-    COUNTY_SUMMARY,
-    DASHBOARD_FILES,
-    KENYA_COUNTY_COUNT,
     LOCALITIES_GEOCODED,
-    REQUIRED_FILES,
-    STATION_FIELDS,
+    REQUIRED_STATION_FIELDS,
     STATION_TYPE_VALUES,
     STATIONS_GEOCODED,
     STATIONS_STANDARD,
     STATIONS_WITH_COUNTY,
-    TOWN_SUMMARY,
+    current_region,
+    dashboard_files_for,
     data_dir,
     read_json,
+    required_files_for,
 )
 
 
@@ -32,9 +29,12 @@ def fail(message: str) -> None:
 
 
 def validate(data: Path) -> bool:
+    cfg = current_region()
+    tiers = cfg.tiers
+    primary_tier = tiers[0]
     ok = True
 
-    for name in REQUIRED_FILES:
+    for name in required_files_for(cfg):
         if not (data / name).exists():
             fail(f"missing {name}")
             ok = False
@@ -44,11 +44,20 @@ def validate(data: Path) -> bool:
     standard = read_json(data / STATIONS_STANDARD)
     geocoded = read_json(data / STATIONS_GEOCODED)
     with_county = read_json(data / STATIONS_WITH_COUNTY)
-    county_summary = read_json(data / COUNTY_SUMMARY)
-    town_summary = read_json(data / TOWN_SUMMARY)
     counties_geo = read_json(data / COUNTIES_GEOJSON)
     display_geo = read_json(data / COUNTIES_DISPLAY_GEOJSON)
     localities = read_json(data / LOCALITIES_GEOCODED)
+
+    tier_summaries = {}
+    for tier in tiers:
+        path = data / f"{tier}_summary.json"
+        if not path.exists():
+            fail(f"missing {tier}_summary.json")
+            ok = False
+        else:
+            tier_summaries[tier] = read_json(path)
+    if not ok:
+        return False
 
     if not isinstance(standard, list) or not standard:
         fail(f"{STATIONS_STANDARD} must be a non-empty list")
@@ -56,7 +65,7 @@ def validate(data: Path) -> bool:
 
     station_ids = set()
     for row in standard:
-        missing = STATION_FIELDS - row.keys()
+        missing = REQUIRED_STATION_FIELDS - row.keys()
         if missing:
             fail(f"{STATIONS_STANDARD} missing fields {sorted(missing)} on {row.get('station_id')}")
             ok = False
@@ -91,62 +100,67 @@ def validate(data: Path) -> bool:
         ok = False
 
     for row in with_county:
-        if not row.get("county"):
-            fail(f"missing county for {row.get('station_id')}")
-            ok = False
+        for tier in tiers:
+            if not row.get(tier):
+                fail(f"missing {tier} for {row.get('station_id')}")
+                ok = False
         if not row.get("maps_navigation_url"):
             fail(f"missing maps_navigation_url for {row.get('station_id')}")
-            ok = False
-        if not row.get("town"):
-            fail(f"missing town for {row.get('station_id')}")
             ok = False
 
     county_features = counties_geo.get("features", [])
     display_features = display_geo.get("features", [])
-    if len(county_features) != KENYA_COUNTY_COUNT:
-        fail(f"{COUNTIES_GEOJSON} expected {KENYA_COUNTY_COUNT} features, got {len(county_features)}")
+    expected_units = cfg.expected_unit_count
+    if len(county_features) != expected_units:
+        fail(f"{COUNTIES_GEOJSON} expected {expected_units} features, got {len(county_features)}")
         ok = False
-    if len(display_features) != KENYA_COUNTY_COUNT:
-        fail(f"{COUNTIES_DISPLAY_GEOJSON} expected {KENYA_COUNTY_COUNT} features, got {len(display_features)}")
+    if len(display_features) != expected_units:
+        fail(f"{COUNTIES_DISPLAY_GEOJSON} expected {expected_units} features, got {len(display_features)}")
         ok = False
 
     station_total = len(standard)
-    county_total = sum(row["total_count"] for row in county_summary)
-    town_total = sum(row["total_count"] for row in town_summary)
-    if county_total != station_total:
-        fail(f"{COUNTY_SUMMARY} total {county_total} != station count {station_total}")
-        ok = False
-    if town_total != station_total:
-        fail(f"{TOWN_SUMMARY} total {town_total} != station count {station_total}")
-        ok = False
-
-    for table, label in ((county_summary, COUNTY_SUMMARY), (town_summary, TOWN_SUMMARY)):
-        for row in table:
-            if sum(row[col] for col in COUNT_COLS[:2]) != row["total_count"]:
-                fail(f"{label} row {row} counts do not add up")
+    for tier, summary in tier_summaries.items():
+        tier_total = sum(row["total_count"] for row in summary)
+        if tier_total != station_total:
+            fail(f"{tier}_summary.json total {tier_total} != station count {station_total}")
+            ok = False
+        for row in summary:
+            type_cols = [key for key in row if key.endswith("_count") and key != "total_count"]
+            if sum(row[col] for col in type_cols) != row["total_count"]:
+                fail(f"{tier}_summary.json row {row} counts do not add up")
                 ok = False
 
-    station_town_pairs = Counter((row["town"], row["county"]) for row in with_county)
-    summary_town_pairs = {(row["town"], row["county"]): row["total_count"] for row in town_summary}
-    if set(station_town_pairs) != set(summary_town_pairs):
-        fail(f"{TOWN_SUMMARY} town/county pairs do not match stations")
-        ok = False
-    for pair, count in station_town_pairs.items():
-        if summary_town_pairs.get(pair) != count:
-            fail(f"{TOWN_SUMMARY} {pair} count {summary_town_pairs.get(pair)} != stations {count}")
+    if len(tiers) >= 2:
+        secondary = tiers[1]
+        station_pairs = Counter(
+            tuple(row[t] for t in reversed(tiers[:2])) for row in with_county
+        )
+        summary_pairs = {
+            tuple(row[t] for t in reversed(tiers[:2])): row["total_count"]
+            for row in tier_summaries[secondary]
+        }
+        if set(station_pairs) != set(summary_pairs):
+            fail(f"{secondary}_summary.json {secondary}/{primary_tier} pairs do not match stations")
             ok = False
+        for pair, count in station_pairs.items():
+            if summary_pairs.get(pair) != count:
+                fail(
+                    f"{secondary}_summary.json {pair} count "
+                    f"{summary_pairs.get(pair)} != stations {count}"
+                )
+                ok = False
 
-    towns_by_county: dict[str, int] = defaultdict(int)
-    for row in town_summary:
-        towns_by_county[row["county"]] += row["total_count"]
-    for row in county_summary:
-        town_sum = towns_by_county.get(row["county"], 0)
-        if town_sum != row["total_count"]:
-            fail(
-                f"towns in {row['county']} sum to {town_sum} != "
-                f"{COUNTY_SUMMARY} total {row['total_count']}"
-            )
-            ok = False
+        by_primary: dict[str, int] = defaultdict(int)
+        for row in tier_summaries[secondary]:
+            by_primary[row[primary_tier]] += row["total_count"]
+        for row in tier_summaries[primary_tier]:
+            child_sum = by_primary.get(row[primary_tier], 0)
+            if child_sum != row["total_count"]:
+                fail(
+                    f"{secondary}s in {row[primary_tier]} sum to {child_sum} != "
+                    f"{primary_tier}_summary.json total {row['total_count']}"
+                )
+                ok = False
 
     locality_names = {row["locality"] for row in localities}
     station_localities = {row["locality"] for row in standard}
@@ -155,15 +169,15 @@ def validate(data: Path) -> bool:
         fail(f"{LOCALITIES_GEOCODED} missing: {sorted(missing_localities)}")
         ok = False
 
-    for name in DASHBOARD_FILES:
+    for name in dashboard_files_for(cfg):
         if not (data / name).exists():
             fail(f"dashboard artifact missing: {name}")
             ok = False
 
     if ok:
         review_count = sum(1 for row in geocoded if row.get("needs_review"))
-        town_count = len({row["town"] for row in with_county})
-        print(f"PASS: {station_total} stations, {town_count} towns, {review_count} need review")
+        unit_count = len({row[primary_tier] for row in with_county})
+        print(f"PASS: {station_total} stations, {unit_count} {primary_tier}, {review_count} need review")
     return ok
 
 

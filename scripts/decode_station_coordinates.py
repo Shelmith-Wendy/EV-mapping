@@ -1,27 +1,30 @@
 #!/usr/bin/env python3
-"""Decode station coordinates from Plus Codes and verify against Maps URLs."""
+"""Decode station coordinates from Plus Codes / Maps URLs; skip if already set."""
 
 from __future__ import annotations
 
-import math
-import re
 import statistics
 import sys
-import time
 from collections import Counter, defaultdict
-from urllib.parse import unquote
 
 import requests
-from openlocationcode import openlocationcode as olc
 
 from common import (
     LOCALITIES_GEOCODED,
     STATIONS_GEOCODED,
     STATIONS_STANDARD,
+    current_region,
     data_dir,
     nominatim_geocode,
     read_json,
     write_json,
+)
+from regions.kenya import (
+    business_name_from_url,
+    decode_plus_code,
+    haversine_km,
+    resolve_maps_for_station,
+    resolve_share_google_q,
 )
 
 PROCESSED = data_dir()
@@ -29,42 +32,61 @@ STATIONS_PATH = PROCESSED / STATIONS_STANDARD
 LOCALITIES_PATH = PROCESSED / LOCALITIES_GEOCODED
 
 MISMATCH_THRESHOLD_KM = 5.0
-SECONDARY_PLUS_AGREE_KM = 1.0
 TERTIARY_AGREE_KM = 3.0
-REQUEST_GAP_SECONDS = 0.5
-REQUEST_TIMEOUT_SECONDS = 15
-USER_AGENT = (
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
-    "Chrome/128.0.0.0 Safari/537.36"
+
+
+GEOCODED_ENRICHMENT_KEYS = (
+    "decoded_latitude",
+    "decoded_longitude",
+    "resolved_latitude",
+    "resolved_longitude",
+    "secondary_decode_latitude",
+    "secondary_decode_longitude",
+    "distance_km",
+    "final_latitude",
+    "final_longitude",
+    "coordinate_source",
+    "maps_navigation_url",
+    "tertiary_check_latitude",
+    "tertiary_check_longitude",
+    "tertiary_check_agrees",
+    "needs_review",
+    "review_reason",
 )
 
-PLUS_CODE_RE = re.compile(r"[A-Za-z0-9]{4,8}\+[A-Za-z0-9]{2,3}")
-PIN_RE = re.compile(r"!3d(-?\d+\.?\d*)!4d(-?\d+\.?\d*)")
-VIEWPORT_RE = re.compile(r"@(-?\d+\.?\d*),(-?\d+\.?\d*),")
-Q_LATLNG_RE = re.compile(r"[?&]q=(-?\d+\.?\d*)[,%2C\+]+(-?\d+\.?\d*)")
-SEARCH_PATH_RE = re.compile(r"/maps/search/(-?\d+\.?\d*)[,%2C\+]+(-?\d+\.?\d*)")
-DIR_PATH_RE = re.compile(r"/maps/dir/(.+)")
 
-
-def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
-    radius_km = 6371.0
-    phi1, phi2 = math.radians(lat1), math.radians(lat2)
-    d_phi = math.radians(lat2 - lat1)
-    d_lambda = math.radians(lon2 - lon1)
-    a = math.sin(d_phi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(d_lambda / 2) ** 2
-    return 2 * radius_km * math.asin(math.sqrt(a))
-
-
-def load_previous_resolved() -> dict[tuple[str, str], tuple[float | None, float | None]]:
+def load_previous_geocoded() -> dict[str, dict]:
     path = PROCESSED / STATIONS_GEOCODED
     if not path.exists():
         return {}
+    return {row["station_id"]: row for row in read_json(path)}
+
+
+def load_previous_resolved(previous_geocoded: dict[str, dict]) -> dict[tuple[str, str], tuple[float | None, float | None]]:
     previous = {}
-    for row in read_json(path):
+    for row in previous_geocoded.values():
         resolved = (row.get("resolved_latitude"), row.get("resolved_longitude"))
         if resolved[0] is not None and resolved[1] is not None:
             previous[(row["station_id"], row["source_maps_url"])] = resolved
     return previous
+
+
+def reuse_previous_geocoded(station: dict, previous: dict | None) -> dict | None:
+    """Pass through prior enrichment when the station's decode inputs are unchanged."""
+    if not previous:
+        return None
+    if previous.get("address_raw") != station.get("address_raw"):
+        return None
+    if previous.get("source_maps_url") != station.get("source_maps_url"):
+        return None
+    if previous.get("locality") != station.get("locality"):
+        return None
+    if previous.get("final_latitude") is None or previous.get("final_longitude") is None:
+        return None
+    return {
+        **station,
+        **{key: previous.get(key) for key in GEOCODED_ENRICHMENT_KEYS},
+    }
 
 
 def load_nominatim_anchors() -> dict[str, tuple[float, float]]:
@@ -108,6 +130,7 @@ def update_locality_anchors(
     anchors: dict[str, tuple[float, float]],
     anchor_sources: dict[str, str],
     stations: list[dict],
+    country_hint: str,
 ) -> None:
     if not LOCALITIES_PATH.exists():
         return
@@ -133,7 +156,7 @@ def update_locality_anchors(
             if source == "maps_url":
                 row["display_name"] = None
             continue
-        query = f"{landmark}, Kenya" if landmark else f"{locality}, Kenya"
+        query = f"{landmark}, {country_hint}" if landmark else f"{locality}, {country_hint}"
         rows.append({
             "locality": locality,
             "landmark": landmark,
@@ -146,148 +169,6 @@ def update_locality_anchors(
 
     rows.sort(key=lambda row: row["locality"])
     write_json(LOCALITIES_PATH, rows)
-
-
-def plus_code_in_text(text: str) -> str | None:
-    for match in PLUS_CODE_RE.finditer(text or ""):
-        code = match.group().upper()
-        try:
-            if olc.isValid(code):
-                return code
-        except Exception:
-            continue
-    return None
-
-
-def decode_plus_code(address_raw: str, anchor_lat: float, anchor_lng: float):
-    code = plus_code_in_text(address_raw)
-    if not code:
-        return None, None
-    try:
-        full_code = olc.recoverNearest(code, anchor_lat, anchor_lng)
-        area = olc.decode(full_code)
-    except Exception:
-        return None, None
-    return area.latitudeCenter, area.longitudeCenter
-
-
-def q_param_text(url: str) -> str | None:
-    match = re.search(r"[?&]q=([^&]+)", url)
-    return unquote(match.group(1)) if match else None
-
-
-def extract_maps_coordinates(url: str):
-    if not url or "consent.google.com" in url:
-        return None, None
-    pin = PIN_RE.findall(url)
-    if pin:
-        lat, lng = pin[-1]
-        return float(lat), float(lng)
-    viewport = VIEWPORT_RE.search(url)
-    if viewport:
-        return float(viewport.group(1)), float(viewport.group(2))
-    q_match = Q_LATLNG_RE.search(url)
-    if q_match:
-        return float(q_match.group(1)), float(q_match.group(2))
-    search_match = SEARCH_PATH_RE.search(url)
-    if search_match:
-        return float(search_match.group(1)), float(search_match.group(2))
-    dir_match = DIR_PATH_RE.search(url)
-    if dir_match:
-        pairs = re.findall(r"(-?\d+\.?\d*),(-?\d+\.?\d*)", dir_match.group(1))
-        if pairs:
-            lat, lng = pairs[-1]
-            return float(lat), float(lng)
-    return None, None
-
-
-def fetch_final_url(session: requests.Session, url: str) -> str | None:
-    try:
-        response = session.get(
-            url,
-            allow_redirects=True,
-            headers={"User-Agent": USER_AGENT},
-            timeout=REQUEST_TIMEOUT_SECONDS,
-        )
-        return response.url
-    except requests.RequestException:
-        return None
-
-
-def business_name_from_url(url: str) -> str | None:
-    if not url:
-        return None
-    place_match = re.search(r"/maps/place/([^/?]+)", url)
-    if place_match:
-        name = unquote(place_match.group(1).replace("+", " ")).strip()
-        return name or None
-    q_text = q_param_text(url)
-    if not q_text:
-        return None
-    if Q_LATLNG_RE.search(f"?q={q_text}") or plus_code_in_text(q_text):
-        return None
-    return q_text.replace("+", " ").strip() or None
-
-
-def resolve_share_google_q(
-    final_url: str,
-    address_raw: str,
-    decoded_lat: float | None,
-    decoded_lng: float | None,
-    anchor_lat: float,
-    anchor_lng: float,
-):
-    q_latlng = Q_LATLNG_RE.search(final_url)
-    if q_latlng:
-        return float(q_latlng.group(1)), float(q_latlng.group(2)), None, None, None
-
-    q_text = q_param_text(final_url)
-    if not q_text:
-        return None, None, None, None, None
-
-    q_plus = plus_code_in_text(q_text)
-    address_plus = plus_code_in_text(address_raw)
-    if not q_plus:
-        return None, None, None, None, None
-    if q_plus == address_plus:
-        return None, None, None, None, None
-
-    secondary_lat, secondary_lng = decode_plus_code(q_plus, anchor_lat, anchor_lng)
-    if decoded_lat is None or decoded_lng is None or secondary_lat is None or secondary_lng is None:
-        return None, None, secondary_lat, secondary_lng, "dual_plus_code_decode_failed"
-
-    distance_km = haversine_km(decoded_lat, decoded_lng, secondary_lat, secondary_lng)
-    if distance_km <= SECONDARY_PLUS_AGREE_KM:
-        return None, None, secondary_lat, secondary_lng, "plus_code_decode_confirmed"
-    return None, None, secondary_lat, secondary_lng, f"dual_plus_code_disagree_{distance_km:.1f}km"
-
-
-def resolve_maps_url(session: requests.Session, url: str):
-    final_url = fetch_final_url(session, url)
-    if not final_url:
-        return None, None, final_url
-    coords = extract_maps_coordinates(final_url)
-    if coords[0] is not None:
-        return coords[0], coords[1], final_url
-    return None, None, final_url
-
-
-def resolve_maps_for_station(
-    session: requests.Session,
-    station: dict,
-    previous_resolved: dict[tuple[str, str], tuple[float | None, float | None]],
-    fetch_live: bool,
-) -> tuple[float | None, float | None, str | None]:
-    source_url = station["source_maps_url"]
-    cache_key = (station["station_id"], source_url)
-    if cache_key in previous_resolved:
-        lat, lng = previous_resolved[cache_key]
-        return lat, lng, None
-    if not fetch_live:
-        return None, None, None
-    resolved_lat, resolved_lng, final_url = resolve_maps_url(session, source_url)
-    time.sleep(REQUEST_GAP_SECONDS)
-    return resolved_lat, resolved_lng, final_url
 
 
 def zeno_link_trusted(review_reason: str | None) -> bool:
@@ -338,8 +219,30 @@ def review_reason(
     return "no_coordinates"
 
 
-def write_outputs(records: list[dict]) -> None:
-    write_json(PROCESSED / STATIONS_GEOCODED, records)
+def record_from_source_coords(station: dict) -> dict:
+    lat = float(station["latitude"])
+    lng = float(station["longitude"])
+    return {
+        **station,
+        "decoded_latitude": None,
+        "decoded_longitude": None,
+        "resolved_latitude": lat,
+        "resolved_longitude": lng,
+        "secondary_decode_latitude": None,
+        "secondary_decode_longitude": None,
+        "distance_km": None,
+        "final_latitude": lat,
+        "final_longitude": lng,
+        "coordinate_source": "source",
+        "maps_navigation_url": maps_navigation_url(
+            station.get("source_maps_url"), lat, lng, None
+        ),
+        "tertiary_check_latitude": None,
+        "tertiary_check_longitude": None,
+        "tertiary_check_agrees": None,
+        "needs_review": False,
+        "review_reason": None,
+    }
 
 
 def print_summary(
@@ -363,10 +266,12 @@ def print_summary(
     missing_anchors = sorted(
         {station["locality"] for station in stations} - set(anchors)
     )
+    skipped = sum(1 for record in records if record.get("coordinate_source") == "source")
 
     print(f"anchors: {len(anchors)} ({dict(anchor_source_counts)})")
     if missing_anchors:
         print(f"localities without anchor ({len(missing_anchors)}): {missing_anchors}")
+    print(f"skipped (source lat/lon): {skipped}")
     print(f"coordinate_source maps_url: {sources.get('maps_url', 0)}")
     print(f"coordinate_source plus_code_decode: {sources.get('plus_code_decode', 0)}")
     print(f"coordinate_source plus_code_decode_confirmed: {sources.get('plus_code_decode_confirmed', 0)}")
@@ -381,26 +286,55 @@ def print_summary(
 
 
 def main() -> int:
+    cfg = current_region()
+    country_hint = cfg.geocode_country_hint
     stations = read_json(STATIONS_PATH)
     nominatim_anchors = load_nominatim_anchors()
-    previous_resolved = load_previous_resolved()
+    previous_geocoded = load_previous_geocoded()
+    previous_resolved = load_previous_resolved(previous_geocoded)
     session = requests.Session()
+
+    reused: dict[str, dict] = {}
+    for station in stations:
+        if station.get("latitude") is not None and station.get("longitude") is not None:
+            continue
+        prior = reuse_previous_geocoded(station, previous_geocoded.get(station["station_id"]))
+        if prior is not None:
+            reused[station["station_id"]] = prior
 
     maps_by_station: dict[str, tuple[float | None, float | None, str | None]] = {}
     for station in stations:
+        if station["station_id"] in reused:
+            maps_by_station[station["station_id"]] = (None, None, None)
+            continue
+        if station.get("latitude") is not None and station.get("longitude") is not None:
+            maps_by_station[station["station_id"]] = (None, None, None)
+            continue
         resolved_lat, resolved_lng, final_url = resolve_maps_for_station(
             session, station, previous_resolved, fetch_live=True
         )
         maps_by_station[station["station_id"]] = (resolved_lat, resolved_lng, final_url)
 
-    anchors, anchor_sources = bootstrap_anchors(stations, nominatim_anchors, maps_by_station)
-    update_locality_anchors(anchors, anchor_sources, stations)
+    need_decode = [
+        station for station in stations
+        if station["station_id"] not in reused
+        and (station.get("latitude") is None or station.get("longitude") is None)
+    ]
+    anchors, anchor_sources = bootstrap_anchors(need_decode, nominatim_anchors, maps_by_station)
+    update_locality_anchors(anchors, anchor_sources, need_decode, country_hint)
 
     geocode = nominatim_geocode()
     tertiary_cache: dict[str, tuple[float | None, float | None]] = {}
     records = []
 
     for station in stations:
+        if station["station_id"] in reused:
+            records.append(reused[station["station_id"]])
+            continue
+        if station.get("latitude") is not None and station.get("longitude") is not None:
+            records.append(record_from_source_coords(station))
+            continue
+
         locality = station["locality"]
         anchor = anchors.get(locality)
         decoded_lat, decoded_lng = (None, None)
@@ -450,7 +384,7 @@ def main() -> int:
             lookup_url = final_url or station["source_maps_url"]
             business_name = business_name_from_url(lookup_url)
             if business_name:
-                query = f"{business_name}, {station['locality']}, Kenya"
+                query = f"{business_name}, {station['locality']}, {country_hint}"
                 if query not in tertiary_cache:
                     location = geocode(query)
                     tertiary_cache[query] = (
@@ -486,7 +420,8 @@ def main() -> int:
             "review_reason": reason,
         })
 
-    write_outputs(records)
+    write_json(PROCESSED / STATIONS_GEOCODED, records)
+    print(f"reused previous geocode: {len(reused)}")
     print_summary(records, anchors, anchor_sources, stations)
     return 0
 

@@ -1,39 +1,91 @@
 const URL_PARAMS = new URLSearchParams(window.location.search);
 const EMBEDDED = URL_PARAMS.get("embed") === "1";
 const TYPE_PARAM = URL_PARAMS.get("type");
-const VALID_TYPES = new Set(["all", "fast_charger", "swap_station"]);
-// In Streamlit, the dashboard is served under /app/static/dashboard/, so use an
-// absolute public-data URL. Standalone /dashboard/ still uses the relative path.
-const DATA = EMBEDDED ? "/app/static/data/public" : "../data/public";
-const KENYA_BOUNDS = [[-5.0, 33.5], [5.6, 42.2]];
+const PUBLIC_ROOT = EMBEDDED ? "/app/static/data/public" : "../data/public";
 const BASEMAP_STYLE = "https://tiles.openfreemap.org/styles/dark";
-const FAST = "#4ade80";
-const SWAP = "#fb923c";
 const SELECTED = "#5eead4";
+const MAX_CLUSTER_PANELS = 4;
+const BOUNDARIES_FILE = "kenya_counties_display.geojson";
+const STATIONS_FILE = "stations_with_county.json";
 
-const state = {
-  stationType: VALID_TYPES.has(TYPE_PARAM) ? TYPE_PARAM : "all",
-  selectedCounty: null,
-  selectedTown: null,
-  counties: [],
-  towns: [],
-  stations: [],
-  geojson: null,
-  map: null,
-  countyLayer: null,
-  countyLabelLayer: null,
-  stationLayer: null,
-  countyRenderer: null,
-  countyChart: null,
-  townChart: null,
+const TYPE_META = {
+  fast_charger: { label: "Fast charger", short: "Fast", color: "#4ade80", css: "fast" },
+  swap_station: { label: "Swap station", short: "Swap", color: "#fb923c", css: "swap" },
+  standard_charger: { label: "Standard charger", short: "Standard", color: "#60a5fa", css: "standard" },
+};
+
+const app = {
+  manifest: null,
+  selectedRegionIds: new Set(["kenya"]),
+  stationType: "all",
+  regionData: new Map(),
+  panels: [],
 };
 
 if (EMBEDDED) document.body.classList.add("is-embed");
 
-function countOf(row) {
-  if (state.stationType === "fast_charger") return row.fast_charger_count;
-  if (state.stationType === "swap_station") return row.swap_station_count;
-  return row.total_count;
+function titleCaseWords(value) {
+  return String(value).replace(/_/g, " ").replace(/\b\w/g, (ch) => ch.toUpperCase());
+}
+
+function tierTitle(tier, { plural = false } = {}) {
+  const irregular = {
+    county: ["County", "Counties"],
+    town: ["Town", "Towns"],
+    district: ["District", "Districts"],
+  };
+  if (irregular[tier]) return irregular[tier][plural ? 1 : 0];
+  const base = titleCaseWords(tier);
+  return plural ? `${base}s` : base;
+}
+
+function typeMeta(stationType) {
+  return TYPE_META[stationType] || {
+    label: titleCaseWords(stationType),
+    short: titleCaseWords(stationType),
+    color: "#94a3b8",
+    css: "muted",
+  };
+}
+
+function selectedConfigs() {
+  return app.manifest.regions.filter((region) => app.selectedRegionIds.has(region.region_id));
+}
+
+function unionStationTypes(configs) {
+  const types = new Set();
+  for (const config of configs) {
+    for (const stationType of config.station_types) types.add(stationType);
+  }
+  return [...types].sort();
+}
+
+function clusterKeySet(configs) {
+  return new Set(configs.map((config) => config.cluster));
+}
+
+function layoutMode(configs) {
+  return clusterKeySet(configs).size <= 1 ? "merge" : "grid";
+}
+
+function panelsByCluster(configs) {
+  const groups = new Map();
+  for (const config of configs) {
+    if (!groups.has(config.cluster)) groups.set(config.cluster, []);
+    groups.get(config.cluster).push(config);
+  }
+  return [...groups.entries()].map(([cluster, regions]) => ({ cluster, regions }));
+}
+
+function countOf(row, stationType) {
+  if (stationType === "all") return row.total_count || 0;
+  return row[`${stationType}_count`] || 0;
+}
+
+function emptyCountRow(stationTypes) {
+  const row = { total_count: 0 };
+  for (const stationType of stationTypes) row[`${stationType}_count`] = 0;
+  return row;
 }
 
 function fillColor(count) {
@@ -44,12 +96,10 @@ function fillColor(count) {
   return "#5eead4";
 }
 
-function visibleStations() {
-  return state.stations.filter((s) => state.stationType === "all" || s.station_type === state.stationType);
-}
-
-function sortedRows(rows) {
-  return rows.filter((row) => countOf(row) > 0).sort((a, b) => countOf(b) - countOf(a));
+function sortedRows(rows, stationType) {
+  return rows
+    .filter((row) => countOf(row, stationType) > 0)
+    .sort((a, b) => countOf(b, stationType) - countOf(a, stationType));
 }
 
 function chartHeight(rowCount) {
@@ -69,17 +119,14 @@ function chartOptions(onBarClick) {
     layout: { padding: { top: 4, right: 8, bottom: 4, left: 0 } },
     onClick(event, elements, chart) {
       if (!elements.length || !onBarClick) return;
-      const index = elements[0].index;
-      onBarClick(chart.data.labels[index]);
+      onBarClick(chart.data.labels[elements[0].index]);
     },
     onHover(event, elements) {
       if (event.native?.target) {
         event.native.target.style.cursor = onBarClick && elements.length ? "pointer" : "default";
       }
     },
-    plugins: {
-      legend: { display: false },
-    },
+    plugins: { legend: { display: false } },
     scales: {
       x: {
         stacked: true,
@@ -105,34 +152,26 @@ function stackValue(count) {
   return count > 0 ? count : null;
 }
 
-function buildDatasets(labels, rows, selectedLabel) {
-  if (state.stationType === "all") {
-    return [
-      {
-        label: "Fast charger",
-        data: rows.map((r) => stackValue(r.fast_charger_count)),
-        backgroundColor: barColors(labels, FAST, selectedLabel),
+function buildDatasets(labels, rows, selectedLabel, stationType, stationTypes) {
+  if (stationType === "all") {
+    return stationTypes.map((typeName) => {
+      const meta = typeMeta(typeName);
+      return {
+        label: meta.label,
+        data: rows.map((row) => stackValue(row[`${typeName}_count`] || 0)),
+        backgroundColor: barColors(labels, meta.color, selectedLabel),
         borderRadius: 4,
         minBarLength: 6,
         categoryPercentage: 0.72,
         barPercentage: 0.9,
-      },
-      {
-        label: "Swap station",
-        data: rows.map((r) => stackValue(r.swap_station_count)),
-        backgroundColor: barColors(labels, SWAP, selectedLabel),
-        borderRadius: 4,
-        minBarLength: 6,
-        categoryPercentage: 0.72,
-        barPercentage: 0.9,
-      },
-    ];
+      };
+    });
   }
-  const color = state.stationType === "fast_charger" ? FAST : SWAP;
+  const meta = typeMeta(stationType);
   return [{
-    label: state.stationType === "fast_charger" ? "Fast charger" : "Swap station",
-    data: rows.map(countOf),
-    backgroundColor: barColors(labels, color, selectedLabel),
+    label: meta.label,
+    data: rows.map((row) => countOf(row, stationType)),
+    backgroundColor: barColors(labels, meta.color, selectedLabel),
     borderRadius: 4,
     minBarLength: 6,
     categoryPercentage: 0.72,
@@ -140,76 +179,19 @@ function buildDatasets(labels, rows, selectedLabel) {
   }];
 }
 
-function drawBarChart({ canvasId, boxId, chartKey, rows, labelKey, selectedLabel, onBarClick }) {
+function drawBarChart({ canvas, box, chartRef, rows, labelKey, selectedLabel, onBarClick, stationType, stationTypes }) {
   const labels = rows.map((row) => row[labelKey]);
-  document.getElementById(boxId).style.height = `${chartHeight(rows.length)}px`;
-
-  if (state[chartKey]) state[chartKey].destroy();
-  state[chartKey] = new Chart(document.getElementById(canvasId), {
+  box.style.height = `${chartHeight(rows.length)}px`;
+  if (chartRef.chart) chartRef.chart.destroy();
+  chartRef.chart = new Chart(canvas, {
     type: "bar",
-    data: { labels, datasets: buildDatasets(labels, rows, selectedLabel) },
+    data: {
+      labels,
+      datasets: buildDatasets(labels, rows, selectedLabel, stationType, stationTypes),
+    },
     options: chartOptions(onBarClick),
   });
-  requestAnimationFrame(() => state[chartKey]?.resize());
-}
-
-function setText(id, value) {
-  const el = document.getElementById(id);
-  if (el) el.textContent = value;
-}
-
-function setHidden(id, hidden) {
-  const el = document.getElementById(id);
-  if (el) el.hidden = hidden;
-}
-
-function updateStats() {
-  const visible = filteredStations();
-  setText("stat-total", visible.length);
-  setText("stat-fast", visible.filter((s) => s.station_type === "fast_charger").length);
-  setText("stat-swap", visible.filter((s) => s.station_type === "swap_station").length);
-  setText("stat-counties", new Set(visible.map((s) => s.county)).size);
-}
-
-function countyTooltipText(county, row) {
-  if (state.stationType === "fast_charger") {
-    return `<strong>${county}</strong><br>${row.fast_charger_count} fast chargers`;
-  }
-  if (state.stationType === "swap_station") {
-    return `<strong>${county}</strong><br>${row.swap_station_count} swap stations`;
-  }
-  return (
-    `<strong>${county}</strong><br>` +
-    `${row.total_count} stations · ${row.fast_charger_count} fast · ${row.swap_station_count} swap`
-  );
-}
-
-function countyStyle(row, selected) {
-  // When a county is selected, mute other fills but keep borders readable.
-  if (state.selectedCounty && !selected) {
-    return {
-      fillColor: "#070b14",
-      fillOpacity: 0.72,
-      color: "#64748b",
-      weight: 1,
-      opacity: 0.85,
-    };
-  }
-  return {
-    fillColor: fillColor(row ? countOf(row) : 0),
-    fillOpacity: selected ? 1 : 0.92,
-    color: selected ? SELECTED : "#64748b",
-    weight: selected ? 2.5 : 1,
-  };
-}
-
-function countyLabelIcon(name) {
-  return L.divIcon({
-    className: "county-label",
-    html: `<span>${name}</span>`,
-    iconSize: [0, 0],
-    iconAnchor: [0, 0],
-  });
+  requestAnimationFrame(() => chartRef.chart?.resize());
 }
 
 function ringSignedArea(ring) {
@@ -237,7 +219,7 @@ function ringCentroid(ring) {
   return [cx / (3 * twiceArea), cy / (3 * twiceArea)];
 }
 
-function countyLabelPoint(geometry) {
+function unitLabelPoint(geometry) {
   const polygons = geometry.type === "MultiPolygon"
     ? geometry.coordinates
     : [geometry.coordinates];
@@ -255,329 +237,781 @@ function countyLabelPoint(geometry) {
   return L.latLng(lat, lng);
 }
 
-function drawCountyLabels() {
-  if (state.countyLabelLayer) state.countyLabelLayer.remove();
-  state.countyLabelLayer = L.layerGroup();
-  for (const feature of state.geojson.features) {
-    const name = feature.properties.county;
-    L.marker(countyLabelPoint(feature.geometry), {
-      icon: countyLabelIcon(name),
-      interactive: false,
-      keyboard: false,
-    }).addTo(state.countyLabelLayer);
-  }
-  state.countyLabelLayer.addTo(state.map);
-}
-
-function drawCounties() {
-  const byCounty = Object.fromEntries(state.counties.map((row) => [row.county, row]));
-  if (!state.countyRenderer) state.countyRenderer = L.canvas({ padding: 0.5 });
-  if (state.countyLayer) state.countyLayer.remove();
-  state.countyLayer = L.geoJSON(state.geojson, {
-    renderer: state.countyRenderer,
-    style(feature) {
-      const county = feature.properties.county;
-      const row = byCounty[county];
-      return countyStyle(row, state.selectedCounty === county);
-    },
-    onEachFeature(feature, layer) {
-      const county = feature.properties.county;
-      const row = byCounty[county] || {
-        total_count: 0, fast_charger_count: 0, swap_station_count: 0,
-      };
-      layer.bindTooltip(countyTooltipText(county, row), { sticky: true });
-      layer.on("click", () => selectCounty(county));
-      layer.on("mouseover", () => {
-        layer.setStyle({ weight: 2.5, color: "#f8fafc", opacity: 1 });
-      });
-      layer.on("mouseout", () => {
-        if (state.selectedCounty === county) {
-          layer.setStyle({ weight: 2.5, color: SELECTED, opacity: 1 });
-          return;
-        }
-        state.countyLayer.resetStyle(layer);
-      });
-    },
-  }).addTo(state.map);
-  state.countyLayer.bringToFront();
-  drawCountyLabels();
-}
-
-function stationPopup(station) {
-  const isFast = station.station_type === "fast_charger";
-  const mapsLink = station.maps_navigation_url
-    ? `<a href="${station.maps_navigation_url}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>`
-    : "";
-  return (
-    `<strong>${station.name}</strong>` +
-    `<span>${isFast ? "Fast charger" : "Swap station"} · ${station.town}, ${station.county}<br>${station.hours}</span>` +
-    mapsLink
-  );
-}
-
-function filteredStations() {
-  return visibleStations().filter((station) => {
-    if (state.selectedTown) {
-      return station.town === state.selectedTown && station.county === state.selectedCounty;
-    }
-    if (state.selectedCounty) return station.county === state.selectedCounty;
-    return true;
+function unitLabelIcon(name) {
+  return L.divIcon({
+    className: "county-label",
+    html: `<span>${name}</span>`,
+    iconSize: [0, 0],
+    iconAnchor: [0, 0],
   });
 }
 
-function fitToStationPoints(stations) {
+function jitteredPositions(stations) {
+  const groups = new Map();
+  for (const station of stations) {
+    const key = `${station.final_latitude},${station.final_longitude}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(station);
+  }
+  const positions = new Map();
+  for (const group of groups.values()) {
+    if (group.length === 1) {
+      positions.set(group[0], [group[0].final_latitude, group[0].final_longitude]);
+      continue;
+    }
+    // Keep the ring small (~5m). Taipei districts are tight; the old
+    // 0.00018*n formula pushed edge stacks ~160m outside the polygon.
+    const radius = Math.min(0.00002 * Math.sqrt(group.length), 0.000045);
+    for (let index = 0; index < group.length; index += 1) {
+      const angle = (2 * Math.PI * index) / group.length;
+      positions.set(group[index], [
+        group[index].final_latitude + radius * Math.cos(angle),
+        group[index].final_longitude + radius * Math.sin(angle),
+      ]);
+    }
+  }
+  return positions;
+}
+
+function stationPlaceLine(station, tiers) {
+  const parts = [];
+  for (let index = tiers.length - 1; index >= 0; index -= 1) {
+    const value = station[tiers[index]];
+    if (value) parts.push(value);
+  }
+  return parts.join(", ");
+}
+
+function stationPopup(station, tiers) {
+  const meta = typeMeta(station.station_type);
+  const place = stationPlaceLine(station, tiers);
+  const mapsLink = station.maps_navigation_url
+    ? `<a href="${station.maps_navigation_url}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>`
+    : "";
+  const placeLine = place ? `${meta.label} · ${place}` : meta.label;
+  const hoursLine = station.hours ? `<br>${station.hours}` : "";
+  return `<strong>${station.name}</strong><span>${placeLine}${hoursLine}</span>${mapsLink}`;
+}
+
+function unitTooltipText(name, row, stationType, stationTypes) {
+  if (stationType !== "all") {
+    const meta = typeMeta(stationType);
+    return `<strong>${name}</strong><br>${countOf(row, stationType)} ${meta.label.toLowerCase()}s`;
+  }
+  const parts = stationTypes
+    .map((typeName) => `${row[`${typeName}_count`] || 0} ${typeMeta(typeName).short.toLowerCase()}`)
+    .join(" · ");
+  return `<strong>${name}</strong><br>${row.total_count || 0} stations · ${parts}`;
+}
+
+function unitStyle(row, selected, hasSelection, stationType) {
+  if (hasSelection && !selected) {
+    return {
+      fillColor: "#070b14",
+      fillOpacity: 0.72,
+      color: "#64748b",
+      weight: 1,
+      opacity: 0.85,
+    };
+  }
+  return {
+    fillColor: fillColor(row ? countOf(row, stationType) : 0),
+    fillOpacity: selected ? 1 : 0.92,
+    color: selected ? SELECTED : "#64748b",
+    weight: selected ? 2.5 : 1,
+  };
+}
+
+function statsHtml(stationTypes, tierPlural) {
+  const typeStats = stationTypes.map((typeName) => {
+    const meta = typeMeta(typeName);
+    return (
+      `<article class="stat stat-${meta.css}">` +
+      `<p class="stat-label">${meta.short}</p>` +
+      `<p class="stat-value" data-stat="${typeName}">—</p>` +
+      `</article>`
+    );
+  }).join("");
+  return (
+    `<article class="stat">` +
+    `<p class="stat-label">Stations</p>` +
+    `<p class="stat-value" data-stat="total">—</p>` +
+    `</article>` +
+    typeStats +
+    `<article class="stat">` +
+    `<p class="stat-label">${tierPlural}</p>` +
+    `<p class="stat-value" data-stat="units">—</p>` +
+    `</article>`
+  );
+}
+
+function fillStats(root, stations, primaryTier, stationTypes) {
+  if (!root) return;
+  root.querySelector('[data-stat="total"]').textContent = String(stations.length);
+  for (const typeName of stationTypes) {
+    const el = root.querySelector(`[data-stat="${typeName}"]`);
+    if (el) el.textContent = String(stations.filter((s) => s.station_type === typeName).length);
+  }
+  const units = new Set(
+    stations.map((station) => `${station.region_id}:${station[primaryTier]}`).filter((key) => !key.endsWith(":undefined") && !key.endsWith(":null") && !key.endsWith(":"))
+  );
+  root.querySelector('[data-stat="units"]').textContent = String(units.size);
+}
+
+function legendHtml(stationTypes) {
+  const typeItems = stationTypes.map((typeName) => {
+    const meta = typeMeta(typeName);
+    return `<li><span class="swatch swatch-${meta.css}"></span> ${meta.label}</li>`;
+  }).join("");
+  return `<li><span class="swatch swatch-zero"></span> No stations</li>${typeItems}`;
+}
+
+async function loadRegionBundle(config) {
+  const base = `${PUBLIC_ROOT}/${config.data_path}`;
+  const primaryTier = config.tiers[0];
+  const secondaryTier = config.tiers[1];
+  const fetchJson = (url) => fetch(url, { cache: "no-store" }).then((response) => {
+    if (!response.ok) throw new Error(`${url} HTTP ${response.status}`);
+    return response.json();
+  });
+  const requests = [
+    fetchJson(`${base}/${primaryTier}_summary.json`),
+    fetchJson(`${base}/${STATIONS_FILE}`),
+    fetchJson(`${base}/${BOUNDARIES_FILE}`),
+  ];
+  if (secondaryTier) {
+    requests.push(fetchJson(`${base}/${secondaryTier}_summary.json`));
+  }
+  const [primarySummary, stations, geojson, secondarySummary = []] = await Promise.all(requests);
+  return {
+    config,
+    primarySummary: primarySummary.map((row) => ({ ...row, region_id: config.region_id })),
+    secondarySummary: secondarySummary.map((row) => ({ ...row, region_id: config.region_id })),
+    stations: stations.map((station) => ({ ...station, region_id: config.region_id })),
+    geojson: {
+      type: "FeatureCollection",
+      features: geojson.features.map((feature) => ({
+        ...feature,
+        properties: { ...feature.properties, region_id: config.region_id },
+      })),
+    },
+  };
+}
+
+function destroyPanels() {
+  for (const panel of app.panels) {
+    for (const chart of Object.values(panel.charts)) {
+      chart.chart?.destroy();
+    }
+    panel.map?.remove();
+    panel.resizeObserver?.disconnect();
+  }
+  app.panels = [];
+  document.getElementById("workspace").innerHTML = "";
+}
+
+function filteredStations(panel) {
+  const stationType = app.stationType;
+  let stations = panel.bundles.flatMap((bundle) => bundle.stations);
+  stations = stations.filter((station) => stationType === "all" || station.station_type === stationType);
+  if (panel.selectedSecondary) {
+    const { regionId, primary, secondary, secondaryTier } = panel.selectedSecondary;
+    const primaryTier = panel.bundles.find((bundle) => bundle.config.region_id === regionId).config.tiers[0];
+    return stations.filter(
+      (station) =>
+        station.region_id === regionId &&
+        station[primaryTier] === primary &&
+        station[secondaryTier] === secondary
+    );
+  }
+  if (panel.selectedPrimary) {
+    const { regionId, primary, primaryTier } = panel.selectedPrimary;
+    return stations.filter(
+      (station) => station.region_id === regionId && station[primaryTier] === primary
+    );
+  }
+  return stations;
+}
+
+function unionBounds(bundles) {
+  let bounds = null;
+  for (const bundle of bundles) {
+    const [[south, west], [north, east]] = bundle.config.bounds;
+    const next = L.latLngBounds([south, west], [north, east]);
+    bounds = bounds ? bounds.extend(next) : next;
+  }
+  return bounds;
+}
+
+function featureBounds(panel, regionId, primaryTier, primaryName) {
+  for (const bundle of panel.bundles) {
+    if (bundle.config.region_id !== regionId) continue;
+    const feature = bundle.geojson.features.find(
+      (item) => item.properties[primaryTier] === primaryName
+    );
+    if (feature) return L.geoJSON(feature).getBounds();
+  }
+  return null;
+}
+
+function fitToStationPoints(map, stations) {
   if (stations.length === 1) {
-    state.map.setView([stations[0].final_latitude, stations[0].final_longitude], 13);
+    map.setView([stations[0].final_latitude, stations[0].final_longitude], 13);
     return;
   }
   const bounds = L.latLngBounds(
     stations.map((station) => [station.final_latitude, station.final_longitude])
   );
-  state.map.fitBounds(bounds.pad(0.35));
+  map.fitBounds(bounds.pad(0.35));
 }
 
-function countyFeatureBounds(county) {
-  const feature = state.geojson.features.find((f) => f.properties.county === county);
-  if (!feature) return null;
-  return L.geoJSON(feature).getBounds();
-}
-
-function fitMapToSelection() {
-  if (!state.map) return;
-  if (state.selectedTown) {
-    const stations = filteredStations();
+function fitMapToSelection(panel) {
+  if (!panel.map) return;
+  if (panel.selectedSecondary) {
+    const stations = filteredStations(panel);
     if (stations.length) {
-      fitToStationPoints(stations);
+      fitToStationPoints(panel.map, stations);
       return;
     }
   }
-  if (state.selectedCounty) {
-    const bounds = countyFeatureBounds(state.selectedCounty);
+  if (panel.selectedPrimary) {
+    const { regionId, primary, primaryTier } = panel.selectedPrimary;
+    const bounds = featureBounds(panel, regionId, primaryTier, primary);
     if (bounds) {
-      // Edge-to-edge on the county box; muted neighbors hide the bleed.
-      state.map.fitBounds(bounds, { animate: false, padding: [10, 10] });
+      panel.map.fitBounds(bounds, { animate: false, padding: [10, 10] });
       return;
     }
   }
-  // Fit Kenya once the container has a real size (iframe/embed often starts at 0×0).
-  state.map.fitBounds(KENYA_BOUNDS, { animate: false, padding: [28, 28] });
+  const bounds = unionBounds(panel.bundles);
+  if (bounds) panel.map.fitBounds(bounds, { animate: false, padding: [28, 28] });
 }
 
-function syncMapViewport(refit = true) {
-  if (!state.map) return;
-  state.map.invalidateSize({ animate: false });
-  if (refit) fitMapToSelection();
+function syncMapViewport(panel, refit = true) {
+  if (!panel.map) return;
+  panel.map.invalidateSize({ animate: false });
+  if (refit) fitMapToSelection(panel);
 }
 
-function drawStations() {
-  if (state.stationLayer) state.stationLayer.remove();
-  state.stationLayer = L.featureGroup();
-  const visible = filteredStations();
+function drawBoundaries(panel) {
+  const stationType = app.stationType;
+  const byKey = new Map();
+  for (const bundle of panel.bundles) {
+    const primaryTier = bundle.config.tiers[0];
+    for (const row of bundle.primarySummary) {
+      byKey.set(`${bundle.config.region_id}:${row[primaryTier]}`, { row, primaryTier, bundle });
+    }
+  }
+  if (!panel.boundaryRenderer) panel.boundaryRenderer = L.canvas({ padding: 0.5 });
+  if (panel.boundaryLayer) panel.boundaryLayer.remove();
+  if (panel.labelLayer) panel.labelLayer.remove();
+  panel.labelLayer = L.layerGroup();
+
+  const merged = {
+    type: "FeatureCollection",
+    features: panel.bundles.flatMap((bundle) => bundle.geojson.features),
+  };
+
+  panel.boundaryLayer = L.geoJSON(merged, {
+    renderer: panel.boundaryRenderer,
+    style(feature) {
+      const regionId = feature.properties.region_id;
+      const bundle = panel.bundles.find((item) => item.config.region_id === regionId);
+      const primaryTier = bundle.config.tiers[0];
+      const name = feature.properties[primaryTier];
+      const entry = byKey.get(`${regionId}:${name}`);
+      const selected =
+        panel.selectedPrimary?.regionId === regionId &&
+        panel.selectedPrimary?.primary === name;
+      return unitStyle(entry?.row, selected, Boolean(panel.selectedPrimary), stationType);
+    },
+    onEachFeature(feature, layer) {
+      const regionId = feature.properties.region_id;
+      const bundle = panel.bundles.find((item) => item.config.region_id === regionId);
+      const primaryTier = bundle.config.tiers[0];
+      const stationTypes = bundle.config.station_types;
+      const name = feature.properties[primaryTier];
+      const entry = byKey.get(`${regionId}:${name}`);
+      const row = entry?.row || emptyCountRow(stationTypes);
+      layer.bindTooltip(unitTooltipText(name, row, stationType, stationTypes), { sticky: true });
+      layer.on("click", () => selectPrimary(panel, regionId, primaryTier, name));
+      layer.on("mouseover", () => {
+        layer.setStyle({ weight: 2.5, color: "#f8fafc", opacity: 1 });
+      });
+      layer.on("mouseout", () => {
+        if (panel.selectedPrimary?.regionId === regionId && panel.selectedPrimary?.primary === name) {
+          layer.setStyle({ weight: 2.5, color: SELECTED, opacity: 1 });
+          return;
+        }
+        panel.boundaryLayer.resetStyle(layer);
+      });
+      L.marker(unitLabelPoint(feature.geometry), {
+        icon: unitLabelIcon(name),
+        interactive: false,
+        keyboard: false,
+      }).addTo(panel.labelLayer);
+    },
+  }).addTo(panel.map);
+  panel.boundaryLayer.bringToFront();
+  panel.labelLayer.addTo(panel.map);
+}
+
+function drawStations(panel) {
+  if (panel.stationLayer) panel.stationLayer.remove();
+  panel.stationLayer = L.featureGroup();
+  const visible = filteredStations(panel);
+  const positions = jitteredPositions(visible);
   for (const station of visible) {
-    const isFast = station.station_type === "fast_charger";
-    L.circleMarker([station.final_latitude, station.final_longitude], {
+    const bundle = panel.bundles.find((item) => item.config.region_id === station.region_id);
+    const meta = typeMeta(station.station_type);
+    const latLng = positions.get(station);
+    L.circleMarker(latLng, {
       radius: 7,
       color: "#070b14",
       weight: 1,
-      fillColor: isFast ? FAST : SWAP,
+      fillColor: meta.color,
       fillOpacity: 1,
     })
-      .bindPopup(stationPopup(station))
-      .addTo(state.stationLayer);
+      .bindPopup(stationPopup(station, bundle.config.tiers))
+      .addTo(panel.stationLayer);
   }
-  state.stationLayer.addTo(state.map);
-  state.stationLayer.bringToFront();
+  panel.stationLayer.addTo(panel.map);
+  panel.stationLayer.bringToFront();
 }
 
-function townsForSelection() {
-  if (!state.selectedCounty) return [];
-  return sortedRows(state.towns.filter((row) => row.county === state.selectedCounty));
-}
-
-function updateCountyChartHeader() {
-  setHidden("clear-county", !state.selectedCounty);
-  setText(
-    "county-chart-hint",
-    state.selectedCounty ? `${state.selectedCounty} selected` : "Click a county to drill down",
+function secondaryRowsFor(panel, bundle) {
+  if (!panel.selectedPrimary) return [];
+  if (panel.selectedPrimary.regionId !== bundle.config.region_id) return [];
+  const primaryTier = bundle.config.tiers[0];
+  const secondaryTier = bundle.config.tiers[1];
+  if (!secondaryTier) return [];
+  return sortedRows(
+    bundle.secondarySummary.filter(
+      (row) => row[primaryTier] === panel.selectedPrimary.primary
+    ),
+    app.stationType
   );
 }
 
-function updateTownChartHeader(townRows) {
-  const block = document.getElementById("town-chart-block");
-  if (block) block.hidden = !state.selectedCounty;
-  setHidden("clear-town", !state.selectedTown);
-  if (!state.selectedCounty) return;
-  setText(
-    "town-chart-title",
-    state.selectedTown ? `Towns · ${state.selectedTown}` : `Towns · ${state.selectedCounty}`,
-  );
-  if (!townRows.length) {
-    setText("town-chart-hint", "No stations for this filter");
+function updateChartHeaders(panel, bundle, secondaryRows) {
+  const regionId = bundle.config.region_id;
+  const primaryTier = bundle.config.tiers[0];
+  const secondaryTier = bundle.config.tiers[1];
+  const clearPrimary = panel.root.querySelector(`[data-clear-primary="${regionId}"]`);
+  const primaryHint = panel.root.querySelector(`[data-primary-hint="${regionId}"]`);
+  const selectedHere =
+    panel.selectedPrimary?.regionId === regionId ? panel.selectedPrimary.primary : null;
+
+  if (clearPrimary) clearPrimary.hidden = !selectedHere;
+  if (primaryHint) {
+    primaryHint.textContent = selectedHere
+      ? `${selectedHere} selected`
+      : `Click a ${primaryTier} to drill down`;
+  }
+
+  if (!secondaryTier) return;
+  const secondaryBlock = panel.root.querySelector(`[data-secondary-block="${regionId}"]`);
+  const clearSecondary = panel.root.querySelector(`[data-clear-secondary="${regionId}"]`);
+  const secondaryTitle = panel.root.querySelector(`[data-secondary-title="${regionId}"]`);
+  const secondaryHint = panel.root.querySelector(`[data-secondary-hint="${regionId}"]`);
+  if (secondaryBlock) secondaryBlock.hidden = !selectedHere;
+  if (clearSecondary) clearSecondary.hidden = !panel.selectedSecondary || panel.selectedSecondary.regionId !== regionId;
+  if (!selectedHere) return;
+  const selectedTown =
+    panel.selectedSecondary?.regionId === regionId ? panel.selectedSecondary.secondary : null;
+  if (secondaryTitle) {
+    secondaryTitle.textContent = selectedTown
+      ? `${tierTitle(secondaryTier, { plural: true })} · ${selectedTown}`
+      : `${tierTitle(secondaryTier, { plural: true })} · ${selectedHere}`;
+  }
+  if (!secondaryRows.length) {
+    if (secondaryHint) secondaryHint.textContent = "No stations for this filter";
     return;
   }
-  setText(
-    "town-chart-hint",
-    state.selectedTown
-      ? "Town selected — use Clear to zoom back out"
-      : "Click a town to see its stations",
-  );
+  if (secondaryHint) {
+    secondaryHint.textContent = selectedTown
+      ? `${tierTitle(secondaryTier)} selected — use Clear to zoom back out`
+      : `Click a ${secondaryTier} to see its stations`;
+  }
 }
 
-function drawTownChart() {
-  const rows = townsForSelection();
-  updateTownChartHeader(rows);
-  if (!state.selectedCounty) {
-    if (state.townChart) {
-      state.townChart.destroy();
-      state.townChart = null;
-    }
-    return;
-  }
-  if (!rows.length) {
-    if (state.townChart) {
-      state.townChart.destroy();
-      state.townChart = null;
-    }
-    document.getElementById("town-chart-box").style.height = "48px";
-    return;
-  }
+function drawRegionCharts(panel, bundle) {
+  const regionId = bundle.config.region_id;
+  const primaryTier = bundle.config.tiers[0];
+  const secondaryTier = bundle.config.tiers[1];
+  const stationTypes = bundle.config.station_types;
+  const selectedPrimary =
+    panel.selectedPrimary?.regionId === regionId ? panel.selectedPrimary.primary : null;
+  const primaryRows = sortedRows(bundle.primarySummary, app.stationType);
+  const secondaryRows = secondaryRowsFor(panel, bundle);
+  updateChartHeaders(panel, bundle, secondaryRows);
+
+  const primaryCanvas = panel.root.querySelector(`[data-primary-canvas="${regionId}"]`);
+  const primaryBox = panel.root.querySelector(`[data-primary-box="${regionId}"]`);
+  const primaryRef = panel.charts[`primary:${regionId}`];
   drawBarChart({
-    canvasId: "town-bars",
-    boxId: "town-chart-box",
-    chartKey: "townChart",
-    rows,
-    labelKey: "town",
-    selectedLabel: state.selectedTown,
-    onBarClick: selectTown,
+    canvas: primaryCanvas,
+    box: primaryBox,
+    chartRef: primaryRef,
+    rows: primaryRows,
+    labelKey: primaryTier,
+    selectedLabel: selectedPrimary,
+    onBarClick: (name) => selectPrimary(panel, regionId, primaryTier, name),
+    stationType: app.stationType,
+    stationTypes,
+  });
+
+  if (!secondaryTier) return;
+  const secondaryRef = panel.charts[`secondary:${regionId}`];
+  const secondaryCanvas = panel.root.querySelector(`[data-secondary-canvas="${regionId}"]`);
+  const secondaryBox = panel.root.querySelector(`[data-secondary-box="${regionId}"]`);
+  if (!selectedPrimary) {
+    secondaryRef.chart?.destroy();
+    secondaryRef.chart = null;
+    return;
+  }
+  if (!secondaryRows.length) {
+    secondaryRef.chart?.destroy();
+    secondaryRef.chart = null;
+    secondaryBox.style.height = "48px";
+    return;
+  }
+  const selectedSecondary =
+    panel.selectedSecondary?.regionId === regionId ? panel.selectedSecondary.secondary : null;
+  drawBarChart({
+    canvas: secondaryCanvas,
+    box: secondaryBox,
+    chartRef: secondaryRef,
+    rows: secondaryRows,
+    labelKey: secondaryTier,
+    selectedLabel: selectedSecondary,
+    onBarClick: (name) => selectSecondary(panel, regionId, primaryTier, selectedPrimary, secondaryTier, name),
+    stationType: app.stationType,
+    stationTypes,
   });
 }
 
-function drawCountyChart() {
-  updateCountyChartHeader();
-  const rows = sortedRows(state.counties);
-  drawBarChart({
-    canvasId: "county-bars",
-    boxId: "county-chart-box",
-    chartKey: "countyChart",
-    rows,
-    labelKey: "county",
-    selectedLabel: state.selectedCounty,
-    onBarClick: selectCounty,
-  });
+function refreshPanel(panel) {
+  const stationTypes = unionStationTypes(panel.bundles.map((bundle) => bundle.config));
+  const primaryTier = panel.bundles[0].config.tiers[0];
+  const visible = filteredStations(panel);
+  if (panel.localStats) fillStats(panel.localStats, visible, primaryTier, stationTypes);
+  for (const bundle of panel.bundles) drawRegionCharts(panel, bundle);
+  drawBoundaries(panel);
+  drawStations(panel);
+  fitMapToSelection(panel);
 }
 
-function refreshSelection() {
-  updateStats();
-  drawCountyChart();
-  drawTownChart();
-  drawCounties();
-  drawStations();
-  fitMapToSelection();
-}
-
-function selectCounty(county) {
-  if (state.selectedCounty === county) {
-    state.selectedCounty = null;
-    state.selectedTown = null;
+function selectPrimary(panel, regionId, primaryTier, name) {
+  if (panel.selectedPrimary?.regionId === regionId && panel.selectedPrimary?.primary === name) {
+    panel.selectedPrimary = null;
+    panel.selectedSecondary = null;
   } else {
-    state.selectedCounty = county;
-    state.selectedTown = null;
+    panel.selectedPrimary = { regionId, primary: name, primaryTier };
+    panel.selectedSecondary = null;
   }
-  refreshSelection();
+  refreshPanel(panel);
+  updateGlobalStats();
 }
 
-function selectTown(town) {
-  state.selectedTown = state.selectedTown === town ? null : town;
-  refreshSelection();
+function selectSecondary(panel, regionId, primaryTier, primary, secondaryTier, name) {
+  if (panel.selectedSecondary?.regionId === regionId && panel.selectedSecondary?.secondary === name) {
+    panel.selectedSecondary = null;
+  } else {
+    panel.selectedSecondary = { regionId, primary, secondary: name, secondaryTier };
+    panel.selectedPrimary = { regionId, primary, primaryTier };
+  }
+  refreshPanel(panel);
+  updateGlobalStats();
 }
 
-function renderMapLayers() {
-  drawCounties();
-  drawStations();
-}
-
-function render() {
-  updateStats();
-  renderMapLayers();
-  drawCountyChart();
-  drawTownChart();
-}
-
-function syncTypeToggles() {
-  document.querySelectorAll("[data-type]").forEach((button) => {
-    button.classList.toggle("is-on", button.dataset.type === state.stationType);
-  });
-}
-
-function bindToggles() {
-  syncTypeToggles();
-  document.querySelectorAll("[data-type]").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.stationType = button.dataset.type;
-      syncTypeToggles();
-      if (state.selectedTown && !filteredStations().length) {
-        state.selectedTown = null;
+function bindPanelControls(panel) {
+  for (const bundle of panel.bundles) {
+    const regionId = bundle.config.region_id;
+    panel.root.querySelector(`[data-clear-primary="${regionId}"]`)?.addEventListener("click", () => {
+      if (panel.selectedPrimary?.regionId === regionId) {
+        panel.selectedPrimary = null;
+        panel.selectedSecondary = null;
+        refreshPanel(panel);
+        updateGlobalStats();
       }
-      render();
-      fitMapToSelection();
     });
-  });
-  document.getElementById("clear-county")?.addEventListener("click", () => {
-    state.selectedCounty = null;
-    state.selectedTown = null;
-    refreshSelection();
-  });
-  document.getElementById("clear-town")?.addEventListener("click", () => {
-    state.selectedTown = null;
-    refreshSelection();
-  });
+    panel.root.querySelector(`[data-clear-secondary="${regionId}"]`)?.addEventListener("click", () => {
+      if (panel.selectedSecondary?.regionId === regionId) {
+        panel.selectedSecondary = null;
+        refreshPanel(panel);
+        updateGlobalStats();
+      }
+    });
+  }
 }
 
-async function main() {
-  const [counties, towns, stations, geojson] = await Promise.all([
-    fetch(`${DATA}/county_summary.json`).then((r) => r.json()),
-    fetch(`${DATA}/town_summary.json`).then((r) => r.json()),
-    fetch(`${DATA}/stations_with_county.json`).then((r) => r.json()),
-    fetch(`${DATA}/kenya_counties_display.geojson`).then((r) => r.json()),
-  ]);
-  Object.assign(state, { counties, towns, stations, geojson });
+function regionChartsHtml(bundle, { showRegionTitle }) {
+  const regionId = bundle.config.region_id;
+  const primaryTier = bundle.config.tiers[0];
+  const secondaryTier = bundle.config.tiers[1];
+  const title = showRegionTitle
+    ? `<h2 class="region-charts-title">${bundle.config.display_name}</h2>`
+    : "";
+  const secondary = secondaryTier
+    ? (
+      `<section class="chart-block" data-secondary-block="${regionId}" aria-label="Stations by ${secondaryTier}" hidden>` +
+      `<div class="chart-block-head">` +
+      `<h2 data-secondary-title="${regionId}">${tierTitle(secondaryTier, { plural: true })}</h2>` +
+      `<p class="chart-hint" data-secondary-hint="${regionId}"></p>` +
+      `<button type="button" class="chart-clear" data-clear-secondary="${regionId}" hidden>Clear</button>` +
+      `</div>` +
+      `<div class="chart-scroll"><div data-secondary-box="${regionId}"><canvas data-secondary-canvas="${regionId}"></canvas></div></div>` +
+      `</section>`
+    )
+    : "";
+  return (
+    `<div class="region-charts" data-region-charts="${regionId}">` +
+    title +
+    `<section class="chart-block" aria-label="Stations by ${primaryTier}">` +
+    `<div class="chart-block-head">` +
+    `<h2>${tierTitle(primaryTier, { plural: true })}</h2>` +
+    `<p class="chart-hint" data-primary-hint="${regionId}">Click a ${primaryTier} to drill down</p>` +
+    `<button type="button" class="chart-clear" data-clear-primary="${regionId}" hidden>Clear</button>` +
+    `</div>` +
+    `<div class="chart-scroll"><div data-primary-box="${regionId}"><canvas data-primary-canvas="${regionId}"></canvas></div></div>` +
+    `</section>` +
+    secondary +
+    `</div>`
+  );
+}
 
-  const mapEl = document.getElementById("map");
-  state.map = L.map(mapEl, { zoomControl: true, attributionControl: true });
-  // MapLibre basemap needs a real center/zoom during onAdd; fit Kenya first.
-  state.map.fitBounds(KENYA_BOUNDS, { animate: false, padding: [28, 28] });
-  const basemap = L.maplibreGL({ style: BASEMAP_STYLE }).addTo(state.map);
-  state.map.attributionControl.setPrefix(false);
-  state.map.attributionControl.addAttribution(
+function buildPanelElement(panelSpecs, { showLocalStats, showRegionTitles }) {
+  const configs = panelSpecs.regions;
+  const stationTypes = unionStationTypes(configs);
+  const primaryTier = configs[0].tiers[0];
+  const titleNames = configs.map((config) => config.display_name).join(" · ");
+  const localStats = showLocalStats
+    ? `<section class="panel-stats stats" aria-label="${titleNames} totals">${statsHtml(stationTypes, tierTitle(primaryTier, { plural: true }))}</section>`
+    : "";
+  const charts = configs.map((config) => {
+    const bundle = app.regionData.get(config.region_id);
+    return regionChartsHtml(bundle, { showRegionTitle: showRegionTitles });
+  }).join("");
+  const section = document.createElement("section");
+  section.className = "region-panel";
+  section.dataset.cluster = panelSpecs.cluster;
+  section.innerHTML =
+    `${showLocalStats ? `<header class="panel-head"><h2 class="panel-title">${titleNames}</h2>${localStats}</header>` : ""}` +
+    `<main class="stage">` +
+    `<div class="map" aria-label="${titleNames} station map"></div>` +
+    `<aside class="side-panel">` +
+    `<div class="charts-stack">${charts}</div>` +
+    `<ul class="legend">${legendHtml(stationTypes)}</ul>` +
+    `</aside>` +
+    `</main>`;
+  return section;
+}
+
+function mountPanel(panelSpecs, options) {
+  const workspace = document.getElementById("workspace");
+  const root = buildPanelElement(panelSpecs, options);
+  workspace.appendChild(root);
+  const bundles = panelSpecs.regions.map((config) => app.regionData.get(config.region_id));
+  const charts = {};
+  for (const bundle of bundles) {
+    charts[`primary:${bundle.config.region_id}`] = { chart: null };
+    if (bundle.config.tiers[1]) charts[`secondary:${bundle.config.region_id}`] = { chart: null };
+  }
+  const panel = {
+    root,
+    bundles,
+    charts,
+    map: null,
+    boundaryLayer: null,
+    labelLayer: null,
+    stationLayer: null,
+    boundaryRenderer: null,
+    selectedPrimary: null,
+    selectedSecondary: null,
+    localStats: root.querySelector(".panel-stats"),
+    resizeObserver: null,
+  };
+
+  const mapEl = root.querySelector(".map");
+  panel.map = L.map(mapEl, { zoomControl: true, attributionControl: true });
+  const bounds = unionBounds(bundles);
+  panel.map.fitBounds(bounds, { animate: false, padding: [28, 28] });
+  const basemap = L.maplibreGL({ style: BASEMAP_STYLE }).addTo(panel.map);
+  panel.map.attributionControl.setPrefix(false);
+  panel.map.attributionControl.addAttribution(
     '<a href="https://openfreemap.org/" target="_blank" rel="noopener noreferrer">OpenFreeMap</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'
   );
 
-  bindToggles();
-  updateStats();
-  drawCountyChart();
-  drawTownChart();
+  bindPanelControls(panel);
+  app.panels.push(panel);
 
-  new ResizeObserver(() => {
-    syncMapViewport(!state.selectedCounty && !state.selectedTown);
-  }).observe(mapEl);
-
-  const paintMapLayers = () => {
-    renderMapLayers();
-    syncMapViewport(true);
-    requestAnimationFrame(() => syncMapViewport(true));
-    setTimeout(() => syncMapViewport(true), 150);
+  const paint = () => {
+    refreshPanel(panel);
+    syncMapViewport(panel, true);
+    requestAnimationFrame(() => syncMapViewport(panel, true));
+    setTimeout(() => syncMapViewport(panel, true), 150);
   };
 
+  panel.resizeObserver = new ResizeObserver(() => {
+    syncMapViewport(panel, !panel.selectedPrimary && !panel.selectedSecondary);
+  });
+  panel.resizeObserver.observe(mapEl);
+
   const glMap = basemap.getMaplibreMap?.();
-  if (glMap?.loaded?.()) {
-    paintMapLayers();
-  } else if (glMap?.once) {
-    glMap.once("load", paintMapLayers);
-  } else {
-    // Basemap GL not ready yet (common in a zero-size iframe); still draw overlays.
-    paintMapLayers();
-    setTimeout(paintMapLayers, 200);
+  if (glMap?.loaded?.()) paint();
+  else if (glMap?.once) glMap.once("load", paint);
+  else {
+    paint();
+    setTimeout(paint, 200);
   }
+}
+
+function updateBrand(configs) {
+  const names = configs.map((config) => config.display_name).join(" · ");
+  document.getElementById("brand-eyebrow").textContent = `Zeno Moto · ${names}`;
+  document.title = configs.length === 1
+    ? `${configs[0].display_name} EV Map`
+    : "EV charging coverage";
+}
+
+function updateGlobalStats() {
+  const root = document.getElementById("global-stats");
+  const configs = selectedConfigs();
+  const mode = layoutMode(configs);
+  if (mode === "grid" || configs.length === 0) {
+    root.hidden = true;
+    root.innerHTML = "";
+    return;
+  }
+  root.hidden = false;
+  const stationTypes = unionStationTypes(configs);
+  const primaryTier = configs[0].tiers[0];
+  root.innerHTML = statsHtml(stationTypes, tierTitle(primaryTier, { plural: true }));
+  const stations = app.panels.flatMap((panel) => filteredStations(panel));
+  fillStats(root, stations, primaryTier, stationTypes);
+}
+
+function renderTypeToggles(stationTypes) {
+  const root = document.getElementById("type-toggles");
+  if (!stationTypes.includes(app.stationType) && app.stationType !== "all") {
+    app.stationType = "all";
+  }
+  const buttons = [
+    `<button class="toggle${app.stationType === "all" ? " is-on" : ""}" data-type="all">All</button>`,
+    ...stationTypes.map((typeName) => {
+      const meta = typeMeta(typeName);
+      const on = app.stationType === typeName ? " is-on" : "";
+      return `<button class="toggle${on}" data-type="${typeName}">${meta.label}</button>`;
+    }),
+  ];
+  root.innerHTML = buttons.join("");
+  root.querySelectorAll("[data-type]").forEach((button) => {
+    button.addEventListener("click", () => {
+      app.stationType = button.dataset.type;
+      renderTypeToggles(unionStationTypes(selectedConfigs()));
+      for (const panel of app.panels) {
+        if (panel.selectedSecondary && !filteredStations(panel).length) {
+          panel.selectedSecondary = null;
+        }
+        refreshPanel(panel);
+      }
+      updateGlobalStats();
+    });
+  });
+}
+
+function renderRegionPicker() {
+  const root = document.getElementById("region-picker");
+  const byCluster = new Map();
+  for (const region of app.manifest.regions) {
+    if (!byCluster.has(region.cluster)) byCluster.set(region.cluster, []);
+    byCluster.get(region.cluster).push(region);
+  }
+  const selected = selectedConfigs();
+  const selectedClusters = clusterKeySet(selected);
+  const atCap = selectedClusters.size >= MAX_CLUSTER_PANELS;
+
+  root.innerHTML = [...byCluster.entries()].map(([cluster, regions]) => {
+    const options = regions.map((region) => {
+      const checked = app.selectedRegionIds.has(region.region_id);
+      const wouldAddCluster = !selectedClusters.has(region.cluster);
+      const disabled = !checked && atCap && wouldAddCluster;
+      return (
+        `<label class="region-option${disabled ? " is-disabled" : ""}">` +
+        `<input type="checkbox" data-region-id="${region.region_id}" ${checked ? "checked" : ""} ${disabled ? "disabled" : ""} />` +
+        `<span>${region.display_name}</span>` +
+        `</label>`
+      );
+    }).join("");
+    return (
+      `<div class="cluster-group">` +
+      `<p class="cluster-label">${titleCaseWords(cluster)}</p>` +
+      options +
+      `</div>`
+    );
+  }).join("");
+
+  root.querySelectorAll("[data-region-id]").forEach((input) => {
+    input.addEventListener("change", async () => {
+      const regionId = input.dataset.regionId;
+      if (input.checked) {
+        app.selectedRegionIds.add(regionId);
+      } else if (app.selectedRegionIds.size > 1) {
+        app.selectedRegionIds.delete(regionId);
+      } else {
+        input.checked = true;
+        return;
+      }
+      await renderDashboard();
+    });
+  });
+}
+
+async function ensureRegionData(configs) {
+  const missing = configs.filter((config) => !app.regionData.has(config.region_id));
+  const loaded = await Promise.all(missing.map(loadRegionBundle));
+  for (const bundle of loaded) app.regionData.set(bundle.config.region_id, bundle);
+}
+
+async function renderDashboard() {
+  const configs = selectedConfigs();
+  await ensureRegionData(configs);
+  const mode = layoutMode(configs);
+  const stationTypes = unionStationTypes(configs);
+
+  updateBrand(configs);
+  renderRegionPicker();
+  renderTypeToggles(stationTypes);
+
+  destroyPanels();
+  const workspace = document.getElementById("workspace");
+  workspace.classList.toggle("is-merge", mode === "merge");
+  workspace.classList.toggle("is-grid", mode === "grid");
+
+  if (mode === "merge") {
+    mountPanel(
+      { cluster: configs[0].cluster, regions: configs },
+      { showLocalStats: false, showRegionTitles: configs.length > 1 }
+    );
+  } else {
+    for (const group of panelsByCluster(configs)) {
+      mountPanel(group, { showLocalStats: true, showRegionTitles: group.regions.length > 1 });
+    }
+  }
+  updateGlobalStats();
+}
+
+async function main() {
+  if (TYPE_PARAM && TYPE_META[TYPE_PARAM]) app.stationType = TYPE_PARAM;
+  const manifest = await fetch(`${PUBLIC_ROOT}/regions.json`, { cache: "no-store" }).then((response) => {
+    if (!response.ok) throw new Error(`regions.json HTTP ${response.status}`);
+    return response.json();
+  });
+  app.manifest = manifest;
+  if (!manifest.regions.some((region) => region.region_id === "kenya")) {
+    app.selectedRegionIds = new Set([manifest.regions[0].region_id]);
+  }
+  await renderDashboard();
 }
 
 main().catch((error) => {

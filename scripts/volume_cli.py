@@ -13,9 +13,11 @@ import argparse
 import sys
 from pathlib import Path
 
-from common import ROOT, VOLUME_PUBLIC_FILES
+from common import ROOT
 from volume_contract import (
+    contract_files,
     publish_public_dir,
+    region_id_from_public_dir,
     validate_public_dir,
     volume_root,
     write_manifest,
@@ -24,7 +26,11 @@ from volume_contract import (
 DEFAULT_CATALOG = "main"
 DEFAULT_SCHEMA = "zeno_ev_map"
 DEFAULT_VOLUME = "public"
-DEFAULT_PUBLIC = ROOT / "data" / "public"
+DEFAULT_PUBLIC = ROOT / "data" / "public" / "kenya"
+
+
+def _files_for(public_dir: Path) -> tuple[str, ...]:
+    return contract_files(region_id_from_public_dir(public_dir))
 
 
 def _add_public_dir(parser: argparse.ArgumentParser) -> None:
@@ -32,7 +38,7 @@ def _add_public_dir(parser: argparse.ArgumentParser) -> None:
         "--public-dir",
         type=Path,
         default=DEFAULT_PUBLIC,
-        help="Directory with dashboard artifacts (default: data/public)",
+        help="Directory with dashboard artifacts (default: data/public/kenya)",
     )
 
 
@@ -44,7 +50,11 @@ def _add_volume_target(parser: argparse.ArgumentParser) -> None:
 
 def cmd_write_manifest(args: argparse.Namespace) -> int:
     try:
-        path = write_manifest(args.public_dir, pipeline_run_id=args.pipeline_run_id)
+        path = write_manifest(
+            args.public_dir,
+            pipeline_run_id=args.pipeline_run_id,
+            region_id=region_id_from_public_dir(args.public_dir),
+        )
     except FileNotFoundError as error:
         print(error, file=sys.stderr)
         return 1
@@ -53,10 +63,12 @@ def cmd_write_manifest(args: argparse.Namespace) -> int:
 
 
 def cmd_validate(args: argparse.Namespace) -> int:
-    problems = validate_public_dir(args.public_dir)
+    region_id = region_id_from_public_dir(args.public_dir)
+    files = _files_for(args.public_dir)
+    problems = validate_public_dir(args.public_dir, region_id=region_id)
     target = volume_root(args.catalog, args.schema, args.volume)
     print(f"Contract target: {target}/")
-    print(f"Required files: {', '.join(VOLUME_PUBLIC_FILES)}")
+    print(f"Required files: {', '.join(files)}")
     print(f"Checked: {args.public_dir}")
 
     if problems:
@@ -69,23 +81,26 @@ def cmd_validate(args: argparse.Namespace) -> int:
 
 
 def cmd_publish(args: argparse.Namespace) -> int:
+    region_id = region_id_from_public_dir(args.public_dir)
+    files = _files_for(args.public_dir)
     dest = args.volume_root or volume_root(args.catalog, args.schema, args.volume)
-    problems = validate_public_dir(args.public_dir)
+    problems = validate_public_dir(args.public_dir, region_id=region_id)
     if problems:
         for problem in problems:
             print(f"FAIL: {problem}", file=sys.stderr)
         return 1
 
+    dest_display = f"{dest}/{region_id}" if region_id else dest
     print(f"Source: {args.public_dir}")
-    print(f"Dest:   {dest}/")
-    print(f"Files:  {', '.join(VOLUME_PUBLIC_FILES)}")
+    print(f"Dest:   {dest_display}/")
+    print(f"Files:  {', '.join(files)}")
 
     if args.dry_run:
         print("Dry run: contract OK, skipping publish")
         return 0
 
     try:
-        published = publish_public_dir(args.public_dir, dest)
+        published = publish_public_dir(args.public_dir, dest, region_id=region_id)
     except OSError as error:
         print(
             f"Cannot write {dest} ({error}). "
@@ -98,7 +113,7 @@ def cmd_publish(args: argparse.Namespace) -> int:
         return 1
 
     print(f"Published to {published}/")
-    for name in VOLUME_PUBLIC_FILES:
+    for name in files:
         path = Path(published) / name
         print(f"  {name} ({path.stat().st_size} bytes)")
     return 0

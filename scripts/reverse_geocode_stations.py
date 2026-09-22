@@ -1,123 +1,30 @@
 #!/usr/bin/env python3
-"""Reverse-geocode station coordinates to derive a town label via Nominatim."""
+"""Reverse-geocode station coordinates to derive a town label via Nominatim.
+
+Skips entirely when the region has no town tier (e.g. Taipei's district-only config).
+"""
 
 from __future__ import annotations
 
-import re
 import sys
 from collections import Counter
-from functools import lru_cache
 
 from geopy.exc import GeocoderTimedOut
 
 from common import (
-    ROOT,
     STATIONS_WITH_COUNTY,
     TOWNS_REVERSE_GEOCODED,
+    current_region,
     data_dir,
     nominatim_reverse,
     read_json,
     write_json,
 )
+from regions.kenya import clean_town, pick_town
 
 PROCESSED = data_dir()
 STATIONS_PATH = PROCESSED / STATIONS_WITH_COUNTY
 CACHE_PATH = PROCESSED / TOWNS_REVERSE_GEOCODED
-NAIROBI_COUNTY = "Nairobi"
-
-# --- Town label normalization (formerly town_names.py) ---
-
-ADMIN_MARKERS = ("ward", "location", "division", "sublocation", "township")
-ADMIN_SUFFIXES = (" sublocation", " location", " division", " ward", " township", " town")
-KEEP_UPPER = {"CBD"}
-NEW_PREFIX = re.compile(r"^new\s+", re.I)
-OVERRIDES_PATH = ROOT / "data" / "raw" / "town_overrides.json"
-
-
-@lru_cache(maxsize=1)
-def load_overrides() -> tuple[dict[str, str], dict[str, str]]:
-    if not OVERRIDES_PATH.exists():
-        return {}, {}
-    data = read_json(OVERRIDES_PATH)
-    aliases = {str(k): str(v) for k, v in data.get("aliases", {}).items()}
-    stations = {str(k): str(v) for k, v in data.get("stations", {}).items()}
-    return aliases, stations
-
-
-def title_words(name: str) -> str:
-    upper = name.upper()
-    if upper in KEEP_UPPER:
-        return upper
-    return " ".join(word[:1].upper() + word[1:] for word in name.split())
-
-
-def strip_admin_suffixes(name: str) -> str:
-    cleaned = name.strip()
-    changed = True
-    while changed:
-        changed = False
-        for suffix in ADMIN_SUFFIXES:
-            if cleaned.lower().endswith(suffix):
-                cleaned = cleaned[: -len(suffix)].strip()
-                changed = True
-    return cleaned
-
-
-def is_admin_label(name: str) -> bool:
-    lower = name.lower()
-    return any(marker in lower for marker in ADMIN_MARKERS)
-
-
-def clean_town(name: str | None, county: str | None = None, station_id: str | None = None) -> str | None:
-    if not name:
-        return None
-
-    aliases, station_overrides = load_overrides()
-    if station_id and station_id in station_overrides:
-        return station_overrides[station_id]
-
-    cleaned = name.strip()
-    if "/" in cleaned:
-        cleaned = cleaned.split("/", 1)[0].strip()
-    cleaned = NEW_PREFIX.sub("", cleaned)
-    cleaned = strip_admin_suffixes(cleaned)
-    cleaned = title_words(cleaned)
-    if cleaned in aliases:
-        cleaned = aliases[cleaned]
-    return cleaned or name.strip()
-
-
-# --- Reverse geocode ---
-
-def town_from_display(display_name: str | None, county: str) -> str | None:
-    if not display_name:
-        return None
-    for part in display_name.split(","):
-        candidate = clean_town(part.strip(), county)
-        if not candidate or candidate == county:
-            continue
-        if candidate.endswith("County") or candidate == "Kenya":
-            continue
-        if not is_admin_label(candidate):
-            return candidate
-    return None
-
-
-def pick_town(address: dict, county: str, display_name: str | None) -> str | None:
-    if not address:
-        return None
-    if county == NAIROBI_COUNTY:
-        keys = ("suburb", "neighbourhood", "quarter", "town", "city", "municipality")
-    else:
-        keys = ("town", "city", "municipality", "village", "suburb")
-    for key in keys:
-        raw = address.get(key)
-        if not raw:
-            continue
-        candidate = clean_town(strip_admin_suffixes(raw), county)
-        if candidate and not is_admin_label(candidate):
-            return candidate
-    return town_from_display(display_name, county)
 
 
 def coord_key(lat: float, lng: float) -> str:
@@ -146,70 +53,93 @@ def write_outputs(stations: list[dict], cache: dict[str, dict]) -> None:
 
 
 def print_summary(stations: list[dict]) -> None:
-    sources = Counter(row["town_source"] for row in stations)
-    zeno_diff = sum(1 for row in stations if row["town"] != row["locality"])
+    sources = Counter(row.get("town_source") for row in stations)
+    zeno_diff = sum(1 for row in stations if row.get("town") != row.get("locality"))
     print(f"town_source: {dict(sources)}")
     print(f"town differs from zeno locality: {zeno_diff}")
     print("top 5 towns:")
-    counts = Counter(row["town"] for row in stations)
+    counts = Counter(row.get("town") for row in stations)
     for town, n in counts.most_common(5):
         print(f"  {town}: {n}")
 
 
-def apply_clean_towns(stations: list[dict], cache: dict[str, dict]) -> None:
+def apply_clean_towns(stations: list[dict], cache: dict[str, dict], primary_tier: str) -> None:
     for station in stations:
+        if station.get("_town_from_source"):
+            continue
         station["town"] = clean_town(
             station.get("town") or station.get("locality"),
-            station.get("county"),
+            station.get(primary_tier),
             station.get("station_id"),
         )
     for row in cache.values():
-        row["town"] = clean_town(row.get("town"), row.get("county"))
+        row["town"] = clean_town(row.get("town"), row.get(primary_tier) or row.get("county"))
 
 
 def main() -> int:
+    cfg = current_region()
     stations = read_json(STATIONS_PATH)
-    cache = load_cache()
 
+    if "town" not in cfg.tiers:
+        print(f"skip reverse-geocode: region tiers={cfg.tiers} (no town)")
+        write_json(STATIONS_PATH, stations)
+        write_json(CACHE_PATH, [])
+        return 0
+
+    primary_tier = cfg.tiers[0]
+    cache = load_cache()
     reverse = nominatim_reverse()
+    skipped = 0
 
     for station in stations:
+        existing_town = station.get("town")
+        if isinstance(existing_town, str) and existing_town.strip():
+            station["town"] = existing_town.strip()
+            station["town_source"] = station.get("town_source") or "source"
+            station["_town_from_source"] = True
+            skipped += 1
+            continue
+
         lat = float(station["final_latitude"])
         lng = float(station["final_longitude"])
         key = coord_key(lat, lng)
-        county = station["county"]
+        unit_name = station[primary_tier]
 
         if key in cache:
             cached = cache[key]
-            station["town"] = clean_town(cached["town"], county, station.get("station_id"))
+            station["town"] = clean_town(cached["town"], unit_name, station.get("station_id"))
             station["town_source"] = cached["town_source"]
             continue
 
         location = reverse_lookup(reverse, lat, lng)
         address = location.raw.get("address", {}) if location else {}
         display_name = location.address if location else None
-        town = pick_town(address, county, display_name)
+        town = pick_town(address, unit_name, display_name)
         if town:
             town_source = "reverse_geocode"
         else:
             town = station["locality"]
             town_source = "zeno_fallback"
 
-        town = clean_town(town, county, station.get("station_id"))
+        town = clean_town(town, unit_name, station.get("station_id"))
         station["town"] = town
         station["town_source"] = town_source
         cache[key] = {
             "coord_key": key,
             "latitude": lat,
             "longitude": lng,
-            "county": county,
+            "county": unit_name,
             "town": town,
             "town_source": town_source,
             "display_name": display_name,
         }
 
-    apply_clean_towns(stations, cache)
+    apply_clean_towns(stations, cache, primary_tier)
+    for station in stations:
+        station.pop("_town_from_source", None)
+
     write_outputs(stations, cache)
+    print(f"skipped (source town): {skipped}")
     print_summary(stations)
     return 0
 

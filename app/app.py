@@ -21,14 +21,22 @@ if (APP_DIR / "dashboard").is_dir():
 else:
     DASHBOARD_SRC = REPO_ROOT / "dashboard"
 
-if (APP_DIR / "data" / "public").is_dir():
-    PUBLIC = APP_DIR / "data" / "public"
-else:
-    PUBLIC = REPO_ROOT / "data" / "public"
+def _resolve_public_root() -> Path:
+    candidates = (
+        APP_DIR / "data" / "public",
+        REPO_ROOT / "data" / "public",
+    )
+    for path in candidates:
+        if (path / "regions.json").is_file() or (path / "kenya" / "stations_with_county.json").is_file():
+            return path
+    return REPO_ROOT / "data" / "public"
 
+
+PUBLIC_ROOT = _resolve_public_root()
+PUBLIC = PUBLIC_ROOT / "kenya"
 STATIC_DIR = APP_DIR / "static"
 STATIC_DASHBOARD = STATIC_DIR / "dashboard"
-STATIC_PUBLIC = STATIC_DIR / "data" / "public"
+STATIC_PUBLIC_ROOT = STATIC_DIR / "data" / "public"
 STATIONS_FILE = PUBLIC / "stations_with_county.json"
 MANIFEST_FILE = PUBLIC / "manifest.json"
 MAP_PATH = "/app/static/dashboard/index.html"
@@ -38,14 +46,6 @@ TYPE_LABELS = {
     "fast_charger": "Fast charger",
     "swap_station": "Swap station",
 }
-
-PUBLIC_FILES = (
-    "county_summary.json",
-    "town_summary.json",
-    "stations_with_county.json",
-    "kenya_counties_display.geojson",
-    "manifest.json",
-)
 
 SHELL_CSS = """
 <style>
@@ -166,12 +166,19 @@ def copy_static_assets() -> bool:
             shutil.rmtree(STATIC_DASHBOARD)
         shutil.copytree(DASHBOARD_SRC, STATIC_DASHBOARD)
 
-    if PUBLIC.is_dir():
-        STATIC_PUBLIC.mkdir(parents=True, exist_ok=True)
-        for name in PUBLIC_FILES:
-            src = PUBLIC / name
-            if src.exists() and _stale(src, STATIC_PUBLIC / name):
-                shutil.copy2(src, STATIC_PUBLIC / name)
+    if PUBLIC_ROOT.is_dir():
+        STATIC_PUBLIC_ROOT.mkdir(parents=True, exist_ok=True)
+        regions_index = PUBLIC_ROOT / "regions.json"
+        if regions_index.exists() and _stale(regions_index, STATIC_PUBLIC_ROOT / "regions.json"):
+            shutil.copy2(regions_index, STATIC_PUBLIC_ROOT / "regions.json")
+        for region_dir in PUBLIC_ROOT.iterdir():
+            if not region_dir.is_dir():
+                continue
+            dest_dir = STATIC_PUBLIC_ROOT / region_dir.name
+            dest_dir.mkdir(parents=True, exist_ok=True)
+            for src in region_dir.glob("*"):
+                if src.is_file() and _stale(src, dest_dir / src.name):
+                    shutil.copy2(src, dest_dir / src.name)
 
     return (STATIC_DASHBOARD / "index.html").exists()
 
@@ -205,7 +212,7 @@ st.markdown(
 )
 
 if not STATIONS_FILE.exists():
-    st.error("Missing data/public/. Run: python scripts/run_pipeline.py")
+    st.error("Missing data/public/kenya/. Run: python scripts/run_pipeline.py")
     st.stop()
 
 if not STATIC_READY:

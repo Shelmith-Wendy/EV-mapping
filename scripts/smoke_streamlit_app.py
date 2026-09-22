@@ -11,19 +11,16 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
+from common import dashboard_files_for
+from regions import REGIONS
+
 ROOT = Path(__file__).resolve().parent.parent
 APP_DIR = ROOT / "app"
 DASHBOARD_SRC = ROOT / "dashboard"
-PUBLIC = ROOT / "data" / "public"
+PUBLIC_ROOT = ROOT / "data" / "public"
 STATIC_DASHBOARD = APP_DIR / "static" / "dashboard"
-STATIC_PUBLIC = APP_DIR / "static" / "data" / "public"
-
-PUBLIC_FILES = (
-    "county_summary.json",
-    "town_summary.json",
-    "stations_with_county.json",
-    "kenya_counties_display.geojson",
-)
+STATIC_PUBLIC_ROOT = APP_DIR / "static" / "data" / "public"
+KENYA_FILES = dashboard_files_for(REGIONS["kenya"])
 
 
 def fail(message: str) -> None:
@@ -45,9 +42,20 @@ def sync_static() -> None:
     if STATIC_DASHBOARD.exists():
         shutil.rmtree(STATIC_DASHBOARD)
     shutil.copytree(DASHBOARD_SRC, STATIC_DASHBOARD)
-    STATIC_PUBLIC.mkdir(parents=True, exist_ok=True)
-    for name in PUBLIC_FILES:
-        shutil.copy2(PUBLIC / name, STATIC_PUBLIC / name)
+
+    STATIC_PUBLIC_ROOT.mkdir(parents=True, exist_ok=True)
+    regions_index = PUBLIC_ROOT / "regions.json"
+    if regions_index.is_file():
+        shutil.copy2(regions_index, STATIC_PUBLIC_ROOT / "regions.json")
+    for region_dir in PUBLIC_ROOT.iterdir():
+        if not region_dir.is_dir():
+            continue
+        dest_dir = STATIC_PUBLIC_ROOT / region_dir.name
+        dest_dir.mkdir(parents=True, exist_ok=True)
+        for src in region_dir.glob("*"):
+            if src.is_file():
+                shutil.copy2(src, dest_dir / src.name)
+
     app_v = str(int((STATIC_DASHBOARD / "app.js").stat().st_mtime))
     css_v = str(int((STATIC_DASHBOARD / "styles.css").stat().st_mtime))
     index_path = STATIC_DASHBOARD / "index.html"
@@ -58,11 +66,15 @@ def sync_static() -> None:
 
 
 def check_sources() -> None:
-    for name in PUBLIC_FILES:
-        path = PUBLIC / name
+    if not (PUBLIC_ROOT / "regions.json").is_file():
+        fail("missing data/public/regions.json — run: python scripts/run_pipeline.py")
+    ok("public/regions.json")
+    kenya = PUBLIC_ROOT / "kenya"
+    for name in KENYA_FILES:
+        path = kenya / name
         if not path.is_file():
             fail(f"missing {path} — run: python scripts/run_pipeline.py")
-        ok(f"public/{name}")
+        ok(f"public/kenya/{name}")
     for name in ("index.html", "app.js", "styles.css"):
         if not (DASHBOARD_SRC / name).is_file():
             fail(f"missing dashboard/{name}")
@@ -72,12 +84,11 @@ def check_sources() -> None:
 def check_embed_wiring() -> None:
     js = (DASHBOARD_SRC / "app.js").read_text(encoding="utf-8")
     css = (DASHBOARD_SRC / "styles.css").read_text(encoding="utf-8")
-    html = (DASHBOARD_SRC / "index.html").read_text(encoding="utf-8")
     checks = [
         ('URL_PARAMS.get("embed") === "1"' in js, "app.js reads embed=1"),
-        ("/app/static/data/public" in js, "app.js embedded DATA path"),
-        ("clear-county" in js and "clear-town" in js, "app.js Clear handlers"),
-        ('id="clear-county"' in html and 'id="clear-town"' in html, "index.html Clear buttons"),
+        ('"/app/static/data/public"' in js, "app.js embedded PUBLIC_ROOT"),
+        ("regions.json" in js, "app.js loads regions.json"),
+        ("data-clear-primary" in js, "app.js Clear handlers"),
         ("body.is-embed .toolbar" in css, "styles.css hides toolbar when embedded"),
     ]
     for passed, label in checks:
@@ -89,9 +100,11 @@ def check_embed_wiring() -> None:
 def check_static_copy() -> None:
     if not (STATIC_DASHBOARD / "index.html").is_file():
         fail("app/static/dashboard/index.html missing after sync")
-    for name in PUBLIC_FILES:
-        if not (STATIC_PUBLIC / name).is_file():
-            fail(f"app/static/data/public/{name} missing after sync")
+    if not (STATIC_PUBLIC_ROOT / "regions.json").is_file():
+        fail("app/static/data/public/regions.json missing after sync")
+    for name in KENYA_FILES:
+        if not (STATIC_PUBLIC_ROOT / "kenya" / name).is_file():
+            fail(f"app/static/data/public/kenya/{name} missing after sync")
     stamped = (STATIC_DASHBOARD / "index.html").read_text(encoding="utf-8")
     if "app.js?v=" not in stamped or "styles.css?v=" not in stamped:
         fail("static index.html missing cache-bust query strings")
@@ -115,8 +128,9 @@ def check_live(base: str) -> None:
     http_ok(f"{base}/")
     http_ok(f"{base}/app/static/dashboard/index.html?embed=1&type=all")
     http_ok(f"{base}/app/static/dashboard/app.js")
-    for name in PUBLIC_FILES:
-        http_ok(f"{base}/app/static/data/public/{name}")
+    http_ok(f"{base}/app/static/data/public/regions.json")
+    for name in KENYA_FILES:
+        http_ok(f"{base}/app/static/data/public/kenya/{name}")
 
 
 def main() -> int:
