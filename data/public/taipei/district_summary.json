@@ -1,74 +1,86 @@
 [
   {
-    "district":"中山區",
-    "standard_charger_count":1,
-    "swap_station_count":26,
-    "total_count":27
+    "district": "中山區",
+    "standard_charger_count": 1,
+    "swap_station_count": 26,
+    "total_count": 27,
+    "district_en": "Zhongshan"
   },
   {
-    "district":"中正區",
-    "standard_charger_count":1,
-    "swap_station_count":23,
-    "total_count":24
+    "district": "中正區",
+    "standard_charger_count": 1,
+    "swap_station_count": 23,
+    "total_count": 24,
+    "district_en": "Zhongzheng"
   },
   {
-    "district":"信義區",
-    "standard_charger_count":0,
-    "swap_station_count":30,
-    "total_count":30
+    "district": "信義區",
+    "standard_charger_count": 0,
+    "swap_station_count": 30,
+    "total_count": 30,
+    "district_en": "Xinyi"
   },
   {
-    "district":"內湖區",
-    "standard_charger_count":3,
-    "swap_station_count":43,
-    "total_count":46
+    "district": "內湖區",
+    "standard_charger_count": 3,
+    "swap_station_count": 43,
+    "total_count": 46,
+    "district_en": "Neihu"
   },
   {
-    "district":"北投區",
-    "standard_charger_count":0,
-    "swap_station_count":36,
-    "total_count":36
+    "district": "北投區",
+    "standard_charger_count": 0,
+    "swap_station_count": 36,
+    "total_count": 36,
+    "district_en": "Beitou"
   },
   {
-    "district":"南港區",
-    "standard_charger_count":0,
-    "swap_station_count":24,
-    "total_count":24
+    "district": "南港區",
+    "standard_charger_count": 0,
+    "swap_station_count": 24,
+    "total_count": 24,
+    "district_en": "Nangang"
   },
   {
-    "district":"士林區",
-    "standard_charger_count":1,
-    "swap_station_count":30,
-    "total_count":31
+    "district": "士林區",
+    "standard_charger_count": 1,
+    "swap_station_count": 30,
+    "total_count": 31,
+    "district_en": "Shilin"
   },
   {
-    "district":"大同區",
-    "standard_charger_count":1,
-    "swap_station_count":27,
-    "total_count":28
+    "district": "大同區",
+    "standard_charger_count": 1,
+    "swap_station_count": 27,
+    "total_count": 28,
+    "district_en": "Datong"
   },
   {
-    "district":"大安區",
-    "standard_charger_count":1,
-    "swap_station_count":29,
-    "total_count":30
+    "district": "大安區",
+    "standard_charger_count": 1,
+    "swap_station_count": 29,
+    "total_count": 30,
+    "district_en": "Da'an"
   },
   {
-    "district":"文山區",
-    "standard_charger_count":0,
-    "swap_station_count":38,
-    "total_count":38
+    "district": "文山區",
+    "standard_charger_count": 0,
+    "swap_station_count": 38,
+    "total_count": 38,
+    "district_en": "Wenshan"
   },
   {
-    "district":"松山區",
-    "standard_charger_count":2,
-    "swap_station_count":30,
-    "total_count":32
+    "district": "松山區",
+    "standard_charger_count": 2,
+    "swap_station_count": 30,
+    "total_count": 32,
+    "district_en": "Songshan"
   },
   {
-    "district":"萬華區",
-    "standard_charger_count":2,
-    "swap_station_count":19,
-    "total_count":21
+    "district": "萬華區",
+    "standard_charger_count": 2,
+    "swap_station_count": 19,
+    "total_count": 21,
+    "district_en": "Wanhua"
   }
 ]

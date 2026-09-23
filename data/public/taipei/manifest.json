@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-14T12:39:08+00:00",
-  "pipeline_run_id": "466f895e51b64250b186160a4eb8a769",
-  "source_name": "Gogoro Network",
+  "generated_at": "2026-09-23T10:00:07+00:00",
+  "pipeline_run_id": "52d6539ee33b403eacc28b9f7be8d2eb",
+  "source_name": "taipei_open_data",
   "station_count": 367,
-  "retrieved_at": "2026-09-14T12:39:05+00:00",
+  "retrieved_at": "2026-09-23T09:07:27+00:00",
   "files": {
     "district_summary.json": {
-      "bytes": 1430,
-      "sha256": "b2076281d58d37128551f09fc945bff1e6d73431f3ac0a809b86dc6ee3e6f141"
+      "bytes": 1921,
+      "sha256": "f10c9ae24f6fe82991f702e10cbc7b1f8a74bc9dc4c8d1eee237fe12ef9e7b28"
     },
     "stations_with_county.json": {
-      "bytes": 390868,
-      "sha256": "c5c7926bf6d973c986a94729560a1c0a65b3fd4322ec4dcdd29b05ec5b3a0054"
+      "bytes": 401880,
+      "sha256": "d1539aed776e9a9147295cb1ff4b423b4e556f2625b29efd09546fe0b8ed1064"
     },
     "kenya_counties_display.geojson": {
-      "bytes": 6289,
-      "sha256": "799786fb63e6cf4b3cc66d88ab5ddf79b4c3c374dd0f83c62a056d7504c957b1"
+      "bytes": 186759,
+      "sha256": "5a76a2b2bbb3f420177c4c03e0a60b930d597e43692716559544dde737684318"
     }
   }
 }

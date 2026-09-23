@@ -22,7 +22,9 @@
         "fast_charger",
         "swap_station"
       ],
-      "data_path": "kenya"
+      "data_path": "kenya",
+      "dataset_source": "zeno_earth",
+      "dataset_source_label": "Zeno Moto"
     },
     {
       "region_id": "taipei",
@@ -45,7 +47,9 @@
         "standard_charger",
         "swap_station"
       ],
-      "data_path": "taipei"
+      "data_path": "taipei",
+      "dataset_source": "taipei_open_data",
+      "dataset_source_label": "Taipei Open Data"
     }
   ]
 }
