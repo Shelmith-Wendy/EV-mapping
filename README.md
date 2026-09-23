@@ -1,69 +1,211 @@
 # kenya-ev-map
 
-kenya-ev-map maps Zeno Moto's EV charging stations across Kenya, organizing them by county and city so coverage, gaps, and local access are easy to see. Raw inputs live in `data/raw/`. The pipeline writes to `data/staging/`, validates, then promotes to `data/public/` (what the dashboard reads). Each stage lives as a single script in `scripts/`; run them all with `python scripts/run_pipeline.py`.
+Interactive map of EV charging and battery-swap coverage by region. Pull public station lists, geocode and assign them to admin boundaries, then publish JSON the dashboard can trust.
 
-## Streamlit shell (Phase 0 baseline)
+Kenya (Zeno Moto) is the primary product view. Taipei is a second region that proves the same pipeline works for a different geography, language, and set of operators.
 
-Thin wrapper: Streamlit metrics + station-type filter, existing Leaflet dashboard in an iframe.
-On startup the app copies `dashboard/` + `data/public/` into `app/static/` (Streamlit cannot serve out-of-tree symlinks).
+## What you get
+
+- **Choropleth map** — admin units shaded by station density, with per-station markers
+- **Type filters** — fast charger, swap station, and (where present) standard charger
+- **Drill-down** — Kenya: county → town; Taipei: district
+- **Multi-region UI** — pick one or more regions; same-cluster maps merge, cross-cluster uses a grid
+- **Validated publish** — totals and contract files must pass before promotion; a failed region keeps last-good public data
+
+## How it works
+
+```text
+Sources                    Pipeline                         Outputs
+───────                    ────────                         ───────
+Zeno HTML ─┐
+Taipei CSVs┤──► ingest → geocode → assign → aggregate → validate
+Admin GeoJSON┘                                              │
+                                                            ▼
+                                              data/public/<region>/
+                                                     │
+                                    ┌────────────────┼────────────────┐
+                                    ▼                ▼                ▼
+                              Leaflet map     Streamlit App    UC Volume (opt.)
+```
+
+Each region is a plug-in under `regions/`. Shared stages in `scripts/` look up the active `RegionConfig` and run the same step list — they never hard-code “Kenya” or “Taipei”.
+
+```text
+regions/kenya.py  ──┐
+regions/taipei.py ──┼──► RegionConfig ──► shared pipeline ──► data/public/
+                    ┘
+```
+
+### Pipeline stages
+
+| Step | Script | Role |
+|------|--------|------|
+| 1 | `ingest.py` | Fetch and normalize stations |
+| 2 | `geocode_localities.py` | Nominatim anchors for localities (skipped if coords already exist) |
+| 3 | `decode_station_coordinates.py` | Plus Codes + Maps URL resolution (Kenya-heavy) |
+| 4 | `build_county_boundaries.py` | Admin polygons for choropleth |
+| 5 | `assign_counties.py` | Point-in-polygon (+ small nearest fallback) |
+| 6 | `reverse_geocode_stations.py` | Town labels when the region has a town tier |
+| 7 | `aggregate_stations.py` | Per-tier summaries with type counts |
+| — | `validate_publish.py` | Contract checks before promote |
+
+Run all regions with `uv run python scripts/run_pipeline.py`. Regions fail independently.
+
+## Regions
+
+| Region | Source | Station types | Admin tiers |
+|--------|--------|---------------|-------------|
+| **Kenya** | [Zeno locations page](https://zeno.earth/locations/locations.html) | `fast_charger`, `swap_station` | county → town |
+| **Taipei** | [Battery-swap registry](https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=c0f07b6c-ff55-4fae-a390-ddfe9374d4d7) · [Charging registry](https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=c940eb09-c131-46e5-837c-5c96e7897253) | `swap_station`, `standard_charger` | district |
+
+Published snapshots live under `data/public/<region_id>/` plus a top-level `data/public/regions.json` index.
+
+## Project layout
+
+```text
+regions/          # Adapters (kenya, taipei) + RegionConfig contract
+scripts/          # Pipeline, validation, Volume helpers, Databricks Job entry
+data/
+  raw/            # Cached sources, boundary repos, town overrides
+  staging/        # Per-run working copy (gitignored)
+  public/         # Promoted artifacts the UI reads
+dashboard/        # Standalone Leaflet + Chart.js map
+app/              # Streamlit shell for Databricks Apps
+databricks.yml    # Asset Bundle: schema, Volume, App
+```
+
+## Requirements
+
+- Python **≥ 3.13** (see `.python-version`)
+- [uv](https://docs.astral.sh/uv/) for install and running
+
+```bash
+uv sync
+```
+
+That creates `.venv` and installs everything in `pyproject.toml` (pipeline + Streamlit).  
+Pipeline-only deps (no Streamlit): `requirements-pipeline.txt`.
+
+Prefer `uv run …` so you don’t need a global `python` on PATH:
+
+```bash
+uv run python scripts/run_pipeline.py
+```
+
+## Local usage
+
+### Refresh data
+
+```bash
+uv run python scripts/run_pipeline.py
+```
+
+Force re-download of sources:
+
+```bash
+# Git Bash / macOS / Linux
+KENYA_EV_FORCE_FETCH=1 uv run python scripts/run_pipeline.py
+
+# PowerShell
+$env:KENYA_EV_FORCE_FETCH=1; uv run python scripts/run_pipeline.py
+```
+
+Optional: publish contract files after promote by setting  
+`KENYA_EV_VOLUME_ROOT=/Volumes/<catalog>/<schema>/<volume>`.
+
+### Dashboard
+
+Serve the repo root and open the dashboard:
+
+```bash
+uv run python -m http.server 8000
+# → http://localhost:8000/dashboard/
+```
+
+The map loads `../data/public/regions.json` and each region’s JSON/GeoJSON.
+
+### Streamlit shell
+
+Thin metrics + type filter around the Leaflet map. Pick one region at a time (Kenya default); the iframe follows via `?region=`:
 
 ```bash
 cd app
-../.venv/bin/streamlit run app.py --server.enableStaticServing=true
+uv run streamlit run app.py --server.enableStaticServing=true
 ```
 
-Open http://localhost:8501 — confirm map, charts, type filter, and Clear. Smoke check (with the app running):
+Smoke check (app already running):
 
 ```bash
-.venv/bin/python scripts/smoke_streamlit_app.py
+uv run python scripts/smoke_streamlit_app.py
 ```
 
-## Phase 1 — Databricks App (baked snapshot)
+## Databricks
 
-Databricks Apps only ship `app/`. Before deploy, bake `dashboard/` + `data/public/` into the app package:
+The Asset Bundle (`databricks.yml`) deploys:
+
+- Unity Catalog **schema** `zeno_ev_map` (default catalog `main`)
+- Managed **Volume** `public` for published dashboard files
+- **App** `kenya-ev-map` from `./app`
+
+Set `workspace_host` (and catalog if needed), then:
 
 ```bash
-./scripts/prepare_databricks_app.sh
-```
-
-Set your workspace host in `databricks.yml` (`variables.workspace_host.default`) or pass it on the CLI, then:
-
-```bash
+./scripts/prepare_databricks_app.sh   # bake dashboard + data/public into app/
 databricks bundle validate -t dev
 databricks bundle deploy -t dev
 databricks bundle run kenya_ev_map -t dev
 ```
 
-`bundle deploy` creates/updates the App resource; `bundle run kenya_ev_map` deploys code and starts it. Data is a snapshot until Phase 3–4 (Job → Volume refresh).
-
-## Phase 2 — Volume contract
-
-Published dashboard files live on a Unity Catalog Volume (Job writes in Phase 3; App reads in Phase 4):
+### Volume layout
 
 ```text
 /Volumes/<catalog>/<schema>/<volume>/
-  stations_with_county.json
-  county_summary.json
-  town_summary.json
-  kenya_counties_display.geojson
-  manifest.json
+  regions.json
+  kenya/
+    stations_with_county.json
+    county_summary.json
+    town_summary.json
+    kenya_counties_display.geojson
+    manifest.json
+  taipei/
+    stations_with_county.json
+    district_summary.json
+    kenya_counties_display.geojson   # shared filename; district polygons
+    manifest.json
 ```
 
-Defaults: `main.zeno_ev_map.public` → `/Volumes/main/zeno_ev_map/public/`.
+Defaults: `/Volumes/main/zeno_ev_map/public/`.
 
-`manifest.json` records `generated_at`, `pipeline_run_id`, `retrieved_at`, `station_count`, and per-file `sha256` / size.
+Seed from a machine with CLI auth:
 
 ```bash
-# Write + validate local contract
-python scripts/volume_cli.py write-manifest
-python scripts/volume_cli.py validate
-
-# Deploy schema + managed Volume (catalog must already exist)
-# Set variables.catalog / workspace_host in databricks.yml as needed
-databricks bundle deploy -t dev
-
-# Seed the Volume manually (Phase 2 exit check)
 ./scripts/upload_public_to_volume.sh main zeno_ev_map public
 ```
 
-**Identities:** Job needs write on the Volume; App service principal needs read (wired in Phase 4–5). Until then, upload with your user CLI.
+Validate locally:
+
+```bash
+uv run python scripts/volume_cli.py write-manifest --public-dir data/public/kenya
+uv run python scripts/volume_cli.py validate --public-dir data/public/kenya
+```
+
+### Scheduled refresh
+
+`scripts/databricks_pipeline_job.py` is the Job entry point: force-fetch sources, run the full pipeline for every registered region, and publish to the Volume. Wire it as a `spark_python_task` in the bundle when you enable automated refresh. The App today serves a baked snapshot from `prepare_databricks_app.sh`; live Volume reads are a follow-on.
+
+## Adding a region
+
+1. Implement a `RegionConfig` in `regions/` (station source, boundary source, tiers, types, bounds, cluster).
+2. Register it in `regions/__init__.py`.
+3. Run `uv run python scripts/run_pipeline.py` and confirm `data/public/<id>/` + `regions.json`.
+4. The dashboard picks up new entries from `regions.json` automatically.
+
+Finding usable public data for a new place is still manual work; the shared pipeline is the part that should not need rewriting.
+
+## Tech stack
+
+| Layer | Stack |
+|-------|--------|
+| Pipeline | Python 3.13, pandas, shapely, geopy/Nominatim, BeautifulSoup, openlocationcode |
+| UI | Leaflet, MapLibre GL, Chart.js |
+| Hosting | Streamlit · Databricks Apps · Unity Catalog Volumes |

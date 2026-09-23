@@ -86,8 +86,10 @@ def check_embed_wiring() -> None:
     css = (DASHBOARD_SRC / "styles.css").read_text(encoding="utf-8")
     checks = [
         ('URL_PARAMS.get("embed") === "1"' in js, "app.js reads embed=1"),
+        ('URL_PARAMS.get("region")' in js, "app.js reads region param"),
         ('"/app/static/data/public"' in js, "app.js embedded PUBLIC_ROOT"),
         ("regions.json" in js, "app.js loads regions.json"),
+        ("selectedRegionId" in js, "app.js single-region selection"),
         ("data-clear-primary" in js, "app.js Clear handlers"),
         ("body.is-embed .toolbar" in css, "styles.css hides toolbar when embedded"),
     ]
@@ -126,7 +128,7 @@ def http_ok(url: str) -> None:
 def check_live(base: str) -> None:
     base = base.rstrip("/")
     http_ok(f"{base}/")
-    http_ok(f"{base}/app/static/dashboard/index.html?embed=1&type=all")
+    http_ok(f"{base}/app/static/dashboard/index.html?embed=1&region=kenya&type=all")
     http_ok(f"{base}/app/static/dashboard/app.js")
     http_ok(f"{base}/app/static/data/public/regions.json")
     for name in KENYA_FILES:

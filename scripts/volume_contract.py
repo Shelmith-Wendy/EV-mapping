@@ -63,6 +63,19 @@ def region_id_from_public_dir(public_dir: Path) -> str | None:
     return name if name in REGIONS else None
 
 
+def resolve_dataset_source(region_id: str | None, source_name: str | None = None) -> str:
+    """Prefer an explicit override, else the region adapter's dataset publisher id."""
+    if source_name:
+        return source_name
+    if region_id:
+        from regions import REGIONS
+
+        cfg = REGIONS.get(region_id)
+        if cfg is not None:
+            return cfg.dataset_source
+    return "unknown"
+
+
 def build_manifest(
     public_dir: Path,
     *,
@@ -103,10 +116,8 @@ def write_manifest(
     if missing:
         raise FileNotFoundError(f"Missing dashboard files in {public_dir}: {missing}")
 
-    stations = read_json(public_dir / STATIONS_WITH_COUNTY)
-    if source_name is None:
-        names = [row.get("source_name") for row in stations if row.get("source_name")]
-        source_name = max(set(names), key=names.count) if names else "unknown"
+    resolved_region = region_id or region_id_from_public_dir(public_dir)
+    source_name = resolve_dataset_source(resolved_region, source_name)
 
     path = public_dir / MANIFEST_FILE
     write_json(
@@ -115,7 +126,7 @@ def write_manifest(
             public_dir,
             pipeline_run_id=pipeline_run_id,
             source_name=source_name,
-            region_id=region_id,
+            region_id=resolved_region,
         ),
     )
     return path

@@ -1,4 +1,4 @@
-"""Thin Streamlit shell: metrics + type filter around the existing Leaflet dashboard."""
+"""Thin Streamlit shell: region picker + metrics + type filter around the Leaflet dashboard."""
 
 from __future__ import annotations
 
@@ -21,6 +21,7 @@ if (APP_DIR / "dashboard").is_dir():
 else:
     DASHBOARD_SRC = REPO_ROOT / "dashboard"
 
+
 def _resolve_public_root() -> Path:
     candidates = (
         APP_DIR / "data" / "public",
@@ -33,18 +34,22 @@ def _resolve_public_root() -> Path:
 
 
 PUBLIC_ROOT = _resolve_public_root()
-PUBLIC = PUBLIC_ROOT / "kenya"
 STATIC_DIR = APP_DIR / "static"
 STATIC_DASHBOARD = STATIC_DIR / "dashboard"
 STATIC_PUBLIC_ROOT = STATIC_DIR / "data" / "public"
-STATIONS_FILE = PUBLIC / "stations_with_county.json"
-MANIFEST_FILE = PUBLIC / "manifest.json"
 MAP_PATH = "/app/static/dashboard/index.html"
 
 TYPE_LABELS = {
     "all": "All",
     "fast_charger": "Fast charger",
     "swap_station": "Swap station",
+    "standard_charger": "Standard charger",
+}
+
+TIER_PLURALS = {
+    "county": "Counties",
+    "town": "Towns",
+    "district": "Districts",
 }
 
 SHELL_CSS = """
@@ -116,12 +121,6 @@ div[role="radiogroup"] svg { display: none; }
   font-size: 1.75rem !important;
   color: #f8fafc !important;
 }
-[data-testid="stHorizontalBlock"] > div:nth-child(2) [data-testid="stMetricValue"] {
-  color: #4ade80 !important;
-}
-[data-testid="stHorizontalBlock"] > div:nth-child(3) [data-testid="stMetricValue"] {
-  color: #fb923c !important;
-}
 
 iframe { border: 1px solid #1e293b; border-radius: 12px; }
 </style>
@@ -183,57 +182,104 @@ def copy_static_assets() -> bool:
     return (STATIC_DASHBOARD / "index.html").exists()
 
 
+def load_regions_index() -> list[dict]:
+    path = PUBLIC_ROOT / "regions.json"
+    if not path.exists():
+        return []
+    regions = json.loads(path.read_text(encoding="utf-8")).get("regions") or []
+    return sorted(
+        regions,
+        key=lambda region: (0 if region.get("region_id") == "kenya" else 1, region.get("display_name", "")),
+    )
+
+
+def tier_plural(tier: str) -> str:
+    return TIER_PLURALS.get(tier, f"{tier.title()}s")
+
+
 STATIC_READY = copy_static_assets()
 ASSET_VERSION = _stamp_dashboard_cache_bust() if STATIC_READY else "0"
 
 
 @st.cache_data
-def load_stations() -> pd.DataFrame:
-    if not STATIONS_FILE.exists():
-        return pd.DataFrame(columns=["station_type", "county"])
-    return pd.read_json(STATIONS_FILE)
+def load_stations(path: str) -> pd.DataFrame:
+    return pd.read_json(path)
 
 
-manifest = json.loads(MANIFEST_FILE.read_text(encoding="utf-8")) if MANIFEST_FILE.exists() else {}
+regions = load_regions_index()
+if not regions:
+    st.set_page_config(page_title="EV Map", layout="wide")
+    st.markdown(SHELL_CSS, unsafe_allow_html=True)
+    st.error("Missing data/public/regions.json. Run: python scripts/run_pipeline.py")
+    st.stop()
+
+region_by_id = {region["region_id"]: region for region in regions}
+default_region_id = "kenya" if "kenya" in region_by_id else regions[0]["region_id"]
+
+st.set_page_config(page_title="EV Map", layout="wide")
+st.markdown(SHELL_CSS, unsafe_allow_html=True)
+
+region_id = st.selectbox(
+    "Region",
+    [region["region_id"] for region in regions],
+    index=[region["region_id"] for region in regions].index(default_region_id),
+    format_func=lambda rid: region_by_id[rid]["display_name"],
+)
+region = region_by_id[region_id]
+public_dir = PUBLIC_ROOT / region["data_path"]
+stations_file = public_dir / "stations_with_county.json"
+manifest_file = public_dir / "manifest.json"
+
+manifest = json.loads(manifest_file.read_text(encoding="utf-8")) if manifest_file.exists() else {}
 generated_at = manifest.get("generated_at")
 updated_html = (
     f'<p class="kem-updated">Updated {datetime.fromisoformat(generated_at):%b %d, %Y · %H:%M} UTC</p>'
     if generated_at
     else ""
 )
+source = region.get("dataset_source_label") or None
+eyebrow = f"{source} · {region['display_name']}" if source else region["display_name"]
 
-st.set_page_config(page_title="Kenya EV Map", layout="wide")
-st.markdown(SHELL_CSS, unsafe_allow_html=True)
 st.markdown(
-    '<p class="kem-eyebrow">Zeno Moto · Kenya</p>'
+    f'<p class="kem-eyebrow">{eyebrow}</p>'
     '<h1 class="kem-title">EV charging coverage</h1>'
     f"{updated_html}",
     unsafe_allow_html=True,
 )
 
-if not STATIONS_FILE.exists():
-    st.error("Missing data/public/kenya/. Run: python scripts/run_pipeline.py")
+if not stations_file.exists():
+    st.error(f"Missing data/public/{region['data_path']}/. Run: python scripts/run_pipeline.py")
     st.stop()
 
 if not STATIC_READY:
     st.error("Dashboard assets missing under app/static/dashboard/.")
     st.stop()
 
-stations = load_stations()
+stations = load_stations(str(stations_file))
+station_types = sorted(region.get("station_types") or stations["station_type"].dropna().unique().tolist())
+type_choices = ["all", *station_types]
 station_type = st.radio(
     "Station type",
-    list(TYPE_LABELS),
+    type_choices,
     horizontal=True,
-    format_func=TYPE_LABELS.get,
+    format_func=lambda key: TYPE_LABELS.get(key, key.replace("_", " ").title()),
     label_visibility="collapsed",
+    key=f"station_type_{region_id}",
 )
 
 visible = stations if station_type == "all" else stations[stations["station_type"] == station_type]
-c1, c2, c3, c4 = st.columns(4)
-c1.metric("Stations", len(visible))
-c2.metric("Fast", int((visible["station_type"] == "fast_charger").sum()))
-c3.metric("Swap", int((visible["station_type"] == "swap_station").sum()))
-c4.metric("Counties", int(visible["county"].nunique()))
+primary_tier = region["tiers"][0]
+metric_cols = st.columns(2 + len(station_types))
+metric_cols[0].metric("Stations", len(visible))
+for index, type_name in enumerate(station_types, start=1):
+    label = TYPE_LABELS.get(type_name, type_name.replace("_", " ").title())
+    metric_cols[index].metric(label, int((visible["station_type"] == type_name).sum()))
+metric_cols[-1].metric(
+    tier_plural(primary_tier),
+    int(visible[primary_tier].nunique()) if primary_tier in visible.columns else 0,
+)
 
-# Keep a pixel height fallback: stretch can collapse on some Streamlit layouts.
-st.iframe(f"{MAP_PATH}?embed=1&type={station_type}&v={ASSET_VERSION}", height=780)
+st.iframe(
+    f"{MAP_PATH}?embed=1&region={region_id}&type={station_type}&v={ASSET_VERSION}",
+    height=780,
+)

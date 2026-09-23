@@ -53,12 +53,18 @@ def main() -> int:
     summaries: dict[str, pd.DataFrame] = {}
 
     primary_counts = counts_by(stations, primary_tier, station_types)
-    all_units = pd.DataFrame({
-        primary_tier: [f["properties"][primary_tier] for f in boundaries_geo["features"]],
-    })
+    en_key = f"{primary_tier}_en"
+    unit_rows = []
+    for feature in boundaries_geo["features"]:
+        props = feature["properties"]
+        row = {primary_tier: props[primary_tier]}
+        if props.get(en_key):
+            row[en_key] = props[en_key]
+        unit_rows.append(row)
+    all_units = pd.DataFrame(unit_rows)
     primary_summary = (
         all_units.merge(primary_counts, left_on=primary_tier, right_index=True, how="left")
-        .fillna(0)
+        .fillna({col: 0 for col in [*count_cols, "total_count"]})
         .astype({col: int for col in [*count_cols, "total_count"]})
         .sort_values(primary_tier)
         .reset_index(drop=True)

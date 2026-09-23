@@ -408,7 +408,7 @@ def resolve_maps_for_station(
     previous_resolved: dict[tuple[str, str], tuple[float | None, float | None]],
     fetch_live: bool,
 ) -> tuple[float | None, float | None, str | None]:
-    source_url = station["source_maps_url"]
+    source_url = station.get("source_maps_url") or ""
     cache_key = (station["station_id"], source_url)
     if cache_key in previous_resolved:
         lat, lng = previous_resolved[cache_key]
@@ -515,6 +515,8 @@ CONFIG = RegionConfig(
     expected_unit_count=47,
     station_type_map=STATION_TYPE_MAP,
     geocode_country_hint="Kenya",
+    dataset_source="zeno_earth",
+    dataset_source_label="Zeno Moto",
     station_source=ZenoStationSource(),
     boundary_source=KenyaBoundarySource(),
 )

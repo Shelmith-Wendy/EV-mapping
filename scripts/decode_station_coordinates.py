@@ -67,7 +67,8 @@ def load_previous_resolved(previous_geocoded: dict[str, dict]) -> dict[tuple[str
     for row in previous_geocoded.values():
         resolved = (row.get("resolved_latitude"), row.get("resolved_longitude"))
         if resolved[0] is not None and resolved[1] is not None:
-            previous[(row["station_id"], row["source_maps_url"])] = resolved
+            # Taipei (and similar) omit source_maps_url; Kenya uses "" when absent.
+            previous[(row["station_id"], row.get("source_maps_url") or "")] = resolved
     return previous
 
 
@@ -349,7 +350,8 @@ def main() -> int:
         tertiary_lng = None
         tertiary_agrees = None
 
-        if resolved_lat is None and anchor is not None and "share.google" in station["source_maps_url"] and final_url:
+        source_maps_url = station.get("source_maps_url") or ""
+        if resolved_lat is None and anchor is not None and "share.google" in source_maps_url and final_url:
             (
                 share_lat,
                 share_lng,
@@ -381,7 +383,7 @@ def main() -> int:
             final_lat, final_lng, source = None, None, None
 
         if resolved_lat is None and decoded_lat is not None:
-            lookup_url = final_url or station["source_maps_url"]
+            lookup_url = final_url or source_maps_url
             business_name = business_name_from_url(lookup_url)
             if business_name:
                 query = f"{business_name}, {station['locality']}, {country_hint}"

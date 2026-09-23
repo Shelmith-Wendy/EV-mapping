@@ -50,6 +50,24 @@ ROAD_RE = re.compile(
 )
 TAIPEI_COUNTY_NAMES = {"台北市", "臺北市"}
 TAIPEI_VIEWBOX = ((24.96, 121.45), (25.21, 121.67))
+DATASET_SOURCE = "taipei_open_data"
+DATASET_SOURCE_LABEL = "Taipei Open Data"
+
+# Locked English display names. Chinese `district` stays the join key everywhere.
+DISTRICT_EN = {
+    "中山區": "Zhongshan",
+    "中正區": "Zhongzheng",
+    "信義區": "Xinyi",
+    "內湖區": "Neihu",
+    "北投區": "Beitou",
+    "南港區": "Nangang",
+    "士林區": "Shilin",
+    "大同區": "Datong",
+    "大安區": "Da'an",
+    "文山區": "Wenshan",
+    "松山區": "Songshan",
+    "萬華區": "Wanhua",
+}
 
 
 def download_csv(url: str, path: Path) -> None:
@@ -226,7 +244,8 @@ class TaipeiStationSource:
             "station_type": STATION_TYPE_MAP[native_type],
             "locality": district or city or "臺北市",
             "address_raw": address,
-            "source_name": (row.get("廠商") or "").strip(),
+            "source_name": DATASET_SOURCE,
+            "operator": (row.get("廠商") or "").strip(),
             "retrieved_at": retrieved_at,
         }
 
@@ -243,6 +262,7 @@ class TaipeiBoundarySource:
         if len(features) == 12:
             print(f"district set matches all 12: {names}")
 
+        apply_district_en(features)
         fix_invalid_geometries(features, "district")
         return {"type": "FeatureCollection", "features": features}
 
@@ -258,11 +278,16 @@ class TaipeiBoundarySource:
             town_id = str(props.get("TOWNID", ""))
             if county not in TAIPEI_COUNTY_NAMES and not town_id.startswith("630"):
                 continue
+            zh_name = props["TOWNNAME"]
             features.append({
                 "type": "Feature",
-                "properties": {"district": props["TOWNNAME"]},
+                "properties": {
+                    "district": zh_name,
+                    "district_en": DISTRICT_EN[zh_name],
+                },
                 "geometry": feature["geometry"],
             })
+        apply_district_en(features)
         DISTRICTS_GEOJSON.parent.mkdir(parents=True, exist_ok=True)
         DISTRICTS_GEOJSON.write_text(
             json.dumps(
@@ -275,6 +300,20 @@ class TaipeiBoundarySource:
         print(f"wrote {DISTRICTS_GEOJSON} ({len(features)} districts)")
 
 
+def apply_district_en(features: list[dict]) -> None:
+    """Stamp locked English labels onto district features; fail if any name is unknown."""
+    missing = []
+    for feature in features:
+        zh_name = feature["properties"]["district"]
+        en_name = DISTRICT_EN.get(zh_name)
+        if not en_name:
+            missing.append(zh_name)
+            continue
+        feature["properties"]["district_en"] = en_name
+    if missing:
+        raise ValueError(f"missing DISTRICT_EN entries for: {sorted(set(missing))}")
+
+
 CONFIG = RegionConfig(
     region_id="taipei",
     display_name="Taipei",
@@ -284,6 +323,8 @@ CONFIG = RegionConfig(
     expected_unit_count=12,
     station_type_map=STATION_TYPE_MAP,
     geocode_country_hint="Taiwan",
+    dataset_source=DATASET_SOURCE,
+    dataset_source_label=DATASET_SOURCE_LABEL,
     station_source=TaipeiStationSource(),
     boundary_source=TaipeiBoundarySource(),
 )

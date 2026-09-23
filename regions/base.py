@@ -52,5 +52,8 @@ class RegionConfig:
     expected_unit_count: int
     station_type_map: dict[str, str]
     geocode_country_hint: str
+    # Dataset publisher for manifests / UI — never an operator/vendor majority vote.
+    dataset_source: str
+    dataset_source_label: str
     station_source: StationSource
     boundary_source: BoundarySource

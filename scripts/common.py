@@ -143,6 +143,8 @@ def write_regions_index(public_root: Path | None = None) -> Path:
             "tiers": list(cfg.tiers),
             "station_types": sorted(set(cfg.station_type_map.values())),
             "data_path": cfg.region_id,
+            "dataset_source": cfg.dataset_source,
+            "dataset_source_label": cfg.dataset_source_label,
         })
     path = root / REGIONS_INDEX
     write_json(path, {"regions": entries})
