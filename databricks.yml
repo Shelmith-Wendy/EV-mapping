@@ -1,16 +1,15 @@
-# Databricks Asset Bundle — App + UC Volume + weekly pipeline Job.
+# Phase 1–2: Databricks Asset Bundle — App + UC Volume contract.
 # Before App deploy: ./scripts/prepare_databricks_app.sh
 #
-# Set workspace_host / catalog / alert_email below (or pass --var=...).
+# Set workspace_host / catalog below (or pass --var=...).
 #
 #   databricks bundle validate -t dev
 #   databricks bundle deploy -t dev
 #   ./scripts/upload_public_to_volume.sh   # manual seed of Volume (Phase 2 exit)
 #   databricks bundle run kenya_ev_map -t dev
-#   databricks bundle run kenya_ev_data_refresh -t dev   # manual pipeline trigger
 
 bundle:
-  name: kenya-ev-map
+  name: ev-map
 
 variables:
   workspace_host:
@@ -25,18 +24,13 @@ variables:
   volume_name:
     description: Managed Volume name for published dashboard files
     default: public
-  alert_email:
-    description: Email for weekly pipeline failure alerts
-    default: YOUR-EMAIL@example.com
 
-# Job needs scripts/, regions/, data/raw/; App still ships from ./app only.
 sync:
   paths:
     - app
-    - scripts
-    - regions
-    - data/raw
-    - requirements-pipeline.txt
+  include:
+    - app/static/dashboard/**
+    - app/static/data/**
 
 resources:
   schemas:
@@ -52,50 +46,16 @@ resources:
       schema_name: ${resources.schemas.kenya_ev_schema.name}
       volume_type: MANAGED
       comment: >
-        Published dashboard artifacts at
+        Phase 2 contract root. Files live at
         /Volumes/${var.catalog}/${var.schema_name}/${var.volume_name}/
-        (regions.json, <region_id>/contract files, _pipeline_logs/).
+        (stations_with_county.json, county_summary.json, town_summary.json,
+        kenya_counties_display.geojson, manifest.json).
 
   apps:
     kenya_ev_map:
       name: kenya-ev-map
       description: Zeno Moto EV charging coverage map for Kenya (Streamlit + Leaflet)
       source_code_path: ./app
-
-  jobs:
-    kenya_ev_data_refresh:
-      name: kenya-ev-data-refresh
-      description: >
-        Weekly refresh of all REGIONS (Kenya + Taipei) into the UC Volume.
-        Per-region validate-then-promote; failed regions keep last-good data.
-      # Paused by default; prod target unpauses. Dev mode also auto-pauses schedules.
-      schedule:
-        quartz_cron_expression: "0 0 6 ? * MON"
-        timezone_id: Africa/Nairobi
-        pause_status: PAUSED
-      email_notifications:
-        on_failure:
-          - ${var.alert_email}
-      tasks:
-        - task_key: refresh_all_regions
-          spark_python_task:
-            python_file: ./scripts/databricks_pipeline_job.py
-            parameters:
-              - --catalog=${var.catalog}
-              - --schema=${var.schema_name}
-              - --volume=${var.volume_name}
-          environment_key: pipeline_env
-      environments:
-        - environment_key: pipeline_env
-          spec:
-            environment_version: "2"
-            dependencies:
-              - beautifulsoup4>=4.12.0
-              - geopy>=2.4.0
-              - openlocationcode>=1.0.1
-              - pandas>=2.2.0
-              - requests>=2.31.0
-              - shapely>=2.0.0
 
 targets:
   dev:
@@ -119,12 +79,3 @@ targets:
           permissions:
             - level: CAN_USE
               group_name: users
-      jobs:
-        kenya_ev_data_refresh:
-          schedule:
-            quartz_cron_expression: "0 0 6 ? * MON"
-            timezone_id: Africa/Nairobi
-            pause_status: UNPAUSED
-          permissions:
-            - level: CAN_MANAGE
-              user_name: ${workspace.current_user.userName}
