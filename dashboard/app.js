@@ -1,8 +1,9 @@
 const URL_PARAMS = new URLSearchParams(window.location.search);
-const EMBEDDED = URL_PARAMS.get("embed") === "1";
 const TYPE_PARAM = URL_PARAMS.get("type");
 const REGION_PARAM = URL_PARAMS.get("region");
-const PUBLIC_ROOT = EMBEDDED ? "/app/static/data/public" : "../data/public";
+const MANUFACTURER_PARAM = URL_PARAMS.get("manufacturer");
+const MANUFACTURER_ALL = "all";
+const PUBLIC_ROOT = "../data/public";
 const BASEMAP_STYLE = "https://tiles.openfreemap.org/styles/dark";
 const SELECTED = "#5eead4";
 const BOUNDARIES_FILE = "kenya_counties_display.geojson";
@@ -18,11 +19,12 @@ const app = {
   manifest: null,
   selectedRegionId: "kenya",
   stationType: "all",
+  manufacturer: MANUFACTURER_ALL,
   regionData: new Map(),
   panels: [],
 };
 
-if (EMBEDDED) document.body.classList.add("is-embed");
+const retrievedLabels = new Map();
 
 function titleCaseWords(value) {
   return String(value).replace(/_/g, " ").replace(/\b\w/g, (ch) => ch.toUpperCase());
@@ -427,10 +429,81 @@ function destroyPanels() {
   document.getElementById("workspace").innerHTML = "";
 }
 
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function matchesManufacturer(station) {
+  if (!app.manufacturer || app.manufacturer === MANUFACTURER_ALL) return true;
+  return station.operator === app.manufacturer;
+}
+
+function operatorsForSelection() {
+  const config = selectedConfig();
+  const bundle = config && app.regionData.get(config.region_id);
+  if (!bundle) return [];
+  const names = new Set();
+  for (const station of bundle.stations) {
+    if (app.stationType !== "all" && station.station_type !== app.stationType) continue;
+    const operator = typeof station.operator === "string" ? station.operator.trim() : "";
+    if (operator) names.add(operator);
+  }
+  return [...names].sort((a, b) => a.localeCompare(b));
+}
+
+function applyManufacturerChoice(value) {
+  const operators = operatorsForSelection();
+  if (operators.length < 2 || !value || value === MANUFACTURER_ALL || !operators.includes(value)) {
+    app.manufacturer = MANUFACTURER_ALL;
+    return;
+  }
+  app.manufacturer = value;
+}
+
+function summaryFromStations(bundle, stations, tiers) {
+  const stationTypes = bundle.config.station_types;
+  const byKey = new Map();
+  const sourceRows = tiers.length === 1 ? bundle.primarySummary : bundle.secondarySummary;
+  for (const row of sourceRows) {
+    const fresh = emptyCountRow(stationTypes);
+    for (const tier of tiers) fresh[tier] = row[tier];
+    const enKey = `${tiers[0]}_en`;
+    if (row[enKey]) fresh[enKey] = row[enKey];
+    fresh.region_id = row.region_id;
+    byKey.set(tiers.map((tier) => row[tier]).join(":"), fresh);
+  }
+  for (const station of stations) {
+    if (!matchesManufacturer(station)) continue;
+    const row = byKey.get(tiers.map((tier) => station[tier]).join(":"));
+    if (!row) continue;
+    row.total_count += 1;
+    const column = `${station.station_type}_count`;
+    if (Object.prototype.hasOwnProperty.call(row, column)) row[column] += 1;
+  }
+  return [...byKey.values()];
+}
+
+function filteredPrimarySummary(bundle) {
+  if (!app.manufacturer || app.manufacturer === MANUFACTURER_ALL) return bundle.primarySummary;
+  return summaryFromStations(bundle, bundle.stations, [bundle.config.tiers[0]]);
+}
+
+function filteredSecondarySummary(bundle) {
+  if (!app.manufacturer || app.manufacturer === MANUFACTURER_ALL) return bundle.secondarySummary;
+  const secondaryTier = bundle.config.tiers[1];
+  if (!secondaryTier) return [];
+  return summaryFromStations(bundle, bundle.stations, [bundle.config.tiers[0], secondaryTier]);
+}
+
 function filteredStations(panel) {
   const stationType = app.stationType;
   let stations = panel.bundles.flatMap((bundle) => bundle.stations);
   stations = stations.filter((station) => stationType === "all" || station.station_type === stationType);
+  stations = stations.filter((station) => matchesManufacturer(station));
   if (panel.selectedSecondary) {
     const { regionId, primary, secondary, secondaryTier } = panel.selectedSecondary;
     const primaryTier = panel.bundles.find((bundle) => bundle.config.region_id === regionId).config.tiers[0];
@@ -514,7 +587,7 @@ function drawBoundaries(panel) {
   const byKey = new Map();
   for (const bundle of panel.bundles) {
     const primaryTier = bundle.config.tiers[0];
-    for (const row of bundle.primarySummary) {
+    for (const row of filteredPrimarySummary(bundle)) {
       byKey.set(`${bundle.config.region_id}:${row[primaryTier]}`, { row, primaryTier, bundle });
     }
   }
@@ -606,7 +679,7 @@ function secondaryRowsFor(panel, bundle) {
   const secondaryTier = bundle.config.tiers[1];
   if (!secondaryTier) return [];
   return sortedRows(
-    bundle.secondarySummary.filter(
+    filteredSecondarySummary(bundle).filter(
       (row) => row[primaryTier] === panel.selectedPrimary.primary
     ),
     app.stationType
@@ -673,13 +746,24 @@ function drawRegionCharts(panel, bundle) {
   const stationTypes = bundle.config.station_types;
   const selectedPrimary =
     panel.selectedPrimary?.regionId === regionId ? panel.selectedPrimary.primary : null;
-  const primaryRows = sortedRows(bundle.primarySummary, app.stationType);
+  const primaryRows = sortedRows(filteredPrimarySummary(bundle), app.stationType);
   const secondaryRows = secondaryRowsFor(panel, bundle);
   updateChartHeaders(panel, bundle, secondaryRows);
 
   const primaryCanvas = panel.root.querySelector(`[data-primary-canvas="${regionId}"]`);
   const primaryBox = panel.root.querySelector(`[data-primary-box="${regionId}"]`);
   const primaryRef = panel.charts[`primary:${regionId}`];
+  const primaryHint = panel.root.querySelector(`[data-primary-hint="${regionId}"]`);
+  if (!primaryRows.length) {
+    primaryRef.chart?.destroy();
+    primaryRef.chart = null;
+    if (primaryBox) primaryBox.style.height = "48px";
+    if (primaryHint) primaryHint.textContent = "No stations for this filter";
+    const secondaryRef = panel.charts[`secondary:${regionId}`];
+    secondaryRef?.chart?.destroy();
+    if (secondaryRef) secondaryRef.chart = null;
+    return;
+  }
   drawBarChart({
     canvas: primaryCanvas,
     box: primaryBox,
@@ -898,14 +982,48 @@ function mountPanel(panelSpecs, options) {
   }
 }
 
-function updateBrand(configs) {
+function formatRetrievedAt(value) {
+  const date = new Date(value);
+  if (!value || Number.isNaN(date.getTime())) return "";
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const day = String(date.getUTCDate()).padStart(2, "0");
+  const hours = String(date.getUTCHours()).padStart(2, "0");
+  const minutes = String(date.getUTCMinutes()).padStart(2, "0");
+  return `Updated ${months[date.getUTCMonth()]} ${day}, ${date.getUTCFullYear()} · ${hours}:${minutes} UTC`;
+}
+
+async function retrievedLabel(regionId) {
+  if (retrievedLabels.has(regionId)) return retrievedLabels.get(regionId);
+  let label = "";
+  try {
+    const response = await fetch(`${PUBLIC_ROOT}/${regionId}/manifest.json`, { cache: "no-store" });
+    if (response.ok) {
+      const manifest = await response.json();
+      label = formatRetrievedAt(manifest.retrieved_at);
+    }
+  } catch {
+    label = "";
+  }
+  retrievedLabels.set(regionId, label);
+  return label;
+}
+
+async function updateBrand(configs) {
   const config = configs[0];
-  if (!config) return;
+  const updated = document.getElementById("brand-updated");
+  if (!config) {
+    updated.hidden = true;
+    updated.textContent = "";
+    return;
+  }
   const source = datasetLabel(config);
   document.getElementById("brand-eyebrow").textContent = source
     ? `${source} · ${config.display_name}`
     : config.display_name;
   document.title = `${config.display_name} EV Map`;
+  const label = await retrievedLabel(config.region_id);
+  updated.hidden = !label;
+  updated.textContent = label;
 }
 
 function updateGlobalStats() {
@@ -941,7 +1059,9 @@ function renderTypeToggles(stationTypes) {
   root.querySelectorAll("[data-type]").forEach((button) => {
     button.addEventListener("click", () => {
       app.stationType = button.dataset.type;
+      applyManufacturerChoice(app.manufacturer);
       renderTypeToggles(unionStationTypes(selectedConfigs()));
+      renderManufacturerSelect();
       for (const panel of app.panels) {
         if (panel.selectedSecondary && !filteredStations(panel).length) {
           panel.selectedSecondary = null;
@@ -958,6 +1078,33 @@ function orderedRegions() {
     if (a.region_id === "kenya") return -1;
     if (b.region_id === "kenya") return 1;
     return a.display_name.localeCompare(b.display_name);
+  });
+}
+
+function renderManufacturerSelect() {
+  const root = document.getElementById("manufacturer-picker");
+  applyManufacturerChoice(app.manufacturer);
+  const operators = operatorsForSelection();
+  if (operators.length < 2) {
+    root.hidden = true;
+    root.innerHTML = "";
+    return;
+  }
+  const options = [
+    `<option value="${MANUFACTURER_ALL}"${app.manufacturer === MANUFACTURER_ALL ? " selected" : ""}>All manufacturers</option>`,
+    ...operators.map((name) => (
+      `<option value="${escapeHtml(name)}"${app.manufacturer === name ? " selected" : ""}>${escapeHtml(name)}</option>`
+    )),
+  ];
+  root.hidden = false;
+  root.innerHTML =
+    `<label class="region-select-label" for="manufacturer-select">Manufacturer</label>` +
+    `<select id="manufacturer-select" class="region-select" aria-label="Manufacturer">${options.join("")}</select>`;
+  root.querySelector("#manufacturer-select").addEventListener("change", (event) => {
+    applyManufacturerChoice(event.target.value);
+    renderManufacturerSelect();
+    for (const panel of app.panels) refreshPanel(panel);
+    updateGlobalStats();
   });
 }
 
@@ -987,9 +1134,10 @@ async function renderDashboard() {
   await ensureRegionData(configs);
   const stationTypes = unionStationTypes(configs);
 
-  updateBrand(configs);
+  await updateBrand(configs);
   renderRegionPicker();
   renderTypeToggles(stationTypes);
+  renderManufacturerSelect();
 
   destroyPanels();
   const workspace = document.getElementById("workspace");
@@ -1005,6 +1153,7 @@ async function renderDashboard() {
 
 async function main() {
   if (TYPE_PARAM && TYPE_META[TYPE_PARAM]) app.stationType = TYPE_PARAM;
+  if (MANUFACTURER_PARAM) app.manufacturer = MANUFACTURER_PARAM;
   const manifest = await fetch(`${PUBLIC_ROOT}/regions.json`, { cache: "no-store" }).then((response) => {
     if (!response.ok) throw new Error(`regions.json HTTP ${response.status}`);
     return response.json();
@@ -1015,8 +1164,10 @@ async function main() {
 }
 
 main().catch((error) => {
-  const hint = EMBEDDED
-    ? "Streamlit embed failed while starting the map. Hard-refresh http://127.0.0.1:8501/ after restarting Streamlit from <code>app/</code>."
-    : "Serve the repo root (not this folder):<br><code>python3 -m http.server 8000</code><br>then open <code>/dashboard/</code><br><br>Run <code>python scripts/run_pipeline.py</code> to build <code>data/public/</code>.";
-  document.body.innerHTML = `<p style="padding:40px;font:20px/1.4 IBM Plex Sans,sans-serif;color:#f8fafc;background:#070b14">Could not load dashboard.<br><br>${hint}<br><br><code>${error}</code></p>`;
+  document.body.innerHTML =
+    `<p style="padding:40px;font:20px/1.4 IBM Plex Sans,sans-serif;color:#f8fafc;background:#070b14">` +
+    `Could not load dashboard.<br><br>` +
+    `Open <code>/dashboard/</code> from a server rooted at the repo, or open the Streamlit app. ` +
+    `This page reads <code>../data/public</code>.<br><br>` +
+    `<code>${error}</code></p>`;
 });
