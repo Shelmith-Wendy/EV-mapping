@@ -8,8 +8,10 @@ Kenya (Zeno Moto) is the primary product view. Taipei is a second region that pr
 
 - **Choropleth map** — admin units shaded by station density, with per-station markers
 - **Type filters** — fast charger, swap station, and (where present) standard charger
+- **Manufacturer filter** — shown when the selected region has more than one operator (Taipei)
 - **Drill-down** — Kenya: county → town; Taipei: district
-- **Multi-region UI** — pick one or more regions; same-cluster maps merge, cross-cluster uses a grid
+- **One region at a time** — Kenya is the default; the dashboard picker switches region
+- **Updated time** — `retrieved_at` from that region’s `manifest.json`, shown under the title
 - **Validated publish** — totals and contract files must pass before promotion; a failed region keeps last-good public data
 
 ## How it works
@@ -23,9 +25,10 @@ Admin GeoJSON┘                                              │
                                                             ▼
                                               data/public/<region>/
                                                      │
-                                    ┌────────────────┼────────────────┐
-                                    ▼                ▼                ▼
-                              Leaflet map     Streamlit App    UC Volume (opt.)
+                          ┌──────────────────────────┼──────────────────────────┐
+                          ▼                          ▼                          ▼
+                    dashboard/ (:8000)     app/static/ (baked)          UC Volume (opt.)
+                    reads ../data/public   Streamlit iframe             contract files
 ```
 
 Each region is a plug-in under `regions/`. Shared stages in `scripts/` look up the active `RegionConfig` and run the same step list — they never hard-code “Kenya” or “Taipei”.
@@ -69,8 +72,9 @@ data/
   raw/            # Cached sources, boundary repos, town overrides
   staging/        # Per-run working copy (gitignored)
   public/         # Promoted artifacts the UI reads
-dashboard/        # Standalone Leaflet + Chart.js map
-app/              # Streamlit shell for Databricks Apps
+dashboard/        # Leaflet + Chart.js UI (region, type, manufacturer)
+app/              # Streamlit viewport for Databricks Apps
+app/static/       # Bake from prepare_databricks_app.sh (gitignored)
 databricks.yml    # Asset Bundle: schema, Volume, App
 ```
 
@@ -126,17 +130,23 @@ The map loads `../data/public/regions.json` and each region’s JSON/GeoJSON.
 
 ### Streamlit shell
 
-Thin metrics + type filter around the Leaflet map. Pick one region at a time (Kenya default); the iframe follows via `?region=`:
+A full-viewport iframe around that same dashboard. Streamlit does not draw the filters; it only forwards `region`, `type`, and `manufacturer` from its own URL into the iframe on load. Example: `http://127.0.0.1:8501/?region=taipei&type=swap_station&manufacturer=Gogoro%20Network`.
+
+The app reads `app/static/`, not `dashboard/` or `data/public/` directly. Bake first:
 
 ```bash
+./scripts/prepare_databricks_app.sh
 cd app
 uv run streamlit run app.py --server.enableStaticServing=true
 ```
 
-Smoke check (app already running):
+The bake copies `dashboard/` into `app/static/dashboard/` (with cache-bust stamps) and copies `data/public/regions.json` plus each region’s dashboard files and `manifest.json`. Pipeline intermediates stay out of the snapshot.
+
+Smoke check:
 
 ```bash
-uv run python scripts/smoke_streamlit_app.py
+uv run python scripts/smoke_streamlit_app.py --skip-http   # files only
+uv run python scripts/smoke_streamlit_app.py               # also the app on :8501
 ```
 
 ## Databricks
@@ -150,11 +160,13 @@ The Asset Bundle (`databricks.yml`) deploys:
 Set `workspace_host` (and catalog if needed), then:
 
 ```bash
-./scripts/prepare_databricks_app.sh   # bake dashboard + data/public into app/
+./scripts/prepare_databricks_app.sh   # bake dashboard + contract files into app/static
 databricks bundle validate -t dev
 databricks bundle deploy -t dev
 databricks bundle run kenya_ev_map -t dev
 ```
+
+`app/static/` is gitignored. `databricks.yml` lists `sync.include` for `app/static/dashboard/**` and `app/static/data/**` so the bake is still uploaded.
 
 ### Volume layout
 
@@ -198,7 +210,7 @@ uv run python scripts/volume_cli.py validate --public-dir data/public/kenya
 1. Implement a `RegionConfig` in `regions/` (station source, boundary source, tiers, types, bounds, cluster).
 2. Register it in `regions/__init__.py`.
 3. Run `uv run python scripts/run_pipeline.py` and confirm `data/public/<id>/` + `regions.json`.
-4. The dashboard picks up new entries from `regions.json` automatically.
+4. The standalone dashboard picks up new entries from `regions.json`. Re-run `./scripts/prepare_databricks_app.sh` before starting Streamlit so the bake includes the new region.
 
 Finding usable public data for a new place is still manual work; the shared pipeline is the part that should not need rewriting.
 
