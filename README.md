@@ -1,4 +1,4 @@
-# kenya-ev-map
+# EV-Charger-Map
 
 Interactive map of EV charging and battery-swap coverage by region. Pull public station lists, geocode and assign them to admin boundaries, then publish JSON the dashboard can trust.
 
