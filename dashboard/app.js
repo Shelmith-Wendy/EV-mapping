@@ -7,6 +7,7 @@ const BASEMAP_STYLE = "https://tiles.openfreemap.org/styles/dark";
 const SELECTED = "#5eead4";
 const BOUNDARIES_FILE = "kenya_counties_display.geojson";
 const STATIONS_FILE = "stations_with_county.json";
+const CANDIDATES_FILE = "tvs_candidates.json";
 
 const TYPE_META = {
   fast_charger: { label: "Fast charger", short: "Fast", color: "#4ade80", css: "fast" },
@@ -18,6 +19,7 @@ const app = {
   manifest: null,
   selectedRegionId: "kenya",
   stationType: "all",
+  showCandidates: false,
   regionData: new Map(),
   panels: [],
 };
@@ -293,6 +295,16 @@ function lookupUnitProp(bundle, tier, nativeName) {
     || null;
 }
 
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (ch) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  }[ch]));
+}
+
 function stationPopup(station, bundle) {
   const tiers = bundle.config.tiers;
   const primaryTier = tiers[0];
@@ -307,6 +319,23 @@ function stationPopup(station, bundle) {
   const nativeLine = native && native !== english ? `<span class="unit-native">${native}</span>` : "";
   const hoursLine = station.hours ? `<span>${station.hours}</span>` : "";
   return `<strong>${station.name}</strong><span>${placeLine}</span>${nativeLine}${hoursLine}${mapsLink}`;
+}
+
+function candidatePopup(station, bundle) {
+  const primaryTier = bundle.config.tiers[0];
+  const native = station[primaryTier];
+  const props = lookupUnitProp(bundle, primaryTier, native);
+  const english = unitDisplayName(props || station, primaryTier, native);
+  const locality = station.locality || station.name;
+  const place = english && english !== locality ? `${english}` : "";
+  const nativeLine = native && native !== english && native !== locality
+    ? `<span class="unit-native">${escapeHtml(native)}</span>`
+    : "";
+  const mapsLink = station.maps_navigation_url
+    ? `<a href="${station.maps_navigation_url}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>`
+    : "";
+  const placeLine = place ? `<span>${escapeHtml(place)}</span>` : "";
+  return `<strong>${escapeHtml(locality)}</strong><span>TVS candidate</span>${placeLine}${nativeLine}${mapsLink}`;
 }
 
 function unitTooltipText(english, chinese, row, stationType, stationTypes) {
@@ -399,12 +428,25 @@ async function loadRegionBundle(config) {
   if (secondaryTier) {
     requests.push(fetchJson(`${base}/${secondaryTier}_summary.json`));
   }
-  const [primarySummary, stations, geojson, secondarySummary = []] = await Promise.all(requests);
+  const candidateRequest = config.region_id === "taipei"
+    ? fetch(`${base}/${CANDIDATES_FILE}`, { cache: "no-store" }).then((response) => {
+      if (response.status === 404) return [];
+      if (!response.ok) throw new Error(`${CANDIDATES_FILE} HTTP ${response.status}`);
+      return response.json();
+    })
+    : Promise.resolve([]);
+  const loaded = await Promise.all(requests);
+  const primarySummary = loaded[0];
+  const stations = loaded[1];
+  const geojson = loaded[2];
+  const secondarySummary = secondaryTier ? loaded[3] : [];
+  const candidates = await candidateRequest;
   return {
     config,
     primarySummary: primarySummary.map((row) => ({ ...row, region_id: config.region_id })),
     secondarySummary: secondarySummary.map((row) => ({ ...row, region_id: config.region_id })),
     stations: stations.map((station) => ({ ...station, region_id: config.region_id })),
+    candidates: candidates.map((station) => ({ ...station, region_id: config.region_id })),
     geojson: {
       type: "FeatureCollection",
       features: geojson.features.map((feature) => ({
@@ -599,6 +641,50 @@ function drawStations(panel) {
   panel.stationLayer.bringToFront();
 }
 
+function filteredCandidates(panel) {
+  if (!app.showCandidates) return [];
+  if (app.stationType !== "all" && app.stationType !== "swap_station") return [];
+  let rows = panel.bundles.flatMap((bundle) => bundle.candidates || []);
+  if (panel.selectedPrimary) {
+    const { regionId, primary, primaryTier } = panel.selectedPrimary;
+    rows = rows.filter((row) => row.region_id === regionId && row[primaryTier] === primary);
+  }
+  return rows;
+}
+
+function drawCandidates(panel) {
+  if (panel.candidateLayer) panel.candidateLayer.remove();
+  panel.candidateLayer = L.featureGroup();
+  const positions = jitteredPositions(filteredCandidates(panel));
+  for (const station of positions.keys()) {
+    const bundle = panel.bundles.find((item) => item.config.region_id === station.region_id);
+    L.circleMarker(positions.get(station), {
+      radius: 8,
+      color: "#fee2e2",
+      weight: 2,
+      fillColor: "#ef4444",
+      fillOpacity: 1,
+    })
+      .bindPopup(candidatePopup(station, bundle))
+      .addTo(panel.candidateLayer);
+  }
+  panel.candidateLayer.addTo(panel.map);
+  panel.candidateLayer.bringToFront();
+}
+
+function refreshLegend(panel) {
+  const legend = panel.root.querySelector(".legend");
+  if (!legend) return;
+  const stationTypes = unionStationTypes(panel.bundles.map((bundle) => bundle.config));
+  const typeAllows = app.stationType === "all" || app.stationType === "swap_station";
+  const showCandidates = typeAllows && app.showCandidates
+    && panel.bundles.some((bundle) => bundle.candidates?.length);
+  const candidateItem = showCandidates
+    ? `<li><span class="swatch swatch-candidate"></span> TVS candidate</li>`
+    : "";
+  legend.innerHTML = legendHtml(stationTypes) + candidateItem;
+}
+
 function secondaryRowsFor(panel, bundle) {
   if (!panel.selectedPrimary) return [];
   if (panel.selectedPrimary.regionId !== bundle.config.region_id) return [];
@@ -730,6 +816,8 @@ function refreshPanel(panel) {
   for (const bundle of panel.bundles) drawRegionCharts(panel, bundle);
   drawBoundaries(panel);
   drawStations(panel);
+  drawCandidates(panel);
+  refreshLegend(panel);
   fitMapToSelection(panel);
 }
 
@@ -857,6 +945,7 @@ function mountPanel(panelSpecs, options) {
     boundaryLayer: null,
     labelLayer: null,
     stationLayer: null,
+    candidateLayer: null,
     boundaryRenderer: null,
     selectedPrimary: null,
     selectedSecondary: null,
@@ -922,6 +1011,25 @@ function updateGlobalStats() {
   root.innerHTML = statsHtml(stationTypes, tierTitle(primaryTier, { plural: true }));
   const stations = app.panels.flatMap((panel) => filteredStations(panel));
   fillStats(root, stations, primaryTier, stationTypes);
+}
+
+function renderCandidateToggle() {
+  const root = document.getElementById("candidate-toggle");
+  const available = selectedConfigs().some((config) => app.regionData.get(config.region_id)?.candidates?.length);
+  root.hidden = !available;
+  if (!available) {
+    app.showCandidates = false;
+    root.innerHTML = "";
+    return;
+  }
+  const on = app.showCandidates ? " is-on" : "";
+  root.innerHTML =
+    `<button class="toggle${on}" data-candidates="tvs" aria-pressed="${app.showCandidates}">TVS candidates</button>`;
+  root.querySelector("button").addEventListener("click", () => {
+    app.showCandidates = !app.showCandidates;
+    renderCandidateToggle();
+    for (const panel of app.panels) refreshPanel(panel);
+  });
 }
 
 function renderTypeToggles(stationTypes) {
@@ -990,6 +1098,7 @@ async function renderDashboard() {
   updateBrand(configs);
   renderRegionPicker();
   renderTypeToggles(stationTypes);
+  renderCandidateToggle();
 
   destroyPanels();
   const workspace = document.getElementById("workspace");
