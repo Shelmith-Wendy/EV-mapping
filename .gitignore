@@ -12,6 +12,9 @@ wheels/
 # Pipeline staging (never published)
 data/staging/
 
+# Local UTF-8 copies for sharing. Originals stay Big5 for the pipeline.
+data/raw/taipei/*_utf8.csv
+
 # Local tunnel binary
 .bin/
 

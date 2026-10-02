@@ -7,6 +7,7 @@
   --fast: #4ade80;
   --swap: #fb923c;
   --standard: #60a5fa;
+  --candidate: #ef4444;
   --gap: 16px;
   --toolbar-pad: 10px 50px;
 }
@@ -170,6 +171,7 @@ h1 {
 .manufacturer-picker[hidden] {
   display: none;
 }
+.toggles[hidden] { display: none; }
 
 .toggles {
   display: flex;
@@ -201,6 +203,7 @@ h1 {
 .toggle[data-type="fast_charger"].is-on { background: var(--fast); color: #052e16; }
 .toggle[data-type="swap_station"].is-on { background: var(--swap); color: #431407; }
 .toggle[data-type="standard_charger"].is-on { background: var(--standard); color: #0b1e3a; }
+.toggle[data-candidates].is-on { background: var(--candidate); color: #450a0a; }
 
 .workspace {
   min-height: 0;
@@ -415,6 +418,7 @@ h1 {
 .swatch-fast { background: var(--fast); }
 .swatch-swap { background: var(--swap); }
 .swatch-standard { background: var(--standard); }
+.swatch-candidate { background: var(--candidate); }
 
 .leaflet-container { background: #020617; font-family: "IBM Plex Sans", sans-serif; }
 .leaflet-gl-layer canvas { outline: none; }
