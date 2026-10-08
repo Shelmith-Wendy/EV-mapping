@@ -7,9 +7,9 @@
     "address_raw": "台北市士林區士東路100號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1130068,
-    "longitude": 121.535203
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.11192547175037,
+    "longitude": 121.529276905848
   },
   {
     "station_id": "taipei_swap_2",
@@ -19,9 +19,9 @@
     "address_raw": "台北市士林區士商路1號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0939662,
-    "longitude": 121.5174096
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.089334192313608,
+    "longitude": 121.52142768538596
   },
   {
     "station_id": "taipei_swap_3",
@@ -31,9 +31,9 @@
     "address_raw": "台北市士林區中山北路五段570號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1297818,
-    "longitude": 121.5369994
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.095591950741166,
+    "longitude": 121.52826212131073
   },
   {
     "station_id": "taipei_swap_4",
@@ -43,9 +43,9 @@
     "address_raw": "台北市士林區中正路115號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.094728,
-    "longitude": 121.5231012
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.095668840123164,
+    "longitude": 121.5285562743195
   },
   {
     "station_id": "taipei_swap_5",
@@ -55,9 +55,9 @@
     "address_raw": "台北市士林區延平北路6段308號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.08678,
-    "longitude": 121.50948
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.089802919570086,
+    "longitude": 121.50294247859748
   },
   {
     "station_id": "taipei_swap_6",
@@ -67,9 +67,9 @@
     "address_raw": "台北市士林區延平北路五段1巷",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0787965,
-    "longitude": 121.5099378
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.07900513151271,
+    "longitude": 121.51051938359217
   },
   {
     "station_id": "taipei_swap_7",
@@ -79,9 +79,9 @@
     "address_raw": "台北市士林區忠誠路一段101號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0952636,
-    "longitude": 121.5254705
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.104862793441324,
+    "longitude": 121.52851336804366
   },
   {
     "station_id": "taipei_swap_8",
@@ -91,9 +91,9 @@
     "address_raw": "台北市士林區忠誠路二段55號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0952636,
-    "longitude": 121.5254705
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.111811064536134,
+    "longitude": 121.53143823740226
   },
   {
     "station_id": "taipei_swap_9",
@@ -103,9 +103,9 @@
     "address_raw": "台北市士林區承德路四段83號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1081149,
-    "longitude": 121.5297352
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.082777452352612,
+    "longitude": 121.52362683687109
   },
   {
     "station_id": "taipei_swap_10",
@@ -115,9 +115,9 @@
     "address_raw": "台北市士林區格致路59號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1373025,
-    "longitude": 121.5464602
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.137932131092416,
+    "longitude": 121.54626059963263
   },
   {
     "station_id": "taipei_swap_11",
@@ -127,9 +127,9 @@
     "address_raw": "台北市士林區福林路100巷11弄交叉口",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0971654,
-    "longitude": 121.5333328
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.095906395802825,
+    "longitude": 121.53279663527267
   },
   {
     "station_id": "taipei_swap_12",
@@ -139,9 +139,9 @@
     "address_raw": "台北市士林區福國路70號捷運站1號出口",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1018208,
-    "longitude": 121.5207717
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.102157704034646,
+    "longitude": 121.52260167345605
   },
   {
     "station_id": "taipei_swap_13",
@@ -151,9 +151,9 @@
     "address_raw": "台北市大同區大龍街91巷7號對面",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0687228,
-    "longitude": 121.5158785
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06736802681201,
+    "longitude": 121.51651649122124
   },
   {
     "station_id": "taipei_swap_14",
@@ -163,9 +163,9 @@
     "address_raw": "台北市大同區延平北路四段205號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.06326,
-    "longitude": 121.51099
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.07429905439652,
+    "longitude": 121.51174679356076
   },
   {
     "station_id": "taipei_swap_15",
@@ -175,9 +175,9 @@
     "address_raw": "台北市大同區承德路二段31號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.04879,
-    "longitude": 121.51626
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.053931120593248,
+    "longitude": 121.5182542365458
   },
   {
     "station_id": "taipei_swap_16",
@@ -187,9 +187,9 @@
     "address_raw": "台北市大同區長安西路37號之1",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0502374,
-    "longitude": 121.5198774
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.050367169526858,
+    "longitude": 121.51969735169932
   },
   {
     "station_id": "taipei_swap_17",
@@ -199,9 +199,9 @@
     "address_raw": "台北市大同區迪化街一段63號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0561728,
-    "longitude": 121.5102161
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05577904607296,
+    "longitude": 121.51010127112818
   },
   {
     "station_id": "taipei_swap_18",
@@ -211,9 +211,9 @@
     "address_raw": "台北市大同區重慶北路二段180號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0635887,
-    "longitude": 121.5136522
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.060179916312308,
+    "longitude": 121.51330430455313
   },
   {
     "station_id": "taipei_swap_19",
@@ -223,9 +223,9 @@
     "address_raw": "台北市大安區四維路78號對面",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0353359,
-    "longitude": 121.5481086
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03411425169539,
+    "longitude": 121.5480216844407
   },
   {
     "station_id": "taipei_swap_20",
@@ -235,9 +235,9 @@
     "address_raw": "台北市大安區和平東路一段129號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0278749,
-    "longitude": 121.5376062
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.026879821879014,
+    "longitude": 121.52841163079127
   },
   {
     "station_id": "taipei_swap_21",
@@ -247,9 +247,9 @@
     "address_raw": "台北市大安區和平東路三段168號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0278749,
-    "longitude": 121.5376062
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.023719470956806,
+    "longitude": 121.5528530491931
   },
   {
     "station_id": "taipei_swap_22",
@@ -259,9 +259,9 @@
     "address_raw": "台北市大安區臥龍街20之1號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0092926,
-    "longitude": 121.5655159
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.023665207207635,
+    "longitude": 121.54657560642801
   },
   {
     "station_id": "taipei_swap_23",
@@ -271,9 +271,9 @@
     "address_raw": "台北市大安區建國南路二段75-1號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0316402,
-    "longitude": 121.5374907
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03095235820689,
+    "longitude": 121.53813899815397
   },
   {
     "station_id": "taipei_swap_24",
@@ -283,9 +283,9 @@
     "address_raw": "台北市大安區基隆路二段166-1號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0173185,
-    "longitude": 121.5443245
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.027128459063743,
+    "longitude": 121.55544024446344
   },
   {
     "station_id": "taipei_swap_25",
@@ -295,9 +295,9 @@
     "address_raw": "台北市大安區基隆路四段43號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0173185,
-    "longitude": 121.5443245
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.01374301232239,
+    "longitude": 121.5406238771355
   },
   {
     "station_id": "taipei_swap_26",
@@ -307,9 +307,9 @@
     "address_raw": "台北市大安區通化街177號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0287281,
-    "longitude": 121.5538123
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.02745210676224,
+    "longitude": 121.55358165519715
   },
   {
     "station_id": "taipei_swap_27",
@@ -319,9 +319,9 @@
     "address_raw": "台北市大安區敦化南路1段247巷12號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0189437,
-    "longitude": 121.5464432
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03886332018098,
+    "longitude": 121.54996135956834
   },
   {
     "station_id": "taipei_swap_28",
@@ -331,9 +331,9 @@
     "address_raw": "台北市大安區羅斯福路4段85號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0109646,
-    "longitude": 121.5380463
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.012893180321022,
+    "longitude": 121.53648472204551
   },
   {
     "station_id": "taipei_swap_29",
@@ -343,9 +343,9 @@
     "address_raw": "台北市中山區大直街70號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0833799,
-    "longitude": 121.5463363
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.083586533345972,
+    "longitude": 121.54623420174988
   },
   {
     "station_id": "taipei_swap_30",
@@ -355,9 +355,9 @@
     "address_raw": "台北市中山區中山北路二段59巷3弄7號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0494348,
-    "longitude": 121.5380675
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.056175957501814,
+    "longitude": 121.5235412583733
   },
   {
     "station_id": "taipei_swap_31",
@@ -367,9 +367,9 @@
     "address_raw": "台北市中山區北安路819之1號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0830875,
-    "longitude": 121.5491179
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.084953604204287,
+    "longitude": 121.5561791650937
   },
   {
     "station_id": "taipei_swap_32",
@@ -379,7 +379,7 @@
     "address_raw": "台北市中山區民族東路與吉林路口",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0681925,
     "longitude": 121.5396775
   },
@@ -391,7 +391,7 @@
     "address_raw": "台北市中山區民權西路72號捷運3號出入口",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.062825,
     "longitude": 121.5196113
   },
@@ -403,9 +403,9 @@
     "address_raw": "台北市中山區松江路530號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0691378,
-    "longitude": 121.5335315
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.066902333177048,
+    "longitude": 121.53306689178528
   },
   {
     "station_id": "taipei_swap_35",
@@ -415,9 +415,9 @@
     "address_raw": "台北市中山區南京東路二段85號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.051836,
-    "longitude": 121.5439651
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.052251467768166,
+    "longitude": 121.53180376432492
   },
   {
     "station_id": "taipei_swap_36",
@@ -427,9 +427,9 @@
     "address_raw": "台北市中山區建國北路一段13號對面(近建國北路一段八德路二段口)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0653738,
-    "longitude": 121.5365493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.046880473628406,
+    "longitude": 121.53708050241943
   },
   {
     "station_id": "taipei_swap_37",
@@ -439,7 +439,7 @@
     "address_raw": "台北市中山區建國北路二段11巷內空地",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0653738,
     "longitude": 121.5365493
   },
@@ -451,9 +451,9 @@
     "address_raw": "台北市中山區建國北路二段151巷8號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0653738,
-    "longitude": 121.5365493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.061726325609545,
+    "longitude": 121.53803098660752
   },
   {
     "station_id": "taipei_swap_39",
@@ -463,9 +463,9 @@
     "address_raw": "台北市中山區建國北路三段39號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0653738,
-    "longitude": 121.5365493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.063914035336495,
+    "longitude": 121.53761318408252
   },
   {
     "station_id": "taipei_swap_40",
@@ -475,9 +475,9 @@
     "address_raw": "台北市中山區建國北路三段89及91號前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0653738,
-    "longitude": 121.5365493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06570667343233,
+    "longitude": 121.5367727923689
   },
   {
     "station_id": "taipei_swap_41",
@@ -487,9 +487,9 @@
     "address_raw": "台北市中山區新生北路一段23號1樓",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0509162,
-    "longitude": 121.5282946
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.046851756377464,
+    "longitude": 121.5315455732159
   },
   {
     "station_id": "taipei_swap_42",
@@ -499,9 +499,9 @@
     "address_raw": "台北市中山區新生北路三段3巷56號對面",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0509162,
-    "longitude": 121.5282946
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.063061861918435,
+    "longitude": 121.52960109974929
   },
   {
     "station_id": "taipei_swap_43",
@@ -511,7 +511,7 @@
     "address_raw": "台北市中山區新生北路—段36號前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0509162,
     "longitude": 121.5282946
   },
@@ -523,9 +523,9 @@
     "address_raw": "台北市中正區汀州路三段160巷8號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0269055,
-    "longitude": 121.5111141
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.013179220027556,
+    "longitude": 121.53390200419162
   },
   {
     "station_id": "taipei_swap_45",
@@ -535,9 +535,9 @@
     "address_raw": "台北市中正區延平南路133巷底",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0452888,
-    "longitude": 121.5105135
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.037796900485883,
+    "longitude": 121.5088716989836
   },
   {
     "station_id": "taipei_swap_46",
@@ -547,9 +547,9 @@
     "address_raw": "台北市中正區延平南路189號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0452888,
-    "longitude": 121.5105135
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.033783939697724,
+    "longitude": 121.50749164127018
   },
   {
     "station_id": "taipei_swap_47",
@@ -559,9 +559,9 @@
     "address_raw": "台北市中正區忠孝東路一段12號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.04467,
-    "longitude": 121.52357
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.04491230535363,
+    "longitude": 121.52207144614813
   },
   {
     "station_id": "taipei_swap_48",
@@ -571,9 +571,9 @@
     "address_raw": "台北市中正區重慶南路二段73號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0428897,
-    "longitude": 121.513452
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.030204422113854,
+    "longitude": 121.51529016082358
   },
   {
     "station_id": "taipei_swap_49",
@@ -583,9 +583,9 @@
     "address_raw": "台北市內湖區內湖路一段387巷38號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0625839,
-    "longitude": 121.6056403
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.083664315791793,
+    "longitude": 121.57039203401096
   },
   {
     "station_id": "taipei_swap_50",
@@ -595,9 +595,9 @@
     "address_raw": "台北市內湖區內湖路一段411巷19弄17號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0625839,
-    "longitude": 121.6056403
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.082397336879875,
+    "longitude": 121.57192822892519
   },
   {
     "station_id": "taipei_swap_51",
@@ -607,9 +607,9 @@
     "address_raw": "台北市內湖區內湖路一段594號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0625839,
-    "longitude": 121.6056403
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.078799087935575,
+    "longitude": 121.57726131062712
   },
   {
     "station_id": "taipei_swap_52",
@@ -619,9 +619,9 @@
     "address_raw": "台北市內湖區民善街88號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0593955,
-    "longitude": 121.5759307
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06014070138817,
+    "longitude": 121.57536495628459
   },
   {
     "station_id": "taipei_swap_53",
@@ -631,9 +631,9 @@
     "address_raw": "台北市內湖區民權東路六段208號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.069,
-    "longitude": 121.58493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.067638197641045,
+    "longitude": 121.59669639124652
   },
   {
     "station_id": "taipei_swap_54",
@@ -643,9 +643,9 @@
     "address_raw": "台北市內湖區民權東路六段296巷66-3號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.069,
-    "longitude": 121.58493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.07039701091536,
+    "longitude": 121.60869487820946
   },
   {
     "station_id": "taipei_swap_55",
@@ -655,9 +655,9 @@
     "address_raw": "台北市內湖區安康路228巷11號對面(機車停車場內)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.064643,
-    "longitude": 121.6078064
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06272649638178,
+    "longitude": 121.60324278871369
   },
   {
     "station_id": "taipei_swap_56",
@@ -667,9 +667,9 @@
     "address_raw": "台北市內湖區成功路五段11號捷運站1號出口",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0831849,
-    "longitude": 121.5980243
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.08333977507021,
+    "longitude": 121.60264115396322
   },
   {
     "station_id": "taipei_swap_57",
@@ -679,9 +679,9 @@
     "address_raw": "台北市內湖區成功路四段188號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0831849,
-    "longitude": 121.5980243
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.084081335670565,
+    "longitude": 121.59454686317173
   },
   {
     "station_id": "taipei_swap_58",
@@ -691,9 +691,9 @@
     "address_raw": "台北市內湖區洲子街12號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0806223,
-    "longitude": 121.5696626
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.078221107490826,
+    "longitude": 121.57504247024194
   },
   {
     "station_id": "taipei_swap_59",
@@ -703,9 +703,9 @@
     "address_raw": "台北市內湖區康樂街213號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.068761,
-    "longitude": 121.618418
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.07577121521897,
+    "longitude": 121.62208709346312
   },
   {
     "station_id": "taipei_swap_60",
@@ -715,9 +715,9 @@
     "address_raw": "台北市內湖區瑞光路468號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0697792,
-    "longitude": 121.5832778
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.07834161496229,
+    "longitude": 121.56994261784136
   },
   {
     "station_id": "taipei_swap_61",
@@ -727,9 +727,9 @@
     "address_raw": "台北市內湖區舊宗路一段128號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0685533,
-    "longitude": 121.5810654
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.060962986538765,
+    "longitude": 121.57832045682625
   },
   {
     "station_id": "taipei_swap_62",
@@ -739,9 +739,9 @@
     "address_raw": "台北市內湖區舊宗路一段86號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0685533,
-    "longitude": 121.5810654
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.059319193025505,
+    "longitude": 121.57965568588791
   },
   {
     "station_id": "taipei_swap_63",
@@ -751,9 +751,9 @@
     "address_raw": "台北市內湖區舊宗路二段111號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0685533,
-    "longitude": 121.5810654
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.069043212942148,
+    "longitude": 121.57494992490439
   },
   {
     "station_id": "taipei_swap_64",
@@ -763,9 +763,9 @@
     "address_raw": "台北市文山區木柵路二段109巷25弄2號1樓、2-1號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9977825,
-    "longitude": 121.5741323
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.99003193459674,
+    "longitude": 121.56294727536856
   },
   {
     "station_id": "taipei_swap_65",
@@ -775,9 +775,9 @@
     "address_raw": "台北市文山區和平東路四段95號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0046253,
-    "longitude": 121.5706513
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.005198279913127,
+    "longitude": 121.56782876867562
   },
   {
     "station_id": "taipei_swap_66",
@@ -787,9 +787,9 @@
     "address_raw": "台北市文山區指南路一段53號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.987772,
-    "longitude": 121.5699976
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.988246314438804,
+    "longitude": 121.57085922299943
   },
   {
     "station_id": "taipei_swap_67",
@@ -799,9 +799,9 @@
     "address_raw": "台北市文山區指南路二段145號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.987772,
-    "longitude": 121.5699976
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.987476187584722,
+    "longitude": 121.57715643503805
   },
   {
     "station_id": "taipei_swap_68",
@@ -811,9 +811,9 @@
     "address_raw": "台北市文山區景文街142巷2號B1樓",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.99356,
-    "longitude": 121.5412852
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.98851606204236,
+    "longitude": 121.54030185806036
   },
   {
     "station_id": "taipei_swap_69",
@@ -823,9 +823,9 @@
     "address_raw": "台北市文山區興隆路二段244巷1號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0018879,
-    "longitude": 121.5551262
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.000879886347793,
+    "longitude": 121.55394021408047
   },
   {
     "station_id": "taipei_swap_70",
@@ -835,9 +835,9 @@
     "address_raw": "台北市北投區中央北路三段53巷10號捷運站1號出口",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1326726,
-    "longitude": 121.4751467
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.13767969563156,
+    "longitude": 121.48539525727767
   },
   {
     "station_id": "taipei_swap_71",
@@ -847,9 +847,9 @@
     "address_raw": "台北市北投區中央北路四段301號捷運站1號出口",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1326726,
-    "longitude": 121.4751467
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.131141244020373,
+    "longitude": 121.47331476342202
   },
   {
     "station_id": "taipei_swap_72",
@@ -859,9 +859,9 @@
     "address_raw": "台北市北投區天母西路112號B1",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1189005,
-    "longitude": 121.5231114
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.118750444263714,
+    "longitude": 121.52328114184076
   },
   {
     "station_id": "taipei_swap_73",
@@ -871,9 +871,9 @@
     "address_raw": "台北市北投區文林北路230號1樓",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1087094,
-    "longitude": 121.5133136
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.108475602451996,
+    "longitude": 121.51399670742012
   },
   {
     "station_id": "taipei_swap_74",
@@ -883,9 +883,9 @@
     "address_raw": "台北市北投區石牌路一段200號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1133495,
-    "longitude": 121.5107358
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.115004602446138,
+    "longitude": 121.51521549578545
   },
   {
     "station_id": "taipei_swap_75",
@@ -895,9 +895,9 @@
     "address_raw": "台北市北投區石牌路一段39巷100號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1133495,
-    "longitude": 121.5107358
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.116335980321995,
+    "longitude": 121.50965284814279
   },
   {
     "station_id": "taipei_swap_76",
@@ -907,9 +907,9 @@
     "address_raw": "台北市北投區光明路133號1、2樓前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1361231,
-    "longitude": 121.5054011
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.134529083923955,
+    "longitude": 121.5022977492864
   },
   {
     "station_id": "taipei_swap_77",
@@ -919,9 +919,9 @@
     "address_raw": "台北市北投區光明路1號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1361231,
-    "longitude": 121.5054011
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.132291511094728,
+    "longitude": 121.49846678249656
   },
   {
     "station_id": "taipei_swap_78",
@@ -931,9 +931,9 @@
     "address_raw": "台北市北投區西安街二段253號對面",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1449165,
-    "longitude": 121.4988415
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.12026043639062,
+    "longitude": 121.5077643945885
   },
   {
     "station_id": "taipei_swap_79",
@@ -943,9 +943,9 @@
     "address_raw": "台北市北投區承德路七段303號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1162911,
-    "longitude": 121.4910003
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.116755728313557,
+    "longitude": 121.50394933383801
   },
   {
     "station_id": "taipei_swap_80",
@@ -955,9 +955,9 @@
     "address_raw": "台北市北投區明德路95號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1082353,
-    "longitude": 121.5185173
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.109286148792712,
+    "longitude": 121.51915462969727
   },
   {
     "station_id": "taipei_swap_81",
@@ -967,9 +967,9 @@
     "address_raw": "台北市松山區八德路四段176號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0493535,
-    "longitude": 121.5684294
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.04857557035797,
+    "longitude": 121.56342314351224
   },
   {
     "station_id": "taipei_swap_82",
@@ -979,9 +979,9 @@
     "address_raw": "台北市松山區八德路四段692號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0493535,
-    "longitude": 121.5684294
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.049863173138615,
+    "longitude": 121.57725078249798
   },
   {
     "station_id": "taipei_swap_83",
@@ -991,9 +991,9 @@
     "address_raw": "台北市松山區三民路160號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0555149,
-    "longitude": 121.563735
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06165066424052,
+    "longitude": 121.56353890060613
   },
   {
     "station_id": "taipei_swap_84",
@@ -1003,9 +1003,9 @@
     "address_raw": "台北市松山區民生東路四段133號車道出口旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0596995,
-    "longitude": 121.5637521
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.058494915174624,
+    "longitude": 121.55443535843169
   },
   {
     "station_id": "taipei_swap_85",
@@ -1015,9 +1015,9 @@
     "address_raw": "台北市松山區民權東路三段140巷15號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.061456,
-    "longitude": 121.5515502
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06050067452545,
+    "longitude": 121.54674182933252
   },
   {
     "station_id": "taipei_swap_86",
@@ -1027,9 +1027,9 @@
     "address_raw": "台北市松山區延吉街13號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0447925,
-    "longitude": 121.5537481
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.04644989368005,
+    "longitude": 121.55364974773529
   },
   {
     "station_id": "taipei_swap_87",
@@ -1039,9 +1039,9 @@
     "address_raw": "台北市松山區長安東路二段225號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.049508,
-    "longitude": 121.5331188
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.048357583927057,
+    "longitude": 121.54510378209366
   },
   {
     "station_id": "taipei_swap_88",
@@ -1051,9 +1051,9 @@
     "address_raw": "台北市松山區南京東路四段133巷9弄2號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.051836,
-    "longitude": 121.5439651
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.053223240628718,
+    "longitude": 121.55525590135697
   },
   {
     "station_id": "taipei_swap_89",
@@ -1063,9 +1063,9 @@
     "address_raw": "台北市松山區濱江街375號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0705563,
-    "longitude": 121.5632855
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.072568958292866,
+    "longitude": 121.55302042995014
   },
   {
     "station_id": "taipei_swap_90",
@@ -1075,9 +1075,9 @@
     "address_raw": "台北市信義區忠孝東路 5 段 666 號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0333448,
-    "longitude": 121.5668963
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.04233679222322,
+    "longitude": 121.58080193767091
   },
   {
     "station_id": "taipei_swap_91",
@@ -1087,9 +1087,9 @@
     "address_raw": "台北市信義區忠孝東路五段236巷15號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0333448,
-    "longitude": 121.5668963
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.039852493274577,
+    "longitude": 121.57204117997173
   },
   {
     "station_id": "taipei_swap_92",
@@ -1099,9 +1099,9 @@
     "address_raw": "台北市信義區忠孝東路五段257號後門",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0333448,
-    "longitude": 121.5668963
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.041384085976887,
+    "longitude": 121.57072033124372
   },
   {
     "station_id": "taipei_swap_93",
@@ -1111,9 +1111,9 @@
     "address_raw": "台北市信義區忠孝東路五段71巷8號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0333448,
-    "longitude": 121.5668963
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.04178885570862,
+    "longitude": 121.56724872735714
   },
   {
     "station_id": "taipei_swap_94",
@@ -1123,9 +1123,9 @@
     "address_raw": "台北市信義區松仁路174號(近三犁公園)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0400286,
-    "longitude": 121.5685437
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.028066721497098,
+    "longitude": 121.56822479194345
   },
   {
     "station_id": "taipei_swap_95",
@@ -1135,9 +1135,9 @@
     "address_raw": "台北市信義區松隆路282號前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0478946,
-    "longitude": 121.5738472
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.048227420233044,
+    "longitude": 121.57542986032934
   },
   {
     "station_id": "taipei_swap_96",
@@ -1147,9 +1147,9 @@
     "address_raw": "台北市信義區松壽路1號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0359383,
-    "longitude": 121.5617307
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03608322812917,
+    "longitude": 121.56310947513283
   },
   {
     "station_id": "taipei_swap_97",
@@ -1159,7 +1159,7 @@
     "address_raw": "台北市信義區信義路五段300號後",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0349596,
     "longitude": 121.5739631
   },
@@ -1171,9 +1171,9 @@
     "address_raw": "台北市信義區基隆路一段131號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0363331,
-    "longitude": 121.5611059
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.04425117149723,
+    "longitude": 121.56655888580704
   },
   {
     "station_id": "taipei_swap_99",
@@ -1183,9 +1183,9 @@
     "address_raw": "台北市信義區莊敬路391巷11弄2號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0278472,
-    "longitude": 121.5642521
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.02891905438636,
+    "longitude": 121.5659315073323
   },
   {
     "station_id": "taipei_swap_100",
@@ -1195,9 +1195,9 @@
     "address_raw": "台北市南港區同德路100號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0455803,
-    "longitude": 121.5848284
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.046147197546382,
+    "longitude": 121.58675523028482
   },
   {
     "station_id": "taipei_swap_101",
@@ -1207,9 +1207,9 @@
     "address_raw": "台北市南港區昆陽街23號B1樓",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0514814,
-    "longitude": 121.5936232
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05314647675783,
+    "longitude": 121.59273976856433
   },
   {
     "station_id": "taipei_swap_102",
@@ -1219,9 +1219,9 @@
     "address_raw": "台北市南港區研究院路2段70巷1號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0407669,
-    "longitude": 121.6129932
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.045788918036603,
+    "longitude": 121.61500532509214
   },
   {
     "station_id": "taipei_swap_103",
@@ -1231,9 +1231,9 @@
     "address_raw": "台北市南港區經貿一路265號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0548576,
-    "longitude": 121.6186423
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.061885192976735,
+    "longitude": 121.61766708218195
   },
   {
     "station_id": "taipei_swap_104",
@@ -1243,9 +1243,9 @@
     "address_raw": "台北市南港區興東街59號地下一樓",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.056437,
-    "longitude": 121.6111096
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.056525950745876,
+    "longitude": 121.6111735454016
   },
   {
     "station_id": "taipei_swap_105",
@@ -1255,9 +1255,9 @@
     "address_raw": "台北市萬華區峨眉街83號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0444536,
-    "longitude": 121.5029764
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.043985204791127,
+    "longitude": 121.50526750133884
   },
   {
     "station_id": "taipei_swap_106",
@@ -1267,9 +1267,9 @@
     "address_raw": "台北市萬華區桂林路1號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0386308,
-    "longitude": 121.4965734
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.037675439578592,
+    "longitude": 121.5063036053011
   },
   {
     "station_id": "taipei_swap_107",
@@ -1279,9 +1279,9 @@
     "address_raw": "台北市萬華區萬大路207號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0203364,
-    "longitude": 121.4979576
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.02716235349224,
+    "longitude": 121.50060717375403
   },
   {
     "station_id": "taipei_swap_108",
@@ -1291,9 +1291,9 @@
     "address_raw": "台北市萬華區萬大路388號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0203364,
-    "longitude": 121.4979576
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.021894517926132,
+    "longitude": 121.49869251873719
   },
   {
     "station_id": "taipei_swap_109",
@@ -1303,9 +1303,9 @@
     "address_raw": "台北市萬華區環河南路二段245號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0475282,
-    "longitude": 121.5046116
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.02989113823155,
+    "longitude": 121.48981459376353
   },
   {
     "station_id": "taipei_swap_110",
@@ -1315,9 +1315,9 @@
     "address_raw": "台北市大同區大龍街262號(近大龍夜市商圈)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0687228,
-    "longitude": 121.5158785
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.07060943070798,
+    "longitude": 121.515832664884
   },
   {
     "station_id": "taipei_swap_111",
@@ -1327,9 +1327,9 @@
     "address_raw": "台北市中正區市民大道三段8號(近市民大道三段/金山北路口)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0450234,
-    "longitude": 121.5343452
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.045215900298185,
+    "longitude": 121.53210077848155
   },
   {
     "station_id": "taipei_swap_112",
@@ -1339,9 +1339,9 @@
     "address_raw": "台北市信義區永吉路120巷83號(近永吉路120巷22弄松隆路口)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0453176,
-    "longitude": 121.5807276
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.042452610877014,
+    "longitude": 121.57029347052335
   },
   {
     "station_id": "taipei_swap_113",
@@ -1351,9 +1351,9 @@
     "address_raw": "台北市北投區承德路七段139號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1162911,
-    "longitude": 121.4910003
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.112529445806107,
+    "longitude": 121.50873377096289
   },
   {
     "station_id": "taipei_swap_114",
@@ -1363,9 +1363,9 @@
     "address_raw": "台北市信義區信義路五段150巷與松仁路153巷口電池交換站",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0349596,
-    "longitude": 121.5739631
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.0250881157319,
+    "longitude": 121.57264824644162
   },
   {
     "station_id": "taipei_swap_115",
@@ -1375,9 +1375,9 @@
     "address_raw": "台北市士林區中山北路五段465號旁電池交換站",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1297818,
-    "longitude": 121.5369994
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.09242611872329,
+    "longitude": 121.5275441868096
   },
   {
     "station_id": "taipei_swap_116",
@@ -1387,9 +1387,9 @@
     "address_raw": "台北市大同區歸綏街79巷11號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0587531,
-    "longitude": 121.5163308
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.059460663668677,
+    "longitude": 121.51706558284629
   },
   {
     "station_id": "taipei_swap_117",
@@ -1399,9 +1399,9 @@
     "address_raw": "台北市文山區木柵路一段70巷3號對面電池交換站",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9977825,
-    "longitude": 121.5741323
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.98661877650383,
+    "longitude": 121.54906178832933
   },
   {
     "station_id": "taipei_swap_118",
@@ -1411,9 +1411,9 @@
     "address_raw": "台北市大安區仁愛路四段118號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0384237,
-    "longitude": 121.5377466
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03748211817197,
+    "longitude": 121.54995734230845
   },
   {
     "station_id": "taipei_swap_119",
@@ -1423,9 +1423,9 @@
     "address_raw": "台北市文山區興隆路二段97號(近興隆路二段/興隆路二段123巷交叉口)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0018879,
-    "longitude": 121.5551262
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.999739249201614,
+    "longitude": 121.54745222892022
   },
   {
     "station_id": "taipei_swap_120",
@@ -1435,9 +1435,9 @@
     "address_raw": "臺北市松山區民權東路四段180號旁(近民權公園地下停車場出入口)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.061456,
-    "longitude": 121.5515502
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06182568789773,
+    "longitude": 121.55687610551338
   },
   {
     "station_id": "taipei_swap_121",
@@ -1447,9 +1447,9 @@
     "address_raw": "台北市中正區福州街62號(近福州街/汀州路二段13巷口)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0286326,
-    "longitude": 121.5182779
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.026624246049334,
+    "longitude": 121.51490261500442
   },
   {
     "station_id": "taipei_swap_122",
@@ -1459,9 +1459,9 @@
     "address_raw": "臺北市中山區長安西路3號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0502374,
-    "longitude": 121.5198774
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05016305118135,
+    "longitude": 121.52120124431549
   },
   {
     "station_id": "taipei_swap_123",
@@ -1471,9 +1471,9 @@
     "address_raw": "台北市中正區中山南路21-1號(近景福門)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0387084,
-    "longitude": 121.517688
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03553921482028,
+    "longitude": 121.51834288650677
   },
   {
     "station_id": "taipei_swap_124",
@@ -1483,9 +1483,9 @@
     "address_raw": "台北市大安區信義路3段157巷10弄2號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0332073,
-    "longitude": 121.5524396
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.034251010202382,
+    "longitude": 121.54274128432968
   },
   {
     "station_id": "taipei_swap_125",
@@ -1495,9 +1495,9 @@
     "address_raw": "臺北市士林區德行東路249號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1088269,
-    "longitude": 121.5315571
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.10988929965527,
+    "longitude": 121.53449479611355
   },
   {
     "station_id": "taipei_swap_126",
@@ -1507,7 +1507,7 @@
     "address_raw": "臺北市中山區興安街近合江街口",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0560572,
     "longitude": 121.5441243
   },
@@ -1519,7 +1519,7 @@
     "address_raw": "臺北市信義區松廉路/松智路交叉口(近信義廣場地下停車場1號出口)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0339845,
     "longitude": 121.5668599
   },
@@ -1531,9 +1531,9 @@
     "address_raw": "臺北市信義區仁愛路四段505號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0375387,
-    "longitude": 121.5627834
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.039513916220095,
+    "longitude": 121.56025752136505
   },
   {
     "station_id": "taipei_swap_129",
@@ -1543,9 +1543,9 @@
     "address_raw": "台北市內湖區康樂街61巷2號對面",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.068761,
-    "longitude": 121.618418
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.068521541343827,
+    "longitude": 121.61862309889034
   },
   {
     "station_id": "taipei_swap_130",
@@ -1555,9 +1555,9 @@
     "address_raw": "台北市北投區三合街二段489號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1267033,
-    "longitude": 121.5036886
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.126139189387796,
+    "longitude": 121.50098073264658
   },
   {
     "station_id": "taipei_swap_131",
@@ -1567,9 +1567,9 @@
     "address_raw": "台北市大同區西寧北路28號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0556937,
-    "longitude": 121.5089474
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.049790838409663,
+    "longitude": 121.50777331096214
   },
   {
     "station_id": "taipei_swap_132",
@@ -1579,9 +1579,9 @@
     "address_raw": "臺北市萬華區康定路380號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0368274,
-    "longitude": 121.5015066
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.033966638155427,
+    "longitude": 121.50005798162866
   },
   {
     "station_id": "taipei_swap_133",
@@ -1591,9 +1591,9 @@
     "address_raw": "台北市南港區向陽路80號旁100公尺電池交換站",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.051129,
-    "longitude": 121.5955341
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.052322038119147,
+    "longitude": 121.59572633037685
   },
   {
     "station_id": "taipei_swap_134",
@@ -1603,9 +1603,9 @@
     "address_raw": "台北市萬華區南寧路62、64、66號(近三水街口)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0359464,
-    "longitude": 121.5041393
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.035336549013216,
+    "longitude": 121.5038168370422
   },
   {
     "station_id": "taipei_swap_135",
@@ -1615,9 +1615,9 @@
     "address_raw": "臺北市松山區健康路305號前方(近健康路/延壽街72巷口)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0543083,
-    "longitude": 121.5656317
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.054403008302707,
+    "longitude": 121.56541975061717
   },
   {
     "station_id": "taipei_swap_136",
@@ -1627,9 +1627,9 @@
     "address_raw": "臺北市中正區和平西路二段102號前(近和平西路二段104巷口)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.03024,
-    "longitude": 121.50904
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.030719086766215,
+    "longitude": 121.50848540958894
   },
   {
     "station_id": "taipei_swap_137",
@@ -1639,9 +1639,9 @@
     "address_raw": "臺北市中正區和平西路一段90號(近牯嶺街84巷內)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.03024,
-    "longitude": 121.50904
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.026480100749087,
+    "longitude": 121.5183720195912
   },
   {
     "station_id": "taipei_swap_138",
@@ -1651,9 +1651,9 @@
     "address_raw": "臺北市大同區承德路三段237號前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.04879,
-    "longitude": 121.51626
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.07094711073409,
+    "longitude": 121.51867513537316
   },
   {
     "station_id": "taipei_swap_139",
@@ -1663,9 +1663,9 @@
     "address_raw": "臺北市北投區大業路700號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1319654,
-    "longitude": 121.4960073
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.137017685272205,
+    "longitude": 121.50346549937595
   },
   {
     "station_id": "taipei_swap_140",
@@ -1675,9 +1675,9 @@
     "address_raw": "臺北市士林區前港街45號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0849184,
-    "longitude": 121.52037
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.08505164928909,
+    "longitude": 121.52032285571488
   },
   {
     "station_id": "taipei_swap_141",
@@ -1687,9 +1687,9 @@
     "address_raw": "臺北市萬華區西藏路213號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.029267,
-    "longitude": 121.4979649
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.02852649364149,
+    "longitude": 121.49616874680842
   },
   {
     "station_id": "taipei_swap_142",
@@ -1699,9 +1699,9 @@
     "address_raw": "臺北市松山區敦化北路405巷123弄3號前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0615531,
-    "longitude": 121.5505241
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.063084195032282,
+    "longitude": 121.55558069314854
   },
   {
     "station_id": "taipei_swap_143",
@@ -1711,7 +1711,7 @@
     "address_raw": "臺北市大安區建國南路二段305號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0316402,
     "longitude": 121.5374907
   },
@@ -1723,9 +1723,9 @@
     "address_raw": "臺北市中山區長安東路一段52巷14號旁(近市民大道二段/長安東路一段52巷口)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0465596,
-    "longitude": 121.530946
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.047532562727177,
+    "longitude": 121.52779895438795
   },
   {
     "station_id": "taipei_swap_145",
@@ -1735,7 +1735,7 @@
     "address_raw": "臺北市中山區民權東路三段1號榮星公園",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0597698,
     "longitude": 121.5368603
   },
@@ -1747,9 +1747,9 @@
     "address_raw": "台北市萬華區康定路250巷",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0374394,
-    "longitude": 121.5012493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.037515705411018,
+    "longitude": 121.50124115726227
   },
   {
     "station_id": "taipei_swap_147",
@@ -1759,9 +1759,9 @@
     "address_raw": "臺北市南港區研究院路二段1號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0407669,
-    "longitude": 121.6129932
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.048694513737775,
+    "longitude": 121.61612226810489
   },
   {
     "station_id": "taipei_swap_148",
@@ -1771,7 +1771,7 @@
     "address_raw": "臺北市松山區光復北路268號前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0541064,
     "longitude": 121.5562736
   },
@@ -1783,9 +1783,9 @@
     "address_raw": "臺北市南港區忠孝東路6段451號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0522923,
-    "longitude": 121.6076461
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.050611172231566,
+    "longitude": 121.59379709998183
   },
   {
     "station_id": "taipei_swap_150",
@@ -1795,9 +1795,9 @@
     "address_raw": "台北市南港區中坡南路55號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.042715,
-    "longitude": 121.5836255
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.041864177282346,
+    "longitude": 121.58575042568224
   },
   {
     "station_id": "taipei_swap_151",
@@ -1807,9 +1807,9 @@
     "address_raw": "臺北市文山區萬芳路60號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9967745,
-    "longitude": 121.5598998
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.998644838452865,
+    "longitude": 121.56834724460218
   },
   {
     "station_id": "taipei_swap_152",
@@ -1819,9 +1819,9 @@
     "address_raw": "臺北市內湖區金湖路239號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0837687,
-    "longitude": 121.5954124
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.076723170428654,
+    "longitude": 121.60050383745381
   },
   {
     "station_id": "taipei_swap_153",
@@ -1831,9 +1831,9 @@
     "address_raw": "臺北市大安區和平東路3段410號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0278749,
-    "longitude": 121.5376062
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.0185450644968,
+    "longitude": 121.55865214139301
   },
   {
     "station_id": "taipei_swap_154",
@@ -1843,9 +1843,9 @@
     "address_raw": "臺北市內湖區環山路一段56號對面",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0861367,
-    "longitude": 121.5714997
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.08649295070516,
+    "longitude": 121.56562575817118
   },
   {
     "station_id": "taipei_swap_155",
@@ -1855,9 +1855,9 @@
     "address_raw": "臺北市大安區愛國東路31號前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0319472,
-    "longitude": 121.5255223
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03216566414003,
+    "longitude": 121.52480007313346
   },
   {
     "station_id": "taipei_swap_156",
@@ -1867,7 +1867,7 @@
     "address_raw": "臺北市萬華區水源路與國興路口",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0214034,
     "longitude": 121.5063747
   },
@@ -1879,7 +1879,7 @@
     "address_raw": "臺北市中山區建國南路一段與仁愛路交叉口",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0446765,
     "longitude": 121.54187
   },
@@ -1891,7 +1891,7 @@
     "address_raw": "臺北市中正區仁愛路一段",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0383307,
     "longitude": 121.5204463
   },
@@ -1903,9 +1903,9 @@
     "address_raw": "臺北市信義區信安街202號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0255609,
-    "longitude": 121.5566952
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.022821024014476,
+    "longitude": 121.55489651932379
   },
   {
     "station_id": "taipei_swap_160",
@@ -1915,9 +1915,9 @@
     "address_raw": "臺北市大安區師大路9號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0255724,
-    "longitude": 121.5284016
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.025860728526794,
+    "longitude": 121.52856037886212
   },
   {
     "station_id": "taipei_swap_161",
@@ -1927,9 +1927,9 @@
     "address_raw": "臺北市大安區敦化南路1段142號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0189437,
-    "longitude": 121.5464432
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.044181802491458,
+    "longitude": 121.54843155886684
   },
   {
     "station_id": "taipei_swap_162",
@@ -1939,7 +1939,7 @@
     "address_raw": "臺北市信義區信安街56號對面(近景勤二號公園)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0255609,
     "longitude": 121.5566952
   },
@@ -1951,7 +1951,7 @@
     "address_raw": "台北市南港區大坑街南港自來水加壓站旁電池交換站(南港區中南段)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0472548,
     "longitude": 121.6168706
   },
@@ -1963,7 +1963,7 @@
     "address_raw": "臺北市大同區西寧北路與鄭州路口電池交換站",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0556937,
     "longitude": 121.5089474
   },
@@ -1975,7 +1975,7 @@
     "address_raw": "台北市北投區西安街二段354號斜對面(立農段五小段586地號)",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.1449165,
     "longitude": 121.4988415
   },
@@ -1987,9 +1987,9 @@
     "address_raw": "臺北市南港區園區街3號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0590517,
-    "longitude": 121.6110533
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.058478471112835,
+    "longitude": 121.61198665093617
   },
   {
     "station_id": "taipei_swap_167",
@@ -1999,9 +1999,9 @@
     "address_raw": "臺北市士林區天母西路3-53號前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1184206,
-    "longitude": 121.5278907
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.118878162888787,
+    "longitude": 121.52957333519834
   },
   {
     "station_id": "taipei_swap_168",
@@ -2011,9 +2011,9 @@
     "address_raw": "臺北市中山區民生東路三段67號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0560153,
-    "longitude": 121.5276795
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05804925434968,
+    "longitude": 121.54227928614736
   },
   {
     "station_id": "taipei_swap_169",
@@ -2023,7 +2023,7 @@
     "address_raw": "臺北市內湖區民善路與新湖一路交叉口",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.069664,
     "longitude": 121.5889983
   },
@@ -2035,9 +2035,9 @@
     "address_raw": "臺北市文山區木柵路四段123號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9977825,
-    "longitude": 121.5741323
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.99781175562017,
+    "longitude": 121.57388091205998
   },
   {
     "station_id": "taipei_swap_171",
@@ -2047,9 +2047,9 @@
     "address_raw": "台北市內湖區南京東路六段370號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0567714,
-    "longitude": 121.5735711
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.059301135168003,
+    "longitude": 121.58680577758975
   },
   {
     "station_id": "taipei_swap_172",
@@ -2059,9 +2059,9 @@
     "address_raw": "臺北市中正區金山南路一段79巷9號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.03811,
-    "longitude": 121.52855
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03675272529833,
+    "longitude": 121.52831399989287
   },
   {
     "station_id": "taipei_swap_173",
@@ -2071,9 +2071,9 @@
     "address_raw": "臺北市文山區興隆路三段222號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0018879,
-    "longitude": 121.5551262
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.997036015749508,
+    "longitude": 121.55969313517882
   },
   {
     "station_id": "taipei_swap_174",
@@ -2083,9 +2083,9 @@
     "address_raw": "臺北市信義區虎林街120巷270號對面",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.039765,
-    "longitude": 121.5767112
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.042209964189436,
+    "longitude": 121.57088509320344
   },
   {
     "station_id": "taipei_swap_175",
@@ -2095,9 +2095,9 @@
     "address_raw": "臺北市文山區指南路三段40巷8-4號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.987772,
-    "longitude": 121.5699976
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.968576380146757,
+    "longitude": 121.59527733187734
   },
   {
     "station_id": "taipei_swap_176",
@@ -2107,9 +2107,9 @@
     "address_raw": "臺北市大同區承德路三段287號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.04879,
-    "longitude": 121.51626
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.074071916578088,
+    "longitude": 121.52039298870807
   },
   {
     "station_id": "taipei_swap_177",
@@ -2119,9 +2119,9 @@
     "address_raw": "臺北市信義區信義路五段17號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0349596,
-    "longitude": 121.5739631
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03317044887771,
+    "longitude": 121.56770707357953
   },
   {
     "station_id": "taipei_swap_178",
@@ -2131,9 +2131,9 @@
     "address_raw": "臺北市內湖區康寧路三段99巷39弄19-1號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.07535,
-    "longitude": 121.60132
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.073521971716996,
+    "longitude": 121.61084174416322
   },
   {
     "station_id": "taipei_swap_179",
@@ -2143,9 +2143,9 @@
     "address_raw": "臺北市松山區光復北路11巷81號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0541064,
-    "longitude": 121.5562736
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.050336625261007,
+    "longitude": 121.5615533928291
   },
   {
     "station_id": "taipei_swap_180",
@@ -2155,9 +2155,9 @@
     "address_raw": "臺北市大同區涼州街84號對面",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.060709,
-    "longitude": 121.5124124
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.060544908604335,
+    "longitude": 121.5105301043297
   },
   {
     "station_id": "taipei_swap_181",
@@ -2167,9 +2167,9 @@
     "address_raw": "臺北市南港區南港路三段47巷8號對面",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0550761,
-    "longitude": 121.6174599
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.052301672929126,
+    "longitude": 121.5903954221893
   },
   {
     "station_id": "taipei_swap_182",
@@ -2179,9 +2179,9 @@
     "address_raw": "臺北市北投區立德路8號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1294192,
-    "longitude": 121.4627012
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.12417323348327,
+    "longitude": 121.47243322055124
   },
   {
     "station_id": "taipei_swap_183",
@@ -2191,9 +2191,9 @@
     "address_raw": "台北市內湖區康寧路三段30號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.07535,
-    "longitude": 121.60132
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.071932816812147,
+    "longitude": 121.60840549104061
   },
   {
     "station_id": "taipei_swap_184",
@@ -2203,9 +2203,9 @@
     "address_raw": "臺北市文山區指南路二段177號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.987772,
-    "longitude": 121.5699976
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.987313799814267,
+    "longitude": 121.57793264232632
   },
   {
     "station_id": "taipei_swap_185",
@@ -2215,9 +2215,9 @@
     "address_raw": "臺北市文山區景隆街22號對面",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9987638,
-    "longitude": 121.5438961
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.99906765660431,
+    "longitude": 121.54286589346
   },
   {
     "station_id": "taipei_swap_186",
@@ -2227,9 +2227,9 @@
     "address_raw": "臺北市中山區松江路199號前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0691378,
-    "longitude": 121.5335315
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.056855940795227,
+    "longitude": 121.53331999458051
   },
   {
     "station_id": "taipei_swap_187",
@@ -2239,9 +2239,9 @@
     "address_raw": "臺北市南港區重陽路187巷6號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.058537,
-    "longitude": 121.6084347
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.057031698129652,
+    "longitude": 121.59870629443411
   },
   {
     "station_id": "taipei_swap_188",
@@ -2251,9 +2251,9 @@
     "address_raw": "臺北市內湖區行忠路139號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0660797,
-    "longitude": 121.5791248
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.066794474358726,
+    "longitude": 121.58033872623069
   },
   {
     "station_id": "taipei_swap_189",
@@ -2263,7 +2263,7 @@
     "address_raw": "臺北市大安區臥龍區206號旁",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0265152,
     "longitude": 121.534395
   },
@@ -2275,9 +2275,9 @@
     "address_raw": "臺北市大同區延平北路四段237號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.06326,
-    "longitude": 121.51099
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.076048532296632,
+    "longitude": 121.51207773247553
   },
   {
     "station_id": "taipei_swap_191",
@@ -2287,7 +2287,7 @@
     "address_raw": "臺北市松山區敦化北路201號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0615531,
     "longitude": 121.5505241
   },
@@ -2299,9 +2299,9 @@
     "address_raw": "臺北市中正區臨沂街6巷5-2號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0362511,
-    "longitude": 121.5284895
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.042534520070284,
+    "longitude": 121.53031481577179
   },
   {
     "station_id": "taipei_swap_193",
@@ -2311,9 +2311,9 @@
     "address_raw": "臺北市大安區光復南路268號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0432029,
-    "longitude": 121.5576586
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.039849006262482,
+    "longitude": 121.55744592512153
   },
   {
     "station_id": "taipei_swap_194",
@@ -2323,9 +2323,9 @@
     "address_raw": "臺北市內湖區內湖路二段81號對面",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0625839,
-    "longitude": 121.6056403
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.07989885673329,
+    "longitude": 121.58262053472157
   },
   {
     "station_id": "taipei_swap_195",
@@ -2335,7 +2335,7 @@
     "address_raw": "臺北市大同區環河北路2段-延平北路3段間",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.050219,
     "longitude": 121.5099613
   },
@@ -2347,9 +2347,9 @@
     "address_raw": "臺北市北投區承德路七段378號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1162911,
-    "longitude": 121.4910003
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.118725202427225,
+    "longitude": 121.50283154417848
   },
   {
     "station_id": "taipei_swap_197",
@@ -2359,9 +2359,9 @@
     "address_raw": "臺北市松山區民生東路五段44號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0596995,
-    "longitude": 121.5637521
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.058241152526087,
+    "longitude": 121.55739979226679
   },
   {
     "station_id": "taipei_swap_198",
@@ -2371,9 +2371,9 @@
     "address_raw": "臺北市北投區中和街534號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.137705,
-    "longitude": 121.5031215
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.145566021318693,
+    "longitude": 121.49326728646938
   },
   {
     "station_id": "taipei_swap_199",
@@ -2383,9 +2383,9 @@
     "address_raw": "臺北市大安區和平東路一段129號前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0278749,
-    "longitude": 121.5376062
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.026879821879014,
+    "longitude": 121.52841163079127
   },
   {
     "station_id": "taipei_swap_200",
@@ -2395,9 +2395,9 @@
     "address_raw": "臺北市松山區民生東路五段191號",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0596995,
-    "longitude": 121.5637521
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.059194298695147,
+    "longitude": 121.56544508210271
   },
   {
     "station_id": "taipei_swap_201",
@@ -2407,9 +2407,9 @@
     "address_raw": "臺北市萬華區環河南路二段245號前",
     "source_name": "taipei_open_data",
     "operator": "Gogoro Network",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0475282,
-    "longitude": 121.5046116
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.02989113823155,
+    "longitude": 121.48981459376353
   },
   {
     "station_id": "taipei_swap_202",
@@ -2419,9 +2419,9 @@
     "address_raw": "台北市大同區承德路三段291號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.04879,
-    "longitude": 121.51626
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.075317935279816,
+    "longitude": 121.5204085775062
   },
   {
     "station_id": "taipei_swap_203",
@@ -2431,9 +2431,9 @@
     "address_raw": "台北市松山區三民路160號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0555149,
-    "longitude": 121.563735
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06165066424052,
+    "longitude": 121.56353890060613
   },
   {
     "station_id": "taipei_swap_204",
@@ -2443,9 +2443,9 @@
     "address_raw": "台北市士林區德行西路47號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1060204,
-    "longitude": 121.5239296
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.10554787222695,
+    "longitude": 121.52255329842085
   },
   {
     "station_id": "taipei_swap_205",
@@ -2455,9 +2455,9 @@
     "address_raw": "台北市內湖區民善街88號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0593955,
-    "longitude": 121.5759307
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06014070138817,
+    "longitude": 121.57536495628459
   },
   {
     "station_id": "taipei_swap_206",
@@ -2467,9 +2467,9 @@
     "address_raw": "台北市大同區承德路二段164號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.04879,
-    "longitude": 121.51626
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.060794404321047,
+    "longitude": 121.51808115727313
   },
   {
     "station_id": "taipei_swap_207",
@@ -2479,9 +2479,9 @@
     "address_raw": "台北市萬華區環河南路二段282號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0475282,
-    "longitude": 121.5046116
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.032112037164982,
+    "longitude": 121.49101834890803
   },
   {
     "station_id": "taipei_swap_208",
@@ -2491,9 +2491,9 @@
     "address_raw": "台北市大同區庫倫街1號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0719403,
-    "longitude": 121.5176015
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.072093534567774,
+    "longitude": 121.51704045902363
   },
   {
     "station_id": "taipei_swap_209",
@@ -2503,9 +2503,9 @@
     "address_raw": "台北市信義區嘉興街181巷6號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0262038,
-    "longitude": 121.5563887
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.026170132121273,
+    "longitude": 121.55682801271641
   },
   {
     "station_id": "taipei_swap_210",
@@ -2515,9 +2515,9 @@
     "address_raw": "台北市信義區基隆路二段165號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0363331,
-    "longitude": 121.5611059
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.025398738139593,
+    "longitude": 121.55394810996084
   },
   {
     "station_id": "taipei_swap_211",
@@ -2527,9 +2527,9 @@
     "address_raw": "台北市士林區故宮路41巷1號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0963204,
-    "longitude": 121.5475206
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.096611345942623,
+    "longitude": 121.54743032286044
   },
   {
     "station_id": "taipei_swap_212",
@@ -2539,9 +2539,9 @@
     "address_raw": "台北市內湖區民權東路六段320號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.069,
-    "longitude": 121.58493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.072638488973094,
+    "longitude": 121.60606960896101
   },
   {
     "station_id": "taipei_swap_213",
@@ -2551,9 +2551,9 @@
     "address_raw": "台北市中山區松江路550號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0691378,
-    "longitude": 121.5335315
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06742734248395,
+    "longitude": 121.53306677010532
   },
   {
     "station_id": "taipei_swap_214",
@@ -2563,9 +2563,9 @@
     "address_raw": "台北市內湖區行忠路67號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0660797,
-    "longitude": 121.5791248
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.065799616460826,
+    "longitude": 121.57793846944125
   },
   {
     "station_id": "taipei_swap_215",
@@ -2575,9 +2575,9 @@
     "address_raw": "台北市文山區恆光街19號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9832963,
-    "longitude": 121.5667041
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.983561255092248,
+    "longitude": 121.56670172488836
   },
   {
     "station_id": "taipei_swap_216",
@@ -2587,9 +2587,9 @@
     "address_raw": "台北市士林區中山北路五段465號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1297818,
-    "longitude": 121.5369994
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.09242611872329,
+    "longitude": 121.5275441868096
   },
   {
     "station_id": "taipei_swap_217",
@@ -2599,9 +2599,9 @@
     "address_raw": "台北市大安區仁愛路三段1號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0384237,
-    "longitude": 121.5377466
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03848020050364,
+    "longitude": 121.53319461793674
   },
   {
     "station_id": "taipei_swap_218",
@@ -2611,9 +2611,9 @@
     "address_raw": "台北市中山區八德路二段214號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0459162,
-    "longitude": 121.530757
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.046109492952535,
+    "longitude": 121.5395976827909
   },
   {
     "station_id": "taipei_swap_219",
@@ -2623,9 +2623,9 @@
     "address_raw": "台北市中正區汀州路三段1號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0269055,
-    "longitude": 121.5111141
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.020687830930694,
+    "longitude": 121.52591791015475
   },
   {
     "station_id": "taipei_swap_220",
@@ -2635,9 +2635,9 @@
     "address_raw": "台北市中正區林森北路11號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0478162,
-    "longitude": 121.5242051
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.045861741201815,
+    "longitude": 121.52397819247025
   },
   {
     "station_id": "taipei_swap_221",
@@ -2647,9 +2647,9 @@
     "address_raw": "台北市內湖區民權東路六段50號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.069,
-    "longitude": 121.58493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06852362099278,
+    "longitude": 121.58397597996641
   },
   {
     "station_id": "taipei_swap_222",
@@ -2659,9 +2659,9 @@
     "address_raw": "台北市南港區南港路二段50號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0550761,
-    "longitude": 121.6174599
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.054137340860283,
+    "longitude": 121.60454582150084
   },
   {
     "station_id": "taipei_swap_223",
@@ -2671,9 +2671,9 @@
     "address_raw": "台北市大安區富陽街129號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0201246,
-    "longitude": 121.5567748
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.01912143536371,
+    "longitude": 121.55691044728732
   },
   {
     "station_id": "taipei_swap_224",
@@ -2683,9 +2683,9 @@
     "address_raw": "台北市中山區吉林路401號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0515057,
-    "longitude": 121.530079
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06590115220925,
+    "longitude": 121.5305087484535
   },
   {
     "station_id": "taipei_swap_225",
@@ -2695,9 +2695,9 @@
     "address_raw": "台北市文山區木新路三段29號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.982432,
-    "longitude": 121.5537554
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.982502269341808,
+    "longitude": 121.56463401681343
   },
   {
     "station_id": "taipei_swap_226",
@@ -2707,9 +2707,9 @@
     "address_raw": "台北市萬華區萬大路424巷83號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0203364,
-    "longitude": 121.4979576
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.021262844493023,
+    "longitude": 121.49595390818722
   },
   {
     "station_id": "taipei_swap_227",
@@ -2719,9 +2719,9 @@
     "address_raw": "台北市大同區重慶北路二段164號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0635887,
-    "longitude": 121.5136522
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05899171718443,
+    "longitude": 121.51346844775321
   },
   {
     "station_id": "taipei_swap_228",
@@ -2731,9 +2731,9 @@
     "address_raw": "台北市北投區大同街202之2號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1391085,
-    "longitude": 121.4992704
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.13779256651555,
+    "longitude": 121.49924582652015
   },
   {
     "station_id": "taipei_swap_229",
@@ -2743,9 +2743,9 @@
     "address_raw": "台北市中山區北安路656號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0830875,
-    "longitude": 121.5491179
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.083581984818608,
+    "longitude": 121.54935436098665
   },
   {
     "station_id": "taipei_swap_230",
@@ -2755,9 +2755,9 @@
     "address_raw": "台北市南港區南港路三段314巷16號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0550761,
-    "longitude": 121.6174599
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05205762559572,
+    "longitude": 121.58138192784139
   },
   {
     "station_id": "taipei_swap_231",
@@ -2767,9 +2767,9 @@
     "address_raw": "台北市南港區八德路四段832號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0508719,
-    "longitude": 121.5800911
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05120067014718,
+    "longitude": 121.58210377182311
   },
   {
     "station_id": "taipei_swap_232",
@@ -2779,9 +2779,9 @@
     "address_raw": "台北市信義區福德街66號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0380778,
-    "longitude": 121.5839946
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.036984196755615,
+    "longitude": 121.58074257558285
   },
   {
     "station_id": "taipei_swap_233",
@@ -2791,9 +2791,9 @@
     "address_raw": "台北市文山區興隆路一段139號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0018879,
-    "longitude": 121.5551262
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.001941697205485,
+    "longitude": 121.54219513998436
   },
   {
     "station_id": "taipei_swap_234",
@@ -2803,9 +2803,9 @@
     "address_raw": "台北市文山區木柵路二段109巷23號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9977825,
-    "longitude": 121.5741323
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.989640958251574,
+    "longitude": 121.56272750191974
   },
   {
     "station_id": "taipei_swap_235",
@@ -2815,9 +2815,9 @@
     "address_raw": "台北市文山區木新路二段112號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.982432,
-    "longitude": 121.5537554
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.984608380550345,
+    "longitude": 121.56980581971335
   },
   {
     "station_id": "taipei_swap_236",
@@ -2827,9 +2827,9 @@
     "address_raw": "台北市文山區興隆路二段155號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0018879,
-    "longitude": 121.5551262
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.000486450796465,
+    "longitude": 121.54848644248679
   },
   {
     "station_id": "taipei_swap_237",
@@ -2839,9 +2839,9 @@
     "address_raw": "台北市文山區興隆路二段249號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0018879,
-    "longitude": 121.5551262
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.001993291415044,
+    "longitude": 121.55155747240282
   },
   {
     "station_id": "taipei_swap_238",
@@ -2851,9 +2851,9 @@
     "address_raw": "台北市文山區久康街1號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9900262,
-    "longitude": 121.5663887
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.988680189568342,
+    "longitude": 121.56440859187906
   },
   {
     "station_id": "taipei_swap_239",
@@ -2863,9 +2863,9 @@
     "address_raw": "台北市文山區景興路94號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9978365,
-    "longitude": 121.5446512
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.994838263520407,
+    "longitude": 121.54454050328157
   },
   {
     "station_id": "taipei_swap_240",
@@ -2875,9 +2875,9 @@
     "address_raw": "台北市文山區景興路172號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9978365,
-    "longitude": 121.5446512
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.992923680471865,
+    "longitude": 121.54418709238905
   },
   {
     "station_id": "taipei_swap_241",
@@ -2887,9 +2887,9 @@
     "address_raw": "台北市文山區羅斯福路五段182號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0087641,
-    "longitude": 121.5378003
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.004034870804396,
+    "longitude": 121.53851612755612
   },
   {
     "station_id": "taipei_swap_242",
@@ -2899,9 +2899,9 @@
     "address_raw": "台北市文山區羅斯福路六段52號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0087641,
-    "longitude": 121.5378003
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.999100742229334,
+    "longitude": 121.53991846488857
   },
   {
     "station_id": "taipei_swap_243",
@@ -2911,9 +2911,9 @@
     "address_raw": "台北市信義區信安街80號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0255609,
-    "longitude": 121.5566952
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.0259721877429,
+    "longitude": 121.55713793723064
   },
   {
     "station_id": "taipei_swap_244",
@@ -2923,9 +2923,9 @@
     "address_raw": "台北市信義區莊敬路214號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0278472,
-    "longitude": 121.5642521
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03014952599791,
+    "longitude": 121.56160693711516
   },
   {
     "station_id": "taipei_swap_245",
@@ -2935,9 +2935,9 @@
     "address_raw": "台北市萬華區萬大路500號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0203364,
-    "longitude": 121.4979576
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.019417835744537,
+    "longitude": 121.49713487082727
   },
   {
     "station_id": "taipei_swap_246",
@@ -2947,9 +2947,9 @@
     "address_raw": "台北市大同區延平北路二段256號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.06326,
-    "longitude": 121.51099
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.060296227377773,
+    "longitude": 121.51127622256418
   },
   {
     "station_id": "taipei_swap_247",
@@ -2959,9 +2959,9 @@
     "address_raw": "台北市文山區木新路三段29號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.982432,
-    "longitude": 121.5537554
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.982502269341808,
+    "longitude": 121.56463401681343
   },
   {
     "station_id": "taipei_swap_248",
@@ -2971,9 +2971,9 @@
     "address_raw": "台北市文山區興隆路二段243號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0018879,
-    "longitude": 121.5551262
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.001920989435554,
+    "longitude": 121.55138780112334
   },
   {
     "station_id": "taipei_swap_249",
@@ -2983,9 +2983,9 @@
     "address_raw": "台北市士林區延平北路六段139號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.08678,
-    "longitude": 121.50948
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.08905330826331,
+    "longitude": 121.50772295229774
   },
   {
     "station_id": "taipei_swap_250",
@@ -2995,9 +2995,9 @@
     "address_raw": "台北市中正區泉州街22號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0286498,
-    "longitude": 121.5144435
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.026701069735047,
+    "longitude": 121.51405916745897
   },
   {
     "station_id": "taipei_swap_251",
@@ -3007,9 +3007,9 @@
     "address_raw": "台北市內湖區成功路四段331號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0831849,
-    "longitude": 121.5980243
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.08453721451324,
+    "longitude": 121.5990503238951
   },
   {
     "station_id": "taipei_swap_252",
@@ -3019,9 +3019,9 @@
     "address_raw": "台北市松山區塔悠路206號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0650482,
-    "longitude": 121.5680954
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.057451316314022,
+    "longitude": 121.56905742225506
   },
   {
     "station_id": "taipei_swap_253",
@@ -3031,9 +3031,9 @@
     "address_raw": "台北市萬華區西園路二段265號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.03338,
-    "longitude": 121.49267
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.025661018222543,
+    "longitude": 121.49251800914826
   },
   {
     "station_id": "taipei_swap_254",
@@ -3043,9 +3043,9 @@
     "address_raw": "台北市信義區永吉路237號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0453176,
-    "longitude": 121.5807276
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.045694689817523,
+    "longitude": 121.57453979632545
   },
   {
     "station_id": "taipei_swap_255",
@@ -3055,9 +3055,9 @@
     "address_raw": "台北市信義區基隆路一段99號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0363331,
-    "longitude": 121.5611059
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.04550748008259,
+    "longitude": 121.56731532164004
   },
   {
     "station_id": "taipei_swap_256",
@@ -3067,9 +3067,9 @@
     "address_raw": "台北市信義區莊敬路325巷38號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0278472,
-    "longitude": 121.5642521
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.028561734728058,
+    "longitude": 121.56436766808932
   },
   {
     "station_id": "taipei_swap_257",
@@ -3079,9 +3079,9 @@
     "address_raw": "台北市南港區昆陽街157巷11號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0514814,
-    "longitude": 121.5936232
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.049916774386354,
+    "longitude": 121.59461816284677
   },
   {
     "station_id": "taipei_swap_258",
@@ -3091,9 +3091,9 @@
     "address_raw": "台北市南港區研究院路二段84巷3號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0407669,
-    "longitude": 121.6129932
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.04518923064094,
+    "longitude": 121.61514275064624
   },
   {
     "station_id": "taipei_swap_259",
@@ -3103,9 +3103,9 @@
     "address_raw": "台北市文山區景隆街54號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9987638,
-    "longitude": 121.5438961
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.99845416942969,
+    "longitude": 121.54434539227748
   },
   {
     "station_id": "taipei_swap_260",
@@ -3115,9 +3115,9 @@
     "address_raw": "台北市內湖區星雲街61號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0804626,
-    "longitude": 121.5960403
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.079042562234598,
+    "longitude": 121.59230482815656
   },
   {
     "station_id": "taipei_swap_261",
@@ -3127,9 +3127,9 @@
     "address_raw": "台北市內湖區金龍路148號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.085879,
-    "longitude": 121.5900392
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.08605600812919,
+    "longitude": 121.5893573889203
   },
   {
     "station_id": "taipei_swap_262",
@@ -3139,9 +3139,9 @@
     "address_raw": "台北市士林區雨聲街52號、52-1號、52巷1號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1040281,
-    "longitude": 121.528922
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.102774457889158,
+    "longitude": 121.52886798962686
   },
   {
     "station_id": "taipei_swap_263",
@@ -3151,9 +3151,9 @@
     "address_raw": "台北市大同區酒泉街105號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0709646,
-    "longitude": 121.5179054
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.072121422873447,
+    "longitude": 121.51522598516397
   },
   {
     "station_id": "taipei_swap_264",
@@ -3163,9 +3163,9 @@
     "address_raw": "台北市內湖區康樂街95號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.068761,
-    "longitude": 121.618418
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.07012175737125,
+    "longitude": 121.61901876309366
   },
   {
     "station_id": "taipei_swap_265",
@@ -3175,9 +3175,9 @@
     "address_raw": "台北市內湖區內湖路一段91巷7號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0625839,
-    "longitude": 121.6056403
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.084628450198668,
+    "longitude": 121.56115007937076
   },
   {
     "station_id": "taipei_swap_266",
@@ -3187,9 +3187,9 @@
     "address_raw": "台北市大同區蘭州街42號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0623467,
-    "longitude": 121.5144542
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06257687130372,
+    "longitude": 121.51447901220564
   },
   {
     "station_id": "taipei_swap_267",
@@ -3199,9 +3199,9 @@
     "address_raw": "台北市松山區民權東路五段19號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.061456,
-    "longitude": 121.5515502
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06345719457841,
+    "longitude": 121.56609211409511
   },
   {
     "station_id": "taipei_swap_268",
@@ -3211,9 +3211,9 @@
     "address_raw": "台北市信義區吳興街281巷52號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0251064,
-    "longitude": 121.5670694
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.026446404340454,
+    "longitude": 121.56559803586505
   },
   {
     "station_id": "taipei_swap_269",
@@ -3223,9 +3223,9 @@
     "address_raw": "台北市萬華區雙和街75號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0277845,
-    "longitude": 121.5016108
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.027508893846118,
+    "longitude": 121.50078205347826
   },
   {
     "station_id": "taipei_swap_270",
@@ -3235,9 +3235,9 @@
     "address_raw": "台北市中山區松江路534號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0691378,
-    "longitude": 121.5335315
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.067122500228994,
+    "longitude": 121.53306505691982
   },
   {
     "station_id": "taipei_swap_271",
@@ -3247,9 +3247,9 @@
     "address_raw": "台北市士林區大南路334號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0901506,
-    "longitude": 121.5161971
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.089052940799956,
+    "longitude": 121.51789670149772
   },
   {
     "station_id": "taipei_swap_272",
@@ -3259,9 +3259,9 @@
     "address_raw": "台北市信義區松隆路292號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0478946,
-    "longitude": 121.5738472
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.048141304091473,
+    "longitude": 121.57641744033582
   },
   {
     "station_id": "taipei_swap_273",
@@ -3271,9 +3271,9 @@
     "address_raw": "台北市內湖區新明路304-1號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0584587,
-    "longitude": 121.5880396
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.055540898632866,
+    "longitude": 121.58194374709875
   },
   {
     "station_id": "taipei_swap_274",
@@ -3283,9 +3283,9 @@
     "address_raw": "台北市內湖區民權東路六段130號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.069,
-    "longitude": 121.58493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.068896799274828,
+    "longitude": 121.58760607051144
   },
   {
     "station_id": "taipei_swap_275",
@@ -3295,9 +3295,9 @@
     "address_raw": "台北市南港區南港路三段16巷4號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0550761,
-    "longitude": 121.6174599
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.054718873858082,
+    "longitude": 121.59256763714282
   },
   {
     "station_id": "taipei_swap_276",
@@ -3307,9 +3307,9 @@
     "address_raw": "台北市內湖區五分街39號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0676113,
-    "longitude": 121.6127903
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.067578968150897,
+    "longitude": 121.61364622473927
   },
   {
     "station_id": "taipei_swap_277",
@@ -3319,9 +3319,9 @@
     "address_raw": "台北市萬華區東園街133號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.028109,
-    "longitude": 121.4953664
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.024874417652374,
+    "longitude": 121.49702903410854
   },
   {
     "station_id": "taipei_swap_278",
@@ -3331,9 +3331,9 @@
     "address_raw": "台北市北投區中央北路四段545號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1326726,
-    "longitude": 121.4751467
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.127660855157032,
+    "longitude": 121.46757898062802
   },
   {
     "station_id": "taipei_swap_279",
@@ -3343,9 +3343,9 @@
     "address_raw": "台北市大安區通化街19巷39號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0287281,
-    "longitude": 121.5538123
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.0317057951479,
+    "longitude": 121.55584953323307
   },
   {
     "station_id": "taipei_swap_280",
@@ -3355,9 +3355,9 @@
     "address_raw": "台北市北投區吉利街119號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1179136,
-    "longitude": 121.511275
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.11859658928869,
+    "longitude": 121.506315366043
   },
   {
     "station_id": "taipei_swap_281",
@@ -3367,9 +3367,9 @@
     "address_raw": "台北市南港區忠孝東路七段600號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0522923,
-    "longitude": 121.6076461
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05292116744701,
+    "longitude": 121.61530281207295
   },
   {
     "station_id": "taipei_swap_282",
@@ -3379,9 +3379,9 @@
     "address_raw": "台北市北投區中央北路二段303號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1326726,
-    "longitude": 121.4751467
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.138374846071493,
+    "longitude": 121.48996528340894
   },
   {
     "station_id": "taipei_swap_283",
@@ -3391,9 +3391,9 @@
     "address_raw": "台北市松山區八德路四段282號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0493535,
-    "longitude": 121.5684294
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.04898109820187,
+    "longitude": 121.56677812264601
   },
   {
     "station_id": "taipei_swap_284",
@@ -3403,9 +3403,9 @@
     "address_raw": "台北市萬華區西藏路450之3號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.029267,
-    "longitude": 121.4979649
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.02919384654454,
+    "longitude": 121.49631460359977
   },
   {
     "station_id": "taipei_swap_285",
@@ -3415,9 +3415,9 @@
     "address_raw": "台北市大同區承德路二段164號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.04879,
-    "longitude": 121.51626
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.060794404321047,
+    "longitude": 121.51808115727313
   },
   {
     "station_id": "taipei_swap_286",
@@ -3427,9 +3427,9 @@
     "address_raw": "台北市大同區承德路二段164號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.04879,
-    "longitude": 121.51626
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.060794404321047,
+    "longitude": 121.51808115727313
   },
   {
     "station_id": "taipei_swap_287",
@@ -3439,9 +3439,9 @@
     "address_raw": "台北市文山區羅斯福路六段20號22號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0087641,
-    "longitude": 121.5378003
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.000028967477817,
+    "longitude": 121.53948985326306
   },
   {
     "station_id": "taipei_swap_288",
@@ -3451,9 +3451,9 @@
     "address_raw": "台北市文山區木柵路一段284號286號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9977825,
-    "longitude": 121.5741323
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.988046367325634,
+    "longitude": 121.55499254594024
   },
   {
     "station_id": "taipei_swap_289",
@@ -3463,7 +3463,7 @@
     "address_raw": "台北市文山區景興路113號115號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 24.9978365,
     "longitude": 121.5446512
   },
@@ -3475,7 +3475,7 @@
     "address_raw": "台北市文山區萬年里羅斯福路五段170巷33及35號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0104989,
     "longitude": 121.5370131
   },
@@ -3487,9 +3487,9 @@
     "address_raw": "台北市文山區羅斯福路五段216號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0087641,
-    "longitude": 121.5378003
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.00233796581342,
+    "longitude": 121.53862011134368
   },
   {
     "station_id": "taipei_swap_292",
@@ -3499,9 +3499,9 @@
     "address_raw": "台北市文山區景福街252號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 24.9987935,
-    "longitude": 121.537323
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.993374103367817,
+    "longitude": 121.54015198477553
   },
   {
     "station_id": "taipei_swap_293",
@@ -3511,9 +3511,9 @@
     "address_raw": "台北市北投區東陽街470號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1121948,
-    "longitude": 121.520158
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.11220082250492,
+    "longitude": 121.5197467714517
   },
   {
     "station_id": "taipei_swap_294",
@@ -3523,9 +3523,9 @@
     "address_raw": "台北市大同區雙連街45號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0585134,
-    "longitude": 121.519046
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05903044757646,
+    "longitude": 121.51903004302716
   },
   {
     "station_id": "taipei_swap_295",
@@ -3535,9 +3535,9 @@
     "address_raw": "台北市文山區興隆路四段23號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0018879,
-    "longitude": 121.5551262
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 24.99060014857534,
+    "longitude": 121.55938575905674
   },
   {
     "station_id": "taipei_swap_296",
@@ -3547,9 +3547,9 @@
     "address_raw": "台北市內湖區內湖路二段61號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0625839,
-    "longitude": 121.6056403
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.07964366479153,
+    "longitude": 121.58199224506296
   },
   {
     "station_id": "taipei_swap_297",
@@ -3559,9 +3559,9 @@
     "address_raw": "台北市松山區民生東路四段80巷13號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0596995,
-    "longitude": 121.5637521
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.056413979169488,
+    "longitude": 121.55306888426017
   },
   {
     "station_id": "taipei_swap_298",
@@ -3571,9 +3571,9 @@
     "address_raw": "台北市北投區永興路一段31號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.135168,
-    "longitude": 121.50275
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.139251372316462,
+    "longitude": 121.50005662233076
   },
   {
     "station_id": "taipei_swap_299",
@@ -3583,9 +3583,9 @@
     "address_raw": "台北市士林區中山北路六段405巷79號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1297818,
-    "longitude": 121.5369994
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.117092548900395,
+    "longitude": 121.52603832163648
   },
   {
     "station_id": "taipei_swap_300",
@@ -3595,9 +3595,9 @@
     "address_raw": "台北市中正區中華路二段173號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0428897,
-    "longitude": 121.513452
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03055477820967,
+    "longitude": 121.50428007931464
   },
   {
     "station_id": "taipei_swap_301",
@@ -3607,9 +3607,9 @@
     "address_raw": "台北市北投區中央南路一段225巷4號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1321264,
-    "longitude": 121.5014418
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.127692443177512,
+    "longitude": 121.50097303939125
   },
   {
     "station_id": "taipei_swap_302",
@@ -3619,9 +3619,9 @@
     "address_raw": "台北市北投區中央南路一段210號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1321264,
-    "longitude": 121.5014418
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.128327867121868,
+    "longitude": 121.50105266750259
   },
   {
     "station_id": "taipei_swap_303",
@@ -3631,9 +3631,9 @@
     "address_raw": "台北市萬華區環河南路二段245號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0475282,
-    "longitude": 121.5046116
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.02989113823155,
+    "longitude": 121.48981459376353
   },
   {
     "station_id": "taipei_swap_304",
@@ -3643,9 +3643,9 @@
     "address_raw": "台北市士林區永平街39號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0908094,
-    "longitude": 121.5050398
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.09081176919944,
+    "longitude": 121.50494788607652
   },
   {
     "station_id": "taipei_swap_305",
@@ -3655,9 +3655,9 @@
     "address_raw": "台北市松山區八德路四段332號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0493535,
-    "longitude": 121.5684294
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.049102757255138,
+    "longitude": 121.5679993868474
   },
   {
     "station_id": "taipei_swap_306",
@@ -3667,9 +3667,9 @@
     "address_raw": "台北市北投區中和街241號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.137705,
-    "longitude": 121.5031215
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.13951957265177,
+    "longitude": 121.50113650644869
   },
   {
     "station_id": "taipei_swap_307",
@@ -3679,9 +3679,9 @@
     "address_raw": "台北市文山區辛亥路四段77巷92弄1號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0018879,
-    "longitude": 121.5551262
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.009026938590626,
+    "longitude": 121.56032154132475
   },
   {
     "station_id": "taipei_swap_308",
@@ -3691,9 +3691,9 @@
     "address_raw": "台北市松山區八德路三段198號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0493535,
-    "longitude": 121.5684294
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.047929895028656,
+    "longitude": 121.55634627247555
   },
   {
     "station_id": "taipei_swap_309",
@@ -3703,7 +3703,7 @@
     "address_raw": "台北市大安區羅斯福路四段3號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0109646,
     "longitude": 121.5380463
   },
@@ -3715,9 +3715,9 @@
     "address_raw": "台北市北投區中央北路四段398號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1326726,
-    "longitude": 121.4751467
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.129629933383498,
+    "longitude": 121.47098689772605
   },
   {
     "station_id": "taipei_swap_311",
@@ -3727,9 +3727,9 @@
     "address_raw": "台北市士林區社中街133號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0879966,
-    "longitude": 121.510112
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.090208301255615,
+    "longitude": 121.5098645083433
   },
   {
     "station_id": "taipei_swap_312",
@@ -3739,9 +3739,9 @@
     "address_raw": "台北市中正區重慶南路三段56號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0428897,
-    "longitude": 121.513452
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.027635894131304,
+    "longitude": 121.5156980455113
   },
   {
     "station_id": "taipei_swap_313",
@@ -3751,9 +3751,9 @@
     "address_raw": "台北市士林區德行東路149號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1088269,
-    "longitude": 121.5315571
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.108230219254526,
+    "longitude": 121.52961233854724
   },
   {
     "station_id": "taipei_swap_314",
@@ -3763,9 +3763,9 @@
     "address_raw": "台北市北投區文林北路94巷133號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1087094,
-    "longitude": 121.5133136
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.10749298964171,
+    "longitude": 121.52003051674191
   },
   {
     "station_id": "taipei_swap_315",
@@ -3775,7 +3775,7 @@
     "address_raw": "台北市北投區公館路146號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.126026,
     "longitude": 121.5082123
   },
@@ -3787,9 +3787,9 @@
     "address_raw": "台北市內湖區內湖路三段60巷10弄1號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0625839,
-    "longitude": 121.6056403
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.088031518126545,
+    "longitude": 121.59207563251488
   },
   {
     "station_id": "taipei_swap_317",
@@ -3799,9 +3799,9 @@
     "address_raw": "台北市信義區吳興街110號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0251064,
-    "longitude": 121.5670694
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.030134104839295,
+    "longitude": 121.56093474447711
   },
   {
     "station_id": "taipei_swap_318",
@@ -3811,9 +3811,9 @@
     "address_raw": "台北市北投區吉利街140號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1179136,
-    "longitude": 121.511275
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.118531515195663,
+    "longitude": 121.50768944042336
   },
   {
     "station_id": "taipei_swap_319",
@@ -3823,9 +3823,9 @@
     "address_raw": "台北市大安區延吉街64之1號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.035507,
-    "longitude": 121.5557163
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.04342485511581,
+    "longitude": 121.55386226782527
   },
   {
     "station_id": "taipei_swap_320",
@@ -3835,9 +3835,9 @@
     "address_raw": "台北市中正區重慶南路三段135號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0428897,
-    "longitude": 121.513452
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.023700884000338,
+    "longitude": 121.51701200469647
   },
   {
     "station_id": "taipei_swap_321",
@@ -3847,9 +3847,9 @@
     "address_raw": "台北市北投區自強街62號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1106595,
-    "longitude": 121.5146952
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.110404631702618,
+    "longitude": 121.51390116582422
   },
   {
     "station_id": "taipei_swap_322",
@@ -3859,7 +3859,7 @@
     "address_raw": "台北市中正區汀洲路二段192號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.0269055,
     "longitude": 121.5111141
   },
@@ -3871,9 +3871,9 @@
     "address_raw": "台北市信義區松隆路80號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0478946,
-    "longitude": 121.5738472
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.0445129723598,
+    "longitude": 121.56920965029546
   },
   {
     "station_id": "taipei_swap_324",
@@ -3883,9 +3883,9 @@
     "address_raw": "台北市信義區永吉路27號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0453176,
-    "longitude": 121.5807276
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.04586589643258,
+    "longitude": 121.56849508468832
   },
   {
     "station_id": "taipei_swap_325",
@@ -3895,9 +3895,9 @@
     "address_raw": "台北市中山區興安街65號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0560572,
-    "longitude": 121.5441243
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05622127309449,
+    "longitude": 121.54265965095874
   },
   {
     "station_id": "taipei_swap_326",
@@ -3907,9 +3907,9 @@
     "address_raw": "台北市大安區敦化南路二段63巷54弄6號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0189437,
-    "longitude": 121.5464432
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.030636874149625,
+    "longitude": 121.55130034120555
   },
   {
     "station_id": "taipei_swap_327",
@@ -3919,9 +3919,9 @@
     "address_raw": "台北市中山區中山北路二段59巷34號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0494348,
-    "longitude": 121.5380675
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05579633598817,
+    "longitude": 121.52428913760745
   },
   {
     "station_id": "taipei_swap_328",
@@ -3931,9 +3931,9 @@
     "address_raw": "台北市士林區華岡路31之3號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1380355,
-    "longitude": 121.542692
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.137940133831297,
+    "longitude": 121.54260958162337
   },
   {
     "station_id": "taipei_swap_329",
@@ -3943,9 +3943,9 @@
     "address_raw": "台北市大同區承德路三段20號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.04879,
-    "longitude": 121.51626
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.064083321079274,
+    "longitude": 121.51809598117651
   },
   {
     "station_id": "taipei_swap_330",
@@ -3955,9 +3955,9 @@
     "address_raw": "台北市南港區興中路29號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0562976,
-    "longitude": 121.6071081
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.056334701089277,
+    "longitude": 121.60719198983583
   },
   {
     "station_id": "taipei_swap_331",
@@ -3967,9 +3967,9 @@
     "address_raw": "台北市松山區健康路325巷36號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0543083,
-    "longitude": 121.5656317
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.057032427242042,
+    "longitude": 121.56723718779497
   },
   {
     "station_id": "taipei_swap_332",
@@ -3979,9 +3979,9 @@
     "address_raw": "台北市士林區永平街35號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0908094,
-    "longitude": 121.5050398
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.090663097433538,
+    "longitude": 121.50493962654208
   },
   {
     "station_id": "taipei_swap_333",
@@ -3991,9 +3991,9 @@
     "address_raw": "台北市北投區承德路六段359號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1162911,
-    "longitude": 121.4910003
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.10646148577418,
+    "longitude": 121.51102624210684
   },
   {
     "station_id": "taipei_swap_334",
@@ -4003,9 +4003,9 @@
     "address_raw": "台北市中山區復興北路478號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0590174,
-    "longitude": 121.5441041
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06486687198483,
+    "longitude": 121.54411594749615
   },
   {
     "station_id": "taipei_swap_335",
@@ -4015,7 +4015,7 @@
     "address_raw": "台北市北投區立賢路71號",
     "source_name": "taipei_open_data",
     "operator": "光捷",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
     "latitude": 25.1147409,
     "longitude": 121.5030666
   },
@@ -4027,9 +4027,9 @@
     "address_raw": "台北市大安區信義路四段374號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0332073,
-    "longitude": 121.5524396
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.032931587078433,
+    "longitude": 121.55545693506068
   },
   {
     "station_id": "taipei_swap_337",
@@ -4039,9 +4039,9 @@
     "address_raw": "台北市中山區新生北路二段71號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0509162,
-    "longitude": 121.5282946
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.056546600252712,
+    "longitude": 121.52804109042084
   },
   {
     "station_id": "taipei_swap_338",
@@ -4051,9 +4051,9 @@
     "address_raw": "台北市內湖區內湖路一段362號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0625839,
-    "longitude": 121.6056403
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.08126209255332,
+    "longitude": 121.57109119299288
   },
   {
     "station_id": "taipei_swap_339",
@@ -4063,9 +4063,9 @@
     "address_raw": "台北市內湖區內湖路一段59號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0625839,
-    "longitude": 121.6056403
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.085063906416345,
+    "longitude": 121.55996753358005
   },
   {
     "station_id": "taipei_swap_340",
@@ -4075,9 +4075,9 @@
     "address_raw": "台北市內湖區康寧路三段225號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.07535,
-    "longitude": 121.60132
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06750367619424,
+    "longitude": 121.61190551666527
   },
   {
     "station_id": "taipei_swap_341",
@@ -4087,9 +4087,9 @@
     "address_raw": "台北市內湖區康寧路三段30號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.07535,
-    "longitude": 121.60132
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.071932816812147,
+    "longitude": 121.60840549104061
   },
   {
     "station_id": "taipei_swap_342",
@@ -4099,9 +4099,9 @@
     "address_raw": "台北市文山區興隆路一段13號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0018879,
-    "longitude": 121.5551262
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.004521413059244,
+    "longitude": 121.53931733754358
   },
   {
     "station_id": "taipei_swap_343",
@@ -4111,9 +4111,9 @@
     "address_raw": "台北市北投區承德路七段384號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1162911,
-    "longitude": 121.4910003
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.119296730351163,
+    "longitude": 121.50226523203322
   },
   {
     "station_id": "taipei_swap_344",
@@ -4123,9 +4123,9 @@
     "address_raw": "台北市松山區三民路126號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0555149,
-    "longitude": 121.563735
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05947657935528,
+    "longitude": 121.56389135038732
   },
   {
     "station_id": "taipei_swap_345",
@@ -4135,9 +4135,9 @@
     "address_raw": "台北市松山區復興北路31號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0500122,
-    "longitude": 121.5440666
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.049585831668544,
+    "longitude": 121.54438891638182
   },
   {
     "station_id": "taipei_swap_346",
@@ -4147,9 +4147,9 @@
     "address_raw": "台北市中山區八德路二段214號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0459162,
-    "longitude": 121.530757
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.046109492952535,
+    "longitude": 121.5395976827909
   },
   {
     "station_id": "taipei_swap_347",
@@ -4159,9 +4159,9 @@
     "address_raw": "台北市士林區中山北路五段465號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1297818,
-    "longitude": 121.5369994
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.09242611872329,
+    "longitude": 121.5275441868096
   },
   {
     "station_id": "taipei_swap_348",
@@ -4171,9 +4171,9 @@
     "address_raw": "台北市內湖區民權東路六段50號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.069,
-    "longitude": 121.58493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06852362099278,
+    "longitude": 121.58397597996641
   },
   {
     "station_id": "taipei_swap_349",
@@ -4183,9 +4183,9 @@
     "address_raw": "台北市大安區仁愛路三段1號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0384237,
-    "longitude": 121.5377466
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.03848020050364,
+    "longitude": 121.53319461793674
   },
   {
     "station_id": "taipei_swap_350",
@@ -4195,9 +4195,9 @@
     "address_raw": "台北市南港區南港路二段50號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0550761,
-    "longitude": 121.6174599
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.054137340860283,
+    "longitude": 121.60454582150084
   },
   {
     "station_id": "taipei_swap_351",
@@ -4207,9 +4207,9 @@
     "address_raw": "台北市中正區汀州路三段1號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0269055,
-    "longitude": 121.5111141
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.020687830930694,
+    "longitude": 121.52591791015475
   },
   {
     "station_id": "taipei_swap_352",
@@ -4219,9 +4219,9 @@
     "address_raw": "台北市大安區富陽街129號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0201246,
-    "longitude": 121.5567748
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.01912143536371,
+    "longitude": 121.55691044728732
   },
   {
     "station_id": "taipei_swap_353",
@@ -4231,9 +4231,9 @@
     "address_raw": "台北市中正區林森北路11號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0478162,
-    "longitude": 121.5242051
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.045861741201815,
+    "longitude": 121.52397819247025
   },
   {
     "station_id": "taipei_swap_354",
@@ -4243,9 +4243,9 @@
     "address_raw": "台北市北投區承德路六段359號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1162911,
-    "longitude": 121.4910003
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.10646148577418,
+    "longitude": 121.51102624210684
   },
   {
     "station_id": "taipei_swap_355",
@@ -4255,9 +4255,9 @@
     "address_raw": "台北市士林區格致路3號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1373025,
-    "longitude": 121.5464602
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.13552134322305,
+    "longitude": 121.54577311175638
   },
   {
     "station_id": "taipei_charge_1",
@@ -4267,9 +4267,9 @@
     "address_raw": "臺北市萬華區環河南路二段245號",
     "source_name": "taipei_open_data",
     "operator": "中華汽車",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0475282,
-    "longitude": 121.5046116
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.02989113823155,
+    "longitude": 121.48981459376353
   },
   {
     "station_id": "taipei_charge_2",
@@ -4279,9 +4279,9 @@
     "address_raw": "臺北市松山區三民路160號",
     "source_name": "taipei_open_data",
     "operator": "中華汽車",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0555149,
-    "longitude": 121.563735
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06165066424052,
+    "longitude": 121.56353890060613
   },
   {
     "station_id": "taipei_charge_3",
@@ -4291,9 +4291,9 @@
     "address_raw": "臺北市內湖區民善街88號",
     "source_name": "taipei_open_data",
     "operator": "中華汽車",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0593955,
-    "longitude": 121.5759307
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06014070138817,
+    "longitude": 121.57536495628459
   },
   {
     "station_id": "taipei_charge_4",
@@ -4303,9 +4303,9 @@
     "address_raw": "臺北市大同區重慶北路二段171號",
     "source_name": "taipei_open_data",
     "operator": "中華汽車",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0635887,
-    "longitude": 121.5136522
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05902191812704,
+    "longitude": 121.51382816051911
   },
   {
     "station_id": "taipei_charge_5",
@@ -4315,9 +4315,9 @@
     "address_raw": "臺北市內湖區民權東路六段13之15號",
     "source_name": "taipei_open_data",
     "operator": "中華汽車",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.069,
-    "longitude": 121.58493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.067183052559503,
+    "longitude": 121.57923706208769
   },
   {
     "station_id": "taipei_charge_6",
@@ -4327,9 +4327,9 @@
     "address_raw": "臺北市中山區濱江街309號",
     "source_name": "taipei_open_data",
     "operator": "中華汽車",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0722986,
-    "longitude": 121.5493749
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.072559979067886,
+    "longitude": 121.54630034961382
   },
   {
     "station_id": "taipei_charge_7",
@@ -4339,9 +4339,9 @@
     "address_raw": "臺北市萬華區和平西路二段149號",
     "source_name": "taipei_open_data",
     "operator": "中華汽車",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.03517,
-    "longitude": 121.49048
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.033746785812546,
+    "longitude": 121.50517134068485
   },
   {
     "station_id": "taipei_charge_8",
@@ -4351,9 +4351,9 @@
     "address_raw": "台北市中山區八德路二段214號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0459162,
-    "longitude": 121.530757
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.046109492952535,
+    "longitude": 121.5395976827909
   },
   {
     "station_id": "taipei_charge_9",
@@ -4363,9 +4363,9 @@
     "address_raw": "台北市內湖區民權東路六段50號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.069,
-    "longitude": 121.58493
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.06852362099278,
+    "longitude": 121.58397597996641
   },
   {
     "station_id": "taipei_charge_10",
@@ -4375,9 +4375,9 @@
     "address_raw": "台北市大安區信義路四段374號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0332073,
-    "longitude": 121.5524396
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.032931587078433,
+    "longitude": 121.55545693506068
   },
   {
     "station_id": "taipei_charge_11",
@@ -4387,9 +4387,9 @@
     "address_raw": "台北市松山區三民路126號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.0555149,
-    "longitude": 121.563735
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.05947657935528,
+    "longitude": 121.56389135038732
   },
   {
     "station_id": "taipei_charge_12",
@@ -4399,8 +4399,8 @@
     "address_raw": "台北市士林區文林路100號",
     "source_name": "taipei_open_data",
     "operator": "中油",
-    "retrieved_at": "2026-09-28T13:50:27+00:00",
-    "latitude": 25.1025439,
-    "longitude": 121.5202751
+    "retrieved_at": "2026-10-02T14:07:12+00:00",
+    "latitude": 25.087502842707856,
+    "longitude": 121.5261073148012
   }
 ]
