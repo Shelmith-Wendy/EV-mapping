@@ -597,8 +597,66 @@ function fitToStationPoints(map, stations) {
   map.fitBounds(bounds.pad(0.35));
 }
 
+function haversineKm(origin, target) {
+  const toRad = (degrees) => degrees * Math.PI / 180;
+  const [lat1, lng1] = origin;
+  const [lat2, lng2] = target;
+  const dLat = toRad(lat2 - lat1);
+  const dLng = toRad(lng2 - lng1);
+  const h = Math.sin(dLat / 2) ** 2
+    + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) ** 2;
+  return 6371 * 2 * Math.asin(Math.sqrt(h));
+}
+
+function candidatePoint(station) {
+  return [station.final_latitude, station.final_longitude];
+}
+
+function candidatePinName(station) {
+  return station.locality || station.name || "Candidate";
+}
+
+function formatKm(km) {
+  return `${km.toFixed(1)} km`;
+}
+
+function spacingRows(panel) {
+  const pool = panel.bundles.flatMap((bundle) => bundle.candidates || []);
+  const rows = [];
+  for (const candidate of filteredCandidates(panel)) {
+    let nearest = null;
+    let distanceKm = Infinity;
+    const origin = candidatePoint(candidate);
+    for (const other of pool) {
+      if (other.station_id === candidate.station_id) continue;
+      const distance = haversineKm(origin, candidatePoint(other));
+      if (distance < distanceKm) {
+        distanceKm = distance;
+        nearest = other;
+      }
+    }
+    if (nearest) rows.push({ candidate, nearest, distanceKm });
+  }
+  rows.sort((a, b) => a.distanceKm - b.distanceKm || candidatePinName(a.candidate).localeCompare(candidatePinName(b.candidate)));
+  return rows;
+}
+
+function focusedSpacing(panel) {
+  if (!panel.focusedCandidateId || !app.showCandidates) return null;
+  return spacingRows(panel).find((row) => row.candidate.station_id === panel.focusedCandidateId) || null;
+}
+
 function fitMapToSelection(panel) {
   if (!panel.map) return;
+  const focused = focusedSpacing(panel);
+  if (focused) {
+    const bounds = L.latLngBounds([
+      candidatePoint(focused.candidate),
+      candidatePoint(focused.nearest),
+    ]);
+    panel.map.fitBounds(bounds, { animate: false, padding: [56, 56], maxZoom: 14 });
+    return;
+  }
   if (panel.selectedSecondary) {
     const stations = filteredStations(panel);
     if (stations.length) {
@@ -725,24 +783,68 @@ function filteredCandidates(panel) {
   return rows;
 }
 
+function candidatesToDraw(panel) {
+  const visible = filteredCandidates(panel);
+  const focused = focusedSpacing(panel);
+  if (!focused) return visible;
+  if (visible.some((station) => station.station_id === focused.nearest.station_id)) return visible;
+  return [...visible, focused.nearest];
+}
+
+function spacingPair(panel) {
+  const focused = focusedSpacing(panel);
+  if (!focused) return null;
+  return new Set([focused.candidate.station_id, focused.nearest.station_id]);
+}
+
 function drawCandidates(panel) {
   if (panel.candidateLayer) panel.candidateLayer.remove();
   panel.candidateLayer = L.featureGroup();
-  const positions = jitteredPositions(filteredCandidates(panel));
+  const positions = jitteredPositions(candidatesToDraw(panel));
+  const pair = spacingPair(panel);
   for (const station of positions.keys()) {
     const bundle = panel.bundles.find((item) => item.config.region_id === station.region_id);
+    const inPair = pair?.has(station.station_id);
     L.circleMarker(positions.get(station), {
-      radius: 8,
-      color: "#fee2e2",
-      weight: 2,
+      radius: inPair ? 11 : 8,
+      color: inPair ? "#f8fafc" : "#fee2e2",
+      weight: inPair ? 3 : 2,
       fillColor: "#ef4444",
-      fillOpacity: 1,
+      fillOpacity: pair && !inPair ? 0.35 : 1,
     })
       .bindPopup(candidatePopup(station, bundle))
       .addTo(panel.candidateLayer);
   }
   panel.candidateLayer.addTo(panel.map);
   panel.candidateLayer.bringToFront();
+}
+
+function drawSpacingLink(panel) {
+  if (panel.spacingLinkLayer) panel.spacingLinkLayer.remove();
+  panel.spacingLinkLayer = null;
+  const focused = focusedSpacing(panel);
+  if (!focused || !panel.map) return;
+  const positions = jitteredPositions(candidatesToDraw(panel));
+  const start = positions.get(focused.candidate);
+  const end = positions.get(focused.nearest);
+  if (!start || !end) return;
+  const line = L.polyline([start, end], {
+    color: "#f8fafc",
+    weight: 3,
+    opacity: 1,
+    dashArray: "7 7",
+    interactive: false,
+  });
+  panel.spacingLinkLayer = L.layerGroup([
+    L.polyline([start, end], {
+      color: "#070b14",
+      weight: 7,
+      opacity: 0.85,
+      interactive: false,
+    }),
+    line,
+  ]).addTo(panel.map);
+  if (panel.candidateLayer) panel.candidateLayer.bringToFront();
 }
 
 function refreshLegend(panel) {
@@ -892,6 +994,42 @@ function drawRegionCharts(panel, bundle) {
   });
 }
 
+function renderCandidateSpacing(panel) {
+  const block = panel.root.querySelector("[data-candidate-spacing]");
+  if (!block) return;
+  const rows = spacingRows(panel);
+  const show = rows.length > 0;
+  block.hidden = !show;
+  if (!show) {
+    panel.focusedCandidateId = null;
+    return;
+  }
+  if (panel.focusedCandidateId && !rows.some((row) => row.candidate.station_id === panel.focusedCandidateId)) {
+    panel.focusedCandidateId = null;
+  }
+  const hint = block.querySelector("[data-spacing-hint]");
+  if (hint) hint.textContent = `Closest pair ${formatKm(rows[0].distanceKm)}`;
+  const list = block.querySelector("[data-spacing-list]");
+  list.innerHTML = rows.map((row) => {
+    const on = row.candidate.station_id === panel.focusedCandidateId;
+    return (
+      `<li>` +
+      `<button type="button" class="spacing-row${on ? " is-on" : ""}" data-spacing-id="${escapeHtml(row.candidate.station_id)}" aria-pressed="${on}">` +
+      `<span class="spacing-name">${escapeHtml(candidatePinName(row.candidate))}</span>` +
+      `<span class="spacing-km">${formatKm(row.distanceKm)}</span>` +
+      `<span class="spacing-near">from ${escapeHtml(candidatePinName(row.nearest))}</span>` +
+      `</button></li>`
+    );
+  }).join("");
+  list.querySelectorAll("[data-spacing-id]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const id = button.dataset.spacingId;
+      panel.focusedCandidateId = panel.focusedCandidateId === id ? null : id;
+      refreshPanel(panel);
+    });
+  });
+}
+
 function refreshPanel(panel) {
   const stationTypes = unionStationTypes(panel.bundles.map((bundle) => bundle.config));
   const primaryTier = panel.bundles[0].config.tiers[0];
@@ -901,11 +1039,14 @@ function refreshPanel(panel) {
   drawBoundaries(panel);
   drawStations(panel);
   drawCandidates(panel);
+  drawSpacingLink(panel);
   refreshLegend(panel);
+  renderCandidateSpacing(panel);
   fitMapToSelection(panel);
 }
 
 function selectPrimary(panel, regionId, primaryTier, name) {
+  panel.focusedCandidateId = null;
   if (panel.selectedPrimary?.regionId === regionId && panel.selectedPrimary?.primary === name) {
     panel.selectedPrimary = null;
     panel.selectedSecondary = null;
@@ -918,6 +1059,7 @@ function selectPrimary(panel, regionId, primaryTier, name) {
 }
 
 function selectSecondary(panel, regionId, primaryTier, primary, secondaryTier, name) {
+  panel.focusedCandidateId = null;
   if (panel.selectedSecondary?.regionId === regionId && panel.selectedSecondary?.secondary === name) {
     panel.selectedSecondary = null;
   } else {
@@ -1004,7 +1146,15 @@ function buildPanelElement(panelSpecs, { showLocalStats, showRegionTitles }) {
     `<main class="stage">` +
     `<div class="map" aria-label="${titleNames} station map"></div>` +
     `<aside class="side-panel">` +
-    `<div class="charts-stack">${charts}</div>` +
+    `<div class="charts-stack">` +
+    `<section class="spacing-block" data-candidate-spacing hidden>` +
+    `<div class="chart-block-head">` +
+    `<h2>Candidate spacing</h2>` +
+    `<p class="chart-hint" data-spacing-hint></p>` +
+    `</div>` +
+    `<div class="spacing-scroll"><ul class="spacing-list" data-spacing-list></ul></div>` +
+    `</section>` +
+    `${charts}</div>` +
     `<ul class="legend">${legendHtml(stationTypes)}</ul>` +
     `</aside>` +
     `</main>`;
@@ -1030,9 +1180,11 @@ function mountPanel(panelSpecs, options) {
     labelLayer: null,
     stationLayer: null,
     candidateLayer: null,
+    spacingLinkLayer: null,
     boundaryRenderer: null,
     selectedPrimary: null,
     selectedSecondary: null,
+    focusedCandidateId: null,
     localStats: root.querySelector(".panel-stats"),
     resizeObserver: null,
   };
