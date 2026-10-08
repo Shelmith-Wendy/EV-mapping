@@ -92,6 +92,9 @@ def main() -> int:
     skipped = 0
 
     for station in stations:
+        if station.get("final_latitude") is None or station.get("final_longitude") is None:
+            print(f"skip reverse-geocode: missing coordinates for {station.get('station_id')}", flush=True)
+            continue
         existing_town = station.get("town")
         if isinstance(existing_town, str) and existing_town.strip():
             station["town"] = existing_town.strip()

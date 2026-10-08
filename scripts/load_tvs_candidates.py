@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Publish the TVS placement sheet as a dashboard overlay.
+"""Publish the TVS placement sheet into the active data directory.
 
-Reads data/raw/taipei/ev_optimal_locations_taipei.csv and writes
-data/public/taipei/tvs_candidates.json. Re-run when the sheet changes.
-Does not touch station counts or district summaries.
+Reads data/raw/taipei/ev_optimal_locations_taipei.csv and the region's
+boundary file (staging during a pipeline run) and writes tvs_candidates.json
+beside the other Taipei outputs. A missing sheet fails the run.
 """
 
 from __future__ import annotations
@@ -13,19 +13,17 @@ import sys
 
 from shapely.geometry import Point, shape
 
-from common import ROOT, read_json, write_json
+from common import COUNTIES_GEOJSON, ROOT, TVS_CANDIDATES, data_dir, read_json, write_json
 
 CSV_PATH = ROOT / "data" / "raw" / "taipei" / "ev_optimal_locations_taipei.csv"
-DISTRICTS_PATH = ROOT / "data" / "public" / "taipei" / "kenya_counties.geojson"
-OUT_PATH = ROOT / "data" / "public" / "taipei" / "tvs_candidates.json"
 
 
 def station_id(latitude: float, longitude: float) -> str:
     return f"tvs_{latitude:.6f}_{longitude:.6f}"
 
 
-def load_districts() -> list[tuple[str, object]]:
-    collection = read_json(DISTRICTS_PATH)
+def load_districts(path) -> list[tuple[str, object]]:
+    collection = read_json(path)
     units = []
     for feature in collection["features"]:
         geom = shape(feature["geometry"])
@@ -79,10 +77,16 @@ def main() -> int:
     if not CSV_PATH.is_file():
         print(f"missing {CSV_PATH}")
         return 1
-    records = load_rows(load_districts())
-    write_json(OUT_PATH, records)
+    districts_path = data_dir() / COUNTIES_GEOJSON
+    if not districts_path.is_file():
+        print(f"missing boundary file {districts_path}")
+        return 1
+    out_path = data_dir() / TVS_CANDIDATES
+    records = load_rows(load_districts(districts_path))
+    write_json(out_path, records)
     assigned = sum(1 for row in records if row["district"])
-    print(f"wrote {len(records)} candidates ({assigned} inside a district) to {OUT_PATH}")
+    print(f"districts {districts_path}")
+    print(f"wrote {len(records)} candidates ({assigned} inside a district) to {out_path}")
     return 0
 
 

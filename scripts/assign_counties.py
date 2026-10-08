@@ -45,6 +45,14 @@ def main() -> int:
 
     records = []
     for station in stations:
+        if station.get("final_latitude") is None or station.get("final_longitude") is None:
+            records.append({
+                **station,
+                unit_key: None,
+                f"{unit_key}_match_method": "missing_coordinates",
+                "matched_counties": None,
+            })
+            continue
         point = Point(station["final_longitude"], station["final_latitude"])
         matched = [name for name, geom in units if geom.contains(point)]
 

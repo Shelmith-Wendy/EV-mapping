@@ -149,6 +149,8 @@ def run_region(region_id: str) -> None:
     seed_staging(region_id, staging)
     for script in STEPS:
         run_step(script, staging, region_id)
+    if region_id == "taipei":
+        run_step("load_tvs_candidates.py", staging, region_id)
     validate_staging(staging, region_id)
     promote_to_public(staging, region_id)
     publish_to_volume_if_configured(public_dir(region_id), region_id)

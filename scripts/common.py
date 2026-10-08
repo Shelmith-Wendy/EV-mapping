@@ -124,8 +124,14 @@ def required_files_for(cfg) -> tuple[str, ...]:
     )
 
 
+TVS_CANDIDATES = "tvs_candidates.json"
+
+
 def dashboard_files_for(cfg) -> tuple[str, ...]:
-    return (*summary_files(cfg.tiers), STATIONS_WITH_COUNTY, COUNTIES_DISPLAY_GEOJSON)
+    files = (*summary_files(cfg.tiers), STATIONS_WITH_COUNTY, COUNTIES_DISPLAY_GEOJSON)
+    if getattr(cfg, "region_id", None) == "taipei":
+        return (*files, TVS_CANDIDATES)
+    return files
 
 
 def write_regions_index(public_root: Path | None = None) -> Path:
@@ -169,7 +175,7 @@ def write_json(path: Path, data, *, indent: int | None = 2) -> None:
     text = json.dumps(data, ensure_ascii=False, indent=indent)
     if indent is not None:
         text += "\n"
-    path.write_text(text, encoding="utf-8")
+    path.write_text(text, encoding="utf-8", newline="\n")
 
 
 # --- Nominatim (lazy imports so non-geocode scripts skip geopy) ---

@@ -15,6 +15,9 @@ data/staging/
 # Local UTF-8 copies for sharing. Originals stay Big5 for the pipeline.
 data/raw/taipei/*_utf8.csv
 
+# Taipei doorplate coordinates (TWD97, ~119MB). Local lookup only.
+data/raw/taipei/doorplates.csv
+
 # Local tunnel binary
 .bin/
 

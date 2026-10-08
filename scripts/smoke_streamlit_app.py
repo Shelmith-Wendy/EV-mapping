@@ -94,6 +94,9 @@ def check_bake() -> None:
         for name in published_files(cfg):
             if not (STATIC_PUBLIC_ROOT / region_id / name).is_file():
                 fail(f"baked app/static/data/public/{region_id}/{name} missing — run ./scripts/prepare_databricks_app.sh")
+    if not (STATIC_PUBLIC_ROOT / "taipei" / "tvs_candidates.json").is_file():
+        fail("baked app/static/data/public/taipei/tvs_candidates.json missing — run ./scripts/prepare_databricks_app.sh")
+    ok("baked app/static/data/public/taipei/tvs_candidates.json")
     stamped = index_path.read_text(encoding="utf-8")
     app_hash = hashlib.sha256(app_js.read_bytes()).hexdigest()[:12]
     css_hash = hashlib.sha256(styles.read_bytes()).hexdigest()[:12]
