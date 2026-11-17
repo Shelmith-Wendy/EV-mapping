@@ -25,7 +25,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_2",
@@ -53,7 +54,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_3",
@@ -81,7 +83,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_4",
@@ -109,7 +112,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_5",
@@ -137,7 +141,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_6",
@@ -165,7 +170,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_7",
@@ -193,7 +199,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_8",
@@ -221,7 +228,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_9",
@@ -249,7 +257,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_10",
@@ -277,7 +286,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_11",
@@ -305,7 +315,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_12",
@@ -333,7 +344,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_13",
@@ -361,7 +373,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_14",
@@ -389,7 +402,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_15",
@@ -417,7 +431,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_16",
@@ -445,7 +460,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_17",
@@ -473,7 +489,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_18",
@@ -501,7 +518,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_19",
@@ -529,7 +547,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_20",
@@ -557,7 +576,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_21",
@@ -585,7 +605,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_22",
@@ -613,7 +634,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_23",
@@ -641,7 +663,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_24",
@@ -669,7 +692,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_25",
@@ -697,7 +721,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_26",
@@ -725,7 +750,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_27",
@@ -753,7 +779,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_28",
@@ -781,7 +808,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_29",
@@ -809,7 +837,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_30",
@@ -837,7 +866,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_31",
@@ -865,7 +895,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_32",
@@ -893,7 +924,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_33",
@@ -921,7 +953,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_34",
@@ -949,7 +982,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_35",
@@ -977,7 +1011,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_36",
@@ -1005,7 +1040,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_37",
@@ -1033,7 +1069,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_38",
@@ -1061,7 +1098,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_39",
@@ -1089,7 +1127,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_40",
@@ -1117,7 +1156,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_41",
@@ -1145,7 +1185,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_42",
@@ -1173,7 +1214,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_43",
@@ -1201,7 +1243,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_44",
@@ -1229,7 +1272,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_45",
@@ -1257,7 +1301,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_46",
@@ -1285,7 +1330,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_47",
@@ -1313,7 +1359,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_48",
@@ -1341,7 +1388,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_49",
@@ -1369,7 +1417,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_50",
@@ -1397,7 +1446,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_51",
@@ -1425,7 +1475,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_52",
@@ -1453,7 +1504,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_53",
@@ -1481,7 +1533,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_54",
@@ -1509,7 +1562,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_55",
@@ -1537,7 +1591,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_56",
@@ -1565,7 +1620,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_57",
@@ -1593,7 +1649,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_58",
@@ -1621,7 +1678,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_59",
@@ -1649,7 +1707,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_60",
@@ -1677,7 +1736,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_61",
@@ -1705,7 +1765,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_62",
@@ -1733,7 +1794,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_63",
@@ -1761,7 +1823,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_64",
@@ -1789,7 +1852,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_65",
@@ -1817,7 +1881,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_66",
@@ -1845,7 +1910,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_67",
@@ -1873,7 +1939,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_68",
@@ -1901,7 +1968,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_69",
@@ -1929,7 +1997,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_70",
@@ -1957,7 +2026,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_71",
@@ -1985,7 +2055,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_72",
@@ -2013,7 +2084,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_73",
@@ -2041,7 +2113,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_74",
@@ -2069,7 +2142,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_75",
@@ -2097,7 +2171,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_76",
@@ -2125,7 +2200,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_77",
@@ -2153,7 +2229,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_78",
@@ -2181,7 +2258,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_79",
@@ -2209,7 +2287,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_80",
@@ -2237,7 +2316,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_81",
@@ -2265,7 +2345,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_82",
@@ -2293,7 +2374,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_83",
@@ -2321,7 +2403,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_84",
@@ -2349,7 +2432,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_85",
@@ -2377,7 +2461,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_86",
@@ -2405,7 +2490,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_87",
@@ -2433,7 +2519,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_88",
@@ -2461,7 +2548,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_89",
@@ -2489,7 +2577,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_90",
@@ -2517,7 +2606,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_91",
@@ -2545,7 +2635,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_92",
@@ -2573,7 +2664,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_93",
@@ -2601,7 +2693,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_94",
@@ -2629,7 +2722,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_95",
@@ -2657,7 +2751,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_96",
@@ -2685,7 +2780,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_97",
@@ -2713,7 +2809,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_98",
@@ -2741,7 +2838,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_99",
@@ -2769,7 +2867,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_100",
@@ -2797,7 +2896,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_101",
@@ -2825,7 +2925,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_102",
@@ -2853,7 +2954,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_103",
@@ -2881,7 +2983,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_104",
@@ -2909,7 +3012,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_105",
@@ -2937,7 +3041,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_106",
@@ -2965,7 +3070,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_107",
@@ -2993,7 +3099,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_108",
@@ -3021,7 +3128,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_109",
@@ -3049,7 +3157,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_110",
@@ -3077,7 +3186,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_111",
@@ -3105,7 +3215,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_112",
@@ -3133,7 +3244,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_113",
@@ -3161,7 +3273,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_114",
@@ -3189,7 +3302,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_115",
@@ -3217,7 +3331,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_116",
@@ -3245,7 +3360,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_117",
@@ -3273,7 +3389,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_118",
@@ -3301,7 +3418,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_119",
@@ -3329,7 +3447,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_120",
@@ -3357,7 +3476,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_121",
@@ -3385,7 +3505,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_122",
@@ -3413,7 +3534,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_123",
@@ -3441,7 +3563,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_124",
@@ -3469,7 +3592,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_125",
@@ -3497,7 +3621,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_126",
@@ -3525,7 +3650,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_127",
@@ -3553,7 +3679,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_128",
@@ -3581,7 +3708,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_129",
@@ -3609,7 +3737,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_130",
@@ -3637,7 +3766,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_131",
@@ -3665,7 +3795,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_132",
@@ -3693,7 +3824,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_133",
@@ -3721,7 +3853,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_134",
@@ -3749,7 +3882,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_135",
@@ -3777,7 +3911,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_136",
@@ -3805,7 +3940,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_137",
@@ -3833,7 +3969,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_138",
@@ -3861,7 +3998,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_139",
@@ -3889,7 +4027,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_140",
@@ -3917,7 +4056,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_141",
@@ -3945,7 +4085,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_142",
@@ -3973,7 +4114,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_143",
@@ -4001,7 +4143,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_144",
@@ -4029,7 +4172,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_145",
@@ -4057,7 +4201,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_146",
@@ -4085,7 +4230,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_147",
@@ -4113,7 +4259,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_148",
@@ -4141,7 +4288,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_149",
@@ -4169,7 +4317,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_150",
@@ -4197,7 +4346,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_151",
@@ -4225,7 +4375,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_152",
@@ -4253,7 +4404,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_153",
@@ -4281,7 +4433,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_154",
@@ -4309,7 +4462,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_155",
@@ -4337,7 +4491,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_156",
@@ -4365,7 +4520,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_157",
@@ -4393,7 +4549,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_158",
@@ -4421,7 +4578,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_159",
@@ -4449,7 +4607,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_160",
@@ -4477,7 +4636,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_161",
@@ -4505,7 +4665,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_162",
@@ -4533,7 +4694,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_163",
@@ -4561,7 +4723,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_164",
@@ -4589,7 +4752,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_165",
@@ -4617,7 +4781,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_166",
@@ -4645,7 +4810,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_167",
@@ -4673,7 +4839,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_168",
@@ -4701,7 +4868,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_169",
@@ -4729,7 +4897,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_170",
@@ -4757,7 +4926,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_171",
@@ -4785,7 +4955,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_172",
@@ -4813,7 +4984,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_173",
@@ -4841,7 +5013,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_174",
@@ -4869,7 +5042,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_175",
@@ -4897,7 +5071,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_176",
@@ -4925,7 +5100,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_177",
@@ -4953,7 +5129,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_178",
@@ -4981,7 +5158,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_179",
@@ -5009,7 +5187,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_180",
@@ -5037,7 +5216,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_181",
@@ -5065,7 +5245,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_182",
@@ -5093,7 +5274,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_183",
@@ -5121,7 +5303,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_184",
@@ -5149,7 +5332,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_185",
@@ -5177,7 +5361,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_186",
@@ -5205,7 +5390,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_187",
@@ -5233,7 +5419,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_188",
@@ -5261,7 +5448,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_189",
@@ -5289,7 +5477,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_190",
@@ -5317,7 +5506,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_191",
@@ -5345,7 +5535,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_192",
@@ -5373,7 +5564,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_193",
@@ -5401,7 +5593,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_194",
@@ -5429,7 +5622,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_195",
@@ -5457,7 +5651,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_196",
@@ -5485,7 +5680,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_197",
@@ -5513,7 +5709,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_198",
@@ -5541,7 +5738,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_199",
@@ -5569,7 +5767,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_200",
@@ -5597,7 +5796,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_201",
@@ -5625,7 +5825,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_202",
@@ -5653,7 +5854,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_203",
@@ -5681,7 +5883,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_204",
@@ -5709,7 +5912,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_205",
@@ -5737,7 +5941,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_206",
@@ -5765,7 +5970,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_207",
@@ -5793,7 +5999,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_208",
@@ -5821,7 +6028,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_209",
@@ -5849,7 +6057,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_210",
@@ -5877,7 +6086,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_211",
@@ -5905,7 +6115,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_212",
@@ -5933,7 +6144,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_213",
@@ -5961,7 +6173,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_214",
@@ -5989,7 +6202,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_215",
@@ -6017,7 +6231,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_216",
@@ -6045,7 +6260,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_217",
@@ -6073,7 +6289,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_218",
@@ -6101,7 +6318,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_219",
@@ -6129,7 +6347,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_220",
@@ -6157,7 +6376,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_221",
@@ -6185,7 +6405,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_222",
@@ -6213,7 +6434,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_223",
@@ -6241,7 +6463,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_224",
@@ -6269,7 +6492,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_225",
@@ -6297,7 +6521,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_226",
@@ -6325,7 +6550,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_227",
@@ -6353,7 +6579,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_228",
@@ -6381,7 +6608,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_229",
@@ -6409,7 +6637,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_230",
@@ -6437,7 +6666,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_231",
@@ -6465,7 +6695,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_232",
@@ -6493,7 +6724,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_233",
@@ -6521,7 +6753,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_234",
@@ -6549,7 +6782,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_235",
@@ -6577,7 +6811,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_236",
@@ -6605,7 +6840,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_237",
@@ -6633,7 +6869,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_238",
@@ -6661,7 +6898,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_239",
@@ -6689,7 +6927,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_240",
@@ -6717,7 +6956,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_241",
@@ -6745,7 +6985,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_242",
@@ -6773,7 +7014,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_243",
@@ -6801,7 +7043,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_244",
@@ -6829,7 +7072,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_245",
@@ -6857,7 +7101,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_246",
@@ -6885,7 +7130,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_247",
@@ -6913,7 +7159,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_248",
@@ -6941,7 +7188,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_249",
@@ -6969,7 +7217,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_250",
@@ -6997,7 +7246,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_251",
@@ -7025,7 +7275,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_252",
@@ -7053,7 +7304,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_253",
@@ -7081,7 +7333,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_254",
@@ -7109,7 +7362,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_255",
@@ -7137,7 +7391,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_256",
@@ -7165,7 +7420,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_257",
@@ -7193,7 +7449,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_258",
@@ -7221,7 +7478,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_259",
@@ -7249,7 +7507,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_260",
@@ -7277,7 +7536,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_261",
@@ -7305,7 +7565,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_262",
@@ -7333,7 +7594,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_263",
@@ -7361,7 +7623,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_264",
@@ -7389,7 +7652,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_265",
@@ -7417,7 +7681,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_266",
@@ -7445,7 +7710,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_267",
@@ -7473,7 +7739,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_268",
@@ -7501,7 +7768,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_269",
@@ -7529,7 +7797,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_270",
@@ -7557,7 +7826,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_271",
@@ -7585,7 +7855,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_272",
@@ -7613,7 +7884,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_273",
@@ -7641,7 +7913,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_274",
@@ -7669,7 +7942,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_275",
@@ -7697,7 +7971,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_276",
@@ -7725,7 +8000,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_277",
@@ -7753,7 +8029,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_278",
@@ -7781,7 +8058,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_279",
@@ -7809,7 +8087,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_280",
@@ -7837,7 +8116,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_281",
@@ -7865,7 +8145,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_282",
@@ -7893,7 +8174,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_283",
@@ -7921,7 +8203,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_284",
@@ -7949,7 +8232,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_285",
@@ -7977,7 +8261,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_286",
@@ -8005,7 +8290,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_287",
@@ -8033,7 +8319,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_288",
@@ -8061,7 +8348,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_289",
@@ -8089,7 +8377,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_290",
@@ -8117,7 +8406,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_291",
@@ -8145,7 +8435,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_292",
@@ -8173,7 +8464,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_293",
@@ -8201,7 +8493,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_294",
@@ -8229,7 +8522,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_295",
@@ -8257,7 +8551,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_296",
@@ -8285,7 +8580,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_297",
@@ -8313,7 +8609,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_298",
@@ -8341,7 +8638,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_299",
@@ -8369,7 +8667,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_300",
@@ -8397,7 +8696,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_301",
@@ -8425,7 +8725,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_302",
@@ -8453,7 +8754,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_303",
@@ -8481,7 +8783,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_304",
@@ -8509,7 +8812,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_305",
@@ -8537,7 +8841,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_306",
@@ -8565,7 +8870,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_307",
@@ -8593,7 +8899,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_308",
@@ -8621,7 +8928,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_309",
@@ -8649,7 +8957,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_310",
@@ -8677,7 +8986,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_311",
@@ -8705,7 +9015,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_312",
@@ -8733,7 +9044,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_313",
@@ -8761,7 +9073,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_314",
@@ -8789,7 +9102,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_315",
@@ -8817,7 +9131,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_316",
@@ -8845,7 +9160,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_317",
@@ -8873,7 +9189,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_318",
@@ -8901,7 +9218,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_319",
@@ -8929,7 +9247,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_320",
@@ -8957,7 +9276,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_321",
@@ -8985,7 +9305,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_322",
@@ -9013,7 +9334,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_323",
@@ -9041,7 +9363,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_324",
@@ -9069,7 +9392,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_325",
@@ -9097,7 +9421,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_326",
@@ -9125,7 +9450,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_327",
@@ -9153,7 +9479,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_328",
@@ -9181,7 +9508,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_329",
@@ -9209,7 +9537,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_330",
@@ -9237,7 +9566,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_331",
@@ -9265,7 +9595,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_332",
@@ -9293,7 +9624,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_333",
@@ -9321,7 +9653,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_334",
@@ -9349,7 +9682,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_335",
@@ -9377,7 +9711,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_336",
@@ -9405,7 +9740,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_337",
@@ -9433,7 +9769,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_338",
@@ -9461,7 +9798,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_339",
@@ -9489,7 +9827,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_340",
@@ -9517,7 +9856,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_341",
@@ -9545,7 +9885,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_342",
@@ -9573,7 +9914,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_343",
@@ -9601,7 +9943,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_344",
@@ -9629,7 +9972,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_345",
@@ -9657,7 +10001,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_346",
@@ -9685,7 +10030,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_347",
@@ -9713,7 +10059,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_348",
@@ -9741,7 +10088,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_349",
@@ -9769,7 +10117,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_350",
@@ -9797,7 +10146,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_351",
@@ -9825,7 +10175,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_352",
@@ -9853,7 +10204,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_353",
@@ -9881,7 +10233,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_354",
@@ -9909,7 +10262,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_355",
@@ -9937,7 +10291,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_1",
@@ -9965,7 +10320,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_2",
@@ -9993,7 +10349,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_3",
@@ -10021,7 +10378,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_4",
@@ -10049,7 +10407,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_5",
@@ -10077,7 +10436,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_6",
@@ -10105,7 +10465,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_7",
@@ -10133,7 +10494,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_8",
@@ -10161,7 +10523,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_9",
@@ -10189,7 +10552,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_10",
@@ -10217,7 +10581,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_11",
@@ -10245,7 +10610,8 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_12",
@@ -10273,6 +10639,7 @@
     "tertiary_check_longitude": null,
     "tertiary_check_agrees": null,
     "needs_review": false,
-    "review_reason": null
+    "review_reason": null,
+    "coord_origin": "survey"
   }
 ]

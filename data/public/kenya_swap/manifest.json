@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-23T14:34:15.147040+00:00",
+  "pipeline_run_id": "8a458949e8cd46d8b0fb2220173ae197",
+  "source_name": "arcride_spiro",
+  "station_count": 666,
+  "retrieved_at": "2026-10-21T00:00:00+00:00",
+  "files": {
+    "operator_summary.json": {
+      "bytes": 381,
+      "sha256": "3deaff881e491188c985dcc3e6a75c2de0eb06c18d289408fcfe10b9755dc242"
+    },
+    "stations_with_county.json": {
+      "bytes": 345879,
+      "sha256": "0a7ae9a77646df380e6ea2d69270079c4e3bc5bf337a2ebd4bc60db1d9f41cef"
+    },
+    "kenya_counties_display.geojson": {
+      "bytes": 116772,
+      "sha256": "3d55b628fa26f3bdf2054e416995d2b14c851d740bc3719447613852db83e14b"
+    }
+  }
+}

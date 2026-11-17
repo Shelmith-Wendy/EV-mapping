@@ -1,0 +1,175 @@
+{
+  "_meta": {
+    "input_hash": "6952606563ccdf3b8ab936d0bd807baf7cbac99f558f0d96ecda8e1785114f93",
+    "osrm_base_url": "https://router.project-osrm.org",
+    "profile": "driving",
+    "computed_at": "2026-11-09T07:50:44Z",
+    "request_count": 19,
+    "elapsed_seconds": 18.2,
+    "note": "road_distance_m = route_distance + snap_from_m + snap_to_m. polyline6 encodes the route coordinates."
+  },
+  "sites": {
+    "tvs_25.054578_121.606600": {
+      "nearest_id": "tvs_25.069578_121.618586",
+      "nearest_name": "東湖",
+      "road_distance_m": 3253.3,
+      "straight_line_m": 2059.0,
+      "snap_from_m": 26.7,
+      "snap_to_m": 11.5,
+      "polyline6": "igexn@k~g}fFa@oEgAuKWkC}BmUi@mFm@kHaGkk@}@wI[yCY{CiC}WeAaLqBqSqEse@[}Ce@eFaHus@eJycAWsCB_Dh@{g@p@kCz@aDO{\\JwFuE\\yDMwj@iBgEOef@}AaAE_EMuFQwAGoNe@mNc@{CKaJ[uQk@{AGoCI{a@_B_HQuDKePi@w\\gAoBA}RaAgFW}@g@_CoCgBsIaFdLqDfF}]vWk^vXsLbL{LfMalApsAyKtJiV~LuUdFaf@|F}BRmg@nAqGHeHeAkDi@eI{AiPaEk\\uMen@s[mVmJqU}CkUe@C{Y\\eIDcVFcSz@a[DmBF{BJ{BHmBBw@jKmu@h@{DhA{EnCcLzGs`@N{@xA}HbAcHh@aD`DeR~CwU|B}MrAaIOmGs@uFmAqD}A{EoFmJm@w@mF{EoBy@_D_B}@c@oB_@eCs@aPwEkReFeQcEe@KMnASzB"
+    },
+    "tvs_24.992203_121.541010": {
+      "nearest_id": "tvs_24.989786_121.570458",
+      "nearest_name": "文山區",
+      "road_distance_m": 3958.2,
+      "straight_line_m": 2980.0,
+      "snap_from_m": 18.7,
+      "snap_to_m": 25.1,
+      "polyline6": "srktn@grgyfFb@U`AO\\@l@@mEzOK^aAvC}A~Ev@`@fPjFpGzBpEpAvBn@~NtEdR|FdOjEhPvEjBp@|ThGpBAxAfDR^|`@rFvLN`ScAxQmAvAu@NiCLqJ@qAn@gC~@k[l@{\\FoEnEB|BDft@|AdEMdZM~D@zDCR_]^w]DkEEyHAmBCaDUyWkBwzBD{h@AaA@oD@sF?mHAqKCqC]_E_@eDcCeVeCyXeCcWUaCW_Ca@aFoCqZqBuSqAaNsAsLUqB{@gI}Co[oF}X[qCkByPcJ_aAY{CQuBw@gJHwSaBeTg@aGa@cFmM_rAWaMYeSqAgZmA{P]mBYsBmFs^mDwYoAyJkCySuB{OoFcb@YwCmAcLGqDa@qVVgf@?gC?wCBmv@KyG@iFCoCBmE?cUiCwp@_A}RWcFeGq~@s@_F]qAsAeAnD{PbCuIrEaPx@sCb@{AlAiElCkJPk@\\mAdBeGxBwHZqAjAeGx@wGb@eGZ{GD}A?mCKwDQuBYyCeCiYm@sGUqCuGcu@gAeQQoCSwCOiBK_Aq@iGeCqUaCaUMkAc@}Ds@}Dk@iAyEwGwPyUaAuAuDgFw@gAyB}ClBcBz@XvAoA`BwAtAkAf@{@Zy@HoAGqA]uAk@}@}@q@y@QeAB_APy@j@}RwX??"
+    },
+    "tvs_25.171641_121.534733": {
+      "nearest_id": "tvs_25.132419_121.501379",
+      "nearest_name": "北投區",
+      "road_distance_m": 8668.0,
+      "straight_line_m": 5503.8,
+      "snap_from_m": 6.1,
+      "snap_to_m": 1.9,
+      "polyline6": "cij_o@kl{xfFNGvFUfHQhHBjIaB`JyBhTeEnJ]vIrAlDStLmEbSmGhDFxLsCtBQfDZdDdEfB|BdDxG|FzGzE~GrCpFlAnEx@nEXhDBdAtCbEjLvFlF~BzBf@lCElB{@dCgC~BuDjG{H`EuDjE{@lDYjFg@fBs@tRgUdAgBLqNd@eBnAFh@@n@lAj@fEf@`HMdImArQtAzKf@jFNlEx@n@p@Lt@Gt@]jB}CnB}EjBsMtAkN`N_RdB}DzAkMzBoFfEuGvDyEhFiB~BBd@pEiAdDaBrFsAtGYhJ?zDzA`BhE`CnCExAaApIsJ`OwKbIwDt@YhTsMxHyJxHuFdFoClCOlBuAbH[xC|@pCxDpAF~A{AtEiAjAOdEBrIh@vFrCbCo@dGkBpBh@l@nAIhBqG|LmAnFKhIxA~JErGhAf@zCaAtF]fIx@hCs@~BtC|EhAnEpB|AnA`ACbNaFpBM|BzE|B~Bt@`Bb@dCNfIjA`BzNtClB}@|DoEj@Ep@ZXvBcCjHt@j@|E{@hDA~AhCxCbBpDU|AiDnBoM@qGZcBvB[zKd@vD`CEbJVt@~Ae@AmGdAqKnBUfDT`GtAbObE|@m@wCeHeIoLxKrEzBdC~B~BjDtEjDvIh@jD?`GMbEy@bEw@dDaChD_C`CkDtAaG~BmTjD{VtDuEtAmBhAaEnEcBxGAtED`OJpBj@fBlA^nEKzN[nD|@tAh@tA`Ch@jD\\hHV|EPzAtB|GbG|HfF~IjD|FrBzBfD~A~J|DtFJvTyDvMc@jHf@nCv@hBrAn@dDHzCsBvEiApEf@vDjA~B`JhGnDHvMb@`Cj@tAtAtAtEa@lEoAnBkF~J{BrNc@hI~ApFjDbBhC?xE_CzGaE`NaF~I_EzJsGfJqF|EyA~APpCr@lFnEtGjCdL`HNHn^tS|An@xH~DjHtEzk@`e@dYrVjHtEjDj@|e@jHjHjD~F`GpExUd@rC\\nArAnBhA`AjDfBvBPpDSrIoEn\\eW~BuAjD?vIj@~Bh@tA`Ch@jD?`K?`KvIlTjD`GvQ`Oj@`C?tIuExQ?vMrA`GtA~BtAtAvMjHxUbOfMjFrTtEpDhCbD`EtDrI|EvEzA`E^`Fi@bEaChFkItHgEpCoFNe[h@aGtAuAtAaDzFkCdIkDlLoAbE[pDt@xDfC|FxD`GtCqBdHcD~Cq@zDC`\\xCfC`@lDVzg@nG~c@lJ|PnDhHpBtGJxGgA~H{BpGgB~HPvKbCbDnA|BjC`AfDpA|N|@|BzAvAxBt@jGN~DuAtDwB|BcEj@kDh@kD?gIKiOYgLOqDMqDKqCjA_DrAuChCcM~F}JzFq@zBU`CG`DV~Cl@|BbAnD|BnFxF~k@ht@x@nA~BtJlDrOdGtSzCxInCxHtEpMfP|c@l@vEa@bSYxL?`BC|GZ`ElBlHtIpU|FdVdLzm@jc@vbB~NbR|RjQkR`c@qInS}@|IAdE?~CpAxGjKpRzCdJjTjaARjKc@tOvBzRjKfZlAhGI`OPxPj@|Il@|D|@pEnB|KNpLAtKDvMg@bOMxFi@zEAdFGvHXtLPpMiBpQmAtEoDpD_D~DaGvGy@rBEnBRlDhAbCdCxIPbCB~B_@jKDbB^pAbAnBjJhHhTrPxBvAjBj@jC@fFqA~DcAxLcDvKwCbBMjAHv@TnBhAhUvTnDnFnDnFnC~Fv[v]bN|JlEdDzBfBvA`Adv@ps@vFlGrDxJvCkF~HoNlDiF~BcCn@a@`Dq@hIQp@NtDfBvBjB\\h@lCzCnAjBpG|MjOhYrBpDbErHvE~GbMbO~BpBhA~@pDrB`KdFdCh@`Ex@fRzBpD\\jCZbJzAdH~@xAZ~Cp@b@b@jMtJ|BxA`GpEfAtA|G`LxE`G~CZnOlAtPtAjGf@"
+    },
+    "tvs_25.079749_121.547082": {
+      "nearest_id": "tvs_25.064361_121.533468",
+      "nearest_name": "中山區",
+      "road_distance_m": 3520.5,
+      "straight_line_m": 2192.7,
+      "snap_from_m": 4.3,
+      "snap_to_m": 15.3,
+      "polyline6": "a{vyn@gvsyfFqDSwD~@HtJxE~bCDzBfAvOZtEvDFtWDvyBlAlc@h@fhB~@z`@Qt{Az@z\\`@h@@l@?`D?|DBbA@xB?v@?xEg@vj@SjtGG|K@vD?fE@bGNfHJtQHzs@b@nd@VfC@pA@fGDdDBxh@^dB@zBBrB@dB@zc@V\\`Ct@dCdArBtAfBpBzA~A~@bA\\jB`@UdIOlz@@lBAdBAbEBtFMx_@Y|DK`f@AvA?nC\\nGC|J_@dvC_@dIMxl@j@dFKrLIvMG~FMzQi@lr@I`NOpQA~BGtHWx[a@tCk@hn@C|BAbANpFkFAso@_@mw@a@"
+    },
+    "tvs_25.069578_121.618586": {
+      "nearest_id": "tvs_25.054578_121.606600",
+      "nearest_name": "南港區",
+      "road_distance_m": 3240.5,
+      "straight_line_m": 2059.0,
+      "snap_from_m": 11.5,
+      "snap_to_m": 26.7,
+      "polyline6": "gybyn@kg_~fFR{BLoAd@JdQbEjRdF`PvEdCr@nB^|@b@~C~AnBx@lFzEl@v@nFlJ|AzElApDr@tFoCpDaAzGeCtPiDrUsCnRYpByCdSGTeGj`@wCfN}@dEq@tEkKvt@GlAOtBStCEdBa@zSQrIkAps@I|NIpKDvCpCCzM?pFPzT`DrLbFlFzBhZfP~KpHrV~LrShGpXfDp@HxEh@jKTvg@e@hCGlk@_IlOgE|NqGxJ_GzJ_InlA{sA~KaM~LaLb^sXn\\qZjGkFlDwC~BnC|@f@fFV|R`AnB@v\\fAdPh@tDJ~GPza@~AnCHzAFtQj@`JZzCJlNb@nNd@vAFtFP~DL`ADdf@|AfENvj@hBxDLEhEJj]x@hDj@bCi@zg@C~CVrCdJxcA`Hts@d@dFZ|CpEre@pBpSdA`LhC|WXzCZxC|@vI`Gjk@l@jHh@lF|BlUVjCfAtK`@nE"
+    },
+    "tvs_25.117412_121.464040": {
+      "nearest_id": "tvs_25.132419_121.501379",
+      "nearest_name": "北投區",
+      "road_distance_m": 5762.6,
+      "straight_line_m": 4112.9,
+      "snap_from_m": 17.7,
+      "snap_to_m": 1.9,
+      "polyline6": "}f`|n@_vqtfFsQ{Oq@o@u@eAsLgPCk@iAeRKu@Yq@SQQSo@Wq@Gq@HuDDaCOiDu@kHuGuIyLyK_U{FcJoDiFoAcBk@u@e@o@aHyKoP{RcBoBaDm@mHwB{I}@uBU{OmB{@KkAM{P_DsUwCi@Gi@IcFm@ud@}EwAU_Cj@sQrFwNxEyDzAoStH_FbBq@@gCEVkGnIc|BYkBv@uTqDaFlBgZpBil@vAsc@\\uF^_HpAgi@b@}RhAm`@`CogA`@mPpDgyAbc@kkQv@}ZDyAj@qUHaDvOirGnBsdAJ_DZoLvBq{@x@qYzBoHz@uX`LyfFp@gJDuk@sC_Oh@eYDgBVkHxAyQsG|CwFjBuEj@al@xHyi@lHwXfDoANaJxA_v@~JuSrEse@zLmYrG}CnB_CxAkWzFsRlF{PhDs@RkS|EkDdAqi@vLy[~IyaAf^kBr@eA^gAgGkD{SkCsQaIeg@eFa[_BcLiCsUeAyE}@wEsGc[e@gBe@{B_HmXkByUMaCyBYiC[}w@aGuDY}TaAkJu@aE]"
+    },
+    "tvs_25.064361_121.533468": {
+      "nearest_id": "tvs_25.079749_121.547082",
+      "nearest_name": "大直",
+      "road_distance_m": 3008.5,
+      "straight_line_m": 2192.7,
+      "snap_from_m": 15.3,
+      "snap_to_m": 4.3,
+      "polyline6": "uyxxn@gwxxfFqJEsBAiCAyA@{FCsm@]on@YqBAwBAaF?qBEuREuVW_BA{BCiDC{FEoEcDiJeA_BIcBKwHc@sEBcDHiK^iPE{^cBgXcA}KEgUo@{\\_@qMo@}IeCqIuD_HiE_OmMiHwHiEyHsHgPoDkLuBmJe@eC{BeMaAqI}@eG]qEAuETwDT}BOsBDoB?yBu@qRImBYsGEeALgn@BoQjAaY~@iNL_C|A}q@sBcLRwXeA{GpDw|BHiFDaCHmGlBwcBHoFFiGgEK}C?u_@Su\\_@u|@a@ab@_AqgB{@aST}jC_AoXBu@kMUaESoLKcHwA_p@_Ba{@OeLpDR"
+    },
+    "tvs_24.989786_121.570458": {
+      "nearest_id": "tvs_24.992203_121.541010",
+      "nearest_name": "景美",
+      "road_distance_m": 3730.6,
+      "straight_line_m": 2980.0,
+      "snap_from_m": 25.1,
+      "snap_to_m": 18.7,
+      "polyline6": "ofgtn@ey`{fFkCbC~RvXzFdIeB~Ac@^F|@mBbBxB|Cv@fAtDfF`AtAvPxUxEvGj@hAr@|Db@|DLjA`C`UdCpUp@hGJ~@NhBRvCPnCfAdQtGbu@TpCl@rGdChYXxCPtBJvD?lCE|A[zGc@dGy@vGkAdG[pAyBvHeBdG]lAQj@mCjJmAhEc@zAy@rCsE`PcCtIoDzP?`Bn@rDjGrbAVdFvBnf@dAr\\FjVC`EBfDDlFJv]G|YAhCCfDApB@hAQfXDr]\\lJN~Al@xEt@vFp@zD~Df^fCrRrBfOZdC~Efa@fAvIfDtSZtBTrBtApPd@zL\\jLFpH`@rWxF~k@|E`e@\\tD\\bCThD`@vEnDdm@PvBXtCzAdQtDda@jAzLfBzPZnCjAnG`B~PxCn[x@fIPlBxA~MjA~L~Dpa@pBlST|BTdCrEfd@h@jGd@hFhB|R\\lD^lDA`SE|LApD@|@Glh@tA`{BN|XA`CEdB@jBAlECvEGzNGzNi@|[_EAeZLeELgt@}A}BEoEC_DPaRf@oUo@wa@gBs@E{Fk@oDu@_B]iFgAsPmDeL}AuEeAsD{@_@GkQ{CwCUoBQoDUqK_@_CB}JJO?kBBg@nCaC`N_AlDm@A]AaANc@T"
+    },
+    "tvs_25.091840_121.524207": {
+      "nearest_id": "tvs_25.118707_121.530001",
+      "nearest_name": "天母",
+      "road_distance_m": 4045.3,
+      "straight_line_m": 3044.0,
+      "snap_from_m": 3.0,
+      "snap_to_m": 3.5,
+      "polyline6": "kmnzn@k}fxfFj@yC[qBeCyF}AaDcAy@_GqWuE_XebA~PqJpBeP`AiJrBcM|BwL|Bu`@lG{Dv@sDeXeAmHoC_Si@uDGi@o@sE}AyKqCwSM}@sBaOsC{R}DeYmEk[a@kD~Du@zXaFvM_BdF[hEMxM@zLx@lPxArNlA`AFwAkD}@wB{@I}W{CaH[eGMiPMcLj@uMxA}XbF_Ez@mDl@_Ep@mkAxTuZdF{Bb@iHnAoGp@}d@nIgk@bK{_@pHg\\~F_LxCeNpE_xAvl@}YbMoEvCyNxGwb@rQ}P~EoLnBcHj@iER}Lb@kE@u_AqBgSa@uZ]qGI{AMwUkBqQcBa^wDmD[mE_@iPuAw[oCuEa@uAQ}Ei@c^eDcy@}GyAOgCWu^wDqPqDq\\}MiCeAeCgAgr@iZuM{F}BaAgEiB_rAoj@aDaB_e@eSCAkCiA}CsAmBw@mOmGmRmJob@mWkDqCiRgOyLcJwXmT{q@}g@oBuBy@nG_CdLG|I}EW}@IyHkAoCaAZuAvBeJ"
+    },
+    "tvs_25.069664_121.588998": {
+      "nearest_id": "tvs_25.054578_121.606600",
+      "nearest_name": "南港區",
+      "road_distance_m": 3452.5,
+      "straight_line_m": 2440.8,
+      "snap_from_m": 16.4,
+      "snap_to_m": 26.7,
+      "polyline6": "y{byn@_oe|fFQfOxAlBtPVtFJCdCEvCGjHYxYGlEnEb@FiFt@wq@X}W@sBl@ym@ZwY~B_@^GvCcAjC}A|BsBhBiCtA{C@Cz@cDxX~AnZdBzCPhDXxWpBfPlAri@pDfAHrPnApOnAxLpCnPnEpHrCjG^xFu@jCw@jF}AnHmLvBoBzNuE|J{B|LuAxCURAdw@yErPw@xV}Cfg@cIlOmDvOkDpGeA|DyA~@_@~KeD`K{DbOaHltDofBrGmBlVsLtLuG|b@{Rvk@aXhCgAzWyK~D[EaHcCcXg@qEDsWnIujAzByK|CiO`BeI`@qBdG}Y`Joc@bCsL`@cC`Jki@ZiBb@iEhBaQb@kRR}Vq@u[eGem@cEua@]oDa@wDwC_ZIq@s@gHO{AyFek@YsCuGio@m@aGUgCcHoq@eAwJc@gEg@cFgBkS"
+    },
+    "tvs_25.118707_121.530001": {
+      "nearest_id": "tvs_25.091840_121.524207",
+      "nearest_name": "士林區",
+      "road_distance_m": 3565.1,
+      "straight_line_m": 3044.0,
+      "snap_from_m": 3.5,
+      "snap_to_m": 3.0,
+      "polyline6": "i}b|n@cfrxfFwBdJ[tAmGwC_Bs@iCiA_@_FVgIbB}Hx@gCz@mC|DdDvEfCtLrF|BxBhE`DtnBzxA~@r@zBzAja@hXlQzIrRzHpChAzCrAlf@|SzBbA`_@tPzXjLdZfMfFxBdBr@jaAxa@nBz@dDzA|\\pOt[nEhT`C`BNxBRhOjA`oApKxALnE\\dm@nEhE`@~ANru@|HfVfBlBNpGJpy@vAxw@r@zDBlHUtFiAlCJzRoDlTcHbn@oVnBaAxFkD~TkJnvAcl@lPyFdIwBv]iHx`@aHdoAoUrGoAtFcAxE_AveBg\\xD_AnDo@`Eu@lX{EtNeBpMe@zMTxEHlET~]`Dl@FvAjDrB|DxA`D`ENjB|@t@tAxFbL`MxUpDnDdDzFbDlJ~Bh@|BbAxHfMhCpDnA`BXlApAnIp@fEv@|DdHt^tE~W~FpWbAx@|A`DdCxFZpBk@xC"
+    },
+    "tvs_25.033345_121.566896": {
+      "nearest_id": "tvs_25.049885_121.577272",
+      "nearest_name": "松山區",
+      "road_distance_m": 3216.8,
+      "straight_line_m": 2115.5,
+      "snap_from_m": 45.9,
+      "snap_to_m": 12.4,
+      "polyline6": "gm{vn@mizzfFOv]]ft@EzFGlHmAxaBEhHuIEuAAmBAkm@]mTG{NOqgA{@sF`A_HFskAWuAAiBEaIC_JEoBAeAAukAq@aGGoF_CaFAyIGaF_@cFqAiE}AcGsCcEyBs]}QaWkNsFyEiEkCaHwD_KeF_J}Egy@_`@a`@}QiAk@kGuCwE}BiE{Bk@YwnB}aA}@e@{@c@uF_D_Ag@{CeBeHiEuBgAu^iRsZoOqgAkj@iCqAy@a@gAk@uQaJ{^mRaAg@}@e@mBaAw@wH_BwXgDi`@MmBEaAYck@CqYFu\\@_EX{EN_nALyx@Mcr@lAm_@b@_F}BSsHcA_BOiCIa^hBCcD]it@GcMCcG"
+    },
+    "tvs_25.025196_121.497676": {
+      "nearest_id": "tvs_25.032361_121.518267",
+      "nearest_name": "中正區",
+      "road_distance_m": 3271.6,
+      "straight_line_m": 2222.3,
+      "snap_from_m": 28.3,
+      "snap_to_m": 17.9,
+      "polyline6": "kxlvn@y|rvfFwBqHuA{E{A}FkPol@m@uB}Vc~@wC}AJ{d@GeFcADqTIyLFwh@}@cIAs@?wC?sF@s{@e@yPUwFI]oE}Cs`@qDmc@mCmZUmC]yC_OkpA}B_RaAuHsDf@gD@iMYoAIgCBsCDmJL_H@mMOeCCuAIaAQmDqAe^{MuMgGeJgEmAi@sAu@}K{E_CaAcCcAoAm@oCqAyDaByEuBwBeAsI_EuEyBuDmBkF}Bs\\qOeBkAsQqIuYaOwLcG_Hy@gAg@kCaAeA_@gG{BeC}@yLoDeCs@yEgAcFgAiDk@_`@qFiK}A}PoDkA]~GoFf@_@nBsFj@uBtJ_^r@kCnCcKx@iHFg@zd@g{AzTu~@jAeHx@oGnScuArAmJ^iHdF{z@hFe~@@yD`Cu^RuDtIwnAlAqO~NgGd[iSlFmDpBsA`o@{a@jFoDjIqFr@g@tOeK"
+    },
+    "tvs_25.054034_121.514484": {
+      "nearest_id": "tvs_25.064361_121.533468",
+      "nearest_name": "中山區",
+      "road_distance_m": 3071.1,
+      "straight_line_m": 2230.5,
+      "snap_from_m": 1.4,
+      "snap_to_m": 15.3,
+      "polyline6": "}tdxn@a~swfFq@aGMsCZcDr@sBbB_ChBsAlAkApBgD^uAd@{BhDmVnCiRdA}Hl@{Ep@cFpR_oAZaEnAsIgDo@_Dq@wUaF_NaDqg@sLuNw@uCEoVRkLDuOD{YC_C@qGJqPFeV?mG?_EMeAE_@cGyDom@OgCuBi\\IoAgCea@w@{LMuBgAeQMmBmFuz@}@qNg@gIcB_XYkE[kFY}EYsEoA{SeCsa@i@cJ@uCLe\\HsSJqVBsFBuEXgs@H_WBgEJcXBqD?eAHiQ?k@BsEZqz@@kBBaE`@aeA@_EByFN}\\DaMNea@@mADoL@cCH{SP_a@@}B@qDBeGhCwGqGCkECgOGm]Qem@Waa@SsBAsCAsCAgCAog@SsRGsCA{UMoTWkDEmBCaFTmHEkFAso@_@mw@a@"
+    },
+    "tvs_25.033594_121.543950": {
+      "nearest_id": "tvs_25.033345_121.566896",
+      "nearest_name": "信義區",
+      "road_distance_m": 2715.8,
+      "straight_line_m": 2312.0,
+      "snap_from_m": 14.6,
+      "snap_to_m": 45.9,
+      "polyline6": "mn|vn@uomyfFPa[Z{h@`@}o@D_GDyG@gCDoHJoONgX?UD}Gd@_w@N_UDgHLwMDyNHeLf@sz@r@gnADeG\\}k@B_F@aDFeF\\sl@^in@FsIDsHj@sbAjAeoBDwED}EHcIp@eu@Fcc@ToLP}IpFtBXyGN_MHsLHaLFcI`@}l@DmD?_DBmA@{AHqCpAumBH{XtAyaBDqHFyFtBkgC^yXDaGDwFqGC@vFExFq@|s@IpRCzD"
+    },
+    "tvs_25.032361_121.518267": {
+      "nearest_id": "tvs_25.025196_121.497676",
+      "nearest_name": "加蚋子",
+      "road_distance_m": 3037.4,
+      "straight_line_m": 2222.3,
+      "snap_from_m": 17.9,
+      "snap_to_m": 28.3,
+      "polyline6": "cozvn@}s{wfFpOcK|JuGdSwMdCcBiBwDkCdBqYfRuGhE_WlPuFrDuIvFvBzDxBrFvFp[fPb`AxAvEz@bGpHvb@^zBj@rD`FtZj@dEbE|Wn@hDv@`FPx@hAbFlFp\\l@|DjDhTzAnIbEtU`EvUtAzId@vCt@hDjJza@~A`KvK`r@pElYjGp`@v@nElBbIwEtJm@pAqJfT{AtDw@pBqIlRmF~L{AlDsBxEn@~EVzDBfEFbPAjJ@Z@|JBbH?|DGlh@AhCIxw@?~A?pAGfe@?lFE`EXrSTzt@^xd@?`B?hLz@dqADzEnCBdDhAxCdAbKZxGPfIFbJFhCHv[J|L@pC@bGBnF?nb@Bvp@DdA@nD@zHD`HN~LZlLBhf@l@tABKzd@vC|A|Vb~@l@tBjPnl@zA|FtAzEvBpH"
+    },
+    "tvs_25.132419_121.501379": {
+      "nearest_id": "tvs_25.118707_121.530001",
+      "nearest_name": "天母",
+      "road_distance_m": 4440.5,
+      "straight_line_m": 3260.0,
+      "snap_from_m": 1.9,
+      "snap_to_m": 3.5,
+      "polyline6": "aw}|n@klzvfF`E\\jJt@|T`AtDX|w@`GhCZxBXL`CjBxU~GlXd@zBd@fBrGb[|@vEvBwAj@_@pIsEtOaH|P_FhOgDtTeCdLsAxq@uHfD]lC_@bToCb^cEda@yEdCc@lB]zu@oI~YiDrj@aIjKg@xVcDjSqDlXuHv[eMhPwInEqCzH_GbHmH~@{@|EoGxAuDn@eEJaCd@{EpGwShEiNtAoEfFsWfCkV~BsYl@_HPoBp@uGtEsa@\\sC|Fui@ZkCdDu[rEwd@RiBPoBnB{UJiATsBTwB~G_h@Ry@\\uDtJw~@DuA^}CbBuLtDcYpCcLjDcLdJmUpAeC~BmIrRw\\|A}Cx@sCTaC{AyKm@cEs@}Ct@ySl@}IlBm]dCqa@rDim@Bi@fDsj@jCc^RuGByDz@q[EcCLmEbBqGlA_BnSgLdCsA_AeBqc@a}@iFePf@yGb@wMn@sJlBwOr@uHQcC^aH`@mJSsLsAyIaKy\\{AmFaB{EeBaFaIiUaAqChAmIrCcNn@cDx@{DpE{VhCcOn@oDl@oDjB}IjDmTh@}BhEiVl@mCTwBZyA|@eJt@cODcC?{Cr@qq@J_LDiFBeFJkWDqFDyFJyM@w@@sEBmEDqHFc^FsY@mB@qAVm]BuBBcE?{DBeXF}I~BeLhDyCoBuBy@nG_CdLG|I}EW}@IyHkAoCaAZuAvBeJ"
+    },
+    "tvs_25.049885_121.577272": {
+      "nearest_id": "tvs_25.033345_121.566896",
+      "nearest_name": "信義區",
+      "road_distance_m": 2865.3,
+      "straight_line_m": 2115.5,
+      "snap_from_m": 12.4,
+      "snap_to_m": 45.9,
+      "polyline6": "yw|wn@krn{fFGoSGgFfEAtRAjC@xCAf[LjCCvEIzIEz[c@bECTCzCE`AA|EInLA|Q?lH@j^Bx@BdH?~v@?tDCN?nEAtEC~UGxd@Of}@YtAAx@AlAC|AB~A?b`AYfCAdJA`C?bNAj_@CnG?tECdFGnWFhd@[fC^p@rAhIpPl]dh@jEdGp\\`f@rc@lv@|GlKlFrIhB`DxDlFbDpBjo@ZvDBrjBz@pu@jAz@E|Ia@zBtDhBtDzMd^vGjXtGt\\|Cx]t@jLLzMDpEGrCBrCUrWGzUAjZKz[[vUQngAIdH@vFExFq@|s@IpRCzD"
+    }
+  }
+}

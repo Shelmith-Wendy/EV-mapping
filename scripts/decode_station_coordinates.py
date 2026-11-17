@@ -52,6 +52,7 @@ GEOCODED_ENRICHMENT_KEYS = (
     "tertiary_check_agrees",
     "needs_review",
     "review_reason",
+    "coord_origin",
 )
 
 

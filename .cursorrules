@@ -1,8 +1,0 @@
-# kenya-ev-map coding standards
-# These rules apply to every file in this project.
-
-- Use descriptive variable names.
-- Keep logic flat — avoid deep nesting and unnecessary helper functions.
-- Code should be concise enough to fit on one screen but clear enough to follow without extra comments.
-- Prioritize correctness and performance.
-- No unnecessary abstraction or premature generalization.

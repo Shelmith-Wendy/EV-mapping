@@ -3,8 +3,15 @@ command:
     "streamlit",
     "run",
     "app.py",
+    "--server.port",
+    "$DATABRICKS_APP_PORT",
+    "--server.address",
+    "0.0.0.0",
     "--server.enableStaticServing=true",
     "--server.headless=true",
     "--browser.gatherUsageStats=false",
   ]
 
+env:
+  - name: EV_MAP_VOLUME_PATH
+    valueFrom: ev_map_volume

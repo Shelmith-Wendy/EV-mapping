@@ -569,6 +569,158 @@ h1 {
 }
 .leaflet-popup-content a:hover { text-decoration: underline; }
 
+/* --- Swap Overlay: Coverage & Limits Panel --- */
+.coverage-panel {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(2, 6, 23, 0.45);
+  border: 1px solid var(--panel-edge);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.coverage-panel h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.coverage-operators {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.coverage-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  font-size: 0.85rem;
+}
+
+.coverage-op {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.coverage-count {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.coverage-asof {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.coverage-stale {
+  display: inline-block;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.coverage-reported {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(30, 41, 59, 0.6);
+  font-size: 0.82rem;
+  color: var(--text);
+}
+
+.coverage-reported-main {
+  font-weight: 500;
+  color: #e2e8f0;
+  line-height: 1.4;
+}
+
+.chart-capacity-note {
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(30, 41, 59, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chart-capacity-note .chart-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.chart-capacity-note .chart-cabinets {
+  font-size: 0.82rem;
+  color: var(--text);
+  margin: 0;
+}
+
+.chart-capacity-note .chart-cabinets strong {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.coverage-disclaimer {
+  padding-top: 8px;
+  border-top: 1px solid rgba(30, 41, 59, 0.6);
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.35;
+  font-style: italic;
+}
+
+/* --- Pin Detail Popup Styles for Swap Overlay --- */
+.leaflet-popup-content .popup-operator {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+.leaflet-popup-content .popup-asof {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: 4px;
+}
+
+.leaflet-popup-content .popup-verified {
+  display: inline-block;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.leaflet-popup-content .popup-cabinets {
+  display: block;
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+
 @media (max-width: 1100px) {
   .stage { grid-template-columns: 1fr; grid-template-rows: 1.2fr 1fr; }
   .toolbar { justify-content: flex-start; flex-wrap: wrap; }

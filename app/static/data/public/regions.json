@@ -1,0 +1,55 @@
+{
+  "regions": [
+    {
+      "region_id": "kenya",
+      "display_name": "Kenya",
+      "cluster": "east_africa",
+      "bounds": [
+        [
+          -5.0,
+          33.5
+        ],
+        [
+          5.6,
+          42.2
+        ]
+      ],
+      "tiers": [
+        "county",
+        "town"
+      ],
+      "station_types": [
+        "fast_charger",
+        "swap_station"
+      ],
+      "data_path": "kenya",
+      "dataset_source": "zeno_arcride_spiro",
+      "dataset_source_label": "Zeno, ARC Ride & Spiro"
+    },
+    {
+      "region_id": "taipei",
+      "display_name": "Taipei",
+      "cluster": "east_asia",
+      "bounds": [
+        [
+          24.96,
+          121.45
+        ],
+        [
+          25.21,
+          121.67
+        ]
+      ],
+      "tiers": [
+        "district"
+      ],
+      "station_types": [
+        "standard_charger",
+        "swap_station"
+      ],
+      "data_path": "taipei",
+      "dataset_source": "taipei_open_data",
+      "dataset_source_label": "Taipei Open Data"
+    }
+  ]
+}

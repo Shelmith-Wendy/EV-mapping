@@ -1,26 +1,30 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-08T07:30:55+00:00",
-  "pipeline_run_id": "0897a5b5f90b47df84928bb068371a8c",
-  "source_name": "zeno_earth",
-  "station_count": 114,
-  "retrieved_at": "2026-09-01T13:02:29+00:00",
+  "generated_at": "2026-10-27T13:31:53+00:00",
+  "pipeline_run_id": "merged_zeno_arcride_spiro_towns",
+  "source_name": "zeno_arcride_spiro",
+  "station_count": 780,
+  "retrieved_at": "2026-10-27T13:31:53+00:00",
   "files": {
     "county_summary.json": {
-      "bytes": 5138,
-      "sha256": "95b71ddea58a340e5b6f1e99ef1ca2fae7f1704cabab646eccbf08550911ca65"
+      "bytes": 5365,
+      "sha256": "2719f589d27c6273f8c8dc7abfc1be74d2dd87d4161bf74cc220bafe047829c6"
     },
     "town_summary.json": {
-      "bytes": 14301,
-      "sha256": "1473c5a1cd0fb8e164b76af6d0bac42b25e6521cf70ca18fe752ae0492ae9c57"
+      "bytes": 86447,
+      "sha256": "da3cf5a83743187f95318a2588ac2504efbac3b357680b9e1e2d778c86a31721"
     },
     "stations_with_county.json": {
-      "bytes": 135919,
-      "sha256": "05428e5bf105c3d9c583b058292ec8855164f2759b8ac524282723651e775847"
+      "bytes": 744631,
+      "sha256": "74c6491e0d0a0b7b224a0f00c25d3fcb75d7ed1e9b7343e2dc8ca9ee07e5cbad"
     },
     "kenya_counties_display.geojson": {
       "bytes": 116772,
       "sha256": "3d55b628fa26f3bdf2054e416995d2b14c851d740bc3719447613852db83e14b"
+    },
+    "towns_reverse_geocoded.json": {
+      "bytes": 225879,
+      "sha256": "26b0c8fadd3e7411ea679a92667f5ad3b402c622b44a06b007afeb09e3427df0"
     }
   }
 }

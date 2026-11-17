@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-08T07:53:30+00:00",
-  "pipeline_run_id": "bd624e0d8f5642b78b70d3baa544b0f6",
+  "generated_at": "2026-11-09T07:16:47+00:00",
+  "pipeline_run_id": "6f619b35050e4995aaf4b87841f8f248",
   "source_name": "taipei_open_data",
   "station_count": 367,
   "retrieved_at": "2026-10-02T14:07:12+00:00",
@@ -11,8 +11,8 @@
       "sha256": "4de20c3db04de8a7a2640c09ed67711536f5d0c16b42a3762f7c6cf6c0ffb5e4"
     },
     "stations_with_county.json": {
-      "bytes": 424624,
-      "sha256": "350dd8cd616c0b1314f2a4cbcac039b928e58414537caeccc1517946257285fe"
+      "bytes": 435661,
+      "sha256": "fce0f9d1f478e4ab2b8fc31442b281a7e8100087393070c1d8376569c0aa70cd"
     },
     "kenya_counties_display.geojson": {
       "bytes": 186759,

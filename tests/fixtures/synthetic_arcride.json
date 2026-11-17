@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "name": "Solar Point Hub",
+      "address": "Kilimani, Nairobi, Kenya",
+      "lat": -1.29000,
+      "lng": 36.79000,
+      "imei_number": "synthetic-dev-001"
+    },
+    {
+      "name": "SOLAR POINT HUB",
+      "address": "Kilimani, Nairobi, Kenya",
+      "lat": -1.29005,
+      "lng": 36.79005,
+      "imei_number": "synthetic-dev-002"
+    },
+    {
+      "name": "Solar Point Hub",
+      "address": "Kilimani, Nairobi, Kenya",
+      "lat": -1.29002,
+      "lng": 36.79002,
+      "serial_number": "synthetic-dev-001"
+    },
+    {
+      "name": "   ",
+      "address": "Unnamed alley",
+      "lat": -1.29000,
+      "lng": 36.79000,
+      "imei_number": "synthetic-dev-unnamed"
+    },
+    {
+      "name": "Invalid Coords Station",
+      "address": "Corrupted lat",
+      "lat": "not_a_float",
+      "lng": 36.79000,
+      "imei_number": "synthetic-dev-badcoords"
+    },
+    {
+      "name": "Cairo Swap Hub",
+      "address": "Egypt Station",
+      "lat": 30.0444,
+      "lng": 31.2357,
+      "imei_number": "synthetic-dev-nonkenya"
+    },
+    {
+      "name": "Lakeside Station",
+      "address": "Oginga Odinga St, Kisumu, Kenya",
+      "lat": -0.0917,
+      "lng": 34.7680,
+      "imei_number": "synthetic-dev-kisumu"
+    }
+  ]
+}

@@ -28,7 +28,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_2",
@@ -59,7 +60,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_3",
@@ -90,7 +92,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_4",
@@ -121,7 +124,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_5",
@@ -152,7 +156,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_6",
@@ -183,7 +188,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_7",
@@ -214,7 +220,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_8",
@@ -245,7 +252,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_9",
@@ -276,7 +284,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_10",
@@ -307,7 +316,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_11",
@@ -338,7 +348,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_12",
@@ -369,7 +380,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_13",
@@ -400,7 +412,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_14",
@@ -431,7 +444,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_15",
@@ -462,7 +476,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_16",
@@ -493,7 +508,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_17",
@@ -524,7 +540,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_18",
@@ -555,7 +572,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_19",
@@ -586,7 +604,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_20",
@@ -617,7 +636,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_21",
@@ -648,7 +668,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_22",
@@ -679,7 +700,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_23",
@@ -710,7 +732,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_24",
@@ -741,7 +764,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_25",
@@ -772,7 +796,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_26",
@@ -803,7 +828,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_27",
@@ -834,7 +860,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_28",
@@ -865,7 +892,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_29",
@@ -896,7 +924,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_30",
@@ -927,7 +956,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_31",
@@ -958,7 +988,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_32",
@@ -989,7 +1020,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_33",
@@ -1020,7 +1052,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_34",
@@ -1051,7 +1084,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_35",
@@ -1082,7 +1116,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_36",
@@ -1113,7 +1148,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_37",
@@ -1144,7 +1180,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_38",
@@ -1175,7 +1212,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_39",
@@ -1206,7 +1244,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_40",
@@ -1237,7 +1276,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_41",
@@ -1268,7 +1308,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_42",
@@ -1299,7 +1340,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_43",
@@ -1330,7 +1372,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_44",
@@ -1361,7 +1404,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_45",
@@ -1392,7 +1436,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_46",
@@ -1423,7 +1468,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_47",
@@ -1454,7 +1500,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_48",
@@ -1485,7 +1532,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_49",
@@ -1516,7 +1564,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_50",
@@ -1547,7 +1596,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_51",
@@ -1578,7 +1628,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_52",
@@ -1609,7 +1660,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_53",
@@ -1640,7 +1692,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_54",
@@ -1671,7 +1724,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_55",
@@ -1702,7 +1756,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_56",
@@ -1733,7 +1788,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_57",
@@ -1764,7 +1820,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_58",
@@ -1795,7 +1852,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_59",
@@ -1826,7 +1884,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_60",
@@ -1857,7 +1916,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_61",
@@ -1888,7 +1948,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_62",
@@ -1919,7 +1980,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_63",
@@ -1950,7 +2012,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_64",
@@ -1981,7 +2044,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_65",
@@ -2012,7 +2076,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_66",
@@ -2043,7 +2108,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_67",
@@ -2074,7 +2140,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_68",
@@ -2105,7 +2172,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_69",
@@ -2136,7 +2204,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_70",
@@ -2167,7 +2236,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_71",
@@ -2198,7 +2268,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_72",
@@ -2229,7 +2300,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_73",
@@ -2260,7 +2332,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_74",
@@ -2291,7 +2364,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_75",
@@ -2322,7 +2396,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_76",
@@ -2353,7 +2428,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_77",
@@ -2384,7 +2460,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_78",
@@ -2415,7 +2492,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_79",
@@ -2446,7 +2524,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_80",
@@ -2477,7 +2556,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_81",
@@ -2508,7 +2588,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_82",
@@ -2539,7 +2620,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_83",
@@ -2570,7 +2652,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_84",
@@ -2601,7 +2684,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_85",
@@ -2632,7 +2716,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_86",
@@ -2663,7 +2748,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_87",
@@ -2694,7 +2780,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_88",
@@ -2725,7 +2812,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_89",
@@ -2756,7 +2844,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_90",
@@ -2787,7 +2876,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_91",
@@ -2818,7 +2908,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_92",
@@ -2849,7 +2940,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_93",
@@ -2880,7 +2972,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_94",
@@ -2911,7 +3004,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_95",
@@ -2942,7 +3036,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_96",
@@ -2973,7 +3068,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_97",
@@ -3004,7 +3100,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_98",
@@ -3035,7 +3132,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_99",
@@ -3066,7 +3164,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_100",
@@ -3097,7 +3196,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_101",
@@ -3128,7 +3228,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_102",
@@ -3159,7 +3260,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_103",
@@ -3190,7 +3292,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_104",
@@ -3221,7 +3324,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_105",
@@ -3252,7 +3356,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_106",
@@ -3283,7 +3388,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_107",
@@ -3314,7 +3420,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_108",
@@ -3345,7 +3452,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_109",
@@ -3376,7 +3484,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_110",
@@ -3407,7 +3516,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_111",
@@ -3438,7 +3548,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_112",
@@ -3469,7 +3580,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_113",
@@ -3500,7 +3612,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_114",
@@ -3531,7 +3644,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_115",
@@ -3562,7 +3676,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_116",
@@ -3593,7 +3708,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_117",
@@ -3624,7 +3740,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_118",
@@ -3655,7 +3772,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_119",
@@ -3686,7 +3804,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_120",
@@ -3717,7 +3836,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_121",
@@ -3748,7 +3868,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_122",
@@ -3779,7 +3900,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_123",
@@ -3810,7 +3932,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_124",
@@ -3841,7 +3964,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_125",
@@ -3872,7 +3996,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_126",
@@ -3903,7 +4028,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_127",
@@ -3934,7 +4060,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_128",
@@ -3965,7 +4092,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_129",
@@ -3996,7 +4124,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_130",
@@ -4027,7 +4156,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_131",
@@ -4058,7 +4188,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_132",
@@ -4089,7 +4220,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_133",
@@ -4120,7 +4252,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_134",
@@ -4151,7 +4284,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_135",
@@ -4182,7 +4316,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_136",
@@ -4213,7 +4348,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_137",
@@ -4244,7 +4380,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_138",
@@ -4275,7 +4412,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_139",
@@ -4306,7 +4444,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_140",
@@ -4337,7 +4476,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_141",
@@ -4368,7 +4508,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_142",
@@ -4399,7 +4540,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_143",
@@ -4430,7 +4572,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_144",
@@ -4461,7 +4604,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_145",
@@ -4492,7 +4636,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_146",
@@ -4523,7 +4668,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_147",
@@ -4554,7 +4700,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_148",
@@ -4585,7 +4732,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_149",
@@ -4616,7 +4764,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_150",
@@ -4647,7 +4796,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_151",
@@ -4678,7 +4828,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_152",
@@ -4709,7 +4860,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_153",
@@ -4740,7 +4892,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_154",
@@ -4771,7 +4924,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_155",
@@ -4802,7 +4956,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_156",
@@ -4833,7 +4988,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_157",
@@ -4864,7 +5020,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_158",
@@ -4895,7 +5052,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_159",
@@ -4926,7 +5084,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_160",
@@ -4957,7 +5116,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_161",
@@ -4988,7 +5148,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_162",
@@ -5019,7 +5180,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_163",
@@ -5050,7 +5212,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_164",
@@ -5081,7 +5244,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_165",
@@ -5112,7 +5276,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_166",
@@ -5143,7 +5308,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_167",
@@ -5174,7 +5340,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_168",
@@ -5205,7 +5372,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_169",
@@ -5236,7 +5404,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_170",
@@ -5267,7 +5436,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_171",
@@ -5298,7 +5468,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_172",
@@ -5329,7 +5500,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_173",
@@ -5360,7 +5532,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_174",
@@ -5391,7 +5564,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_175",
@@ -5422,7 +5596,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_176",
@@ -5453,7 +5628,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_177",
@@ -5484,7 +5660,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_178",
@@ -5515,7 +5692,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_179",
@@ -5546,7 +5724,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_180",
@@ -5577,7 +5756,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_181",
@@ -5608,7 +5788,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_182",
@@ -5639,7 +5820,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_183",
@@ -5670,7 +5852,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_184",
@@ -5701,7 +5884,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_185",
@@ -5732,7 +5916,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_186",
@@ -5763,7 +5948,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_187",
@@ -5794,7 +5980,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_188",
@@ -5825,7 +6012,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_189",
@@ -5856,7 +6044,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_190",
@@ -5887,7 +6076,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_191",
@@ -5918,7 +6108,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_192",
@@ -5949,7 +6140,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_193",
@@ -5980,7 +6172,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_194",
@@ -6011,7 +6204,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_195",
@@ -6042,7 +6236,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_196",
@@ -6073,7 +6268,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_197",
@@ -6104,7 +6300,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_198",
@@ -6135,7 +6332,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_199",
@@ -6166,7 +6364,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_200",
@@ -6197,7 +6396,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_201",
@@ -6228,7 +6428,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_202",
@@ -6259,7 +6460,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_203",
@@ -6290,7 +6492,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_204",
@@ -6321,7 +6524,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_205",
@@ -6352,7 +6556,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_206",
@@ -6383,7 +6588,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_207",
@@ -6414,7 +6620,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_208",
@@ -6445,7 +6652,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_209",
@@ -6476,7 +6684,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_210",
@@ -6507,7 +6716,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_211",
@@ -6538,7 +6748,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_212",
@@ -6569,7 +6780,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_213",
@@ -6600,7 +6812,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_214",
@@ -6631,7 +6844,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_215",
@@ -6662,7 +6876,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_216",
@@ -6693,7 +6908,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_217",
@@ -6724,7 +6940,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_218",
@@ -6755,7 +6972,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_219",
@@ -6786,7 +7004,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_220",
@@ -6817,7 +7036,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_221",
@@ -6848,7 +7068,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_222",
@@ -6879,7 +7100,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_223",
@@ -6910,7 +7132,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_224",
@@ -6941,7 +7164,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_225",
@@ -6972,7 +7196,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_226",
@@ -7003,7 +7228,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_227",
@@ -7034,7 +7260,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_228",
@@ -7065,7 +7292,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_229",
@@ -7096,7 +7324,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_230",
@@ -7127,7 +7356,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_231",
@@ -7158,7 +7388,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_232",
@@ -7189,7 +7420,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_233",
@@ -7220,7 +7452,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_234",
@@ -7251,7 +7484,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_235",
@@ -7282,7 +7516,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_236",
@@ -7313,7 +7548,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_237",
@@ -7344,7 +7580,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_238",
@@ -7375,7 +7612,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_239",
@@ -7406,7 +7644,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_240",
@@ -7437,7 +7676,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_241",
@@ -7468,7 +7708,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_242",
@@ -7499,7 +7740,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_243",
@@ -7530,7 +7772,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_244",
@@ -7561,7 +7804,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_245",
@@ -7592,7 +7836,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_246",
@@ -7623,7 +7868,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_247",
@@ -7654,7 +7900,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_248",
@@ -7685,7 +7932,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_249",
@@ -7716,7 +7964,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_250",
@@ -7747,7 +7996,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_251",
@@ -7778,7 +8028,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_252",
@@ -7809,7 +8060,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_253",
@@ -7840,7 +8092,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_254",
@@ -7871,7 +8124,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_255",
@@ -7902,7 +8156,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_256",
@@ -7933,7 +8188,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_257",
@@ -7964,7 +8220,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_258",
@@ -7995,7 +8252,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_259",
@@ -8026,7 +8284,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_260",
@@ -8057,7 +8316,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_261",
@@ -8088,7 +8348,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_262",
@@ -8119,7 +8380,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_263",
@@ -8150,7 +8412,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_264",
@@ -8181,7 +8444,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_265",
@@ -8212,7 +8476,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_266",
@@ -8243,7 +8508,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_267",
@@ -8274,7 +8540,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_268",
@@ -8305,7 +8572,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_269",
@@ -8336,7 +8604,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_270",
@@ -8367,7 +8636,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_271",
@@ -8398,7 +8668,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_272",
@@ -8429,7 +8700,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_273",
@@ -8460,7 +8732,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_274",
@@ -8491,7 +8764,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_275",
@@ -8522,7 +8796,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_276",
@@ -8553,7 +8828,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_277",
@@ -8584,7 +8860,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_278",
@@ -8615,7 +8892,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_279",
@@ -8646,7 +8924,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_280",
@@ -8677,7 +8956,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_281",
@@ -8708,7 +8988,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_282",
@@ -8739,7 +9020,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_283",
@@ -8770,7 +9052,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_284",
@@ -8801,7 +9084,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_285",
@@ -8832,7 +9116,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_286",
@@ -8863,7 +9148,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_287",
@@ -8894,7 +9180,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_288",
@@ -8925,7 +9212,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_289",
@@ -8956,7 +9244,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_290",
@@ -8987,7 +9276,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_291",
@@ -9018,7 +9308,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_292",
@@ -9049,7 +9340,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_293",
@@ -9080,7 +9372,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_294",
@@ -9111,7 +9404,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_295",
@@ -9142,7 +9436,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_296",
@@ -9173,7 +9468,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_297",
@@ -9204,7 +9500,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_298",
@@ -9235,7 +9532,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_299",
@@ -9266,7 +9564,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_300",
@@ -9297,7 +9596,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_301",
@@ -9328,7 +9628,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_302",
@@ -9359,7 +9660,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_303",
@@ -9390,7 +9692,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_304",
@@ -9421,7 +9724,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_305",
@@ -9452,7 +9756,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_306",
@@ -9483,7 +9788,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_307",
@@ -9514,7 +9820,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_308",
@@ -9545,7 +9852,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_309",
@@ -9576,7 +9884,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_310",
@@ -9607,7 +9916,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_311",
@@ -9638,7 +9948,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_312",
@@ -9669,7 +9980,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_313",
@@ -9700,7 +10012,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_314",
@@ -9731,7 +10044,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_315",
@@ -9762,7 +10076,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_316",
@@ -9793,7 +10108,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_317",
@@ -9824,7 +10140,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_318",
@@ -9855,7 +10172,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_319",
@@ -9886,7 +10204,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_320",
@@ -9917,7 +10236,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_321",
@@ -9948,7 +10268,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_322",
@@ -9979,7 +10300,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_323",
@@ -10010,7 +10332,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_324",
@@ -10041,7 +10364,8 @@
     "review_reason": null,
     "district": "信義區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_325",
@@ -10072,7 +10396,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_326",
@@ -10103,7 +10428,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_327",
@@ -10134,7 +10460,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_328",
@@ -10165,7 +10492,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_329",
@@ -10196,7 +10524,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_330",
@@ -10227,7 +10556,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_331",
@@ -10258,7 +10588,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_332",
@@ -10289,7 +10620,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_333",
@@ -10320,7 +10652,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_334",
@@ -10351,7 +10684,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_335",
@@ -10382,7 +10716,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "geocode"
   },
   {
     "station_id": "taipei_swap_336",
@@ -10413,7 +10748,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_337",
@@ -10444,7 +10780,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_338",
@@ -10475,7 +10812,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_339",
@@ -10506,7 +10844,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_340",
@@ -10537,7 +10876,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_341",
@@ -10568,7 +10908,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_342",
@@ -10599,7 +10940,8 @@
     "review_reason": null,
     "district": "文山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_343",
@@ -10630,7 +10972,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_344",
@@ -10661,7 +11004,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_345",
@@ -10692,7 +11036,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_346",
@@ -10723,7 +11068,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_347",
@@ -10754,7 +11100,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_348",
@@ -10785,7 +11132,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_349",
@@ -10816,7 +11164,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_350",
@@ -10847,7 +11196,8 @@
     "review_reason": null,
     "district": "南港區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_351",
@@ -10878,7 +11228,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_352",
@@ -10909,7 +11260,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_353",
@@ -10940,7 +11292,8 @@
     "review_reason": null,
     "district": "中正區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_354",
@@ -10971,7 +11324,8 @@
     "review_reason": null,
     "district": "北投區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_swap_355",
@@ -11002,7 +11356,8 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_1",
@@ -11033,7 +11388,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_2",
@@ -11064,7 +11420,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_3",
@@ -11095,7 +11452,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_4",
@@ -11126,7 +11484,8 @@
     "review_reason": null,
     "district": "大同區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_5",
@@ -11157,7 +11516,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_6",
@@ -11188,7 +11548,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_7",
@@ -11219,7 +11580,8 @@
     "review_reason": null,
     "district": "萬華區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_8",
@@ -11250,7 +11612,8 @@
     "review_reason": null,
     "district": "中山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_9",
@@ -11281,7 +11644,8 @@
     "review_reason": null,
     "district": "內湖區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_10",
@@ -11312,7 +11676,8 @@
     "review_reason": null,
     "district": "大安區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_11",
@@ -11343,7 +11708,8 @@
     "review_reason": null,
     "district": "松山區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   },
   {
     "station_id": "taipei_charge_12",
@@ -11374,6 +11740,7 @@
     "review_reason": null,
     "district": "士林區",
     "district_match_method": "contains",
-    "matched_counties": null
+    "matched_counties": null,
+    "coord_origin": "survey"
   }
 ]

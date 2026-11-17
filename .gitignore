@@ -21,9 +21,10 @@ data/raw/taipei/doorplates.csv
 # Local tunnel binary
 .bin/
 
-# Streamlit copies dashboard + public data here at runtime
-app/static/dashboard/
-app/static/data/
+# Streamlit copies dashboard + public data here for serving
+# (Do not ignore so git and Databricks bundle sync upload the served app assets)
+!app/static/dashboard/
+!app/static/data/
 
 # Phase 1 bake from scripts/prepare_databricks_app.sh (do not commit)
 app/dashboard/
@@ -33,3 +34,11 @@ app/data/
 .databricks/
 
 
+
+# Local untracked configurations
+config.local.json
+*.local.json
+
+# Local ingestion directories (raw drops and raw archive)
+data/inbox/
+data/archive/

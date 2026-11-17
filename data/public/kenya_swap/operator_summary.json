@@ -1,0 +1,18 @@
+[
+  {
+    "operator": "ARC Ride",
+    "swap_station_count": 163,
+    "total_count": 163,
+    "cabinet_count": 280,
+    "excluded_invalid_coordinates": 0,
+    "retrieved_on": "2026-10-21"
+  },
+  {
+    "operator": "Spiro",
+    "swap_station_count": 503,
+    "total_count": 503,
+    "cabinet_count": null,
+    "excluded_invalid_coordinates": 0,
+    "retrieved_on": "2026-10-21"
+  }
+]

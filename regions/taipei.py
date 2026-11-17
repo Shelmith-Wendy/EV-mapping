@@ -430,6 +430,8 @@ class TaipeiStationSource:
             else:
                 station["latitude"] = lat
                 station["longitude"] = lng
+                query_used = cache.get(station["address_raw"], {}).get("query_used")
+                station["coord_origin"] = "survey" if query_used == "doorplate" else "geocode"
                 geocoded.append(station)
             if index % 25 == 0 or index == len(records):
                 save_geocode_cache(cache)

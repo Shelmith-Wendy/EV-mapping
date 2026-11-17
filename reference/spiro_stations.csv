@@ -1,0 +1,504 @@
+operator,name,address,latitude,longitude,cabinet_count,source,retrieved_on
+Spiro,Mwiki Rd,"Kasarani Mwiki Road, Nairobi, Kenya",-1.235328,36.933348,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bishan Plaza,"Westlands, Nairobi, Kenya",-1.264169,36.805684,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Industrial Area Fofo,"Dunga Close, Nairobi, Kenya",-1.301628,36.830071,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Embakasi,"Embakasi, Nairobi, Kenya",-1.325232,36.896859,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bombululu,"GF-3, Petro City fuel station, Bombululu",-4.028019,39.693583,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Malindi 1,"BP Malindi, Mombasa - Malindi Road, Malindi, Kenya",-3.223422,40.111162,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Utange 1,"Old Malindi Rd, Mombasa, Kenya",-3.987074,39.712591,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bamburi Petrocity,"Bamburi, Mombasa, Kenya",-4.001719,39.69929,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Changamwe,"office No 1, Ground Floor, Title No. 3789/VI/MN Changamwe, Opposite Shell fuel station",-4.026738,39.628087,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Utange 2,"Utange, Mombasa, Kenya",-3.97159,39.720744,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyali Cinemax,"Hariz & Son Properties, Shop No 7, Subdivision No 780, Section 1, Mainland North, Mkomani, Mombasa",-4.05401,39.68494,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Dagoretti Corner,Opposite Karandini Market,-1.29895,36.757879,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Karen,Karen near Karen police station,-1.321283,36.709441,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bondo,"Bondo Town, Siaya County",-0.094237,34.257363,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bondo 2,"Bondo Town, Kisian - Bondo - Useme Road",-0.102321,34.27808,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kakanjuni,Near Timboni Prymary School,-3.555433,39.825341,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lubao,"Luabo, Next to Lubao Market",0.335091,34.814346,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Westlands 2 (fofo),"Westlands, Opposite Sarit Centre",-1.260625,36.803017,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kabras,"Kabras, Next to Kakunga SDA Church",0.3788,34.853,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kimilili,Opposite Kimilili Coop Bank,0.78317,34.720868,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chiga,Opposite Zaira Hotel Kisumu,-0.099104,34.847713,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kamkuywa,"Kamkuywa, Bungoma County",0.77872,34.78994,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Musikoma,"Next to Musikoma, ACK Church",0.533271,34.553767,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mateka,Opposite Mateka Market,0.536422,34.49937,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bukura,"Bukura, Opposite KAG Church Bukura",0.219829,34.619408,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kanduyi,Opposite Elegant Hotel,0.587908,34.55498,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mtwapa 3,"Mtwapa Petrocity 2, Near QuickMart",-3.947563,39.745418,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Majengo Vihiga,Majengo Gisambai Road,0.049012,34.729223,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mlango Eldoret,"Opposite Newlands Hotel, Yala-Stendikisa road",0.391314,35.192686,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nashianda,"Nashianda Centre, next to Prola academy",0.493352,34.452194,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Busia Cbd,"Kisumu - Busia Rd, Near Hotel Rowcena",0.462909,34.101594,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Laare,"Laare Centre, Meru county",0.334436,37.936332,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Matsangoni,"Matsangoni Centre, Malindi highway",-3.384623,39.929203,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Litein,"Litein Town, Near St Gabriel Hospital",-0.588248,35.19488,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kagio_test_please_ignore,,-1.477744,36.958153,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Miseleni,"Miseleni centre, Near Miseleni Primary School",-1.175185,37.352662,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kituneni,"Kituneni centre, Next to kituneni Market",-1.286089,37.418735,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Jogoo Rd (oryx) 1,"Jogoo Road, Nairobi, Kenya",-1.298048,36.868682,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Umoja (phase 1),"Umoja Phase 1, Nairobi, Kenya",-1.277323,36.893679,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lucky Summer,"Lucky Summer, Nairobi, Kenya",-1.239559,36.895653,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Stanmerpark,"STANMER PARK, Joseph Kangethe Road, Nairobi, Kenya",-1.302504,36.780379,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kibera,"Kibera, Nairobi, Kenya",-1.309467,36.773626,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Fedha,"Fedha Estate, Nairobi, Kenya",-1.313219,36.893594,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Uthiru,"Stage View Bar, Uthiru, Nairobi City, Kenya",-1.259804,36.719109,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ruaka (galana),"Galana Energies Station - Ruaka Town, Ruaka Hill Road, Ruaka, Kenya",-1.209502,36.788358,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Subaru (mogo),"Subaru Kenya Mombasa Road, Mombasa Road, Nairobi, Kenya",-1.331306,36.8561,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Gigiri (petrocity),"PETROCITY GIGIRI STATION, Limuru Road, Nairobi, Kenya",-1.235996,36.807051,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Prestige - Soko Safi Mall,"Ngong Road, Soko safi Mall. Near Greenhouse mall.",-1.300271,36.78266,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kayole,"Kayole Spine Road, Nairobi, Kenya",-1.27179,36.911859,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ukunda- Diani,"PH7G+PC5 Diani Beach, Kenya",-4.2878,39.579483,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kilifi,"Kilifi County, Kenya",-3.632636,39.84749,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Malindi 2,"OLA Energy Malindi Road, Malindi-Garsen Road, Malindi, Kenya",-3.19126,40.112908,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Rongo,"Rongo Town, Homa Bay County",-0.75233,34.597964,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Shanzu Petrocity,"SHOP 2, GF, Petro City fuel Station, SHANZU, Mtvapa Mumbasa highway",-3.983463,39.738188,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mtwapa 1,"Shop No 2, BOTA House, Original No. 742/1 Sec III, Mainland North, Subdivision No. 2439, Mtvapa Town, Kilifi",-3.952445,39.743407,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kangemi Fofo,"Waiyaki Way, Nairobi, Kenya",-1.263607,36.7481,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Likoni Shelly Beach,"VMQ7+PMQ Mombasa, Kenya",-4.110401,39.664143,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bakarani,"XMPV+22V Mombasa, Kenya",-4.01497,39.69272,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Donholm,"Manyanja Road, Donholm, Nairobi, Kenya",-1.294567,36.887867,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Utawala,"Utawala, Nairobi, Kenya",-1.286566,36.953338,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Jomvu Petrocity,"GF-1, Petro City fuel Station, Jomvu",-4.00805,39.60409,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Grandpri Cbd Eldoret,"Nandi Road, Eldoret, Kenya",0.514626,35.278221,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kimumu (iten Rd),"Kimumu, Eldoret, Kenya",0.547223,35.305522,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Otonglo (costalina),"Otonglo Stage, Kisumu - Busia Road, Kisumu, Kenya",-0.074503,34.696962,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyamasaria -kisumu,"Nyamasaria, Kisumu, Kenya",-0.11,34.78,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kisumu (cbd),"MOGO Boda Boda Store, Kisumu, Kenya",-0.099693,34.752767,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kegati - Kisii,"Kegati, Kenya",-0.710093,34.820514,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mwembe - Kisii,"Okeiga Park Apartments, Kisii - Kilgoris Road, Kisii, Kenya",-0.688981,34.776249,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Meena Kakamega,"Jamia Mosque Kakamega, C40, Kakamega, Kenya",0.282199,34.747519,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kitengela Fofo,"Near QuickMart - Kitengela, Nairobi - Namanga Road, Kitengela, Kenya",-1.500959,36.954594,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kapsabet,"Jean-Marie Road, next to Kipchimatt Supermarket, Kapsabet Town",0.20188,35.09889,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kilifi 2,"Kiwandani, Kilifi town",-3.614853,39.863631,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Watamu,Gede - Watamu Road.,-3.322584,40.012735,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kapsabet-2,"Namgoi, Opposite Kapsabet Boys",0.202341,35.115607,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ahero,Opposite Ahero Multipurpose,-0.173909,34.931255,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Webuye,"Near Khetias Supermarket, Webuye Town.",0.608216,34.770346,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chwele,Chwele Market,0.735299,34.576851,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Makutano Bungoma,Makutano town,0.605391,34.543175,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kenol,"Meru - Nairobi Highway, Near Chewa House",-0.936806,37.13462,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mayanja,Mayanja Market,0.592332,34.488129,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kawangware Galana,"Galana Energies, Kawangware 46",-1.284313,36.743046,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lower Kabete,"Lower Kabete, Kamutiini stage",-1.232379,36.708742,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mlolongo,"Mlolongo Town, next to Foot bridge",-1.399791,36.943509,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Luanda,"Luanda Town, Near Police station",0.028542,34.582018,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Rongai,"Magadi Road, Rongai Town",-1.390139,36.767269,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Katito,"Katito, Kisumu County",-0.267758,34.970082,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mbale,"Mbale Town, Vihiga County",0.082888,34.721946,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kona Nandi,"Kona, Nandi County",0.260424,35.224519,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bungoma,Bungoma CBD,0.571312,34.563339,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Utawala Fofo,"Utawala Town,Eeastern Bypass",-1.285673,36.955068,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kombani,"Kombani, Ukunda Highway",-4.196293,39.590846,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kaloleni,"Kaloleni, Kilifi County",-3.817331,39.625041,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Likoni 2,"Likoni, Shika Adabu",-4.116345,39.635963,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Suneka,"Suneka Town, Kisii County",-0.677818,34.71199,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Rubis Ojijo,"Rubis Ojijo Road, Parklands",-1.266895,36.81144,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Rubis Dagoretti,"Rubis station, Dagoretti Corner",-1.29849,36.760647,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nandi Hills,"Nandi Hills, Nandi County",0.099793,35.186253,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Roysambu,"Near Thika Road Mall, Thika Road",-1.2178,36.889897,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kimbo,"Kimbo Shopping Centre, Thika road",-1.134728,36.975867,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Awasi,"Awasi, Kisii County",-0.163472,35.072707,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ndalat,"Ndalat Centre, Nandi County",0.519988,35.107498,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mosoriot,"Mosriot, Nandi county",0.320118,35.167562,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Marurui,"Marurui, Northern Bypass",-1.210461,36.871698,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Langas,"Langas, , Airport Road",0.485906,35.257401,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Shariani,"Shariani, Kilifi County",-3.786747,39.821474,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kapseret,"Kapseret, Near Airport",0.44801,35.240053,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lessos,"Lessos, Nandi County",0.219064,35.299336,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Eastleigh Fofo,Eastleigh Sec 3,-1.265544,36.856099,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Oyugis,"Oyugis Town, Near KCB Oyugis",-0.5137,34.733607,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Githurai - 45,"Githurai 45 Railway Station, Unnamed Road, Githurai, Kenya",-1.206819,36.920726,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kakamega 2,"Opposite Bukhungu Stadium, Kakamega Town",0.291171,34.7599,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chokaa,"Chokaa Centre, Kangundo road, Next to Chokaa stage",-1.250731,36.953124,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mbita Fofo,"Mbita Icipe Junction, Left hand side from Homabay",-0.433041,34.209369,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kipkaren,Near Masjid Taqwa Mosque,0.606295,34.964157,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kabarnet,Near Kabarnet water treatment plant,0.495456,35.747029,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Birongo,Opposite Birongo Market,-0.748549,34.889528,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyamache,"Riogenyo - Nyamache Road, Near Bata shop",-0.857447,34.822021,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ndunyu,"Dagoretti market, Dagoretti Road",-1.285087,36.687871,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ikonyero,Ikonyero shopping Centre,0.277004,34.73083,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Murhanda,Near Murhanda Pry School,0.262068,34.797547,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Sabatia,Next to Deliverance church Sabatia,0.232606,34.529683,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bukembe,Next to Bukembe Dispensary,0.612251,34.6565,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kiambu Town Fofo,Near Kiambu SDA Church,-1.171412,36.827651,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kabula,"Kabula, Mumias - Bungoma Road",0.484489,34.528916,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bungoma 2,"Opposite Governor's office, Bungoma Town",0.567121,34.561603,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Butere,Opposite Butere G4S office,0.217526,34.499466,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Shibuli,Past Ebuchinga Secondary,0.283908,34.64308,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Olare,Next Ondiche SDA Church,-0.491352,34.52857,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Koyani,Near ACK st Paul's Church,-0.542449,34.339685,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Rangenyo,Near Rangenyo primary,-0.534429,34.90795,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kilala,"Kilala Market, Opposite Kilala Dispensary",-1.574177,37.635089,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chepterit,"Chepterit, Nandi County",0.228508,35.144245,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chavakali,"Stendikisa, Near Highway Autoparts",0.112196,34.727505,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Manga,"Manga Shopping centre, Near Social Hall",-0.615972,34.834455,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyatieko,"Nyatieko-Kisii Road, Opposite Nyatieko Secondary",-0.638422,34.795754,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyachenge,"Opposite Hotel Apex, Nyachenge Centre",-0.718583,34.649745,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Tala,"Tala Market, Near Matungulu Sub-county office",-1.269486,37.322658,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ngecha,"Ngecha, Next to Gikuni Junction",-1.193058,36.679382,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kijabe,"Next to Jubilee Hotel, Kijabe town",-0.941137,36.616984,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Eronge,Opposite Entanda KAG church,-0.570188,34.837655,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Butali,Next to Shalom Gospel Church,0.493308,34.834961,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mishomoroni,Kengelani Road,-4.01814,39.683731,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mosocho,Next to Cardinal Otunga High school,-0.583976,34.73092,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ruai Fofo,"Ruai Shopping Centre, Next to Naivas Supermarket",-1.262291,36.98341,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Eshisiru,"Near Pennjoki resort, Kakmega County",0.278912,34.680413,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kendu Bay,"Kattito Highway, Kendu BAy",-0.366183,34.654951,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Got Kokech,Next to Got Kokech Market,-0.505165,34.493194,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mutumbu,Near Mutumbu Market.,0.115984,34.446483,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mariakani,Near Jamia Masjid Mariakani Mosque,-3.863601,39.473652,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lwandeti,"Kipkaren - Webuye Road, near Pentagonn inn",0.605776,34.851027,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mulwanda,Next to Mulwanda ACK Parish,0.143644,34.565984,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Njoro,Next to Njoro Methodist Church,-0.335311,35.947628,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Riat 1,Next to Kakamega Highway - Riat University Road Roundabout,-0.040733,34.761386,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Elgons,"Kibos Road, next to Kirdi Institute",-0.076214,34.794634,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Getare,Near Full Gospel Ministry Church,-0.666796,34.793393,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Riat 2,"Kisian - Bondo Road, Near Mama Doctor Hotel",-0.063242,34.436842,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Sikri,"Sikri Centre, Rongo - Kisii Road",-0.485903,34.772179,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Matete,"Matete Town, near Mwalimu Centre",0.561691,34.803006,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ngara 2 Fofo,"Ngara, Next to Glory Palace Hotel",-1.273573,36.826028,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Homa Bay Fofo,"Next to Raila Odinga Stadium, Homa Bay Town",-0.537382,34.453627,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Githurai 45 Fofo,"Thika Road, Near Githurai Equity Bank",-1.206975,36.91665,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Sogomo,"Sogomo Centre, Kitale Cheragani Road",0.585729,35.309084,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bondeni,"Mkulima Agrovet, Turbo-Juakali Road",0.602234,35.14339,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Iten Town,"Kerio Valley Road, Opposite Victorious Church",0.660392,35.504142,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kesses,"Next to Club Octopus, Kesses Corner",0.293675,35.325986,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chembulet,"Chembulet, Next to Katalil Hardware",0.61974,35.431858,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Juja Fofo,"Juja Town, Next to Mathais Supermarket",-1.107064,37.014598,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kasongo,"Kasongo Market, Opposte Christian Believers Fellowship",-0.082719,34.974883,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mikindani Fofo,Mikindani Near Kijiweni stage,-4.008836,39.627407,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Daraja Mbili,"Daraja Mbili, near QuickMart",-0.66589,34.762451,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Syokimau Fofo,"Rim House, off Quarry road",-1.354007,36.966826,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Sindo Fofo,"Sindo Town, Near Victory farms",-0.541307,34.166937,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Masii,"Masii Town, Near SDA MAsii Church",-1.46292,37.437913,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mwala,"Furaha Town, Next to Furaha Market",-1.352259,37.452721,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Wamunyu,Near Westend medical clinic,-1.407698,37.561752,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Miu,"Miu Centre, Near Miu Health centre",-1.52307,37.57538,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Machakos Town,Opposite Machakos University Hotel,-1.529013,37.264425,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Muthetheni,"Muthetheni Market, next to Muthetheni Prymary",-1.498686,37.518132,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kyawango,Opposite Kyawango Health centre,-1.331315,37.500898,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mwanzo,"Mwanzo Centre, off Mitaa road.",0.530091,35.255715,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kesogon,Next to Kesogon Secondary school,0.040631,34.99766,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kapsasur,Stendikisa - Yala road,0.19606,35.037663,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kivutini,"Kivutini Centre, Opposite Kivutini market",-1.435843,37.24665,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kisian,"Desnol Petrostation, Kisumu Busia road",-0.071677,34.664513,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kitale Soil,Near Kitale National Polytechnic,1.016141,34.994118,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Pangani Fofo,"Mogira road, Near Mogira Medical services",-1.272536,36.833209,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Dandora Kwa Maji Fofo,"Kangundo Road, Near Kwa Maji Garage",-1.270481,36.900109,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mamba Fofo,On Nyerere road and Ondiek Highway Junction,-0.092785,34.76061,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kondele Fofo,Kenyatta Highway near Kondele Roundabout,-0.084875,34.772947,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Migori Town,"Migori Town near, Equity bank Migori branch",-1.069223,34.470591,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kyalavo,Opposite theRoyal Half London Pub,-1.546442,37.62024,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Eldoret Eastleigh Fofo,"Sosian Street, Eastleigh, Eldoret Town",0.518519,35.267131,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kawangware Fofo,"NAIVASHA RD OPPOSITE PRECIOUS BLOOD SCHOOL, Behind Muthokinjo Hardware.",-1.286158,36.738962,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Dandora (phase 1),"Dandora phase 1, Nairobi, Kenya",-1.260162,36.889673,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Voi Cbd,Voi CBD near Zion Guest House,-3.394677,38.562126,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Voi Kaloleni,"Voi, Near Kilimamjaro Doors",-3.391224,38.57815,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Naitiri,Near Rai Sugar Company,0.757891,34.889052,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kanyariri,off gitaru road western bypass,-1.228698,36.694459,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Huruma Fofo,"Hear Outreach Hope church, Off Juja Road",-1.262387,36.863094,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mboroti,Near Exxon Filling station,-1.188492,36.598771,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kaiboi,"Kaiboi Market near, Joyland Hotel",0.420583,35.015379,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mundika,Near Maasai Butchery,0.415833,34.146699,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Sidende,"Busia-Mumias Rd, Okoki Shop",0.444927,34.353762,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nambale,"Busia-Mumias Rd, The Mutukufu Electricals.",0.461491,34.232753,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Yathui,"C101, Near Classic Butchery Shop",-1.454646,37.574349,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Serem,Near The Carabart Business Centre,0.082999,34.850837,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Tente,Tente Centre near Dubai Guest house,-0.578186,34.933868,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ombwede,Near Mulaha Dispensary.,0.048675,34.257372,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyandiwa,"Nyandiwa-Tinga Way, Nyandiwa Primary School.",0.043851,34.245977,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mtwapa Petrocity,"GF-4A, Petro City fuel Station, Mtvapa Town",-3.927389,39.751248,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Likoni Motors,"WM95+79Q Mombasa, Kenya",-4.091841,39.649502,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kimaeti,Adjacent to Annex Filling station Kimaeti,0.602299,34.406878,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lumakanda,"Lumakanda Centre, Near KPLC offices",0.633828,34.97447,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kangema,Near Kahunguro Photo Studio,-0.684349,36.961565,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nambacha,Adjacent Nambacha Market,0.394978,34.665048,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ugunja,Near Ugunja Police station,0.184574,34.303755,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Sega,"Kisumu-Busia Rd, Globals Liqours Bar.",0.264153,34.222058,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Sigomere,Near Hyper Supermarket.,0.201324,34.357981,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ukwala,"Ukwala Rwambwa Rd, Near Ukwala Boys high school",0.190193,34.183883,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chianda,"C28, Chianda Shopping Centre.",-0.245023,34.342978,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Tezo,"Tezo, Kilifi, Kenya",-3.534549,39.879594,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kengeleni,"Kengeleni, Mombasa Kenya",-4.04,39.68,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Galleria,"Langata Rd, Near XSAT Limited",-1.342078,36.761234,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kayole Junction,"Kayole Junction, Opposite Magunas",-1.256304,36.925889,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nalondo,"Nalondo Centre, Opposite Jacaranda Business Centre",0.656222,34.589361,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Anyuongi,Near Kajwala General Store.,-0.184457,34.279846,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Manyuanda,Near Manyuanda Health Centre (Rarieda).,-0.254222,34.276764,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Emusala,Emusala Centre near Tembesi Fish Farm,0.328001,34.781825,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kombewa,"Kisian-Bondo-Usenge road, Opposite The Glad Tidings Church",-0.110032,34.527166,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Emukaba,Opposite Emukaba Market,0.34173,34.762934,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Magena,"Magena Centre, Kisii Kilgoris Road, Next to Magena Market",-0.906165,34.795933,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kainange,"Dagoretti Road, Near Propserity Way Junction",-1.213466,36.602083,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Riosiri,"Riosiri Market, opposite Leonah Hotel",-0.769372,34.624315,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ndigwa,Near Workgroup Convention Centre.,-0.337986,34.323365,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Pap Onditi,"Pap Onditi-Olwalo road, Opposite Pap General Hardware",-0.310734,34.936536,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mamboleo,next to tupande duka mamboleo,-0.059737,34.783052,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Alendu,"Kisumu - Busia Rd, Luxury Village Resort.",-0.151791,34.815496,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Gikuni,Gikuni Shopping Centre,-1.196038,36.697939,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Joska,Nex to shell Petrol StationJoska,-1.282215,37.1039,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ting'a,Behind Deneva Filling station,-0.612127,34.889769,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ngong,Galana Energies Ngong Town,-1.353318,36.6577,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Soy,"Soy, Uasin Gishu County",0.680383,35.155665,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ngara Fofo,"Near Globe Roundabout, Nairobi",-1.27525,36.822597,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ekero,"Ekero, opposite Ekero Mosque",0.322297,34.508403,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kemera,Near Kemera stage,-0.664849,34.843294,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kutus,Opposite St Trizas Hisgh school,-0.565465,37.327391,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kagio,Near Second Hand clothes stalls,-0.62743,37.253152,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Gichugo,Opposite Gichungo Police Post,-1.271427,36.692833,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mawlem,Adjacent to Mawlem Heights,-1.254506,36.911318,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Work Centre,"Busia Mumias Road, Works View Emukhuyu",0.46373,34.299459,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Dondi,"Luanda - Siaya Rd, JUNNO CHEMIST",0.040197,34.331649,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyali Links Road,off nyali links road,-4.045082,39.699942,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kapsoo,"Kabarnet - Eldama Ravine Road, Near Karen Dogo Kabarnet",0.47009,35.76722,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Dabani,Dabani Trading Center,0.43211,34.049043,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mbaraki,"Mbaraki Rd, Likoni bridge, Mombasa - Showroom, Service and swap",-4.074503,39.666598,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Gongoni,"Gongoni Centre, Kilifi County",-3.036412,40.136961,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Thika Town,"Shell station, Thika Town",-1.04305,37.066246,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Khayega,Khayega,0.194814,34.766871,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Gitimbine,"Embu - Meru Highway, Near Kenchic Kuku Shop Gitimbine",0.041389,37.653028,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kakamega 3,"Amalemba, Kakamega Town",0.268645,34.752126,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Shianda,"Shianda, Kakamega County",0.32048,34.570435,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Navakholo,Kakamega County,0.415048,34.679726,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Toll Station Thika Rd,GEL Thika road Toll station,-1.129583,36.985084,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kamakis,"GEL Kamakis, Eastern Bypass",-1.166527,36.961237,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Athi River,GEL Athi River,-1.436591,36.975214,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Roasters,"Roasters, Thika Road",-1.235439,36.868691,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Misikhu,"Misikhu, Bungoma County",0.71487,34.7553,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Siaya Town,"Mwisho Mwisho, Siaya Town",0.056458,34.291501,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Gachie,Along Kihara Gachie Road,-1.219766,36.771818,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Merewet,"Kitale-Cherangani Rd, Near Barago Agro-Vet",0.719627,35.29995,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kemeloi,Near Kemeloi Health Centre,0.045412,34.912635,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Makuyu,Near Mukarara Shopping Centre,-0.897991,37.185022,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyabisabo,Near Nyakebaku Deb Primary,-0.779298,34.826312,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Milalani,"Ukunda - Ramisi Rd, Opposite Ultimate Concept Co. cell phone store",-4.47409,39.459965,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Maragua 1,Near Farmers Best Animal Feeds,-0.799588,37.125105,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kambiti,"Embu - Nairobi Highway, Near Farmers Agrovet",-0.830759,37.232193,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mogonga,"Mogunga-Kenyenya/Etago Rd, Near Mitumba Camera Store",-0.861665,34.755966,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kadongo Ss,"Kisumu - Kisii Rd, Near Komala Plaza",-0.446038,34.89237,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ingoste,"Ingoste - Isongo Rd, Near Bushiri health Centre",0.35195,34.699504,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kk Meru,KK Centre near Machungulu Sec School,0.293743,37.939711,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Malava,"Malava Centre, near Malava Sub-County Hospital",0.447388,34.854191,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,West Kenya,Opposite West Kenya Sugar Company,0.377377,34.830987,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bushiri,"Bushiri Centre, Near Bushiri Market",0.365515,34.728199,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nkubu,"Meru - Nairobi Highway, Near Travellers Tavern Hotel",-0.0661,37.663295,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Maua,"Maua Centre, Near Kijiji stage",0.229314,37.941903,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kahawa West,"Quickmart Kahawa West, Nairobi, Kenya",-1.182799,36.895592,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Got Rabuor,Near Monato SDA Church,-0.525975,34.472969,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyadorera,Near Nyadorera Market.,0.109504,34.102715,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Usenge,"Kisian-Bondo-Usenge-Rd, Near Usenge Central SDA church",-0.065918,34.057443,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyamonye,Near ACK Nyamonye.,-0.051768,34.148347,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ndori,"Kisian-Bondo-Usenge Rd, Lakers Lounge.",-0.07052,34.377033,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Eregi,Eregi Centre near Dimples Supermarket,0.14925,34.710119,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ndwara,"C28, Mito Business Centre.",-0.178381,34.352913,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mucharage,"Kakamega -Kitale Road, next to Milima Treatment Hub",0.817347,34.852879,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Makutano Embu,Embu -Meru Highway near Meridian Hotel,-0.757458,37.278321,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Malakisi,"Malakisi Centre, Near Malakisi Health Centre",0.681157,34.421196,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Boyani,"Kisumu - Vihiga Road, Opposite The Nest Boyani",0.020887,34.725216,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Makunga,"Makunga Centre, Near Makunga Market",0.300446,34.623624,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Maragua 2,Near Deliverance Church Maragua(DCM),-0.791974,37.130044,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mumbi,Near Mumbi Police Post.,-0.728329,37.161017,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Keroka,Near Roy Resort,-0.775734,34.944308,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Meena Collections,"Kisumu Road, Eldoret, Kenya",0.510205,35.274985,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kakoyi,Near Usomi Church,0.400628,34.85739,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bukandanyi,Near BEE-TECH.CYBER,0.444167,34.328349,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kaptimbor,"Kaptimbor Centre, Opposite Kaptimbor Primary School",0.496891,35.729899,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Malindi Kwa Chocha,Malindi kwa Chocha Near Malindi Airport,-3.241854,40.090376,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Malindi Maweni,"Malindi Maweni, near Malindi Law courts",-3.223558,40.124482,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Umoja Charina Fofo,"Off Kangundo road, Near Charina",-1.276397,36.887697,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lunga Lunga Road Fofo,Next to kuguru complex,-1.324773,36.870805,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kahawa West Fofo,Opposite Farmer's Choice Gate 1,-1.186006,36.907633,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kiserian Fofo,off forest line road,-1.424868,36.685412,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kaimosi,"Kaimosi, Cheptulu",0.129302,34.868928,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Holo,"Holo, Kisumu County",-0.09727,34.59637,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kathivo,Near Glory Hotel.,-1.284967,37.933375,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyagesenda,Near Getembe-Kenyarara Medical Centre,-0.58748,34.813383,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Regen,"Regen, near Family Chapel Church",-1.249525,36.679464,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kangeta,"Meru - Maua Rd, Near Jesus Winner Ministry Kangeta Branch",0.275917,37.882492,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Gakungu,"Meru - Nairobi Highway, Near Lake Oil Makuyu",-0.914939,37.200543,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Sang'alo,"Kakamega - Bungoma Rd, Near Eye Rafiki Optician",0.515988,34.591315,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Muhuru Tagache Ss,"Migori - Muhuru Rd, Near Muhuru Sub-county Hospital",-1.013751,34.131129,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Vihiga Primary,"Kima Majengo Road, Near Vihiga Primary School",0.035077,34.709602,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kehancha,Near Entanda KAG Church,-1.191002,34.612693,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Highpoint,"Meru - Nairobi Highway, Near Marbles Lounge and Grill",-1.092688,37.029279,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mutomo,"Kenyatta Road, Near Milestone Hardware",-1.032362,36.917418,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Theta,Near County Hotel,-1.141588,37.00717,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bonje,"Dongo - Kundu Bypass, Near Petrocity Bonje",-4.002727,39.566438,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Simat,Near Mutwot Gen Distributors,0.517365,35.191793,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Keumbu,Opposite Keumbu Sub-county Hospital,-0.762419,34.829224,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ndurio,"Ndurio Centre, next to Ndurio AIC church",0.025408,35.030395,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Gatua,"Eldoret-Kitale Rd, Near Bidii Farm Machinery Kitale",0.982433,35.033559,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Eldoret Annex,Annex Near Stabex petrostation,0.485835,35.301643,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Baharini,"Eldoret - Jua Kali Rd, NearDiesel Power Petrol Station",0.577895,35.221892,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Malaba Cbd,"Road A104, Near Malaba Town CBD Electronics Store",0.634956,34.278344,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lukolis,"Busia - Malaba Rd, Near Lukolis Chemist",0.579405,34.201497,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Runyenjes,"Embu - Meru Highway, Near Total Energies Runyenjes Service Station",-0.42573,37.567182,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mwihoko,Near Christ Our Refuge Children's Home,-1.2036,36.956133,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mavoko,Near Mavoko Water and Sewerage,-1.450028,36.979459,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Buyangu,"Kisumu - Busia Rd, Near Stars Wines & Spirits",0.085234,34.565658,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Tangakona,"Busia - Mumias Rd, Near Mlo Hotel",0.482149,34.218736,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kijeuri,Near TEABURG Investment,-0.756394,35.014029,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kwale Town,near royal family salon and barber,-4.175591,39.450865,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Obambo,"Kisian - Bondo - Usenge Rd, Near Pork Point Butchery",-0.105633,34.624605,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lela,"Kisumu - Busia Rd, Near Alva Resort",-0.028563,34.60717,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mwabungo,"Ukunda - Ramisi Rd, Near Zumzum",-4.347741,39.536741,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Githurai 45 2,Near Harriet Uniforms Clothing Store,-1.217116,36.924357,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kamwangi,Kamwangi Centre,-0.958307,36.89843,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Soweto Fofo,Next to cinema gamers,-1.288393,36.909023,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bronjo,"Kitale - Cherangani Rd, Near Bronjo Shopping Centre",0.885595,35.24325,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bakulei,"Kitale- Cherangani Rd, Near Bakulei Shopping Centre",0.909043,35.26085,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lemook,Near Lemook Soko Trading Centre,0.501963,35.155896,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Meru Town,"Embu - Meru Highway, Opposite Pink Orchid Hotel",0.054048,37.644984,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Strawbarg,Near Strobag Plaza,0.442577,35.423278,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Flax,Near Limbai Shop,0.371492,35.468786,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chepkorio,Near Stage Point Agrovet,0.367828,35.54368,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chemuswa,Near Genesis General Stores,0.343044,35.115313,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mugundoi,"Kipsigak Serem Rd, Near Mugundoi A.C.K",0.12163,35.118137,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Sabaki,"Mombasa Road, Near Bell Energy Saving",-1.424703,36.955582,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ndenderu,"Limuru Road, Near Luwaki Gardens",-1.199541,36.754187,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kiuru 87,"Kiuru Road, Near Riverside Crescent",-1.266671,36.705642,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Wangige,"Getathuru Road, Near Wangige Market",-1.22182,36.715032,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chuka,"Meru - Nairobi Highway, Near Mwema Investments",-0.334073,37.649295,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kimang'eti,Near Kimang'eti Market,0.430911,34.910009,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ejinja,"Busia - Mumias Rd, Near Digital Classic Butchery",0.410085,34.44566,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kivwe,"Embu - Meru Highway, Near Mwenzangu Shopping Complex",-0.475045,37.499325,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Gakwegori,"Embu - Meru Highway, Near Frimax Fashion Collections",-0.491441,37.463714,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ngeria,Near Ngeria Shopping Centre,0.393538,35.326445,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lincos,"Meru - Nairobi Highway, Near Shell Meru Nairobi Highway",-0.541249,37.455497,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ganze,"Vitengine Ganze Road, Near Miracle Revival Pentecostal",-3.537316,39.687646,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mosombor,"Kaptumo Savani Rd, Near Mwalimu Shop",0.056165,35.095535,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ndhiwa,Near Ndhiwa Township Primary School,-0.729629,34.367318,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Uriri,Near Kijij Hardware,-0.954667,34.513167,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Masimba,Near Mama Ramsey Shops,-0.864023,34.937417,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyamataro,"Daraja Mbili - Nyamataro Rd, Near Umoja Cement Centre",-0.654354,34.752228,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyangweso,Near Double Jay Hardware,-0.475332,34.544112,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Siakago,"Embu - Meru Highway, Near Mancave Executive Barber shop",-0.576677,37.638377,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ndumberi,Near Bluvillah,-1.152321,36.802335,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Membley,"Eastern Bypass, Near Mathmag Builders",-1.159978,36.940616,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chimoi,"Eldoret - Malaba Rd, Near Highway Butchery",0.576263,34.82329,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Githiga,Githunguri - Githiga Rd,-1.087023,36.737053,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Gatuanyaga,Near Victory Farmers Agrovet,-1.061521,37.1706,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Gilgil Town,Near Elimiano 2,-0.497531,36.315522,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kampi Moto,Near Familia Bora Medical Centre,-0.125212,35.936803,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Shabaab,Near Dipos Chemist,-0.295151,36.055597,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kiamunyi,"Nakuru - Sigor Rd, At AIC Church Kiamunyi",-0.26628,36.026021,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyabohanse,"Isibania - Migori Rd, Near Tumaini Hotel",-1.206346,34.470717,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Naca,Near Covenant General Shop,-0.289449,36.109045,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Annestar,Near Young Traders Hardware and Timber sale,-0.268092,36.193588,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Karati,Near Karati G. Hardware,-0.686657,36.475968,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Shinyalu,"Khayega Shinyalu Rd, Near Shihuli Hardware",0.207681,34.793344,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ndiru,Near Molliv Kinyozi,-0.523335,34.578722,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ringa,"Kisumu - Kisii Rd, Near Ringa Dispensary",-0.470448,34.849723,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Buhuru,Near Mukakabana Residence,0.25493,34.443643,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Baricho,"Baricho Town, Adjacent to ACK Church",-0.551899,37.240698,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kabaa,Near Dan Lucy Hardware,-1.241443,37.446707,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kiangwaci,"Kiangwaci, off Sagana Marua Highway",-0.610094,37.203025,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kinale Redrock,"Gatundu - Kinale Road, Near Shiku's Mpesa",-0.905908,36.613161,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Devki,"Mombasa Rd, Near White Park Place",-1.443084,36.989343,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Omboga,Near Jakangeso Kinyozi,-0.435606,34.619418,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kitengela 2,"Miriam Rd, Near Samidoh Grocery",-1.472686,36.95394,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bahati,Near Full Gospel Kamururi,-0.150877,36.148039,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Maili Kumi,Near Blessing Tailoring Shop,-0.174972,36.121501,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Ikalaasa,Near Ithasyo Oasis stores,-1.533692,37.669057,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kimicha,Near Victorious Community Church,-0.584467,37.289125,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kiburu,Near Kiburu Primary Special Unit,-0.5403,37.206839,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mwea,Near Juska Beauty Salon,-0.684641,37.357522,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Getuya,Near Mpesa Kangema Agency,-0.531096,37.2242,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Naivasha Fofo,"Moi Avenue, Near Lilyton Holdings",-0.709337,36.42582,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Awendo Fofo,Near Gunga Guest Rooms,-0.908911,34.528642,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nakuru Fofo,"Kufanya Road, Near Shayona Timber",-0.289794,36.057106,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Barekeiwo,Barekeiwo near AIC Sochoi Academy,0.185206,35.367114,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lwanda K'otieno Fofo,Lwanda K'Otieno centre near fish market,-0.38585,34.285466,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Baba Dogo,"Baba Dogo centre, Baba Dogo road, opposite Baba Dogo primary school",-1.243961,36.88763,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Myanga,"Myanga Centre, near Myanga Secondary",0.56406,34.39052,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Musasa,"Musasa Centre, StendiKisa Yala Road",0.142463,34.883206,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kapsoit,opposite malsha shopping mall,-0.320874,35.222858,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kabartegan,"Chemosit-litein road, opposite Kabartegan boys secondary school",-0.494088,35.166288,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kericho Cbd,"Kericho CBD, off Isaac Salat road",-0.364331,35.28404,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bomet Town,"Off Kaplong narok road, Opposite AGC riverside church Bomet",-0.78715,35.345305,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Silibwet,"Silibwet-Mugango road, near Subway filling station",-0.731563,35.349249,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Dandora 2,Dandora near Dandora stadium,-1.245275,36.906513,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Koriema,"Koriema Centre, Near St Francis catholic Church",0.454926,35.864134,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kituro,"Kituro centre, Opposite Full Gospel Church Kituro",0.478202,35.789733,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kilimani - Shujaa Mall,"Shujah Mall, Kilimani",-1.29487,36.788202,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Limuru,Limuru Town Near Buxton View Apartments,-1.123614,36.647915,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Embakasi Village,"Embakasi Village, next to SDA Embakasi Garisson",-1.3051,36.91738,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kajiado Catholic Parish,St John's Catholic Church,-1.845629,36.78805,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kapkatet,"Kaptet Centre, opposite Kapkatet Tea factory",-0.642621,35.193584,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Chebole,Chebole Centre near Camp David,-0.751679,35.215567,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Matunda,"Matunda Town, near Matunda Post Office",0.824339,35.12297,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Sirisia,"Sirisia Centre, next to Sirisia Police Station",0.753521,34.503161,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Karagita,"Karagita Centre, Near Sure Oil",-0.777451,36.42944,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kayole Nakuru,"Off Nakuru - nairobi Highway, Near Signature Cottages",-0.746767,36.465243,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Tawan Plaza Ngara,A very nice place for business. Big space enough which can be used for both swapping and sales.,-1.273,36.8222,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Isinya,Inside Africa Fuels Station Isinya,-1.686406,36.842568,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Boito,Boito Centre Near Boito market,-0.599009,35.230514,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Roret,"Roret Centre, Near Chelal Tea Factory",-0.501075,35.105789,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Thindigua Galana,"Inside Galana Energies, Thindigua",-1.199715,36.835683,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Moiben,"Moiben Town, Opposite Moiben Sub-County Hospital",0.815356,35.384767,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kitui Town Slota,"Slota Kitui Town, Near Kitui Stadium",-1.364429,38.006056,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Inyuu,Inyuu Market,-1.419259,38.144831,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Zombe,Zombe Town,-1.443436,38.245352,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kaliku,Kaliku Town,-1.289182,38.295532,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kawethei,"Kawethei Centre, behind Kawethei SA Sec School",-1.349223,37.32184,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mwala Junction,"Mwala Junction, Opposite GNCA Makutano Church",-1.414675,37.468987,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Oyuma,"Oyuma market, Near Ongalo Primary School",-0.364284,34.614726,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kinyui,"Kinyui market, near Holy Bread of Life Church",-1.210023,37.325293,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kenol Machakos,"Kenol Market, Off Kenol-Kangundo road next to Bethel House",-1.369436,37.226319,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kwa Mwaura,"Kwa Mwaura market, opposite Unity Educational School",-1.147688,37.304548,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kakeani,"Kakeani Centre, near Chief's office",-1.151281,37.944039,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bisil,"Bisil Town, Off Nairobi Namanga Road",-2.105377,36.793074,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nyamira Cbd,"Nyamira CBD, opposite Nyamira Institute of Science and Technology",-0.553461,34.926425,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Roadblock Fofo,"Roadblock Centre, Eldoret Jua Kali Road",0.549481,35.244893,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kiminini Fofo,"Kiminini Town, Near Total Energies",0.894795,34.927473,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Josmat,"Josmat, near Police station, Mombasa road",-1.536384,37.134408,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kabiyet,"Kabiyet centre, near Kabiyet Sub-county hospital",0.403523,35.08693,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Vyulya,"Vyulya Centre, near Vyulya Market",-1.446569,37.383359,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kaani,Kaani Centre,-1.510884,37.364964,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Boro,"Boro Centre, near Ruambwa HC",0.086154,34.234898,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mulot,"Bomet Town, near Majaliwa Supermarket",-0.9339,35.419931,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kyua,"Kyua Centre, Machakos Kitui Road",-1.405624,37.761605,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Muraru,"Muraru Town, Opposite Muraru Market place",-0.63209,37.54494,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Katheka Kai,"Katheka kai, near katheka Kai Pry School",-1.50559,37.21565,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Manyatta,"Manyatta, Kisumu City",-0.096251,34.782537,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Rakwaro,"Rakwaro Centre, Opposite Rakwaro market",-0.359337,34.746984,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mago,"Mago Centre, Near Sern's Fuel, Kisumu road",0.114474,34.818772,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kangaru,"Kangaru Market, new the New kangaru market stalls",-0.497779,37.459302,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Juja,"Juja Town, Near JKUAT Main Gate",-1.101716,37.013979,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kimwanga,"Kimwanga Market, near Jehovah's Witness church",0.59988,34.424255,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kapsokwony,"Kapsokwony Centre, Near Toboo Primary School",0.841273,34.714645,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Tembwo,"Tembwo Centre, near Kaptebengwa Dispensary",-0.773785,35.087955,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Amukura,Amukura Centre,0.558556,34.26921,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Murumba,"Murumba Centre, near Deliverance church",0.334695,34.259446,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Imbo,"Imbo Centre, Near St Paul Catholic church",-0.596647,34.534385,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kabartonjo,"Kabartonjo Centre, Near Post office",0.629117,35.794831,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mogotio,"Mogotio Centre, Nakuru Sigor Road",-0.022871,35.960516,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kianyaga,Kianyaga Town Near Gichugu Magistrate's Court,-0.496559,37.35258,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kerugoya,"Kerugoya, opposite Kibingo Market",-0.48614,37.259308,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kericho Brooke,"Kericho Town, Kericho Mau Summit road",-0.341573,35.316946,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Lucky Summer Mega,"Lucky Summer, Opposite Naivas lucky Summer",-1.24117,36.889998,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Athiru Gaiti,"Athiru Town, Near Athiru Gaiti Mixed day Secondary School",0.211032,37.973044,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Arwos,Arwos centre,0.202685,35.204105,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Molo,"Molo Town, Near Total Energies Molo",-0.241157,35.72377,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Labuiywo,"Labuiywo Centre, Maraba Labuiywo road",0.015242,35.336263,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mitaboni,"Mitaboni Centre, near Mitaboni Girls School",-1.375594,37.251775,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mukukuni,"Kenol - Kangundo road, opposite St Thomas Catholic Church",-1.337551,37.26678,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Bamba,"Bamba Centre, Near Godoma Sec School",-3.540662,39.52277,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kianjai,"Kianjai Town, Meru - Maua road",0.162226,37.748282,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Muriri,"Muriri Town, Meru Maua Road, next to st Bakhita catholic church Muriri",0.21577,37.792078,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kiirua,"Kiirua Centre, opposite Rubis Kiirua",0.122349,37.55991,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Maili Tatu,"Maili tatu town, near Scorpion Resort",0.311178,37.566665,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kiserian Mars,"Kiserian Town, Next to Mars Medical Clinic",-1.426344,36.692607,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kitui Town Fofo,"Kitui Town, Near Delta Service station Kitui",-1.382653,38.009901,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Sagana,"Genesis Building, Sagana",-0.672866,37.207355,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Kimbimbi,"Meru Highway, Kimbimbi Market",-0.621719,37.363564,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Tabaka,Next to Tabaka Primary school,-0.74885,34.665475,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Igonga,"Igonga, next to Nyamira Centre",-0.632533,34.644631,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Rodi Kopany,Near Asumbi Mission Hospital,-0.623459,34.501421,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mwea Ngurubani,"Ngurubani, near Wang'uru stadium",-0.685313,37.359448,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Nguluni,"Nguluni Centre, inside Galana Station",-1.275021,37.28804,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mudete,Next to Mudete Market,0.117064,34.772526,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Madibira B,Madibira B Majanji rd,0.462301,34.085014,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Namaubi B,Namaubi B,0.480216,34.071276,,spironet.com map payload (saved from browser),2026-10-21
+Spiro,Mowlem Fofo,"Komarock Road, Near Mow;em Heights",-1.254614,36.91121,,spironet.com map payload (saved from browser),2026-10-21

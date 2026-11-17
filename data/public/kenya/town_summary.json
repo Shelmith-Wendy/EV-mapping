@@ -1,695 +1,3872 @@
 [
   {
-    "town":"Ainabkoi",
-    "county":"Uasin Gishu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":0.2132383,
-    "longitude":35.43437
-  },
-  {
-    "town":"Airbase",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.2660892,
-    "longitude":36.8517848
-  },
-  {
-    "town":"Awasi",
-    "county":"Kisumu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.163084,
-    "longitude":35.076699
-  },
-  {
-    "town":"CBD",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":1,
-    "total_count":2,
-    "latitude":-1.2745278,
-    "longitude":36.82520695
-  },
-  {
-    "town":"Chaka",
-    "county":"Nyeri",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.358972,
-    "longitude":37.000823
-  },
-  {
-    "town":"Chavakali",
-    "county":"Vihiga",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":0.1141333,
-    "longitude":34.72933
-  },
-  {
-    "town":"Chuka",
-    "county":"Tharaka-Nithi",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.3222222,
-    "longitude":37.66
-  },
-  {
-    "town":"Eastleigh North",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.2666667,
-    "longitude":36.8455556
-  },
-  {
-    "town":"Embakasi",
-    "county":"Machakos",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.4484941,
-    "longitude":36.9775848
-  },
-  {
-    "town":"Embu",
-    "county":"Embu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.5430556,
-    "longitude":37.4552778
-  },
-  {
-    "town":"Gilgil",
-    "county":"Nakuru",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.5011111,
-    "longitude":36.3261111
-  },
-  {
-    "town":"Gitaru",
-    "county":"Kiambu",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.2302778,
-    "longitude":36.6822222
-  },
-  {
-    "town":"Githurai",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.2013875,
-    "longitude":36.9116719
-  },
-  {
-    "town":"Harambee",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.2960351,
-    "longitude":36.885785
-  },
-  {
-    "town":"Highridge",
-    "county":"Nairobi",
-    "fast_charger_count":3,
-    "swap_station_count":4,
-    "total_count":7,
-    "latitude":-1.2587386286,
-    "longitude":36.8079589
-  },
-  {
-    "town":"Igoji East",
-    "county":"Meru",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.1838207,
-    "longitude":37.6769067
-  },
-  {
-    "town":"Jua Kali",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.313847,
-    "longitude":36.9152902
-  },
-  {
-    "town":"Juja",
-    "county":"Kiambu",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.1078361,
-    "longitude":37.0139194
-  },
-  {
-    "town":"Kahawa Wendani",
-    "county":"Kiambu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.1982008,
-    "longitude":36.9283253
-  },
-  {
-    "town":"Kapsabet",
-    "county":"Nandi",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":0.202105,
-    "longitude":35.0880467
-  },
-  {
-    "town":"Karatina",
-    "county":"Nyeri",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.482773,
-    "longitude":37.126571
-  },
-  {
-    "town":"Kasarani",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":1,
-    "total_count":2,
-    "latitude":-1.227049,
-    "longitude":36.91657145
-  },
-  {
-    "town":"Kawangware",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":2,
-    "total_count":3,
-    "latitude":-1.2871612,
-    "longitude":36.7439883
-  },
-  {
-    "town":"Kiambu",
-    "county":"Kiambu",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.1701375,
-    "longitude":36.827328125
-  },
-  {
-    "town":"Kikuyu",
-    "county":"Kiambu",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.2523285,
-    "longitude":36.6657041
-  },
-  {
-    "town":"Kilimani",
-    "county":"Nairobi",
-    "fast_charger_count":2,
-    "swap_station_count":6,
-    "total_count":8,
-    "latitude":-1.28089945,
-    "longitude":36.7853444062
-  },
-  {
-    "town":"Kimende",
-    "county":"Kiambu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.9852778,
-    "longitude":36.6305556
-  },
-  {
-    "town":"Kimorori",
-    "county":"Murang'a",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.9441667,
-    "longitude":37.1216667
-  },
-  {
-    "town":"Kipkenyo",
-    "county":"Uasin Gishu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":0.5049883,
-    "longitude":35.2722032
-  },
-  {
-    "town":"Kisima",
-    "county":"Meru",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":0.1413574,
-    "longitude":37.472336
-  },
-  {
-    "town":"Kisumu",
-    "county":"Kisumu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.10145,
-    "longitude":34.750517
-  },
-  {
-    "town":"Kitengela",
-    "county":"Kajiado",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.4737161,
-    "longitude":36.9594863
-  },
-  {
-    "town":"Komarock",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.2658333,
-    "longitude":36.9158333
-  },
-  {
-    "town":"Landimawe",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":1,
-    "total_count":2,
-    "latitude":-1.30057815,
-    "longitude":36.82493715
-  },
-  {
-    "town":"Langas",
-    "county":"Uasin Gishu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":0.4816417,
-    "longitude":35.264025
-  },
-  {
-    "town":"Limuru",
-    "county":"Kiambu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.1119444,
-    "longitude":36.6308333
-  },
-  {
-    "town":"Maringo",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.2965625,
-    "longitude":36.8759375
-  },
-  {
-    "town":"Mau Summit",
-    "county":"Nakuru",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.158975,
-    "longitude":35.694278
-  },
-  {
-    "town":"Meru",
-    "county":"Meru",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":0.0451875,
-    "longitude":37.6577656
-  },
-  {
-    "town":"Mlolongo",
-    "county":"Machakos",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.4002625,
-    "longitude":36.943921875
-  },
-  {
-    "town":"Mosop",
-    "county":"Nakuru",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.2120733,
-    "longitude":35.8623033
-  },
-  {
-    "town":"Muchatha",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.2010299,
-    "longitude":36.784991
-  },
-  {
-    "town":"Muguga",
-    "county":"Kiambu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.2017222,
-    "longitude":36.6548611
-  },
-  {
-    "town":"Mugumo-ini",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.3241625,
-    "longitude":36.782765625
-  },
-  {
-    "town":"Mugunda",
-    "county":"Laikipia",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.1336875,
-    "longitude":36.8642031
-  },
-  {
-    "town":"Mugunda",
-    "county":"Nyeri",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.1998611,
-    "longitude":36.8213056
-  },
-  {
-    "town":"Mutithi",
-    "county":"Embu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.7575,
-    "longitude":37.2786111
-  },
-  {
-    "town":"Nairobi West",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.3080222,
-    "longitude":36.8189778
-  },
-  {
-    "town":"Nakuru",
-    "county":"Nakuru",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.2716667,
-    "longitude":36.1025
-  },
-  {
-    "town":"Nanyuki",
-    "county":"Laikipia",
-    "fast_charger_count":4,
-    "swap_station_count":4,
-    "total_count":8,
-    "latitude":0.0047140125,
-    "longitude":37.0598660344
-  },
-  {
-    "town":"Naromoru",
-    "county":"Nyeri",
-    "fast_charger_count":2,
-    "swap_station_count":1,
-    "total_count":3,
-    "latitude":-0.1600787667,
-    "longitude":37.0251652667
-  },
-  {
-    "town":"Ngong",
-    "county":"Kajiado",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.3542217,
-    "longitude":36.657525
-  },
-  {
-    "town":"Njiru",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.2534125,
-    "longitude":36.934421875
-  },
-  {
-    "town":"Nkaimurunya",
-    "county":"Kajiado",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.3963889,
-    "longitude":36.7433333
-  },
-  {
-    "town":"Nyahururu",
-    "county":"Laikipia",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":0.0331501,
-    "longitude":36.3597857
-  },
-  {
-    "town":"Nyeri",
-    "county":"Laikipia",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.0768125,
-    "longitude":36.5824375
-  },
-  {
-    "town":"Nyeri",
-    "county":"Nyeri",
-    "fast_charger_count":2,
-    "swap_station_count":1,
-    "total_count":3,
-    "latitude":-0.4193009667,
-    "longitude":36.9516025667
-  },
-  {
-    "town":"Ol Kalou",
-    "county":"Nyandarua",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.2669444,
-    "longitude":36.3777778
-  },
-  {
-    "town":"Olkeri",
-    "county":"Kajiado",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.4313889,
-    "longitude":36.6861111
-  },
-  {
-    "town":"Pipeline",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.3266625,
-    "longitude":36.8944531
-  },
-  {
-    "town":"Pumwani",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.2936111,
-    "longitude":36.8505556
-  },
-  {
-    "town":"Roysambu",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":1,
-    "total_count":2,
-    "latitude":-1.2342222,
-    "longitude":36.8794222
-  },
-  {
-    "town":"Ruai",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":1,
-    "total_count":2,
-    "latitude":-1.26978125,
-    "longitude":36.9775112625
-  },
-  {
-    "town":"Ruaka",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.206765,
-    "longitude":36.783353
-  },
-  {
-    "town":"Ruaraka",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":1,
-    "total_count":2,
-    "latitude":-1.24308615,
-    "longitude":36.88034445
-  },
-  {
-    "town":"Ruiru",
-    "county":"Kiambu",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.163485,
-    "longitude":36.9543
-  },
-  {
-    "town":"Rware",
-    "county":"Nyeri",
-    "fast_charger_count":1,
-    "swap_station_count":2,
-    "total_count":3,
-    "latitude":-0.4236111333,
-    "longitude":36.9508629667
-  },
-  {
-    "town":"Sagana",
-    "county":"Kirinyaga",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.665,
-    "longitude":37.21
-  },
-  {
-    "town":"South B",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.3224375,
-    "longitude":36.8444375
-  },
-  {
-    "town":"Thika",
-    "county":"Kiambu",
-    "fast_charger_count":1,
-    "swap_station_count":1,
-    "total_count":2,
-    "latitude":-1.04094525,
-    "longitude":37.07201095
-  },
-  {
-    "town":"Timau",
-    "county":"Meru",
-    "fast_charger_count":2,
-    "swap_station_count":0,
-    "total_count":2,
-    "latitude":0.08634125,
-    "longitude":37.2416546
-  },
-  {
-    "town":"Timboroa",
-    "county":"Baringo",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":0.031445,
-    "longitude":35.53106
-  },
-  {
-    "town":"Umoja",
-    "county":"Nairobi",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.28355,
-    "longitude":36.894144
-  },
-  {
-    "town":"Uthiru",
-    "county":"Kiambu",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-1.2588889,
-    "longitude":36.7047222
-  },
-  {
-    "town":"Viwandani",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":2,
-    "total_count":2,
-    "latitude":-1.3076021,
-    "longitude":36.87443125
-  },
-  {
-    "town":"Viwandani",
-    "county":"Nakuru",
-    "fast_charger_count":1,
-    "swap_station_count":0,
-    "total_count":1,
-    "latitude":-0.7166667,
-    "longitude":36.4347222
-  },
-  {
-    "town":"Woodley",
-    "county":"Nairobi",
-    "fast_charger_count":0,
-    "swap_station_count":1,
-    "total_count":1,
-    "latitude":-1.2980556,
-    "longitude":36.8180556
+    "town": "Baringo Central",
+    "county": "Baringo",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.47009,
+    "longitude": 35.76722
+  },
+  {
+    "town": "Kabarnet",
+    "county": "Baringo",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": 0.490183,
+    "longitude": 35.7555537
+  },
+  {
+    "town": "Kabartonjo",
+    "county": "Baringo",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.629117,
+    "longitude": 35.794831
+  },
+  {
+    "town": "Marigat",
+    "county": "Baringo",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.454926,
+    "longitude": 35.864134
+  },
+  {
+    "town": "Mogotio",
+    "county": "Baringo",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.022871,
+    "longitude": 35.960516
+  },
+  {
+    "town": "Timboroa",
+    "county": "Baringo",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": 0.031445,
+    "longitude": 35.53106
+  },
+  {
+    "town": "Bomet",
+    "county": "Bomet",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.78715,
+    "longitude": 35.345305
+  },
+  {
+    "town": "Mulot",
+    "county": "Bomet",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.9339,
+    "longitude": 35.419931
+  },
+  {
+    "town": "Silibwet",
+    "county": "Bomet",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.731563,
+    "longitude": 35.349249
+  },
+  {
+    "town": "Sotik",
+    "county": "Bomet",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.762732,
+    "longitude": 35.151761
+  },
+  {
+    "town": "Bukembe East",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.612251,
+    "longitude": 34.6565
+  },
+  {
+    "town": "Bumula",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.493352,
+    "longitude": 34.452194
+  },
+  {
+    "town": "Bungoma",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.567121,
+    "longitude": 34.561603
+  },
+  {
+    "town": "Elgon",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.841273,
+    "longitude": 34.714645
+  },
+  {
+    "town": "Kabuchai",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.6957605,
+    "longitude": 34.583106
+  },
+  {
+    "town": "Kabula",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.484489,
+    "longitude": 34.528916
+  },
+  {
+    "town": "Kamukuywa",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.77872,
+    "longitude": 34.78994
+  },
+  {
+    "town": "Khalaba",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": 0.5641637,
+    "longitude": 34.557362
+  },
+  {
+    "town": "Kimaeti",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": 0.5887463,
+    "longitude": 34.4072177
+  },
+  {
+    "town": "Kimilili",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.78317,
+    "longitude": 34.720868
+  },
+  {
+    "town": "Lwandanyi",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.681157,
+    "longitude": 34.421196
+  },
+  {
+    "town": "Marakaru",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.605391,
+    "longitude": 34.543175
+  },
+  {
+    "town": "Matulo",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.608216,
+    "longitude": 34.770346
+  },
+  {
+    "town": "Milima",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.787619,
+    "longitude": 34.8709655
+  },
+  {
+    "town": "Ndivisi",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.71487,
+    "longitude": 34.7553
+  },
+  {
+    "town": "Sirisia",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.753521,
+    "longitude": 34.503161
+  },
+  {
+    "town": "South Bukusu",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.536422,
+    "longitude": 34.49937
+  },
+  {
+    "town": "West Bukusu",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.592332,
+    "longitude": 34.488129
+  },
+  {
+    "town": "West Sang'alo",
+    "county": "Bungoma",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.515988,
+    "longitude": 34.591315
+  },
+  {
+    "town": "Amukura East",
+    "county": "Busia",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.558556,
+    "longitude": 34.26921
+  },
+  {
+    "town": "Amukura West",
+    "county": "Busia",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.579405,
+    "longitude": 34.201497
+  },
+  {
+    "town": "Bukhayo Central",
+    "county": "Busia",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.444547,
+    "longitude": 34.3410555
+  },
+  {
+    "town": "Bukhayo East",
+    "county": "Busia",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.46373,
+    "longitude": 34.299459
+  },
+  {
+    "town": "Busia",
+    "county": "Busia",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.439371,
+    "longitude": 34.1241465
+  },
+  {
+    "town": "Busiwondo A",
+    "county": "Busia",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.462301,
+    "longitude": 34.085014
+  },
+  {
+    "town": "Dabani",
+    "county": "Busia",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.43211,
+    "longitude": 34.049043
+  },
+  {
+    "town": "Kingandole",
+    "county": "Busia",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.334695,
+    "longitude": 34.259446
+  },
+  {
+    "town": "Malaba Central",
+    "county": "Busia",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.634956,
+    "longitude": 34.278344
+  },
+  {
+    "town": "Namaubi B",
+    "county": "Busia",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.480216,
+    "longitude": 34.071276
+  },
+  {
+    "town": "Nambale",
+    "county": "Busia",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.47182,
+    "longitude": 34.2257445
+  },
+  {
+    "town": "Chepkorio",
+    "county": "Elgeyo-Marakwet",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.367828,
+    "longitude": 35.54368
+  },
+  {
+    "town": "Iten",
+    "county": "Elgeyo-Marakwet",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.660392,
+    "longitude": 35.504142
+  },
+  {
+    "town": "Embu",
+    "county": "Embu",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": -0.5421523,
+    "longitude": 37.4553874
+  },
+  {
+    "town": "Gachoka",
+    "county": "Embu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.63209,
+    "longitude": 37.54494
+  },
+  {
+    "town": "Kivwe - Kevote Road",
+    "county": "Embu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.475045,
+    "longitude": 37.499325
+  },
+  {
+    "town": "Manyatta",
+    "county": "Embu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.49461,
+    "longitude": 37.461508
+  },
+  {
+    "town": "Mutithi",
+    "county": "Embu",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": -0.757479,
+    "longitude": 37.278466
+  },
+  {
+    "town": "Runyenjes",
+    "county": "Embu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.42573,
+    "longitude": 37.567182
+  },
+  {
+    "town": "Siakago",
+    "county": "Embu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.576677,
+    "longitude": 37.638377
+  },
+  {
+    "town": "Central",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.364284,
+    "longitude": 34.614726
+  },
+  {
+    "town": "East Kamagak",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.485903,
+    "longitude": 34.772179
+  },
+  {
+    "town": "Homa Bay",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.537382,
+    "longitude": 34.453627
+  },
+  {
+    "town": "Homa Bay East",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -0.5425957,
+    "longitude": 34.5001827
+  },
+  {
+    "town": "Kabondo East",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.446038,
+    "longitude": 34.89237
+  },
+  {
+    "town": "Kagan",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.523335,
+    "longitude": 34.578722
+  },
+  {
+    "town": "Kanyamwa Kosewe",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.729629,
+    "longitude": 34.367318
+  },
+  {
+    "town": "Kendu Bay",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.366183,
+    "longitude": 34.654951
+  },
+  {
+    "town": "Kochia",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.483342,
+    "longitude": 34.536341
+  },
+  {
+    "town": "Kojwach",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.470448,
+    "longitude": 34.849723
+  },
+  {
+    "town": "Lambwe",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.542449,
+    "longitude": 34.339685
+  },
+  {
+    "town": "Mbita",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.433041,
+    "longitude": 34.209369
+  },
+  {
+    "town": "Omboga",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.435606,
+    "longitude": 34.619418
+  },
+  {
+    "town": "Oyugis",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.5137,
+    "longitude": 34.733607
+  },
+  {
+    "town": "Riana",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.632533,
+    "longitude": 34.644631
+  },
+  {
+    "town": "Rodi",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.623459,
+    "longitude": 34.501421
+  },
+  {
+    "town": "Sindo",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.541307,
+    "longitude": 34.166937
+  },
+  {
+    "town": "Wang'chieng",
+    "county": "Homa Bay",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.359337,
+    "longitude": 34.746984
+  },
+  {
+    "town": "Bisil",
+    "county": "Kajiado",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -2.105377,
+    "longitude": 36.793074
+  },
+  {
+    "town": "Isinya",
+    "county": "Kajiado",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.686406,
+    "longitude": 36.842568
+  },
+  {
+    "town": "Kajiado",
+    "county": "Kajiado",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.845629,
+    "longitude": 36.78805
+  },
+  {
+    "town": "Kiserian",
+    "county": "Kajiado",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.428156,
+    "longitude": 36.685865
+  },
+  {
+    "town": "Kitengela",
+    "county": "Kajiado",
+    "fast_charger_count": 1,
+    "swap_station_count": 3,
+    "total_count": 4,
+    "latitude": -1.4825954,
+    "longitude": 36.9576872
+  },
+  {
+    "town": "Ngong",
+    "county": "Kajiado",
+    "fast_charger_count": 1,
+    "swap_station_count": 2,
+    "total_count": 3,
+    "latitude": -1.3539204,
+    "longitude": 36.6575833
+  },
+  {
+    "town": "Nkaimurunya",
+    "county": "Kajiado",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.3960382,
+    "longitude": 36.7488151
+  },
+  {
+    "town": "Olkeri",
+    "county": "Kajiado",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -1.4100553,
+    "longitude": 36.6832727
+  },
+  {
+    "town": "Oloosirkon",
+    "county": "Kajiado",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.472686,
+    "longitude": 36.95394
+  },
+  {
+    "town": "Ongata Rongai",
+    "county": "Kajiado",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.393406,
+    "longitude": 36.7570313
+  },
+  {
+    "town": "Bunyala Central",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.415048,
+    "longitude": 34.679726
+  },
+  {
+    "town": "Bunyala West",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.394978,
+    "longitude": 34.665048
+  },
+  {
+    "town": "Butali Chegulo",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.493308,
+    "longitude": 34.834961
+  },
+  {
+    "town": "Butere",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.217526,
+    "longitude": 34.499466
+  },
+  {
+    "town": "Butsotso Central",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.28141,
+    "longitude": 34.6617465
+  },
+  {
+    "town": "Butsotso East",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.3348655,
+    "longitude": 34.7723795
+  },
+  {
+    "town": "Chemuche",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.430911,
+    "longitude": 34.910009
+  },
+  {
+    "town": "Chevaywa",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.561691,
+    "longitude": 34.803006
+  },
+  {
+    "town": "East Kabras",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.389714,
+    "longitude": 34.855195
+  },
+  {
+    "town": "Emuberi North",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.322297,
+    "longitude": 34.508403
+  },
+  {
+    "town": "Etenje",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.25493,
+    "longitude": 34.443643
+  },
+  {
+    "town": "Idakho Central",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.219829,
+    "longitude": 34.619408
+  },
+  {
+    "town": "Idakho South",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.14925,
+    "longitude": 34.710119
+  },
+  {
+    "town": "Ingotse-matiha",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.3587325,
+    "longitude": 34.7138515
+  },
+  {
+    "town": "Isukha North",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.335091,
+    "longitude": 34.814346
+  },
+  {
+    "town": "Isukha South",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.2012475,
+    "longitude": 34.7801075
+  },
+  {
+    "town": "Kakamega",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.268645,
+    "longitude": 34.752126
+  },
+  {
+    "town": "Kisa Central",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.143644,
+    "longitude": 34.565984
+  },
+  {
+    "town": "Koyonzo",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.410085,
+    "longitude": 34.44566
+  },
+  {
+    "town": "Lumakanda",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.633828,
+    "longitude": 34.97447
+  },
+  {
+    "town": "Lwandeti",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.5910195,
+    "longitude": 34.8371585
+  },
+  {
+    "town": "Malaha Isongo Makunga",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.300446,
+    "longitude": 34.623624
+  },
+  {
+    "town": "Murhanda",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.262068,
+    "longitude": 34.797547
+  },
+  {
+    "town": "Nzoia",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.824339,
+    "longitude": 35.12297
+  },
+  {
+    "town": "Sabatia",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.232606,
+    "longitude": 34.529683
+  },
+  {
+    "town": "Sheywe",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": 0.283458,
+    "longitude": 34.746083
+  },
+  {
+    "town": "Shianda",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.32048,
+    "longitude": 34.570435
+  },
+  {
+    "town": "Shirungu-Mugai",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.447388,
+    "longitude": 34.854191
+  },
+  {
+    "town": "South Kabras",
+    "county": "Kakamega",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.377377,
+    "longitude": 34.830987
+  },
+  {
+    "town": "Chemosot",
+    "county": "Kericho",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.494088,
+    "longitude": 35.166288
+  },
+  {
+    "town": "Kapkatet",
+    "county": "Kericho",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.620815,
+    "longitude": 35.212049
+  },
+  {
+    "town": "Kapkugerwet",
+    "county": "Kericho",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.352952,
+    "longitude": 35.300493
+  },
+  {
+    "town": "Kapsoit",
+    "county": "Kericho",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.320874,
+    "longitude": 35.222858
+  },
+  {
+    "town": "Litein",
+    "county": "Kericho",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.588248,
+    "longitude": 35.19488
+  },
+  {
+    "town": "Tebesonik",
+    "county": "Kericho",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.501075,
+    "longitude": 35.105789
+  },
+  {
+    "town": "Biashara",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.1454978,
+    "longitude": 36.9603387
+  },
+  {
+    "town": "Chania",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.958307,
+    "longitude": 36.89843
+  },
+  {
+    "town": "Gatongora",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -1.166193,
+    "longitude": 36.9619409
+  },
+  {
+    "town": "Gatuanyaga",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.061521,
+    "longitude": 37.1706
+  },
+  {
+    "town": "Gitaru",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -1.2297805,
+    "longitude": 36.6867715
+  },
+  {
+    "town": "Gitothua",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.1523694,
+    "longitude": 36.9148869
+  },
+  {
+    "town": "Juja",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 5,
+    "total_count": 5,
+    "latitude": -1.1031133,
+    "longitude": 37.0170332
+  },
+  {
+    "town": "Kabete",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 5,
+    "total_count": 5,
+    "latitude": -1.2296157,
+    "longitude": 36.7164449
+  },
+  {
+    "town": "Kahawa Wendani",
+    "county": "Kiambu",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -1.1982008,
+    "longitude": 36.9283253
+  },
+  {
+    "town": "Kambaa",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.087023,
+    "longitude": 36.737053
+  },
+  {
+    "town": "Karuri",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.1775823,
+    "longitude": 36.7600912
+  },
+  {
+    "town": "Kiambu",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 4,
+    "total_count": 4,
+    "latitude": -1.1778416,
+    "longitude": 36.8295012
+  },
+  {
+    "town": "Kihara",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.219766,
+    "longitude": 36.771818
+  },
+  {
+    "town": "Kijabe",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.941137,
+    "longitude": 36.616984
+  },
+  {
+    "town": "Kikuyu",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.2501347,
+    "longitude": 36.6635276
+  },
+  {
+    "town": "Kimende",
+    "county": "Kiambu",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -0.9852778,
+    "longitude": 36.6305556
+  },
+  {
+    "town": "Kinale",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.905908,
+    "longitude": 36.613161
+  },
+  {
+    "town": "Kinoo",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.253817,
+    "longitude": 36.6902945
+  },
+  {
+    "town": "Limuru",
+    "county": "Kiambu",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": -1.1120433,
+    "longitude": 36.6310413
+  },
+  {
+    "town": "Muguga",
+    "county": "Kiambu",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -1.2017222,
+    "longitude": 36.6548611
+  },
+  {
+    "town": "Murera",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.1297461,
+    "longitude": 36.9837017
+  },
+  {
+    "town": "Mwihoko",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.2080601,
+    "longitude": 36.9515914
+  },
+  {
+    "town": "Mwiki",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 4,
+    "total_count": 4,
+    "latitude": -1.2094619,
+    "longitude": 36.920695
+  },
+  {
+    "town": "Nairobi",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.2261625,
+    "longitude": 36.9899531
+  },
+  {
+    "town": "Ndeiya",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.200979,
+    "longitude": 36.600427
+  },
+  {
+    "town": "Ndenderu",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.1957007,
+    "longitude": 36.7479442
+  },
+  {
+    "town": "Ngecha Tigoni",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.123614,
+    "longitude": 36.647915
+  },
+  {
+    "town": "Ngenda",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.032362,
+    "longitude": 36.917418
+  },
+  {
+    "town": "Nyadhuna",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.194548,
+    "longitude": 36.6886605
+  },
+  {
+    "town": "Ruiru",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -1.1573002,
+    "longitude": 36.951821
+  },
+  {
+    "town": "Theta",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.138158,
+    "longitude": 36.9915185
+  },
+  {
+    "town": "Thika",
+    "county": "Kiambu",
+    "fast_charger_count": 1,
+    "swap_station_count": 4,
+    "total_count": 5,
+    "latitude": -1.0405681,
+    "longitude": 37.0701473
+  },
+  {
+    "town": "Turitu",
+    "county": "Kiambu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.152321,
+    "longitude": 36.802335
+  },
+  {
+    "town": "Uthiru",
+    "county": "Kiambu",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -1.2588889,
+    "longitude": 36.7047222
+  },
+  {
+    "town": "Bamba",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.540662,
+    "longitude": 39.52277
+  },
+  {
+    "town": "Dabaso",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.322584,
+    "longitude": 40.012735
+  },
+  {
+    "town": "Ganze",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.537316,
+    "longitude": 39.687646
+  },
+  {
+    "town": "Gongoni",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.036412,
+    "longitude": 40.136961
+  },
+  {
+    "town": "Junju",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.786747,
+    "longitude": 39.821474
+  },
+  {
+    "town": "Kaloleni",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.817331,
+    "longitude": 39.625041
+  },
+  {
+    "town": "Kibarani",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -3.544991,
+    "longitude": 39.8524675
+  },
+  {
+    "town": "Kilifi",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.614853,
+    "longitude": 39.863631
+  },
+  {
+    "town": "Malindi",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.19126,
+    "longitude": 40.112908
+  },
+  {
+    "town": "Mariakani",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.863601,
+    "longitude": 39.473652
+  },
+  {
+    "town": "Matsangoni",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.384623,
+    "longitude": 39.929203
+  },
+  {
+    "town": "Mtepeni",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.927389,
+    "longitude": 39.751248
+  },
+  {
+    "town": "Shella",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -3.2296113,
+    "longitude": 40.1086733
+  },
+  {
+    "town": "Shimo La Tewa",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -3.950004,
+    "longitude": 39.7444125
+  },
+  {
+    "town": "Tezo",
+    "county": "Kilifi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.632636,
+    "longitude": 39.84749
+  },
+  {
+    "town": "Baragwi",
+    "county": "Kirinyaga",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.496559,
+    "longitude": 37.35258
+  },
+  {
+    "town": "Baricho",
+    "county": "Kirinyaga",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -0.5410983,
+    "longitude": 37.2239123
+  },
+  {
+    "town": "Kanyekini",
+    "county": "Kirinyaga",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.584467,
+    "longitude": 37.289125
+  },
+  {
+    "town": "Kariti",
+    "county": "Kirinyaga",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.610094,
+    "longitude": 37.203025
+  },
+  {
+    "town": "Kerugoya",
+    "county": "Kirinyaga",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.48614,
+    "longitude": 37.259308
+  },
+  {
+    "town": "Kiine",
+    "county": "Kirinyaga",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.62743,
+    "longitude": 37.253152
+  },
+  {
+    "town": "Nyangati",
+    "county": "Kirinyaga",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.593592,
+    "longitude": 37.3454775
+  },
+  {
+    "town": "Sagana",
+    "county": "Kirinyaga",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": -0.668933,
+    "longitude": 37.2086775
+  },
+  {
+    "town": "Tebere",
+    "county": "Kirinyaga",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.684977,
+    "longitude": 37.358485
+  },
+  {
+    "town": "Birongo",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.748549,
+    "longitude": 34.889528
+  },
+  {
+    "town": "Bobaracho",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.710093,
+    "longitude": 34.820514
+  },
+  {
+    "town": "Bogusero",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.583976,
+    "longitude": 34.73092
+  },
+  {
+    "town": "Bombaba Borabu",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.883915,
+    "longitude": 34.7759495
+  },
+  {
+    "town": "Entanda",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.570188,
+    "longitude": 34.837655
+  },
+  {
+    "town": "Ibeno",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.7708585,
+    "longitude": 34.827768
+  },
+  {
+    "town": "Keroka",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.775734,
+    "longitude": 34.944308
+  },
+  {
+    "town": "Kisii",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.6774355,
+    "longitude": 34.76935
+  },
+  {
+    "town": "Kisii Central",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.654354,
+    "longitude": 34.752228
+  },
+  {
+    "town": "Marani",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.58748,
+    "longitude": 34.813383
+  },
+  {
+    "town": "Masige East",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.857447,
+    "longitude": 34.822021
+  },
+  {
+    "town": "Masimba",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.864023,
+    "longitude": 34.937417
+  },
+  {
+    "town": "Ngenyi",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.612127,
+    "longitude": 34.889769
+  },
+  {
+    "town": "Nyatieko",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.652609,
+    "longitude": 34.7945735
+  },
+  {
+    "town": "Suneka",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.677818,
+    "longitude": 34.71199
+  },
+  {
+    "town": "Tabaka",
+    "county": "Kisii",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.7337165,
+    "longitude": 34.65761
+  },
+  {
+    "town": "Ahero",
+    "county": "Kisumu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.173909,
+    "longitude": 34.931255
+  },
+  {
+    "town": "Awasi",
+    "county": "Kisumu",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": -0.163278,
+    "longitude": 35.074703
+  },
+  {
+    "town": "Central Nyakach",
+    "county": "Kisumu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.310734,
+    "longitude": 34.936536
+  },
+  {
+    "town": "Central Seme",
+    "county": "Kisumu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.086637,
+    "longitude": 34.482004
+  },
+  {
+    "town": "Katito",
+    "county": "Kisumu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.267758,
+    "longitude": 34.970082
+  },
+  {
+    "town": "Kisumu",
+    "county": "Kisumu",
+    "fast_charger_count": 1,
+    "swap_station_count": 19,
+    "total_count": 20,
+    "latitude": -0.0884363,
+    "longitude": 34.7506894
+  },
+  {
+    "town": "Kobura",
+    "county": "Kisumu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.151791,
+    "longitude": 34.815496
+  },
+  {
+    "town": "Miwani",
+    "county": "Kisumu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.082719,
+    "longitude": 34.974883
+  },
+  {
+    "town": "North West Kisumu",
+    "county": "Kisumu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.028563,
+    "longitude": 34.60717
+  },
+  {
+    "town": "West Kisumu",
+    "county": "Kisumu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.09727,
+    "longitude": 34.59637
+  },
+  {
+    "town": "Chuluni",
+    "county": "Kitui",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.419259,
+    "longitude": 38.144831
+  },
+  {
+    "town": "Kitui Central",
+    "county": "Kitui",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.364429,
+    "longitude": 38.006056
+  },
+  {
+    "town": "Kwamutonga",
+    "county": "Kitui",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.284967,
+    "longitude": 37.933375
+  },
+  {
+    "town": "Mutitu",
+    "county": "Kitui",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.289182,
+    "longitude": 38.295532
+  },
+  {
+    "town": "Mutongoni",
+    "county": "Kitui",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.151281,
+    "longitude": 37.944039
+  },
+  {
+    "town": "Nzambani",
+    "county": "Kitui",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.382653,
+    "longitude": 38.009901
+  },
+  {
+    "town": "Zombe",
+    "county": "Kitui",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.443436,
+    "longitude": 38.245352
+  },
+  {
+    "town": "Gombato Bongwe",
+    "county": "Kwale",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.2878,
+    "longitude": 39.579483
+  },
+  {
+    "town": "Kasemeni",
+    "county": "Kwale",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.002727,
+    "longitude": 39.566438
+  },
+  {
+    "town": "Kinondo",
+    "county": "Kwale",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.347741,
+    "longitude": 39.536741
+  },
+  {
+    "town": "Kwale",
+    "county": "Kwale",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.175591,
+    "longitude": 39.450865
+  },
+  {
+    "town": "Ramisi",
+    "county": "Kwale",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.47409,
+    "longitude": 39.459965
+  },
+  {
+    "town": "Waa Ngombeni",
+    "county": "Kwale",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.196293,
+    "longitude": 39.590846
+  },
+  {
+    "town": "Mugunda",
+    "county": "Laikipia",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -0.1336875,
+    "longitude": 36.8642031
+  },
+  {
+    "town": "Nanyuki",
+    "county": "Laikipia",
+    "fast_charger_count": 4,
+    "swap_station_count": 4,
+    "total_count": 8,
+    "latitude": 0.004714,
+    "longitude": 37.059866
+  },
+  {
+    "town": "Nyahururu",
+    "county": "Laikipia",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": 0.0331501,
+    "longitude": 36.3597857
+  },
+  {
+    "town": "Nyeri",
+    "county": "Laikipia",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -0.0768125,
+    "longitude": 36.5824375
+  },
+  {
+    "town": "Embakasi",
+    "county": "Machakos",
+    "fast_charger_count": 1,
+    "swap_station_count": 4,
+    "total_count": 5,
+    "latitude": -1.4471198,
+    "longitude": 36.979172
+  },
+  {
+    "town": "Kangundo West",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.349223,
+    "longitude": 37.32184
+  },
+  {
+    "town": "Katangi",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.405624,
+    "longitude": 37.761605
+  },
+  {
+    "town": "Kibauni",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -1.551437,
+    "longitude": 37.641462
+  },
+  {
+    "town": "Kinanie",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.4989435,
+    "longitude": 37.0728144
+  },
+  {
+    "town": "Lower Kaewa-Kaani",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.510884,
+    "longitude": 37.364964
+  },
+  {
+    "town": "Masii",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -1.441388,
+    "longitude": 37.4300863
+  },
+  {
+    "town": "Matathani",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.389355,
+    "longitude": 36.961204
+  },
+  {
+    "town": "Matungulu East",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.192604,
+    "longitude": 37.3389775
+  },
+  {
+    "town": "Matungulu North",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.147688,
+    "longitude": 37.304548
+  },
+  {
+    "town": "Matungulu West",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.282215,
+    "longitude": 37.1039
+  },
+  {
+    "town": "Mbiuni",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.263766,
+    "longitude": 37.432721
+  },
+  {
+    "town": "Mitaboni",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -1.3608603,
+    "longitude": 37.2482913
+  },
+  {
+    "town": "Mlolongo",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -1.3982803,
+    "longitude": 36.9430238
+  },
+  {
+    "town": "Mua",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.50559,
+    "longitude": 37.21565
+  },
+  {
+    "town": "Muthetheni",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.510878,
+    "longitude": 37.546756
+  },
+  {
+    "town": "Mutituni",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.435843,
+    "longitude": 37.24665
+  },
+  {
+    "town": "Muvuti",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.529013,
+    "longitude": 37.264425
+  },
+  {
+    "town": "Mwala",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.341787,
+    "longitude": 37.4768095
+  },
+  {
+    "town": "Syokimau-Mulolongo",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.3698475,
+    "longitude": 36.938016
+  },
+  {
+    "town": "Tala",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.2722535,
+    "longitude": 37.305349
+  },
+  {
+    "town": "Wamunyu",
+    "county": "Machakos",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.431172,
+    "longitude": 37.5680505
+  },
+  {
+    "town": "Athiru Gaiti",
+    "county": "Meru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.211032,
+    "longitude": 37.973044
+  },
+  {
+    "town": "Igoji East",
+    "county": "Meru",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -0.1838207,
+    "longitude": 37.6769067
+  },
+  {
+    "town": "Kangeta",
+    "county": "Meru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.275917,
+    "longitude": 37.882492
+  },
+  {
+    "town": "Kianjai",
+    "county": "Meru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.162226,
+    "longitude": 37.748282
+  },
+  {
+    "town": "Kiirwa Naari",
+    "county": "Meru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.122349,
+    "longitude": 37.55991
+  },
+  {
+    "town": "Kisima",
+    "county": "Meru",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": 0.1413574,
+    "longitude": 37.472336
+  },
+  {
+    "town": "Lare",
+    "county": "Meru",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.3140895,
+    "longitude": 37.9380215
+  },
+  {
+    "town": "Maua",
+    "county": "Meru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.229314,
+    "longitude": 37.941903
+  },
+  {
+    "town": "Meru",
+    "county": "Meru",
+    "fast_charger_count": 1,
+    "swap_station_count": 2,
+    "total_count": 3,
+    "latitude": 0.0468748,
+    "longitude": 37.6519259
+  },
+  {
+    "town": "Muthara",
+    "county": "Meru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.21577,
+    "longitude": 37.792078
+  },
+  {
+    "town": "Nkubu",
+    "county": "Meru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.0661,
+    "longitude": 37.663295
+  },
+  {
+    "town": "Ruiru Rwawera",
+    "county": "Meru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.311178,
+    "longitude": 37.566665
+  },
+  {
+    "town": "Timau",
+    "county": "Meru",
+    "fast_charger_count": 2,
+    "swap_station_count": 0,
+    "total_count": 2,
+    "latitude": 0.0863412,
+    "longitude": 37.2416546
+  },
+  {
+    "town": "Central Kamagambo",
+    "county": "Migori",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.75233,
+    "longitude": 34.597964
+  },
+  {
+    "town": "Central Kanyamkago",
+    "county": "Migori",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.954667,
+    "longitude": 34.513167
+  },
+  {
+    "town": "Central Sakwa",
+    "county": "Migori",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.908911,
+    "longitude": 34.528642
+  },
+  {
+    "town": "Kehancha",
+    "county": "Migori",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.191002,
+    "longitude": 34.612693
+  },
+  {
+    "town": "Migori",
+    "county": "Migori",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.069223,
+    "longitude": 34.470591
+  },
+  {
+    "town": "Muhuru",
+    "county": "Migori",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.013751,
+    "longitude": 34.131129
+  },
+  {
+    "town": "Nyamosense",
+    "county": "Migori",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.206346,
+    "longitude": 34.470717
+  },
+  {
+    "town": "Rongo",
+    "county": "Migori",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.769372,
+    "longitude": 34.624315
+  },
+  {
+    "town": "Bamburi",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -3.979332,
+    "longitude": 39.7166675
+  },
+  {
+    "town": "Changamwe",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.026738,
+    "longitude": 39.628087
+  },
+  {
+    "town": "Frere",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.028019,
+    "longitude": 39.693583
+  },
+  {
+    "town": "Ganjoni",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.074503,
+    "longitude": 39.666598
+  },
+  {
+    "town": "Junda",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.01814,
+    "longitude": 39.683731
+  },
+  {
+    "town": "Likoni",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.091841,
+    "longitude": 39.649502
+  },
+  {
+    "town": "Magogoni",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.01497,
+    "longitude": 39.69272
+  },
+  {
+    "town": "Mikindani",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.008836,
+    "longitude": 39.627407
+  },
+  {
+    "town": "Miritini",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.00805,
+    "longitude": 39.60409
+  },
+  {
+    "town": "Mkomani",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -4.046364,
+    "longitude": 39.688294
+  },
+  {
+    "town": "Mtopanga",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.001719,
+    "longitude": 39.69929
+  },
+  {
+    "town": "Shanzu",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.983463,
+    "longitude": 39.738188
+  },
+  {
+    "town": "Shika Adabu",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.116345,
+    "longitude": 39.635963
+  },
+  {
+    "town": "Timbwani",
+    "county": "Mombasa",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -4.110401,
+    "longitude": 39.664143
+  },
+  {
+    "town": "Ichagaki",
+    "county": "Murang'a",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.799588,
+    "longitude": 37.125105
+  },
+  {
+    "town": "Kambiti",
+    "county": "Murang'a",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.830759,
+    "longitude": 37.232193
+  },
+  {
+    "town": "Kangema",
+    "county": "Murang'a",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.684349,
+    "longitude": 36.961565
+  },
+  {
+    "town": "Kimorori",
+    "county": "Murang'a",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": -0.9404864,
+    "longitude": 37.1281434
+  },
+  {
+    "town": "Makuyu",
+    "county": "Murang'a",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.906465,
+    "longitude": 37.1927825
+  },
+  {
+    "town": "Maragua",
+    "county": "Murang'a",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.791974,
+    "longitude": 37.130044
+  },
+  {
+    "town": "Murang'a",
+    "county": "Murang'a",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.728329,
+    "longitude": 37.161017
+  },
+  {
+    "town": "Airbase",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": -1.2661008,
+    "longitude": 36.8516659
+  },
+  {
+    "town": "Buruburu",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.2806966,
+    "longitude": 36.878678
+  },
+  {
+    "town": "CBD",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 8,
+    "total_count": 9,
+    "latitude": -1.2749754,
+    "longitude": 36.8259211
+  },
+  {
+    "town": "Dandora",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.245275,
+    "longitude": 36.906513
+  },
+  {
+    "town": "Dandora Area I",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.2591692,
+    "longitude": 36.8910135
+  },
+  {
+    "town": "Dandora Area II",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.2576875,
+    "longitude": 36.8939531
+  },
+  {
+    "town": "Doonholm",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.2990239,
+    "longitude": 36.8921566
+  },
+  {
+    "town": "Eastleigh North",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.2666896,
+    "longitude": 36.8466918
+  },
+  {
+    "town": "Eastleigh South",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.2844875,
+    "longitude": 36.8558906
+  },
+  {
+    "town": "Githurai",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 4,
+    "total_count": 5,
+    "latitude": -1.1914385,
+    "longitude": 36.9077544
+  },
+  {
+    "town": "Harambee",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 2,
+    "total_count": 3,
+    "latitude": -1.2895206,
+    "longitude": 36.8794931
+  },
+  {
+    "town": "Highridge",
+    "county": "Nairobi",
+    "fast_charger_count": 3,
+    "swap_station_count": 18,
+    "total_count": 21,
+    "latitude": -1.2487131,
+    "longitude": 36.8069577
+  },
+  {
+    "town": "Imara Daima",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.3249178,
+    "longitude": 36.8760665
+  },
+  {
+    "town": "Jua Kali",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 4,
+    "total_count": 4,
+    "latitude": -1.3099312,
+    "longitude": 36.9147456
+  },
+  {
+    "town": "Kamulu",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.2769375,
+    "longitude": 37.0270312
+  },
+  {
+    "town": "Kangemi",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 4,
+    "total_count": 4,
+    "latitude": -1.2568689,
+    "longitude": 36.7467003
+  },
+  {
+    "town": "Karen",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 5,
+    "total_count": 5,
+    "latitude": -1.3312599,
+    "longitude": 36.7263507
+  },
+  {
+    "town": "Karen C",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.3406446,
+    "longitude": 36.7502889
+  },
+  {
+    "town": "Kasarani",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 5,
+    "total_count": 6,
+    "latitude": -1.2273273,
+    "longitude": 36.9176417
+  },
+  {
+    "town": "Kawangware",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 10,
+    "total_count": 11,
+    "latitude": -1.2904939,
+    "longitude": 36.7432563
+  },
+  {
+    "town": "Kayole Central",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.27179,
+    "longitude": 36.911859
+  },
+  {
+    "town": "Kilimani",
+    "county": "Nairobi",
+    "fast_charger_count": 2,
+    "swap_station_count": 15,
+    "total_count": 17,
+    "latitude": -1.2815021,
+    "longitude": 36.7843048
+  },
+  {
+    "town": "Komarock",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 5,
+    "total_count": 5,
+    "latitude": -1.2659173,
+    "longitude": 36.9119154
+  },
+  {
+    "town": "Kwa Njenga",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.3281125,
+    "longitude": 36.8927656
+  },
+  {
+    "town": "Landimawe",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 5,
+    "total_count": 6,
+    "latitude": -1.3023678,
+    "longitude": 36.8323757
+  },
+  {
+    "town": "Lower Savannah",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.294567,
+    "longitude": 36.887867
+  },
+  {
+    "town": "Lucky Summer",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 4,
+    "total_count": 4,
+    "latitude": -1.2422691,
+    "longitude": 36.8906108
+  },
+  {
+    "town": "Mabatini",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.2639655,
+    "longitude": 36.8595965
+  },
+  {
+    "town": "Maringo",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 5,
+    "total_count": 5,
+    "latitude": -1.2959643,
+    "longitude": 36.8697289
+  },
+  {
+    "town": "Mihango",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.286566,
+    "longitude": 36.953338
+  },
+  {
+    "town": "Mowlem",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.273439,
+    "longitude": 36.893903
+  },
+  {
+    "town": "Muchatha",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -1.2010299,
+    "longitude": 36.784991
+  },
+  {
+    "town": "Mugumo-ini",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.3187626,
+    "longitude": 36.7977022
+  },
+  {
+    "town": "Nairobi West",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.3075673,
+    "longitude": 36.8188561
+  },
+  {
+    "town": "Ndumbuini",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -1.2581208,
+    "longitude": 36.7216248
+  },
+  {
+    "town": "Njiru",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 4,
+    "total_count": 5,
+    "latitude": -1.2539921,
+    "longitude": 36.9241835
+  },
+  {
+    "town": "Pangani",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.2707625,
+    "longitude": 36.8420469
+  },
+  {
+    "town": "Pipeline",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 4,
+    "total_count": 4,
+    "latitude": -1.3264424,
+    "longitude": 36.8944921
+  },
+  {
+    "town": "Pumwani",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.2936111,
+    "longitude": 36.8505556
+  },
+  {
+    "town": "Roysambu",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 10,
+    "total_count": 11,
+    "latitude": -1.2275244,
+    "longitude": 36.8744664
+  },
+  {
+    "town": "Ruai",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 6,
+    "total_count": 7,
+    "latitude": -1.2679435,
+    "longitude": 36.9770435
+  },
+  {
+    "town": "Ruaka",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.206765,
+    "longitude": 36.783353
+  },
+  {
+    "town": "Ruaraka",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": -1.2430861,
+    "longitude": 36.8803445
+  },
+  {
+    "town": "Sarang'ombe",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.309467,
+    "longitude": 36.773626
+  },
+  {
+    "town": "South B",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 5,
+    "total_count": 5,
+    "latitude": -1.3192131,
+    "longitude": 36.8431366
+  },
+  {
+    "town": "South C",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 4,
+    "total_count": 4,
+    "latitude": -1.3317941,
+    "longitude": 36.8626393
+  },
+  {
+    "town": "Soweto",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.288393,
+    "longitude": 36.909023
+  },
+  {
+    "town": "Tassia",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -1.313473,
+    "longitude": 36.8988542
+  },
+  {
+    "town": "Umoja",
+    "county": "Nairobi",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -1.28355,
+    "longitude": 36.894144
+  },
+  {
+    "town": "Umoja I",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.277323,
+    "longitude": 36.893679
+  },
+  {
+    "town": "Umoja II",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.2868875,
+    "longitude": 36.8946094
+  },
+  {
+    "town": "Utawala",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -1.285673,
+    "longitude": 36.955068
+  },
+  {
+    "town": "Viwandani",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -1.3071434,
+    "longitude": 36.8763653
+  },
+  {
+    "town": "Waithaka",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 4,
+    "total_count": 4,
+    "latitude": -1.2715592,
+    "longitude": 36.7011957
+  },
+  {
+    "town": "Woodley",
+    "county": "Nairobi",
+    "fast_charger_count": 0,
+    "swap_station_count": 11,
+    "total_count": 11,
+    "latitude": -1.2996557,
+    "longitude": 36.80063
+  },
+  {
+    "town": "Bahati",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -0.1662253,
+    "longitude": 36.1340133
+  },
+  {
+    "town": "Barut",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.3189088,
+    "longitude": 36.0724786
+  },
+  {
+    "town": "Dundori",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.268092,
+    "longitude": 36.193588
+  },
+  {
+    "town": "Gilgil",
+    "county": "Nakuru",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": -0.4993211,
+    "longitude": 36.3208166
+  },
+  {
+    "town": "Hells Gate",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.777451,
+    "longitude": 36.42944
+  },
+  {
+    "town": "Kiamaina",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.2448125,
+    "longitude": 36.1133125
+  },
+  {
+    "town": "Lake View",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.709337,
+    "longitude": 36.42582
+  },
+  {
+    "town": "Lanet",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.2827125,
+    "longitude": 36.1637031
+  },
+  {
+    "town": "London",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.2881,
+    "longitude": 36.0642813
+  },
+  {
+    "town": "Malewa West",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.686657,
+    "longitude": 36.475968
+  },
+  {
+    "town": "Mau Summit",
+    "county": "Nakuru",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -0.158975,
+    "longitude": 35.694278
+  },
+  {
+    "town": "Menengai West",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.2552963,
+    "longitude": 36.0166277
+  },
+  {
+    "town": "Molo",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.241157,
+    "longitude": 35.72377
+  },
+  {
+    "town": "Mosop",
+    "county": "Nakuru",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": -0.2407554,
+    "longitude": 35.9336829
+  },
+  {
+    "town": "Naivasha East",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.746767,
+    "longitude": 36.465243
+  },
+  {
+    "town": "Nakuru",
+    "county": "Nakuru",
+    "fast_charger_count": 1,
+    "swap_station_count": 18,
+    "total_count": 19,
+    "latitude": -0.2912409,
+    "longitude": 36.0768769
+  },
+  {
+    "town": "Njoro",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": -0.3329388,
+    "longitude": 35.9449367
+  },
+  {
+    "town": "Visoi",
+    "county": "Nakuru",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.125212,
+    "longitude": 35.936803
+  },
+  {
+    "town": "Viwandani",
+    "county": "Nakuru",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -0.7166667,
+    "longitude": 36.4347222
+  },
+  {
+    "town": "Kabiyet",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.412053,
+    "longitude": 35.0511545
+  },
+  {
+    "town": "Kapchorua",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.015242,
+    "longitude": 35.336263
+  },
+  {
+    "town": "Kapsabet",
+    "county": "Nandi",
+    "fast_charger_count": 1,
+    "swap_station_count": 2,
+    "total_count": 3,
+    "latitude": 0.2021087,
+    "longitude": 35.1008479
+  },
+  {
+    "town": "Kaptel",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.343044,
+    "longitude": 35.115313
+  },
+  {
+    "town": "Kaptumo",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.0888975,
+    "longitude": 35.106836
+  },
+  {
+    "town": "Kemeloi-maraba",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.045412,
+    "longitude": 34.912635
+  },
+  {
+    "town": "Kilibwoni",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.2315545,
+    "longitude": 35.214312
+  },
+  {
+    "town": "Kiptuiya",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.19606,
+    "longitude": 35.037663
+  },
+  {
+    "town": "Kobujoi",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.040631,
+    "longitude": 34.99766
+  },
+  {
+    "town": "Kosirai",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.228508,
+    "longitude": 35.144245
+  },
+  {
+    "town": "Koyo",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.025408,
+    "longitude": 35.030395
+  },
+  {
+    "town": "Lelmoko",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.320118,
+    "longitude": 35.167562
+  },
+  {
+    "town": "Nandi Hills",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.099793,
+    "longitude": 35.186253
+  },
+  {
+    "town": "Ndalat",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.5109755,
+    "longitude": 35.131697
+  },
+  {
+    "town": "Ol'lessos",
+    "county": "Nandi",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.219064,
+    "longitude": 35.299336
+  },
+  {
+    "town": "Kamera",
+    "county": "Nyamira",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.664849,
+    "longitude": 34.843294
+  },
+  {
+    "town": "Ngenyi",
+    "county": "Nyamira",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.615972,
+    "longitude": 34.834455
+  },
+  {
+    "town": "Nyamaiya",
+    "county": "Nyamira",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.534429,
+    "longitude": 34.90795
+  },
+  {
+    "town": "Nyamira",
+    "county": "Nyamira",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.5658235,
+    "longitude": 34.9301465
+  },
+  {
+    "town": "Nyansiongo",
+    "county": "Nyamira",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.756394,
+    "longitude": 35.014029
+  },
+  {
+    "town": "Ol Kalou",
+    "county": "Nyandarua",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -0.2669444,
+    "longitude": 36.3777778
+  },
+  {
+    "town": "Chaka",
+    "county": "Nyeri",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -0.358972,
+    "longitude": 37.000823
+  },
+  {
+    "town": "Karatina",
+    "county": "Nyeri",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -0.482773,
+    "longitude": 37.126571
+  },
+  {
+    "town": "Mugunda",
+    "county": "Nyeri",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": -0.1998611,
+    "longitude": 36.8213056
+  },
+  {
+    "town": "Naromoru",
+    "county": "Nyeri",
+    "fast_charger_count": 2,
+    "swap_station_count": 1,
+    "total_count": 3,
+    "latitude": -0.1600788,
+    "longitude": 37.0251653
+  },
+  {
+    "town": "Nyeri",
+    "county": "Nyeri",
+    "fast_charger_count": 2,
+    "swap_station_count": 1,
+    "total_count": 3,
+    "latitude": -0.419301,
+    "longitude": 36.9516026
+  },
+  {
+    "town": "Rware",
+    "county": "Nyeri",
+    "fast_charger_count": 1,
+    "swap_station_count": 2,
+    "total_count": 3,
+    "latitude": -0.4236111,
+    "longitude": 36.950863
+  },
+  {
+    "town": "Bondo",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.098279,
+    "longitude": 34.2677215
+  },
+  {
+    "town": "Central Alego",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.086154,
+    "longitude": 34.234898
+  },
+  {
+    "town": "East Asembo",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.07052,
+    "longitude": 34.377033
+  },
+  {
+    "town": "North Gem",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.115984,
+    "longitude": 34.446483
+  },
+  {
+    "town": "North Ugenya",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.264153,
+    "longitude": 34.222058
+  },
+  {
+    "town": "North Uyoma",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.245023,
+    "longitude": 34.342978
+  },
+  {
+    "town": "Siaya",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": 0.0496613,
+    "longitude": 34.26495
+  },
+  {
+    "town": "Sigomere",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.201324,
+    "longitude": 34.357981
+  },
+  {
+    "town": "South East Alego",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.040197,
+    "longitude": 34.331649
+  },
+  {
+    "town": "South Sakwa",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.184457,
+    "longitude": 34.279846
+  },
+  {
+    "town": "South Uyoma",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": -0.361918,
+    "longitude": 34.3044155
+  },
+  {
+    "town": "Ugunja",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.184574,
+    "longitude": 34.303755
+  },
+  {
+    "town": "Ukwala",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.190193,
+    "longitude": 34.183883
+  },
+  {
+    "town": "Usonga",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.109504,
+    "longitude": 34.102715
+  },
+  {
+    "town": "West Asembo",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.178381,
+    "longitude": 34.352913
+  },
+  {
+    "town": "West Uyoma",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.254222,
+    "longitude": 34.276764
+  },
+  {
+    "town": "West Yimbo",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.065918,
+    "longitude": 34.057443
+  },
+  {
+    "town": "Yimbo East",
+    "county": "Siaya",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -0.051768,
+    "longitude": 34.148347
+  },
+  {
+    "town": "Kaloleni",
+    "county": "Taita-Taveta",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.391224,
+    "longitude": 38.57815
+  },
+  {
+    "town": "Voi",
+    "county": "Taita-Taveta",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": -3.394677,
+    "longitude": 38.562126
+  },
+  {
+    "town": "Chuka",
+    "county": "Tharaka-Nithi",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": -0.3281476,
+    "longitude": 37.6546475
+  },
+  {
+    "town": "Matisi",
+    "county": "Trans Nzoia",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 1.016141,
+    "longitude": 34.994118
+  },
+  {
+    "town": "Nabiswa",
+    "county": "Trans Nzoia",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.894795,
+    "longitude": 34.927473
+  },
+  {
+    "town": "Waitaluk",
+    "county": "Trans Nzoia",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.982433,
+    "longitude": 35.033559
+  },
+  {
+    "town": "Ainabkoi",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 1,
+    "swap_station_count": 0,
+    "total_count": 1,
+    "latitude": 0.2132383,
+    "longitude": 35.43437
+  },
+  {
+    "town": "Cheptiret",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.4396865,
+    "longitude": 35.314044
+  },
+  {
+    "town": "Eldoret",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.5309245,
+    "longitude": 35.2918715
+  },
+  {
+    "town": "Huruma",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.518519,
+    "longitude": 35.267131
+  },
+  {
+    "town": "Kamagut",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.602234,
+    "longitude": 35.14339
+  },
+  {
+    "town": "Kapsaos",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.577895,
+    "longitude": 35.221892
+  },
+  {
+    "town": "Kaptagat",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.4070345,
+    "longitude": 35.446032
+  },
+  {
+    "town": "Kipkenyo",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": 0.5075966,
+    "longitude": 35.2735941
+  },
+  {
+    "town": "Kiplombe",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.539786,
+    "longitude": 35.250304
+  },
+  {
+    "town": "Kiunet",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.585729,
+    "longitude": 35.309084
+  },
+  {
+    "town": "Langas",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 1,
+    "swap_station_count": 1,
+    "total_count": 2,
+    "latitude": 0.4837739,
+    "longitude": 35.260713
+  },
+  {
+    "town": "Likuyani",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.680383,
+    "longitude": 35.155665
+  },
+  {
+    "town": "Moiben",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.815356,
+    "longitude": 35.384767
+  },
+  {
+    "town": "Ngenyilel",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.606295,
+    "longitude": 34.964157
+  },
+  {
+    "town": "Segeroi",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.897319,
+    "longitude": 35.25205
+  },
+  {
+    "town": "Simat",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 3,
+    "total_count": 3,
+    "latitude": 0.4522297,
+    "longitude": 35.2081773
+  },
+  {
+    "town": "Soy",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.719627,
+    "longitude": 35.29995
+  },
+  {
+    "town": "Tarakwa",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.185206,
+    "longitude": 35.367114
+  },
+  {
+    "town": "Tembelio",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.61974,
+    "longitude": 35.431858
+  },
+  {
+    "town": "Tulwet",
+    "county": "Uasin Gishu",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.293675,
+    "longitude": 35.325986
+  },
+  {
+    "town": "Central Maragoli",
+    "county": "Vihiga",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.0420445,
+    "longitude": 34.7194125
+  },
+  {
+    "town": "Chavakali",
+    "county": "Vihiga",
+    "fast_charger_count": 1,
+    "swap_station_count": 2,
+    "total_count": 3,
+    "latitude": 0.1144644,
+    "longitude": 34.7431203
+  },
+  {
+    "town": "Gambogi",
+    "county": "Vihiga",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.020887,
+    "longitude": 34.725216
+  },
+  {
+    "town": "Mbale",
+    "county": "Vihiga",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.082888,
+    "longitude": 34.721946
+  },
+  {
+    "town": "Serem",
+    "county": "Vihiga",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.082999,
+    "longitude": 34.850837
+  },
+  {
+    "town": "Shiru",
+    "county": "Vihiga",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.1358825,
+    "longitude": 34.876067
+  },
+  {
+    "town": "West Bunyore",
+    "county": "Vihiga",
+    "fast_charger_count": 0,
+    "swap_station_count": 2,
+    "total_count": 2,
+    "latitude": 0.056888,
+    "longitude": 34.573838
+  },
+  {
+    "town": "Wodanga",
+    "county": "Vihiga",
+    "fast_charger_count": 0,
+    "swap_station_count": 1,
+    "total_count": 1,
+    "latitude": 0.114474,
+    "longitude": 34.818772
   }
 ]

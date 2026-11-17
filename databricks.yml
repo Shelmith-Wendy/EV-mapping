@@ -56,6 +56,15 @@ resources:
       name: kenya-ev-map
       description: Zeno Moto EV charging coverage map for Kenya (Streamlit + Leaflet)
       source_code_path: ./app
+      resources:
+        volumes:
+          - name: ${var.volume_name}
+            uc_securable:
+              securable_type: VOLUME
+              securable_full_name: ${var.catalog}.${var.schema_name}.${var.volume_name}
+              permissions: READ_VOLUME
+              
+
 
 targets:
   dev:

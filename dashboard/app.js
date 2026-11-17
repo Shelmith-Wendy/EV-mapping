@@ -1,7 +1,39 @@
 const URL_PARAMS = new URLSearchParams(window.location.search);
 const TYPE_PARAM = URL_PARAMS.get("type");
 const REGION_PARAM = URL_PARAMS.get("region");
-const MANUFACTURER_PARAM = URL_PARAMS.get("manufacturer");
+const MANUFACTURER_PARAM = URL_PARAMS.get("manufacturer") || URL_PARAMS.get("operator");
+
+// Operator colour palette for swap-station overlay
+const OPERATOR_META = {
+  "ARC Ride":  { label: "ARC Ride",  color: "#a78bfa", css: "arc-ride" },
+  "Spiro":     { label: "Spiro",     color: "#38bdf8", css: "spiro" },
+  "Zeno Moto": { label: "Zeno Moto", color: "#4ade80", css: "zeno" },
+};
+const OPERATOR_META_DEFAULT = { label: "Unknown", color: "#94a3b8", css: "muted" };
+
+// Dashboard configuration for the coverage and limits panel
+const COVERAGE_CONFIG = {
+  staleness_warning_days: 60,
+  spiro_map_listed: {
+    count: "[N]",
+    date: "[date]",
+  },
+  primary_chart_label: "mapped locations",
+  capacity_note: "Spiro locations and ARC Ride sites are not capacity-comparable.",
+};
+
+function getCoverageConfig(bundle) {
+  const cfg = bundle?.config || {};
+  return {
+    staleness_warning_days: cfg.staleness_warning_days ?? COVERAGE_CONFIG.staleness_warning_days,
+    spiro_map_listed: {
+      count: cfg.spiro_map_listed?.count ?? COVERAGE_CONFIG.spiro_map_listed.count,
+      date: cfg.spiro_map_listed?.date ?? COVERAGE_CONFIG.spiro_map_listed.date,
+    },
+    primary_chart_label: cfg.primary_chart_label ?? COVERAGE_CONFIG.primary_chart_label,
+    capacity_note: cfg.capacity_note ?? COVERAGE_CONFIG.capacity_note,
+  };
+}
 const MANUFACTURER_ALL = "all";
 const PUBLIC_ROOT = "../data/public";
 const BASEMAP_STYLE = "https://tiles.openfreemap.org/styles/dark";
@@ -52,6 +84,15 @@ function typeMeta(stationType) {
   };
 }
 
+function operatorMeta(name) {
+  return OPERATOR_META[name] || OPERATOR_META_DEFAULT;
+}
+
+function isSwapOverlay(bundleOrConfig) {
+  const cfg = bundleOrConfig?.config || bundleOrConfig;
+  return cfg?.tiers?.[0] === "operator" || cfg?.dataset_source === "arcride_spiro";
+}
+
 function selectedConfig() {
   return app.manifest.regions.find((region) => region.region_id === app.selectedRegionId)
     || app.manifest.regions[0];
@@ -79,6 +120,7 @@ function defaultRegionId(regions) {
     return REGION_PARAM;
   }
   if (regions.some((region) => region.region_id === "kenya")) return "kenya";
+  if (regions.some((region) => region.region_id === "kenya_swap")) return "kenya_swap";
   return regions[0]?.region_id;
 }
 
@@ -111,7 +153,14 @@ function chartHeight(rowCount) {
   return Math.max(160, rowCount * 42);
 }
 
-function barColors(labels, baseColor, selectedLabel) {
+function barColors(labels, baseColor, selectedLabel, isOperator = false) {
+  if (isOperator) {
+    return labels.map((label) => {
+      const color = operatorMeta(label).color;
+      if (!selectedLabel) return color;
+      return label === selectedLabel ? color : `${color}66`;
+    });
+  }
   if (!selectedLabel) return labels.map(() => baseColor);
   return labels.map((label) => (label === selectedLabel ? baseColor : `${baseColor}66`));
 }
@@ -157,14 +206,14 @@ function stackValue(count) {
   return count > 0 ? count : null;
 }
 
-function buildDatasets(ids, rows, selectedId, stationType, stationTypes) {
+function buildDatasets(ids, rows, selectedId, stationType, stationTypes, isOperator = false) {
   if (stationType === "all") {
     return stationTypes.map((typeName) => {
       const meta = typeMeta(typeName);
       return {
         label: meta.label,
         data: rows.map((row) => stackValue(row[`${typeName}_count`] || 0)),
-        backgroundColor: barColors(ids, meta.color, selectedId),
+        backgroundColor: barColors(ids, meta.color, selectedId, isOperator),
         borderRadius: 4,
         minBarLength: 6,
         categoryPercentage: 0.72,
@@ -176,7 +225,7 @@ function buildDatasets(ids, rows, selectedId, stationType, stationTypes) {
   return [{
     label: meta.label,
     data: rows.map((row) => countOf(row, stationType)),
-    backgroundColor: barColors(ids, meta.color, selectedId),
+    backgroundColor: barColors(ids, meta.color, selectedId, isOperator),
     borderRadius: 4,
     minBarLength: 6,
     categoryPercentage: 0.72,
@@ -193,7 +242,7 @@ function drawBarChart({ canvas, box, chartRef, rows, labelKey, selectedLabel, on
     type: "bar",
     data: {
       labels,
-      datasets: buildDatasets(ids, rows, selectedLabel, stationType, stationTypes),
+      datasets: buildDatasets(ids, rows, selectedLabel, stationType, stationTypes, labelKey === "operator"),
     },
     options: chartOptions((index) => onBarClick(ids[index])),
   });
@@ -314,13 +363,66 @@ function stationPopup(station, bundle) {
   const props = lookupUnitProp(bundle, primaryTier, native);
   const english = unitDisplayName(props || station, primaryTier, native);
   const meta = typeMeta(station.station_type);
-  const mapsLink = station.maps_navigation_url
-    ? `<a href="${station.maps_navigation_url}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>`
+  const hasCoords = station.final_latitude !== null && station.final_latitude !== undefined
+    && station.final_longitude !== null && station.final_longitude !== undefined;
+  const mapsUrl = station.maps_navigation_url || (hasCoords
+    ? `https://www.google.com/maps/search/?api=1&query=${station.final_latitude},${station.final_longitude}`
+    : "");
+  const mapsLink = mapsUrl
+    ? `<a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>`
     : "";
   const placeLine = english ? `${meta.label} · ${english}` : meta.label;
   const nativeLine = native && native !== english ? `<span class="unit-native">${native}</span>` : "";
-  const hoursLine = station.hours ? `<span>${station.hours}</span>` : "";
-  return `<strong>${station.name}</strong><span>${placeLine}</span>${nativeLine}${hoursLine}${mapsLink}`;
+  const hoursLine = station.hours ? `<span>${escapeHtml(station.hours)}</span>` : "";
+  const opName = station.operator || "";
+  const oMeta = opName ? operatorMeta(opName) : null;
+  const operatorLine = opName
+    ? `<span class="popup-operator" style="color:${oMeta ? oMeta.color : '#38bdf8'}">${escapeHtml(opName)}</span>`
+    : "";
+  const addr = station.address || station.address_raw || "";
+  const addressLine = addr ? `<span>${escapeHtml(addr)}</span>` : "";
+  const asOf = (station.retrieved_on || station.retrieved_at)
+    ? `<span class="popup-asof">As of ${escapeHtml(station.retrieved_on || station.retrieved_at)}</span>`
+    : "";
+  const verifiedBadge = station.last_verified
+    ? `<span class="popup-verified">✓ Verified (${escapeHtml(station.last_verified)})</span>`
+    : "";
+  const cabinetLine = (station.operator === "ARC Ride" && station.cabinet_count)
+    ? `<span class="popup-cabinets">${escapeHtml(String(station.cabinet_count))} registered cabinets (may include retired units)</span>`
+    : "";
+  return (
+    `<strong>${escapeHtml(station.name)}</strong>` +
+    operatorLine +
+    `<span>${placeLine}</span>` +
+    nativeLine +
+    addressLine +
+    asOf +
+    verifiedBadge +
+    cabinetLine +
+    hoursLine +
+    mapsLink
+  );
+}
+
+function swapStationPopup(station) {
+  const oMeta = operatorMeta(station.operator);
+  const verifiedBadge = station.last_verified
+    ? `<span class="popup-verified">✓ Verified (${escapeHtml(station.last_verified)})</span>`
+    : "";
+  const cabinetLine = (station.operator === "ARC Ride" && station.cabinet_count)
+    ? `<span class="popup-cabinets">${escapeHtml(String(station.cabinet_count))} registered cabinets (may include retired units)</span>`
+    : "";
+  const asOf = station.retrieved_on
+    ? `<span class="popup-asof">As of ${escapeHtml(station.retrieved_on)}</span>`
+    : "";
+  return (
+    `<strong>${escapeHtml(station.name)}</strong>` +
+    `<span class="popup-operator" style="color:${oMeta.color}">${escapeHtml(station.operator)}</span>` +
+    (station.address ? `<span>${escapeHtml(station.address)}</span>` : "") +
+    asOf +
+    verifiedBadge +
+    cabinetLine
+  );
 }
 
 function candidatePopup(station, bundle) {
@@ -333,8 +435,13 @@ function candidatePopup(station, bundle) {
   const nativeLine = native && native !== english && native !== locality
     ? `<span class="unit-native">${escapeHtml(native)}</span>`
     : "";
-  const mapsLink = station.maps_navigation_url
-    ? `<a href="${station.maps_navigation_url}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>`
+  const hasCoords = station.final_latitude !== null && station.final_latitude !== undefined
+    && station.final_longitude !== null && station.final_longitude !== undefined;
+  const mapsUrl = station.maps_navigation_url || (hasCoords
+    ? `https://www.google.com/maps/search/?api=1&query=${station.final_latitude},${station.final_longitude}`
+    : "");
+  const mapsLink = mapsUrl
+    ? `<a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>`
     : "";
   const placeLine = place ? `<span>${escapeHtml(place)}</span>` : "";
   return `<strong>${escapeHtml(locality)}</strong><span>TVS candidate</span>${placeLine}${nativeLine}${mapsLink}`;
@@ -471,13 +578,7 @@ function destroyPanels() {
   document.getElementById("workspace").innerHTML = "";
 }
 
-function escapeHtml(value) {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
+
 
 function matchesManufacturer(station) {
   if (!app.manufacturer || app.manufacturer === MANUFACTURER_ALL) return true;
@@ -597,17 +698,6 @@ function fitToStationPoints(map, stations) {
   map.fitBounds(bounds.pad(0.35));
 }
 
-function haversineKm(origin, target) {
-  const toRad = (degrees) => degrees * Math.PI / 180;
-  const [lat1, lng1] = origin;
-  const [lat2, lng2] = target;
-  const dLat = toRad(lat2 - lat1);
-  const dLng = toRad(lng2 - lng1);
-  const h = Math.sin(dLat / 2) ** 2
-    + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) ** 2;
-  return 6371 * 2 * Math.asin(Math.sqrt(h));
-}
-
 function candidatePoint(station) {
   return [station.final_latitude, station.final_longitude];
 }
@@ -616,28 +706,23 @@ function candidatePinName(station) {
   return station.locality || station.name || "Candidate";
 }
 
-function formatKm(km) {
-  return `${km.toFixed(1)} km`;
-}
-
 function spacingRows(panel) {
-  const pool = panel.bundles.flatMap((bundle) => bundle.candidates || []);
+  // Read road distances stored in tvs_candidates.json by load_tvs_candidates.py.
+  // Only candidates with both nearest_tvs_id and nearest_tvs_road_m are shown;
+  // sites without saved road distances are silently omitted -- no straight-line fallback.
+  const pool = new Map(
+    panel.bundles.flatMap((bundle) => bundle.candidates || []).map((s) => [s.station_id, s])
+  );
   const rows = [];
   for (const candidate of filteredCandidates(panel)) {
-    let nearest = null;
-    let distanceKm = Infinity;
-    const origin = candidatePoint(candidate);
-    for (const other of pool) {
-      if (other.station_id === candidate.station_id) continue;
-      const distance = haversineKm(origin, candidatePoint(other));
-      if (distance < distanceKm) {
-        distanceKm = distance;
-        nearest = other;
-      }
-    }
-    if (nearest) rows.push({ candidate, nearest, distanceKm });
+    const nearestId = candidate.nearest_tvs_id;
+    const roadM = candidate.nearest_tvs_road_m;
+    if (!nearestId || roadM == null) continue;
+    const nearest = pool.get(nearestId);
+    if (!nearest) continue;
+    rows.push({ candidate, nearest, roadM });
   }
-  rows.sort((a, b) => a.distanceKm - b.distanceKm || candidatePinName(a.candidate).localeCompare(candidatePinName(b.candidate)));
+  rows.sort((a, b) => a.roadM - b.roadM || candidatePinName(a.candidate).localeCompare(candidatePinName(b.candidate)));
   return rows;
 }
 
@@ -646,14 +731,55 @@ function focusedSpacing(panel) {
   return spacingRows(panel).find((row) => row.candidate.station_id === panel.focusedCandidateId) || null;
 }
 
+function formatM(m) {
+  if (m >= 1000) return (m / 1000).toFixed(1) + ' km';
+  return Math.round(m) + ' m';
+}
+
+function decodePolyline6(encoded) {
+  if (!encoded) return [];
+  const coords = [];
+  let index = 0;
+  let lat = 0;
+  let lng = 0;
+  const length = encoded.length;
+  while (index < length) {
+    let result = 0;
+    let shift = 0;
+    let b;
+    do {
+      b = encoded.charCodeAt(index++) - 63;
+      result |= (b & 0x1f) << shift;
+      shift += 5;
+    } while (b >= 0x20);
+    const dlat = (result & 1) ? ~(result >> 1) : (result >> 1);
+    lat += dlat;
+    result = 0;
+    shift = 0;
+    do {
+      b = encoded.charCodeAt(index++) - 63;
+      result |= (b & 0x1f) << shift;
+      shift += 5;
+    } while (b >= 0x20);
+    const dlng = (result & 1) ? ~(result >> 1) : (result >> 1);
+    lng += dlng;
+    coords.push([lat / 1e6, lng / 1e6]);
+  }
+  return coords;
+}
+
+
 function fitMapToSelection(panel) {
   if (!panel.map) return;
   const focused = focusedSpacing(panel);
   if (focused) {
-    const bounds = L.latLngBounds([
+    const polyline6 = focused.candidate.nearest_tvs_polyline6;
+    const routeCoords = polyline6 ? decodePolyline6(polyline6) : [];
+    const points = routeCoords.length ? routeCoords : [
       candidatePoint(focused.candidate),
       candidatePoint(focused.nearest),
-    ]);
+    ];
+    const bounds = L.latLngBounds(points);
     panel.map.fitBounds(bounds, { animate: false, padding: [56, 56], maxZoom: 14 });
     return;
   }
@@ -712,11 +838,20 @@ function drawBoundaries(panel) {
       const selected =
         panel.selectedPrimary?.regionId === regionId &&
         panel.selectedPrimary?.primary === name;
+      if (isSwapOverlay(bundle)) {
+        return {
+          fillColor: "#090d16",
+          fillOpacity: 0.6,
+          color: "#1e293b",
+          weight: 1,
+        };
+      }
       return unitStyle(entry?.row, selected, Boolean(panel.selectedPrimary), stationType);
     },
     onEachFeature(feature, layer) {
       const regionId = feature.properties.region_id;
       const bundle = panel.bundles.find((item) => item.config.region_id === regionId);
+      if (isSwapOverlay(bundle)) return;
       const primaryTier = bundle.config.tiers[0];
       const stationTypes = bundle.config.station_types;
       const name = feature.properties[primaryTier];
@@ -756,16 +891,22 @@ function drawStations(panel) {
   const positions = jitteredPositions(visible);
   for (const station of visible) {
     const bundle = panel.bundles.find((item) => item.config.region_id === station.region_id);
-    const meta = typeMeta(station.station_type);
+    const useOperatorColor = isSwapOverlay(bundle);
+    const fillColor = useOperatorColor
+      ? operatorMeta(station.operator).color
+      : typeMeta(station.station_type).color;
     const latLng = positions.get(station);
+    const popupContent = isSwapOverlay(bundle)
+      ? swapStationPopup(station)
+      : stationPopup(station, bundle);
     L.circleMarker(latLng, {
       radius: 7,
       color: "#070b14",
       weight: 1,
-      fillColor: meta.color,
+      fillColor,
       fillOpacity: 1,
     })
-      .bindPopup(stationPopup(station, bundle))
+      .bindPopup(popupContent)
       .addTo(panel.stationLayer);
   }
   panel.stationLayer.addTo(panel.map);
@@ -824,21 +965,20 @@ function drawSpacingLink(panel) {
   panel.spacingLinkLayer = null;
   const focused = focusedSpacing(panel);
   if (!focused || !panel.map) return;
-  const positions = jitteredPositions(candidatesToDraw(panel));
-  const start = positions.get(focused.candidate);
-  const end = positions.get(focused.nearest);
-  if (!start || !end) return;
-  const line = L.polyline([start, end], {
+  const polyline6 = focused.candidate.nearest_tvs_polyline6;
+  if (!polyline6) return;
+  const routeCoords = decodePolyline6(polyline6);
+  if (!routeCoords.length) return;
+  const line = L.polyline(routeCoords, {
     color: "#f8fafc",
-    weight: 3,
+    weight: 3.5,
     opacity: 1,
-    dashArray: "7 7",
     interactive: false,
   });
   panel.spacingLinkLayer = L.layerGroup([
-    L.polyline([start, end], {
+    L.polyline(routeCoords, {
       color: "#070b14",
-      weight: 7,
+      weight: 7.5,
       opacity: 0.85,
       interactive: false,
     }),
@@ -847,9 +987,27 @@ function drawSpacingLink(panel) {
   if (panel.candidateLayer) panel.candidateLayer.bringToFront();
 }
 
+function swapLegendHtml(bundles) {
+  const operators = new Set();
+  for (const bundle of bundles) {
+    for (const row of bundle.primarySummary || []) {
+      if (row.operator) operators.add(row.operator);
+    }
+  }
+  const opList = operators.size ? [...operators].sort() : ["ARC Ride", "Spiro"];
+  return opList.map((name) => {
+    const meta = operatorMeta(name);
+    return `<li><span class="swatch" style="background:${meta.color}"></span> ${meta.label}</li>`;
+  }).join("");
+}
+
 function refreshLegend(panel) {
   const legend = panel.root.querySelector(".legend");
   if (!legend) return;
+  if (panel.bundles.some(isSwapOverlay)) {
+    legend.innerHTML = swapLegendHtml(panel.bundles);
+    return;
+  }
   const stationTypes = unionStationTypes(panel.bundles.map((bundle) => bundle.config));
   const typeAllows = app.stationType === "all" || app.stationType === "swap_station";
   const showCandidates = typeAllows && app.showCandidates
@@ -1002,13 +1160,17 @@ function renderCandidateSpacing(panel) {
   block.hidden = !show;
   if (!show) {
     panel.focusedCandidateId = null;
+    
     return;
   }
   if (panel.focusedCandidateId && !rows.some((row) => row.candidate.station_id === panel.focusedCandidateId)) {
     panel.focusedCandidateId = null;
   }
   const hint = block.querySelector("[data-spacing-hint]");
-  if (hint) hint.textContent = `Closest pair ${formatKm(rows[0].distanceKm)}`;
+  if (hint) {
+    const avgM = rows.reduce((s, r) => s + r.roadM, 0) / rows.length;
+    hint.textContent = `Average spacing ${formatM(avgM)}`;
+  }
   const list = block.querySelector("[data-spacing-list]");
   list.innerHTML = rows.map((row) => {
     const on = row.candidate.station_id === panel.focusedCandidateId;
@@ -1016,7 +1178,7 @@ function renderCandidateSpacing(panel) {
       `<li>` +
       `<button type="button" class="spacing-row${on ? " is-on" : ""}" data-spacing-id="${escapeHtml(row.candidate.station_id)}" aria-pressed="${on}">` +
       `<span class="spacing-name">${escapeHtml(candidatePinName(row.candidate))}</span>` +
-      `<span class="spacing-km">${formatKm(row.distanceKm)}</span>` +
+      `<span class="spacing-km">${formatM(row.roadM)}</span>` +
       `<span class="spacing-near">from ${escapeHtml(candidatePinName(row.nearest))}</span>` +
       `</button></li>`
     );
@@ -1028,6 +1190,7 @@ function renderCandidateSpacing(panel) {
       refreshPanel(panel);
     });
   });
+  
 }
 
 function refreshPanel(panel) {
@@ -1095,6 +1258,11 @@ function regionChartsHtml(bundle, { showRegionTitle }) {
   const regionId = bundle.config.region_id;
   const primaryTier = bundle.config.tiers[0];
   const secondaryTier = bundle.config.tiers[1];
+  const isSwap = isSwapOverlay(bundle);
+  const covCfg = getCoverageConfig(bundle);
+  const chartLabel = isSwap
+    ? covCfg.primary_chart_label
+    : tierTitle(primaryTier, { plural: true });
   const title = showRegionTitle
     ? `<h2 class="region-charts-title">${bundle.config.display_name}</h2>`
     : "";
@@ -1110,19 +1278,100 @@ function regionChartsHtml(bundle, { showRegionTitle }) {
       `</section>`
     )
     : "";
+
+  let swapNotesHtml = "";
+  if (isSwap) {
+    const rows = bundle.primarySummary || [];
+    const arcRow = rows.find((r) => r.operator === "ARC Ride");
+    let arcCabinets = 0;
+    if (arcRow && arcRow.cabinet_count !== undefined && arcRow.cabinet_count !== null) {
+      arcCabinets = arcRow.cabinet_count;
+    } else {
+      const arcStations = (bundle.stations || []).filter((s) => s.operator === "ARC Ride");
+      arcCabinets = arcStations.reduce((acc, s) => acc + (parseInt(s.cabinet_count, 10) || 0), 0);
+    }
+    swapNotesHtml =
+      `<div class="chart-capacity-note">` +
+      `<p class="chart-note">${escapeHtml(covCfg.capacity_note)}</p>` +
+      `<p class="chart-cabinets">ARC Ride registered cabinets: <strong>${escapeHtml(String(arcCabinets))}</strong></p>` +
+      `</div>`;
+  }
+
   return (
     `<div class="region-charts" data-region-charts="${regionId}">` +
     title +
-    `<section class="chart-block" aria-label="Stations by ${primaryTier}">` +
+    `<section class="chart-block" aria-label="${escapeHtml(chartLabel)}">` +
     `<div class="chart-block-head">` +
-    `<h2>${tierTitle(primaryTier, { plural: true })}</h2>` +
+    `<h2>${escapeHtml(chartLabel)}</h2>` +
     `<p class="chart-hint" data-primary-hint="${regionId}">Click a ${primaryTier} to drill down</p>` +
     `<button type="button" class="chart-clear" data-clear-primary="${regionId}" hidden>Clear</button>` +
     `</div>` +
     `<div class="chart-scroll"><div data-primary-box="${regionId}"><canvas data-primary-canvas="${regionId}"></canvas></div></div>` +
+    swapNotesHtml +
     `</section>` +
     secondary +
     `</div>`
+  );
+}
+
+function coveragePanelHtml(bundle) {
+  if (!isSwapOverlay(bundle)) return "";
+  const rows = bundle.primarySummary || [];
+  const today = new Date();
+  const covCfg = getCoverageConfig(bundle);
+  const staleDays = covCfg.staleness_warning_days;
+  const staleThresholdMs = staleDays * 24 * 60 * 60 * 1000;
+
+  const operatorRows = rows.map((row) => {
+    const op = row.operator || "Unknown";
+    const meta = operatorMeta(op);
+    const count = row.total_count || 0;
+    const asOf = row.retrieved_on || "";
+
+    let staleWarning = "";
+    if (asOf) {
+      const retrievedDate = new Date(asOf);
+      if (!isNaN(retrievedDate.getTime())) {
+        const diffMs = today.getTime() - retrievedDate.getTime();
+        if (diffMs > staleThresholdMs) {
+          staleWarning = `<span class="coverage-stale">⚠ Data older than ${staleDays} days</span>`;
+        }
+      }
+    }
+
+    return (
+      `<div class="coverage-row">` +
+      `<span class="coverage-op" style="color:${meta.color}">${escapeHtml(op)}</span>` +
+      `<span class="coverage-count">${count} sites mapped</span>` +
+      (asOf ? `<span class="coverage-asof">(as of ${escapeHtml(asOf)})</span>` : "") +
+      staleWarning +
+      `</div>`
+    );
+  }).join("");
+
+  const spiroRow = rows.find((r) => r.operator === "Spiro");
+  const m = spiroRow ? (spiroRow.total_count || 0) : 0;
+  const k = spiroRow ? (spiroRow.excluded_invalid_coordinates ?? 0) : 0;
+  const n = covCfg.spiro_map_listed?.count ?? "[N]";
+  const dateRead = covCfg.spiro_map_listed?.date ?? "[date]";
+
+  const spiroStatement = `Spiro's own map lists ${escapeHtml(String(n))} swap stations (${escapeHtml(String(dateRead))}), ${escapeHtml(String(m))} are shown, and ${escapeHtml(String(k))} were excluded for invalid coordinates.`;
+  const spiroCoverageText =
+    `<div class="coverage-reported">` +
+    `<span class="coverage-reported-main">${spiroStatement}</span>` +
+    `</div>`;
+
+  return (
+    `<section class="chart-block coverage-panel" aria-label="Coverage and limits">` +
+    `<div class="chart-block-head">` +
+    `<h2>Coverage &amp; Limits</h2>` +
+    `</div>` +
+    `<div class="coverage-content">` +
+    `<div class="coverage-operators">${operatorRows}</div>` +
+    spiroCoverageText +
+    `<p class="coverage-disclaimer">This data has no status or live availability.</p>` +
+    `</div>` +
+    `</section>`
   );
 }
 
@@ -1134,9 +1383,13 @@ function buildPanelElement(panelSpecs, { showLocalStats, showRegionTitles }) {
   const localStats = showLocalStats
     ? `<section class="panel-stats stats" aria-label="${titleNames} totals">${statsHtml(stationTypes, tierTitle(primaryTier, { plural: true }))}</section>`
     : "";
+  const bundles = configs.map((config) => app.regionData.get(config.region_id));
+  const isSwap = configs.some(isSwapOverlay);
+  const initialLegend = isSwap ? swapLegendHtml(bundles) : legendHtml(stationTypes);
   const charts = configs.map((config) => {
     const bundle = app.regionData.get(config.region_id);
-    return regionChartsHtml(bundle, { showRegionTitle: showRegionTitles });
+    const coverageHtml = isSwapOverlay(bundle) ? coveragePanelHtml(bundle) : "";
+    return coverageHtml + regionChartsHtml(bundle, { showRegionTitle: showRegionTitles });
   }).join("");
   const section = document.createElement("section");
   section.className = "region-panel";
@@ -1155,7 +1408,7 @@ function buildPanelElement(panelSpecs, { showLocalStats, showRegionTitles }) {
     `<div class="spacing-scroll"><ul class="spacing-list" data-spacing-list></ul></div>` +
     `</section>` +
     `${charts}</div>` +
-    `<ul class="legend">${legendHtml(stationTypes)}</ul>` +
+    `<ul class="legend">${initialLegend}</ul>` +
     `</aside>` +
     `</main>`;
   return section;
@@ -1196,7 +1449,7 @@ function mountPanel(panelSpecs, options) {
   const basemap = L.maplibreGL({ style: BASEMAP_STYLE }).addTo(panel.map);
   panel.map.attributionControl.setPrefix(false);
   panel.map.attributionControl.addAttribution(
-    '<a href="https://openfreemap.org/" target="_blank" rel="noopener noreferrer">OpenFreeMap</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>'
+    '<a href="https://openfreemap.org/" target="_blank" rel="noopener noreferrer">OpenFreeMap</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> · Road distances: <a href="https://project-osrm.org/" target="_blank" rel="noopener noreferrer">OSRM</a>'
   );
 
   bindPanelControls(panel);
@@ -1214,6 +1467,7 @@ function mountPanel(panelSpecs, options) {
   });
   panel.resizeObserver.observe(mapEl);
 
+  paint();
   const glMap = basemap.getMaplibreMap?.();
   if (glMap?.loaded?.()) paint();
   else if (glMap?.once) glMap.once("load", paint);
@@ -1257,7 +1511,10 @@ async function updateBrand(configs) {
     updated.textContent = "";
     return;
   }
-  const source = datasetLabel(config);
+  let source = datasetLabel(config);
+  if (app.manufacturer && app.manufacturer !== MANUFACTURER_ALL) {
+    source = app.manufacturer;
+  }
   document.getElementById("brand-eyebrow").textContent = source
     ? `${source} · ${config.display_name}`
     : config.display_name;
@@ -1299,6 +1556,7 @@ function renderCandidateToggle() {
     app.showCandidates = !app.showCandidates;
     renderCandidateToggle();
     for (const panel of app.panels) refreshPanel(panel);
+    updateGlobalStats();
   });
 }
 
@@ -1337,6 +1595,8 @@ function orderedRegions() {
   return [...app.manifest.regions].sort((a, b) => {
     if (a.region_id === "kenya") return -1;
     if (b.region_id === "kenya") return 1;
+    if (a.region_id === "kenya_swap") return -1;
+    if (b.region_id === "kenya_swap") return 1;
     return a.display_name.localeCompare(b.display_name);
   });
 }
@@ -1350,19 +1610,23 @@ function renderManufacturerSelect() {
     root.innerHTML = "";
     return;
   }
+  const isSwap = selectedConfigs().some(isSwapOverlay);
+  const labelText = isSwap ? "Operator" : "Manufacturer";
+  const allText = isSwap ? "All operators" : "All manufacturers";
   const options = [
-    `<option value="${MANUFACTURER_ALL}"${app.manufacturer === MANUFACTURER_ALL ? " selected" : ""}>All manufacturers</option>`,
+    `<option value="${MANUFACTURER_ALL}"${app.manufacturer === MANUFACTURER_ALL ? " selected" : ""}>${allText}</option>`,
     ...operators.map((name) => (
       `<option value="${escapeHtml(name)}"${app.manufacturer === name ? " selected" : ""}>${escapeHtml(name)}</option>`
     )),
   ];
   root.hidden = false;
   root.innerHTML =
-    `<label class="region-select-label" for="manufacturer-select">Manufacturer</label>` +
-    `<select id="manufacturer-select" class="region-select" aria-label="Manufacturer">${options.join("")}</select>`;
+    `<label class="region-select-label" for="manufacturer-select">${labelText}</label>` +
+    `<select id="manufacturer-select" class="region-select" aria-label="${labelText}">${options.join("")}</select>`;
   root.querySelector("#manufacturer-select").addEventListener("change", (event) => {
     applyManufacturerChoice(event.target.value);
     renderManufacturerSelect();
+    updateBrand(selectedConfigs());
     for (const panel of app.panels) refreshPanel(panel);
     updateGlobalStats();
   });
