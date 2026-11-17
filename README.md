@@ -4,17 +4,16 @@ Interactive map of EV charging and battery-swap coverage across **Kenya** and **
 
 Primary coverage:
 - **Kenya** — EV charging and battery-swap networks across operators (ARC Ride, Spiro, Zeno Moto) with county- and town-level drill-down.
-- **Taipei** — Open-data charging and battery-swap registries alongside the **TVS candidate placement sheet** with road-distance routing.
+- **Taipei** — Open-data charging and battery-swap registries alongside the **TVS candidate placement sheet** with road-distance routing, and district-level drill-down.
 
 ---
 
 ## Features
 
 - **Choropleth Map** — Administrative boundaries shaded by station density, with interactive station markers.
-- **Station Type & Operator Filters** — Filter by type (`fast_charger`, `swap_station`, `standard_charger`) and operator (e.g. ARC Ride, Spiro, Zeno Moto in Kenya; Gogoro Network in Taipei).
+- **Station Type & Operator Filters** — Filter by type (charging or swap) and operator (e.g. ARC Ride, Spiro, Zeno Moto in Kenya; Gogoro Network and others in Taipei).
 - **TVS Candidate Spacing & Road Routing** — Taipei placement candidates display nearest-neighbor road distance calculated via OSRM, average candidate spacing, and solid route polylines on selection.
 - **Administrative Drill-down** — Kenya: county → town; Taipei: district.
-- **Validated Publication** — Checksums, totals, and contract files are validated before promotion to public datasets.
 
 ---
 
@@ -63,7 +62,7 @@ uv run python scripts/run_pipeline.py
 
 | Region | Identifier | Primary Sources | Station Types | Administrative Tiers |
 |--------|------------|-----------------|---------------|----------------------|
-| **Kenya** | `kenya` (and `kenya_swap`) | Operator networks (ARC Ride, Spiro, Zeno Moto) | `swap_station`, `fast_charger` | county → town (and operator overlay) |
+| **Kenya** | `kenya` | Operator networks (ARC Ride, Spiro, Zeno Moto) | `swap_station`, `fast_charger` | county → town |
 | **Taipei** | `taipei` | Taipei Open Data (Swap & Charging registries) | `swap_station`, `standard_charger` | district |
 
 ---
@@ -86,7 +85,7 @@ $$\text{road\_distance\_m} = \text{route\_distance} + \text{snap\_from\_m} + \te
    Verifies the candidate hash and merges road distances and polyline routes into `data/public/taipei/tvs_candidates.json`.
 
 3. **Dashboard display:**
-   - Enabling **TVS candidates** displays the candidate list with average nearest road spacing (`Average spacing 3.8 km`).
+   - Enabling **TVS candidates** displays the candidate list with average nearest road spacing.
    - Clicking a candidate draws the solid road route directly on the map.
 
 ---
@@ -127,7 +126,6 @@ regions/          # RegionConfig definitions (kenya, taipei)
 scripts/          # Pipeline processing, TVS distance routing, operator ingestion
   ingestion/      # Swap operator registry, normalization adapters, safety gates
 tests/            # Unit tests for ingestion core, adapters, and volume contracts
-databricks.yml    # Databricks Asset Bundle (DAB) deployment manifest
 ```
 
 ---
@@ -157,19 +155,3 @@ uv run python -m http.server 8000
 Open **`http://localhost:8000/dashboard/?region=taipei`** (or `?region=kenya`) in your browser.
 
 > **Note on `app/static/`:** If running a test server rooted in `app/static/`, open `http://localhost:8000/dashboard/` directly. Always sync changes from `dashboard/` to `app/static/dashboard/` after making frontend edits.
-
----
-
-## Databricks Deployment
-
-The Asset Bundle (`databricks.yml`) deploys:
-- Unity Catalog **schema** `zeno_ev_map` (catalog `main`)
-- Managed **Volume** `public` for published contract files
-- **App** `kenya-ev-map` from `./app`
-
-```bash
-./scripts/prepare_databricks_app.sh
-databricks bundle validate -t dev
-databricks bundle deploy -t dev
-databricks bundle run kenya_ev_map -t dev
-```
